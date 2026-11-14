@@ -10,7 +10,16 @@
   // No Supabase session => the app must show the login page.
   try { if (!localStorage.getItem("sb-" + REF + "-auth-token")) localStorage.removeItem("em-user"); } catch (e) {}
 
-  var sessionP = sb.auth.getSession().then(function (r) { return r.data && r.data.session; }).catch(function () { return null; });
+  // A saved login whose account no longer exists (or has expired) is cleared, so the login page shows.
+  var sessionP = sb.auth.getSession().then(function (r) { return r.data && r.data.session; }).catch(function () { return null; }).then(function (ses) {
+    if (!ses) return null;
+    return sb.auth.getUser().then(function (u) {
+      if (u.error && u.error.status && u.error.status < 500) {
+        return sb.auth.signOut({ scope: "local" }).catch(function () {}).then(function () { try { localStorage.removeItem("em-user"); } catch (e) {} location.reload(); return null; });
+      }
+      return ses;
+    }).catch(function () { return ses; });
+  });
   var uidP = sessionP.then(function (s) { return s && s.user ? s.user.id : null; });
   // Admins and teachers with an active teacher plan can edit shared content (classes, tasks, marks).
   var adminP = uidP.then(function (u) { return u ? sb.rpc("is_staff").then(function (r) { return !!r.data; }) : false; }).catch(function () { return false; });
