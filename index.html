@@ -5377,6 +5377,7 @@ const STUDY_RES = [
 ];
 const LANG_SUBS = ["English", "Dhivehi"];
 const slugT = (t) => String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
+const CONTENT_V = "20261114c";
 const tqCache = {}, tqTopicCache = {};
 function useTQ(sub) {
   const code = SUBJ_CODE[sub];
@@ -5385,7 +5386,7 @@ function useTQ(sub) {
     let live = true;
     if (tqCache[code] !== undefined) { setSt({ data: tqCache[code] }); return; }
     setSt({ loading: true });
-    fetch(`tq/${code}/i.json`).then((r) => r.ok ? r.json() : null).catch(() => null).then((d) => {
+    fetch(`tq/${code}/i.json?v=${CONTENT_V}`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : null).catch(() => null).then((d) => {
       if (d) { d.code = code; Object.entries(d.papers).forEach(([k, p]) => { p.k = k; p.code = code; }); }
       tqCache[code] = d; if (live) setSt({ data: d });
     });
@@ -5396,7 +5397,7 @@ function useTQ(sub) {
 function tqLoadTopic(I, t) {
   const T = I.topics.find((x) => x.t === t); if (!T) return Promise.resolve([]);
   const k = I.code + "/" + T.f;
-  if (!tqTopicCache[k]) tqTopicCache[k] = fetch(`tq/${k}.json`).then((r) => r.ok ? r.json() : []).catch(() => { delete tqTopicCache[k]; return []; });
+  if (!tqTopicCache[k]) tqTopicCache[k] = fetch(`tq/${k}.json?v=${CONTENT_V}`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : []).catch(() => { delete tqTopicCache[k]; return []; });
   return tqTopicCache[k];
 }
 function useTQTopic(I, t) {
@@ -5668,7 +5669,7 @@ function useStudyPack(code) {
     let live = true;
     if (studyPackCache[code]) { setSt(studyPackCache[code]); return; }
     setSt({ loading: true });
-    fetch(`study/${code}.json`).then((r) => r.ok ? r.json() : {}).catch(() => ({})).then((d) => { studyPackCache[code] = d || {}; if (live) setSt(studyPackCache[code]); });
+    fetch(`study/${code}.json?v=${CONTENT_V}`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : {}).catch(() => ({})).then((d) => { studyPackCache[code] = d || {}; if (live) setSt(studyPackCache[code]); });
     return () => { live = false; };
   }, [code]);
   return st;
