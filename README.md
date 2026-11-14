@@ -1,6 +1,6 @@
 # EduMaldives Smart Learning Portal (web)
 
-Static site for Vercel, backed by Supabase project `pnzchmpvcucoctfbvvit` (EduMaldives).
+Static site for Vercel, backed by Supabase project `aqlosygbfqfcuykgoizh` (EduMaldives).
 
 - `index.html` – the portal
 - `edu-supabase.js` – connects the portal to Supabase (login, database, file uploads, AI)

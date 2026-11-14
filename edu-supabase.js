@@ -1,9 +1,9 @@
 /* EduMaldives web adapter: provides the same window.claude.use(...) API the portal uses inside Claude,
    backed by Supabase (auth, database, storage) and a Supabase Edge Function for AI. */
 (function () {
-  var SB_URL = "https://pnzchmpvcucoctfbvvit.supabase.co";
-  var SB_KEY = "sb_publishable_zSDb_cKWsRnOQKjqW2a1cA_kz6bP-tE";
-  var REF = "pnzchmpvcucoctfbvvit";
+  var SB_URL = "https://aqlosygbfqfcuykgoizh.supabase.co";
+  var SB_KEY = "sb_publishable_J7G9W5gIGRZX56D5-CBEsw_RYM8wWgj";
+  var REF = "aqlosygbfqfcuykgoizh";
   var sb = window.supabase.createClient(SB_URL, SB_KEY, { auth: { persistSession: true, autoRefreshToken: true } });
   window.__SB = sb;
   window.__WEB = true;
