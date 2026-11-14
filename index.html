@@ -12,7 +12,17 @@
 .py-agree{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#33495f;cursor:pointer;background:#fff8ec;border:1px solid #f3dfb8;border-radius:12px;padding:12px}.py-agree input{width:20px;height:20px;margin-top:1px;flex-shrink:0;accent-color:#13497a}.py-agree b{color:#7a4b06}
 .py-err{margin:-6px 0 0;background:#fdecec;border:1px solid #f5c2c2;color:#b42318;border-radius:12px;padding:10px 12px;font-size:14px;font-weight:600}.py-go{width:100%;height:52px;justify-content:center;font-size:16px}
 html[data-theme=dark] .py-card{background:#152238;border-color:#24364f;color:#e6edf5}html[data-theme=dark] .py-top{border-color:#24364f}html[data-theme=dark] .py-amt,html[data-theme=dark] .py-up b{color:#e6edf5}html[data-theme=dark] .py-acc{background:#1b2a40;border-color:#2a3d56}html[data-theme=dark] .py-step>p,html[data-theme=dark] .py-acc span,html[data-theme=dark] .pl-yr>span{color:#c9d6e5}html[data-theme=dark] .py-ref b{color:#e6edf5}html[data-theme=dark] .py-up{background:#17283f;border-color:#35506f}html[data-theme=dark] .py-up.ok{background:#14332a;border-color:#2c6e4c}html[data-theme=dark] .py-agree{background:#3a2d14;border-color:#6b5222;color:#f3d39a}html[data-theme=dark] .py-agree b{color:#f3d39a}html[data-theme=dark] .py-err{background:#3a1717;border-color:#7a2a2a;color:#ffb4ab}
-html,body{overflow-x:clip;max-width:100%}</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+html,body{overflow-x:clip;max-width:100%}.pl-yr{margin-bottom:14px}.pl-yr .pl-price b{font-size:34px}.pl-yr>em.q{color:#6b7f95;font-weight:600}
+.ob-subs{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:12px auto 0;max-width:440px}.ob-subs span{background:#fff;border:1px solid #e3eaf2;border-radius:999px;padding:5px 11px;font-size:13px;font-weight:600;color:#22374f}
+.mp{position:relative;width:100%}.mp-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:8px;height:44px;padding:0 12px;border:1px solid #d5e0eb;border-radius:12px;background:#fff;font:500 15px "DM Sans",sans-serif;color:#22374f;cursor:pointer;text-align:left}.mp-btn span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mp.open .mp-btn{border-color:#2f7fd1;box-shadow:0 0 0 3px #2f7fd122}
+.mp-pop{position:absolute;z-index:40;left:0;right:0;top:calc(100% + 6px);background:#fff;border:1px solid #e3eaf2;border-radius:14px;box-shadow:0 14px 36px #0f233c2e;max-height:min(360px,60vh);overflow:auto;padding:6px;min-width:220px}
+.mp-row{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;cursor:pointer;font-size:15px;color:#22374f}.mp-row:hover{background:#f3f7fb}.mp-row input{width:19px;height:19px;flex-shrink:0;accent-color:#2f7fd1;margin:0}.mp-row span{flex:1}.mp-row em{font-style:normal;font-size:12.5px;font-weight:700;color:#6b7f95;background:#eef3f8;border-radius:999px;padding:2px 8px}.mp-row.all{border-bottom:1px solid #eef2f6;border-radius:10px 10px 0 0;font-weight:700}
+.mp-foot{position:sticky;bottom:-6px;display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fff;border-top:1px solid #eef2f6;padding:8px 6px 4px;margin:4px -6px -6px}
+.rq-refresh{display:inline-flex;align-items:center;gap:6px;margin-left:8px;vertical-align:middle;height:34px;padding:0 14px;font-size:14px}
+html[data-theme=dark] .mp-btn,html[data-theme=dark] .mp-pop,html[data-theme=dark] .mp-foot{background:#152238;border-color:#2a3d56;color:#e6edf5}html[data-theme=dark] .mp-row{color:#e6edf5}html[data-theme=dark] .mp-row:hover{background:#1b2a40}html[data-theme=dark] .ob-subs span{background:#152238;border-color:#2a3d56;color:#e6edf5}
+.mp .mp-row{display:flex!important;flex-direction:row!important;align-items:center;gap:10px;margin:0!important;padding:11px 10px!important;min-height:0;line-height:1.3;font-weight:500}.mp .mp-row>span{display:block;margin:0!important;font-weight:inherit;font-size:15px;color:inherit;text-transform:none;letter-spacing:0}.mp .mp-row.all{position:sticky;top:-6px;z-index:1;background:#fff;font-weight:700}html[data-theme=dark] .mp .mp-row.all{background:#152238}
+.pl-head h2{font:800 26px Manrope,sans-serif;letter-spacing:-.6px;color:var(--ink,#17324f)}.pl-head p{font-size:15px}
+.mp .mp-row input[type=checkbox]{width:19px!important;height:19px!important;min-height:0!important;padding:0!important;margin:0!important;border:0!important;box-shadow:none!important;flex:0 0 19px}</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="edu-supabase.js"></script>
 <script>(function(){var s=function(e){e.preventDefault()};['gesturestart','gesturechange','gestureend'].forEach(function(t){document.addEventListener(t,s,{passive:false})});document.addEventListener('touchmove',function(e){if(e.touches&&e.touches.length>1)e.preventDefault()},{passive:false});var last=0;document.addEventListener('touchend',function(e){var n=Date.now();if(n-last<300&&!(e.target.closest&&e.target.closest('input,textarea,select')))e.preventDefault();last=n},{passive:false});window.addEventListener('wheel',function(e){if(e.ctrlKey)e.preventDefault()},{passive:false});document.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&['+','-','=','0'].indexOf(e.key)>-1)e.preventDefault()})})();</script><link rel="icon" type="image/png" href="/icon-192.png"><title>EduMaldives</title><meta name="apple-mobile-web-app-title" content="EduMaldives"/><meta name="application-name" content="EduMaldives"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="mobile-web-app-capable" content="yes"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><link rel="manifest" href="/manifest.webmanifest"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@600&family=Noto+Sans+Thaana:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -2320,7 +2330,7 @@ function MarkPanel({ a, questions, cfg, setCfg, toast, onClose }) {
 }
 async function readPaperFile(file) {
   if (file.type.startsWith("image/")) {
-    const bmp = await createImageBitmap(file);
+    const bmp = await loadBitmap(file);
     const sc = Math.min(1, 1600 / Math.max(bmp.width, bmp.height));
     const c = document.createElement("canvas");
     c.width = Math.round(bmp.width * sc);
@@ -2752,7 +2762,7 @@ function AuthPage({ supabase: supabase2, setUser }) {
       h("div", { className: "ab-logo-wrap" }, h("span", { className: "ab-ring r1" }), h("span", { className: "ab-ring r2" }), h("div", { className: "ab-logo" }, h(GraduationCap, { size: 46, strokeWidth: 1.7 }))),
       h("div", { className: "ab-name" }, "Edu", h("i", null, "Maldives")),
       h("p", { className: "ab-tag" }, "Your exam revision, made simple."),
-      h("div", { className: "ab-chips" }, ["IGCSE", "SSC", "HSC"].map((t) => h("span", { key: t }, t))),
+      h("div", { className: "ab-chips" }, ["Cambridge IGCSE", "SSC"].map((t) => h("span", { key: t }, t))),
       h("div", { className: "ab-stats" }, [["1,400+", "papers"], ["22K+", "questions"], ["24", "years"]].map(([n, l]) => h("div", { key: l }, h("b", null, n), h("span", null, l)))),
       h("ul", { className: "ab-feats" }, feats.map(([t, d]) => h("li", { key: t }, h("span", { className: "au-tick" }, h(CheckCircle2, { size: 17 })), h("span", null, h("b", null, t), h("small", null, d)))))),
     h("section", { className: "au-side" },
@@ -2777,11 +2787,12 @@ function AuthPage({ supabase: supabase2, setUser }) {
         h("button", { type: "button", className: "au-admin", onClick: adminIn, disabled: busy }, h(ShieldCheck, { size: 16 }), "Admin portal"),
         adminMsg && h("p", { className: "au-err", role: "alert" }, adminMsg))), askPin && h(PinGate, { onOk: () => { setAskPin(false); adminIn(); }, onCancel: () => setAskPin(false) }));
 }
+const loadBitmap = async (file) => { try { return await createImageBitmap(file); } catch (e) { return await new Promise((ok, no) => { const u = URL.createObjectURL(file), im = new Image(); im.onload = () => { ok(im); setTimeout(() => URL.revokeObjectURL(u), 1000); }; im.onerror = () => no(new Error("Could not read that photo.")); im.src = u; }); } };
 const DAYS = { week: 7, month: 30, year: 365 };
 const fmtD = (t) => new Date(t).toLocaleDateString("en-GB");
 const keyOf = (u) => u.email || u.name;
 const shrinkImage = async (file, max) => {
-  const bmp = await createImageBitmap(file);
+  const bmp = await loadBitmap(file);
   const sc = Math.min(1, max / Math.max(bmp.width, bmp.height));
   const c = document.createElement("canvas");
   c.width = Math.round(bmp.width * sc);
@@ -2789,12 +2800,22 @@ const shrinkImage = async (file, max) => {
   c.getContext("2d").drawImage(bmp, 0, 0, c.width, c.height);
   return c.toDataURL("image/jpeg", 0.75);
 };
+const dataUrlBlob = (u) => { const [h0, b64] = String(u).split(","); const mime = (h0.match(/data:([^;]+)/) || [])[1] || "application/octet-stream"; const bin = atob(b64); const a = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) a[i] = bin.charCodeAt(i); return new Blob([a], { type: mime }); };
 const readReceipt = async (file) => {
   if (Cloud.shared && Cloud.assets) {
     if (file.size > 15e6) throw new Error("That file is too large. Upload a photo or a PDF under 15 MB.");
-    const blob = file.type.startsWith("image/") ? await (await fetch(await shrinkImage(file, 1600))).blob() : file;
-    const r = await Cloud.assets.upload(blob, file.type.startsWith("image/") ? { contentType: "image/jpeg" } : { contentType: file.type || "application/pdf" });
-    return { name: file.name, id: r.id, dataUrl: r.url };
+    const isImg = file.type.startsWith("image/") || /\.(jpe?g|png|heic|heif|webp)$/i.test(file.name || "");
+    let small = null;
+    if (isImg) { try { small = await shrinkImage(file, 1600); } catch (e) { throw new Error("Could not read that photo. Try a screenshot of the receipt instead."); } }
+    const blob = isImg ? dataUrlBlob(small) : file;
+    try {
+      const r = await Cloud.assets.upload(blob, isImg ? { contentType: "image/jpeg" } : { contentType: file.type || "application/pdf" });
+      return { name: file.name, id: r.id, dataUrl: r.url };
+    } catch (e) {
+      if (isImg) return { name: file.name, dataUrl: await shrinkImage(file, 1100) };
+      if (file.size < 9e5) return { name: file.name, dataUrl: await new Promise((ok, no) => { const fr = new FileReader(); fr.onload = () => ok(fr.result); fr.onerror = no; fr.readAsDataURL(file); }) };
+      throw new Error("Could not upload that file. Try a photo or screenshot of the receipt.");
+    }
   }
   if (file.type.startsWith("image/")) return { name: file.name, dataUrl: await shrinkImage(file, 1200) };
   if (file.type === "application/pdf" && file.size < 9e5) return { name: file.name, dataUrl: await new Promise((ok, no) => {
@@ -2997,8 +3018,9 @@ function SubscribePage({ user, subs, setSubs, pays, setPays, go, toast, onboard,
       return h("div", { key: p.id, className: "pl-card" + (p.popular ? " pop" : "") + (isCur ? " cur" : "") },
         p.popular && h("span", { className: "pl-badge" }, "Recommended"),
         h("h3", null, p.name), h("p", { className: "pl-tag" }, p.tag),
-        period === "year" && !free ? h("div", { className: "pl-yr" }, h("div", { className: "pl-price" }, h("b", null, `MVR ${p.price.year}`), h("small", null, "/ year")), h("span", null, `Only MVR ${per} a month`), h("em", null, `You save MVR ${p.price.month * 12 - p.price.year}`)) : h("div", { className: "pl-price" }, h("b", null, free ? "Free" : `MVR ${per}`), !free && h("small", null, "/ month")),
-        !(period === "year" && !free) && h("p", { className: "pl-bill" }, free ? "Always free" : "Billed monthly"),
+        h("div", { className: "pl-yr" }, h("div", { className: "pl-price" }, h("b", null, free ? "Free" : `MVR ${period === "year" ? p.price.year : p.price.month}`), !free && h("small", null, period === "year" ? "/ year" : "/ month")),
+          h("span", null, free ? "Always free" : period === "year" ? `Only MVR ${per} a month` : "Paid every month"),
+          h("em", { className: free || period !== "year" ? "q" : "" }, free ? "No payment needed" : period === "year" ? `You save MVR ${p.price.month * 12 - p.price.year}` : "No automatic renewal")),
         h("ul", null, p.features.map((f) => h("li", { key: f }, h(CheckCircle2, { size: 16 }), f)), (p.no || []).map((f) => h("li", { key: f, className: "no" }, h(X, { size: 16 }), f))),
         onboard && free ? h("button", { className: "btn-secondary pl-btn", onClick: onFree }, "Continue with Free") : isCur ? h("button", { className: "btn-secondary pl-btn", disabled: true }, "Current plan") : free ? h("div", { className: "pl-btn-sp" }) : h("button", { className: (p.popular ? "btn-primary" : "btn-secondary") + " pl-btn", onClick: () => { setPick(p); window.scrollTo({ top: 0 }); } }, `Choose ${p.name}`));
     })),
@@ -3899,32 +3921,45 @@ function GroupCard({ g, kind, store, onView, toast }) {
     g.length > 3 && h("button", { className: "text-link gc-all", onClick: () => setMore(!more) }, more ? "Show fewer" : `Show all ${g.length} times it was asked`));
 }
 const ANALYSED = ["Mathematics", "Physics", "Chemistry", "Business Studies"];
+function MultiPick({ options, value, onChange, all }) {
+  const [open, setOpen] = useState(false); const ref = React.useRef(null);
+  useEffect(() => { if (!open) return; const f = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); }; document.addEventListener("pointerdown", f); return () => document.removeEventListener("pointerdown", f); }, [open]);
+  const on = (v) => value.includes(v);
+  const flip = (v) => onChange(on(v) ? value.filter((x) => x !== v) : [...value, v]);
+  const lab = !value.length ? all : value.length === 1 ? (options.find((o) => o.v === value[0]) || { l: value[0] }).l : `${value.length} selected`;
+  return h("div", { className: "mp" + (open ? " open" : ""), ref },
+    h("button", { type: "button", className: "mp-btn", onClick: () => setOpen(!open), "aria-expanded": open }, h("span", null, lab), h(ChevronDown, { size: 16 })),
+    open && h("div", { className: "mp-pop", role: "listbox", "aria-multiselectable": true },
+      h("label", { className: "mp-row all" }, h("input", { type: "checkbox", checked: !value.length, onChange: () => onChange([]) }), h("span", null, all)),
+      options.map((o) => h("label", { key: o.v, className: "mp-row" }, h("input", { type: "checkbox", checked: on(o.v), onChange: () => flip(o.v) }), h("span", null, o.l), o.n ? h("em", null, o.n) : null)),
+      h("div", { className: "mp-foot" }, h("button", { type: "button", className: "text-link", onClick: () => onChange([]) }, "Clear"), h("button", { type: "button", className: "btn-primary sm", onClick: () => setOpen(false) }, "Done"))));
+}
 function RepeatBank({ role, toast, mode }) {
   const C = useCloud();
   const subs = ANALYSED.filter((s) => PAPER_INDEX[s]);
   const [sub0, setSub] = useLocal("em-rq-sub", "Mathematics");
   const sub = subs.includes(sub0) ? sub0 : subs[0];
-  const [topic, setTopic] = useState("All");
+  const [topics, setTopics] = useState([]);
   const focus0 = useMemo(() => { const f = RQ_FOCUS; RQ_FOCUS = null; return f; }, []);
   const [view, setView] = useState(focus0 ? "all" : mode === "practice" ? "all" : "rep");
-  const [year, setYear] = useState("All");
-  const [comp, setComp] = useState("All");
+  const [years, setYears] = useState([]);
+  const [compsSel, setCompsSel] = useState([]);
   const [qtxt, setQtxt] = useState(focus0 ? focus0.q : "");
   const [lim, setLim] = useState(25);
   const [viewer, setViewer] = useState(null);
   const data = useSubjectQs(sub);
   const store = usePaperStore(sub);
-  useEffect(() => { setTopic("All"); setYear("All"); setComp("All"); setLim(25); }, [sub]);
+  useEffect(() => { setTopics([]); setYears([]); setCompsSel([]); setLim(25); }, [sub]);
   const units = useMemo(() => unitsOf(data.qs), [data.qs]);
   const groups = useMemo(() => groupUnits(units), [units]);
-  const match = (u) => (topic === "All" || u.topic === topic) && (year === "All" || u.q.year === Number(year)) && (comp === "All" || String(u.q.comp) === comp) && (!qtxt || u.text.toLowerCase().includes(qtxt.toLowerCase()));
+  const match = (u) => (!topics.length || topics.includes(u.topic)) && (!years.length || years.includes(String(u.q.year))) && (!compsSel.length || compsSel.includes(String(u.q.comp))) && (!qtxt || u.text.toLowerCase().includes(qtxt.toLowerCase()));
   const list = view === "rep" ? groups.rep.filter((g) => g.some(match)) : view === "sim" ? groups.sim.filter((g) => g.some(match)) : units.filter(match).sort((a, b) => b.q.year - a.q.year || String(a.q.paper).localeCompare(b.q.paper)).map((u) => [u]);
   const yrs = [...new Set(units.map((u) => u.q.year))].sort((a, b) => b - a);
   const comps = [...new Set(units.map((u) => String(u.q.comp)))].filter(Boolean).sort();
   const topicCounts = useMemo(() => { const m = {}; groups.rep.forEach((g) => m[g[0].topic] = (m[g[0].topic] || 0) + 1); return m; }, [groups]);
   const nPapers = new Set(data.qs.map((q) => q.paper)).size;
   return h(React.Fragment, null, h(Title, mode === "practice" ? { eyebrow: "PRACTICE", title: "Practice questions", desc: "Practise real exam questions. Check your answer straight away." } : { eyebrow: "EXAM INSIGHTS", title: "Repeated & similar questions", desc: "Questions that come again and again in Cambridge exams, sorted by subject and topic. Each one has the right answer, and you can check your work straight away." }),
-    h("div", { className: "panel" }, h("div", { className: "form-row" }, h(Fld, { label: "Subject" }, h("select", { value: sub, onChange: (e) => setSub(e.target.value) }, subs.map((s) => h("option", { key: s }, s)))), h(Fld, { label: "Show" }, h("select", { value: view, onChange: (e) => { setView(e.target.value); setLim(25); } }, h("option", { value: "rep" }, "Repeated questions"), h("option", { value: "sim" }, "Similar questions (same concept)"), h("option", { value: "all" }, "All questions"))), h(Fld, { label: "Topic" }, h("select", { value: topic, onChange: (e) => setTopic(e.target.value) }, h("option", null, "All"), (SYLLABUS[sub] || []).map((t) => h("option", { key: t, value: t }, t + (topicCounts[t] ? ` (${topicCounts[t]})` : ""))))), h(Fld, { label: "Year" }, h("select", { value: year, onChange: (e) => setYear(e.target.value) }, h("option", null, "All"), yrs.map((y) => h("option", { key: y }, y)))), h(Fld, { label: "Paper" }, h("select", { value: comp, onChange: (e) => setComp(e.target.value) }, h("option", null, "All"), comps.map((c) => h("option", { key: c, value: c }, "Paper " + c))))), h("div", { className: "form-row" }, h(Fld, { label: "Search" }, h("input", { value: qtxt, onChange: (e) => setQtxt(e.target.value), placeholder: "Word or phrase" }))), h("p", { className: "muted" }, data.loading ? "Loading questions…" : data.err ? data.err : `${nPapers} papers analysed \xB7 ${units.length} questions \xB7 ${groups.rep.length} repeated groups \xB7 ${groups.sim.length} similar groups`, " ", !data.loading && h("button", { className: "text-link", onClick: data.reload }, "Refresh"))),
+    h("div", { className: "panel" }, h("div", { className: "form-row" }, h(Fld, { label: "Subject" }, h("select", { value: sub, onChange: (e) => setSub(e.target.value) }, subs.map((s) => h("option", { key: s }, s)))), h(Fld, { label: "Show" }, h("select", { value: view, onChange: (e) => { setView(e.target.value); setLim(25); } }, h("option", { value: "rep" }, "Repeated questions"), h("option", { value: "sim" }, "Similar questions (same concept)"), h("option", { value: "all" }, "All questions"))), h(Fld, { label: "Topics" }, h(MultiPick, { all: "All topics", value: topics, onChange: (v) => { setTopics(v); setLim(25); }, options: (SYLLABUS[sub] || []).map((t) => ({ v: t, l: t, n: topicCounts[t] })) })), h(Fld, { label: "Years" }, h(MultiPick, { all: "All years", value: years, onChange: (v) => { setYears(v); setLim(25); }, options: yrs.map((y) => ({ v: String(y), l: String(y) })) })), h(Fld, { label: "Papers" }, h(MultiPick, { all: "All papers", value: compsSel, onChange: (v) => { setCompsSel(v); setLim(25); }, options: comps.map((c) => ({ v: c, l: "Paper " + c })) }))), h("div", { className: "form-row" }, h(Fld, { label: "Search" }, h("input", { value: qtxt, onChange: (e) => setQtxt(e.target.value), placeholder: "Word or phrase" }))), h("p", { className: "muted" }, data.loading ? "Loading questions…" : data.err ? data.err : `${nPapers} papers analysed \xB7 ${units.length} questions \xB7 ${groups.rep.length} repeated groups \xB7 ${groups.sim.length} similar groups`, !data.loading && h("button", { className: "btn-secondary rq-refresh", onClick: data.reload }, h(Repeat2, { size: 16 }), " Refresh"))),
     !data.loading && !data.err && nPapers === 0 && h("div", { className: "panel" }, h("p", null, `No ${sub} papers have been analysed yet.`), h("p", { className: "muted" }, role !== "Student" ? "Go to Past Papers → View → “Upload & find repeats”, choose the question papers and mark schemes, and keep “Analyse with AI” ticked." : "Your teacher adds papers. Check back soon.")),
     list.slice(0, lim).map((g, i) => h(GroupCard, { key: (g[0] && g[0].key) + i, g, kind: view === "all" ? "one" : view, store, onView: setViewer, toast })),
     list.length > lim && h("button", { className: "btn-secondary", onClick: () => setLim(lim + 25) }, `Show more (${list.length - lim} left)`),
@@ -6132,13 +6167,13 @@ function Splash({ onDone }) {
       h("div", { className: "sp-name" }, "Edu", h("i", null, "Maldives")),
       h("div", { className: "sp-tag" }, "Smart learning portal"),
       h("div", { className: "sp-bar" }, h("i", null))),
-    h("div", { className: "sp-foot" }, "Cambridge IGCSE · SSC · HSC"));
+    h("div", { className: "sp-foot" }, "Cambridge IGCSE · SSC"));
 }
 const INTRO = [
-  { icon: Library, color: "#2ea0e6", title: "Every past paper in your pocket", text: "1,400+ Cambridge and DPE papers with their official mark schemes, sorted by subject, year and session.", chips: ["Mathematics", "Physics", "Business", "Islam", "Dhivehi"] },
-  { icon: Repeat2, color: "#7c6cf2", title: "Learn what keeps coming back", text: "We studied over 22,000 questions from 2002 to 2025 to show you the ones examiners repeat, topic by topic.", chips: ["Repeated ×42", "Similar ×31", "Most asked"] },
-  { icon: ClipboardList, color: "#22b07d", title: "Sit a real exam, get marked", text: "Timed mock papers in the Cambridge format, marked against the official scheme. Download them as PDF too.", chips: ["Timed", "Auto-marked", "PDF"] },
-  { icon: GraduationCap, color: "#e8833a", title: "Join your teacher\u2019s class", text: "Type your class code. Do the tasks your teacher gives you and get your marks and feedback.", chips: ["Class code", "Tasks", "Feedback"] }
+  { icon: Library, color: "#2ea0e6", title: "All your past papers in one place", text: "Cambridge IGCSE and SSC past papers from 2002 to 2025, each with its mark scheme. 12 subjects:", chips: ["IGCSE", "SSC", "Mark schemes"], subjects: ["English", "Dhivehi", "Mathematics", "Physics", "Chemistry", "Biology", "Business Studies", "Accounting", "Economics", "Islam", "Computer Science", "Travel & Tourism"] },
+  { icon: Repeat2, color: "#7c6cf2", title: "See what comes up again", text: "We looked through thousands of past exam questions to show you the ones that are asked again and again, topic by topic.", chips: ["Repeated", "By topic", "With answers"] },
+  { icon: ClipboardList, color: "#22b07d", title: "Practise like the real exam", text: "Do timed practice papers in the Cambridge style and check your answers against the official mark scheme.", chips: ["Timed", "Marked", "Exam style"] },
+  { icon: GraduationCap, color: "#e8833a", title: "Join your teacher\u2019s class", text: "Enter the class code from your teacher. Do your tasks here and see your marks and feedback.", chips: ["Class code", "Tasks", "Marks"] }
 ];
 function Onboarding({ onDone }) {
   const [i, setI] = React.useState(0);
@@ -6152,7 +6187,7 @@ function Onboarding({ onDone }) {
       h("div", { className: "ob-art", style: { "--c": s.color } },
         h("div", { className: "ob-blob" }), h("div", { className: "ob-icon" }, h(s.icon, { size: 54, strokeWidth: 1.6 })),
         s.chips.map((c, n) => h("span", { key: c, className: "ob-chip c" + n }, c))),
-      h("h2", null, s.title), h("p", null, s.text)))),
+      h("h2", null, s.title), h("p", null, s.text), s.subjects && h("div", { className: "ob-subs" }, s.subjects.map((x) => h("span", { key: x }, x)))))),
     h("div", { className: "ob-bottom" },
       h("div", { className: "ob-dots" }, INTRO.map((_, k) => h("button", { key: k, className: k === i ? "on" : "", "aria-label": "Go to screen " + (k + 1), onClick: () => setI(k) }))),
       h("button", { className: "ob-next", onClick: () => last ? onDone() : go(i + 1) }, last ? "Get started" : "Next", h(ArrowUpRight, { size: 17 }))));
