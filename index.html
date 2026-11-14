@@ -2658,6 +2658,7 @@ function AuthPage({ supabase: supabase2, setUser }) {
         const { data: isAd } = await supabase2.rpc("is_admin");
         if (!isAd) { await supabase2.auth.signOut(); setAdminMsg("This account is not an admin account."); setBusy(false); return; }
         Cloud.canEdit = true;
+        if (await checkAdminPin(f.password)) setAdminOk(true);
       }
       if (Cloud.shared && !Cloud.canEdit) { setAdminMsg("The admin portal is only for the portal owner and people they have given edit access."); setBusy(false); return; }
       if (!adminOk()) { setAskPin(true); setBusy(false); return; }
