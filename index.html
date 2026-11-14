@@ -22,9 +22,11 @@ html,body{overflow-x:clip;max-width:100%}.pl-yr{margin-bottom:14px}.pl-yr .pl-pr
 html[data-theme=dark] .mp-btn,html[data-theme=dark] .mp-pop,html[data-theme=dark] .mp-foot{background:#152238;border-color:#2a3d56;color:#e6edf5}html[data-theme=dark] .mp-row{color:#e6edf5}html[data-theme=dark] .mp-row:hover{background:#1b2a40}html[data-theme=dark] .ob-subs span{background:#152238;border-color:#2a3d56;color:#e6edf5}
 .mp .mp-row{display:flex!important;flex-direction:row!important;align-items:center;gap:10px;margin:0!important;padding:11px 10px!important;min-height:0;line-height:1.3;font-weight:500}.mp .mp-row>span{display:block;margin:0!important;font-weight:inherit;font-size:15px;color:inherit;text-transform:none;letter-spacing:0}.mp .mp-row.all{position:sticky;top:-6px;z-index:1;background:#fff;font-weight:700}html[data-theme=dark] .mp .mp-row.all{background:#152238}
 .pl-head h2{font:800 26px Manrope,sans-serif;letter-spacing:-.6px;color:var(--ink,#17324f)}.pl-head p{font-size:15px}
-.mp .mp-row input[type=checkbox]{width:19px!important;height:19px!important;min-height:0!important;padding:0!important;margin:0!important;border:0!important;box-shadow:none!important;flex:0 0 19px}</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+.mp .mp-row input[type=checkbox]{width:19px!important;height:19px!important;min-height:0!important;padding:0!important;margin:0!important;border:0!important;box-shadow:none!important;flex:0 0 19px}.au-forgot{display:block;margin-left:auto!important;border:0;background:none;color:#2f7fd1;font:700 14px "DM Sans",sans-serif;cursor:pointer;padding:2px 0;margin-top:-4px}.au-forgot.c{margin-right:auto!important;margin-top:4px}.up-modal .btn svg{vertical-align:-3px}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="edu-supabase.js"></script>
 <script src="push.js" defer></script>
+<script src="account.js" defer></script>
 <script>(function(){var s=function(e){e.preventDefault()};['gesturestart','gesturechange','gestureend'].forEach(function(t){document.addEventListener(t,s,{passive:false})});document.addEventListener('touchmove',function(e){if(e.touches&&e.touches.length>1)e.preventDefault()},{passive:false});var last=0;document.addEventListener('touchend',function(e){var n=Date.now();if(n-last<300&&!(e.target.closest&&e.target.closest('input,textarea,select')))e.preventDefault();last=n},{passive:false});window.addEventListener('wheel',function(e){if(e.ctrlKey)e.preventDefault()},{passive:false});document.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&['+','-','=','0'].indexOf(e.key)>-1)e.preventDefault()})})();</script><link rel="icon" type="image/png" href="/icon-192.png"><title>EduMaldives</title><meta name="apple-mobile-web-app-title" content="EduMaldives"/><meta name="application-name" content="EduMaldives"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="mobile-web-app-capable" content="yes"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><link rel="manifest" href="/manifest.webmanifest"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@600&family=Noto+Sans+Thaana:wght@400;600;700&display=swap" rel="stylesheet"/>
 <style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
@@ -2737,8 +2739,11 @@ function AuthPage({ supabase: supabase2, setUser }) {
       const email = f.email.trim().toLowerCase();
       if (supabase2) {
         const { data, error } = await supabase2.auth.signInWithPassword({ email, password: f.password });
-        if (error) throw error;
+        if (error) throw new Error(/invalid login/i.test(error.message || "") ? "Email or password is not correct." : /not confirmed/i.test(error.message || "") ? "Please confirm your email first, then log in." : (error.message || "Could not log in."));
         const m = data.user.user_metadata || {};
+        const { data: isAd } = await supabase2.rpc("is_admin");
+        if (mode === "admin" && !isAd) { await supabase2.auth.signOut(); throw new Error("This account is not an admin account."); }
+        if (isAd && (mode === "admin" || m.role === "Admin")) { setAdminOk(true); fin({ id: data.user.id, email, name: m.name || "Admin", role: "Admin", admin: true }); return; }
         fin({ id: data.user.id, email, name: m.name || email, phone: m.phone || "", role: m.role || "Student", grade: m.grade || "", school: m.school || "" });
       } else {
         const h = await sha(email + ":" + f.password);
@@ -2758,6 +2763,7 @@ function AuthPage({ supabase: supabase2, setUser }) {
   };
   const sw = (m) => { setMode(m); setErr(""); };
   const go = (e) => { e.preventDefault(); if (!busy) (mode === "register" ? register : login)(); };
+  const forgot = () => { if (window.__forgotPw) window.__forgotPw(f.email); };
   const inp = (label, key, props = {}) => h("label", { className: "au-field" }, h("span", null, label), h("input", { value: f[key], onChange: (e) => up({ [key]: e.target.value }), ...props }));
   const feats = [["Repeated & similar questions", "See what Cambridge asks again and again, topic by topic."], ["Cambridge-format mock papers", "Real past papers or new ones built from repeats, timed and marked."], ["Official mark schemes", "Every answer checked against the Cambridge or DPE scheme."], ["Teacher paper builder", "Print papers, download PDFs and set them as assignments."]];
   return h("div", { className: "au-wrap" },
@@ -2771,23 +2777,25 @@ function AuthPage({ supabase: supabase2, setUser }) {
     h("section", { className: "au-side" },
       h("form", { className: "au-card", onSubmit: go, noValidate: true },
         h("div", { className: "au-mobile-brand" }, h("span", { className: "au-mark" }, h(GraduationCap, { size: 20 })), h("b", null, "Edu", h("i", null, "Maldives"))),
-        h("h2", null, mode === "login" ? "Welcome back" : "Create your account"),
-        h("p", { className: "au-sub" }, mode === "login" ? "Log in to continue your revision." : "Free to start. It takes less than a minute."),
-        h("div", { className: "au-seg", role: "tablist" }, [["login", "Log in"], ["register", "Register"]].map(([m, l]) => h("button", { key: m, type: "button", role: "tab", "aria-selected": mode === m, className: mode === m ? "on" : "", onClick: () => sw(m) }, l))),
+        h("h2", null, mode === "admin" ? "Admin login" : mode === "login" ? "Welcome back" : "Create your account"),
+        h("p", { className: "au-sub" }, mode === "admin" ? "For the portal owner and editors only." : mode === "login" ? "Log in to continue your revision." : "Free to start. It takes less than a minute."),
+        mode !== "admin" && h("div", { className: "au-seg", role: "tablist" }, [["login", "Log in"], ["register", "Register"]].map(([m, l]) => h("button", { key: m, type: "button", role: "tab", "aria-selected": mode === m, className: mode === m ? "on" : "", onClick: () => sw(m) }, l))),
         mode === "register" && inp("Full name", "name", { autoComplete: "name", placeholder: "e.g. Aishath Ali" }),
         inp("Email", "email", { type: "email", autoComplete: "email", placeholder: "you@example.com" }),
         mode === "register" && inp("Mobile number (+960)", "phone", { type: "tel", autoComplete: "tel", placeholder: "7xxxxxx" }),
-        h("label", { className: "au-field" }, h("span", null, "Password"), h("div", { className: "au-pw" }, h("input", { type: showPw ? "text" : "password", value: f.password, onChange: (e) => up({ password: e.target.value }), autoComplete: mode === "login" ? "current-password" : "new-password", placeholder: mode === "register" ? "At least 8 characters" : "Your password" }), h("button", { type: "button", className: "au-eye", onClick: () => setShowPw(!showPw), "aria-label": showPw ? "Hide password" : "Show password" }, showPw ? "Hide" : "Show"))),
+        h("label", { className: "au-field" }, h("span", null, "Password"), h("div", { className: "au-pw" }, h("input", { type: showPw ? "text" : "password", value: f.password, onChange: (e) => up({ password: e.target.value }), autoComplete: mode === "register" ? "new-password" : "current-password", placeholder: mode === "register" ? "At least 8 characters" : "Your password" }), h("button", { type: "button", className: "au-eye", onClick: () => setShowPw(!showPw), "aria-label": showPw ? "Hide password" : "Show password" }, showPw ? "Hide" : "Show"))),
+        mode !== "register" && supabase2 && h("button", { type: "button", className: "au-forgot", onClick: forgot }, "Forgot password?"),
         mode === "register" && h(React.Fragment, null,
           h("div", { className: "au-field" }, h("span", null, "I am a"), h("div", { className: "au-roles" }, [["Student", BookOpen, "Practise past papers and see your progress"], ["Teacher", Users, "Create classes and set work for students"]].map(([r, Ic, d]) => h("button", { key: r, type: "button", className: f.role === r ? "on" : "", onClick: () => up({ role: r }) }, h(Ic, { size: 18 }), h("b", null, r), h("small", null, d))))),
           h("div", { className: "au-row" }, f.role === "Student" && h("label", { className: "au-field" }, h("span", null, "Grade"), h("select", { value: f.grade, onChange: (e) => up({ grade: e.target.value }) }, GRADES.map((g) => h("option", { key: g }, g)))), inp("School (optional)", "school", { placeholder: "Your school" })),
           h("label", { className: "au-check" }, h("input", { type: "checkbox", checked: f.terms, onChange: (e) => up({ terms: e.target.checked }) }), h("span", null, "I agree to the terms and privacy policy"))),
         err && h("p", { className: "au-err", role: "alert" }, err),
-        h("button", { type: "submit", className: "au-go", disabled: busy }, busy ? "Please wait…" : mode === "register" ? "Create account" : "Log in"),
-        h("button", { type: "button", className: "au-tour", onClick: () => window.dispatchEvent(new Event("em-show-intro")) }, h(BookOpen, { size: 16 }), " See how EduMaldives works"),
-        h("p", { className: "au-switch" }, mode === "login" ? "New to EduMaldives? " : "Already have an account? ", h("button", { type: "button", onClick: () => sw(mode === "login" ? "register" : "login") }, mode === "login" ? "Create a free account" : "Log in")),
+        h("button", { type: "submit", className: "au-go", disabled: busy }, busy ? "Please wait…" : mode === "register" ? "Create account" : mode === "admin" ? "Log in as admin" : "Log in"),
+        mode === "admin" && h("button", { type: "button", className: "au-forgot c", onClick: () => sw("login") }, "\u2190 Back to student and teacher login"),
+        mode !== "admin" && h("button", { type: "button", className: "au-tour", onClick: () => window.dispatchEvent(new Event("em-show-intro")) }, h(BookOpen, { size: 16 }), " See how EduMaldives works"),
+        mode !== "admin" && h("p", { className: "au-switch" }, mode === "login" ? "New to EduMaldives? " : "Already have an account? ", h("button", { type: "button", onClick: () => sw(mode === "login" ? "register" : "login") }, mode === "login" ? "Create a free account" : "Log in")),
         false && h(React.Fragment, null, h("div", { className: "au-or" }, h("span", null, "or")), h("button", { type: "button", className: "au-demo", onClick: () => setUser({ name: "Demo visitor", role: "Demo", email: "" }) }, "Explore the demo without an account")),
-        h("button", { type: "button", className: "au-admin", onClick: adminIn, disabled: busy }, h(ShieldCheck, { size: 16 }), "Admin portal"),
+        mode !== "admin" && h("button", { type: "button", className: "au-admin", onClick: supabase2 ? () => sw("admin") : adminIn, disabled: busy }, h(ShieldCheck, { size: 16 }), "Admin portal"),
         adminMsg && h("p", { className: "au-err", role: "alert" }, adminMsg))), askPin && h(PinGate, { onOk: () => { setAskPin(false); adminIn(); }, onCancel: () => setAskPin(false) }));
 }
 const loadBitmap = async (file) => { try { return await createImageBitmap(file); } catch (e) { return await new Promise((ok, no) => { const u = URL.createObjectURL(file), im = new Image(); im.onload = () => { ok(im); setTimeout(() => URL.revokeObjectURL(u), 1000); }; im.onerror = () => no(new Error("Could not read that photo.")); im.src = u; }); } };
@@ -3247,6 +3255,15 @@ async function uploadFile(file) {
   if (!Cloud.assets) throw new Error("File upload is not available for your account. Ask the portal owner to give you access.");
   try { return await Cloud.assets.upload(file, file.type ? undefined : { contentType: "application/pdf" }); } catch (e) { throw new Error(errText(e)); }
 }
+async function saveBlobToDevice(blob, filename) {
+  if (Cloud.downloads) {
+    try { await Cloud.downloads.save({ filename, data: blob }); return "saved"; } catch (e) { if (e && e.code === "declined") return "declined"; throw new Error(errText(e)); }
+  }
+  const u = URL.createObjectURL(blob), a = document.createElement("a");
+  a.href = u; a.download = filename; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(u), 4000);
+  return "saved";
+}
 async function saveFileToDevice(id, filename) {
   if (String(id).startsWith("gd:")) { driveDownload(id, null); return "saved"; }
   const blob = await assetBlob(id);
@@ -3317,9 +3334,10 @@ function DriveOpen({ id, name, onClose }) {
     h("h3", null, prettyDoc(name)),
     h("p", null, "This paper opens in Google Drive's viewer."),
     h("a", { className: "btn primary", href: DRIVE_VIEW(id), target: "_blank", rel: "noopener noreferrer", onClick: () => setTimeout(onClose, 300) }, "Open paper"),
+    h("a", { className: "btn", href: DRIVE_DL(id), target: "_blank", rel: "noopener noreferrer" }, h(Download, { size: 16 }), " Download"),
     h("button", { className: "btn", onClick: onClose }, "Close")));
 }
-function PdfViewer(p) { return p.soon ? h(SoonViewer, p) : String(p.id).startsWith("gd:") ? h(window.__WEB ? DriveViewer : DriveOpen, p) : h(PdfViewerInner, p); }
+function PdfViewer(p) { return p.soon ? h(SoonViewer, p) : String(p.id).startsWith("gd:") ? h(window.__WEB ? DriveViewer : DriveOpen, p) : h(PdfViewerInner, { ...p, allowDl: true }); }
 function DriveViewer({ id, name, onClose }) {
   const dp = driveParts(id), fid = dp.f;
   const [ready, setReady] = useState(false);
@@ -3328,7 +3346,7 @@ function DriveViewer({ id, name, onClose }) {
     h("div", { className: "pdf-bar pv-bar" },
       h("button", { className: "pv-x", onClick: onClose, "aria-label": "Close" }, h(IBack, { size: 20 })),
       h("b", { className: "pv-title" }, prettyDoc(name)),
-      h("span", null)),
+      h("a", { className: "pv-dl", href: DRIVE_DL(id), target: "_blank", rel: "noopener noreferrer" }, h(Download, { size: 16 }), h("span", null, "Download"))),
     h("div", { className: "pv-body" },
       !ready && h("div", { className: "pv-load" }, h("span", { className: "pv-spin" }), "Opening paper\u2026"),
       h("iframe", { src: "https://drive.google.com/file/d/" + fid + "/preview" + dp.q, title: name || "Document", onLoad: () => setReady(true), allow: "autoplay", className: "pv-frame" }),
@@ -3376,13 +3394,13 @@ function PdfViewerInner({ id, url, name, page, onClose, allowDl }) {
     })();
     return () => { dead = true; };
   }, [id, url]);
-  const dl = async () => { setBusy(true); try { const r = await saveFileToDevice(id, name || "paper.pdf"); setSt(r === "declined" ? "Download cancelled." : "Downloaded."); } catch (e) { setSt(e.message); } setBusy(false); };
+  const dl = async () => { setBusy(true); try { let r; if (id) r = await saveFileToDevice(id, name || "paper.pdf"); else { const rr = await fetch(url); if (!rr.ok) throw new Error("Could not download this file."); r = await saveBlobToDevice(await rr.blob(), name || "paper.pdf"); } setSt(r === "declined" ? "Download cancelled." : "Downloaded."); } catch (e) { if (url && /^https?:/i.test(url)) { window.open(url, "_blank", "noopener"); setSt(""); } else setSt(e.message); } setBusy(false); };
   const noCtx = (e) => { if (!allowDl) e.preventDefault(); };
   return h("div", { className: "pdf-modal pvx", role: "dialog", "aria-label": prettyDoc(name) },
     h("div", { className: "pdf-bar pv-bar" },
       h("button", { className: "pv-x", onClick: onClose, "aria-label": "Close" }, h(IBack, { size: 20 })),
       h("b", { className: "pv-title" }, prettyDoc(name), st ? h("small", { className: "pv-st" }, st) : null),
-      allowDl && id ? h("button", { className: "pv-dl", disabled: busy, onClick: dl }, h(Download, { size: 16 }), h("span", null, "Download")) : gv ? h("button", { className: "pv-x", "aria-label": "Reload", title: "Reload", onClick: () => setGv(gv + 1) }, h(IReload, { size: 18 })) : h("span", null)),
+      allowDl && (id || url) ? h("button", { className: "pv-dl", disabled: busy, onClick: dl }, h(Download, { size: 16 }), h("span", null, "Download")) : gv ? h("button", { className: "pv-x", "aria-label": "Reload", title: "Reload", onClick: () => setGv(gv + 1) }, h(IReload, { size: 18 })) : h("span", null)),
     gv ? h("div", { className: "pv-body", onContextMenu: noCtx },
       h("div", { className: "pv-load" }, h("span", { className: "pv-spin" }), "Opening paper\u2026"),
       h("iframe", { key: gv, src: "https://drive.google.com/viewerng/viewer?embedded=true&url=" + encodeURIComponent(url), title: prettyDoc(name), className: "pv-frame", style: { zIndex: 1 } }),
@@ -5357,6 +5375,7 @@ const STUDY_RES = [
   ["builder", IWand, "Practice exam builder", "Make a timed test from the topics you choose"],
   ["cards", ICards, "Flashcards", "Quick recall of key terms"]
 ];
+const LANG_SUBS = ["English", "Dhivehi"];
 const slugT = (t) => String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
 const tqCache = {}, tqTopicCache = {};
 function useTQ(sub) {
@@ -5867,7 +5886,7 @@ function StudyPage({ role, toast, setPage }) {
     !view ? h(React.Fragment, null,
       h("div", { className: "st-head" }, h("h2", null, sub), h("span", { className: "ps-code" }, SUBJ_CODE[sub])),
       role !== "Student" && h(PrepareStudy, { sub, toast }),
-      h("div", { className: "st-grid" }, STUDY_RES.map(([k, I, t, d]) => h("button", { key: k, className: "st-res", onClick: () => open(k) }, h("span", { className: "st-ic" }, h(I, { size: 22 })), h("span", { className: "st-txt" }, h("b", null, t), h("small", null, d)), h(ChevronRight, { size: 18, className: "st-go" })))))
+      h("div", { className: "st-grid" }, STUDY_RES.filter((r) => !(r[0] === "topical" && LANG_SUBS.includes(sub))).map(([k, I, t, d]) => h("button", { key: k, className: "st-res", onClick: () => open(k) }, h("span", { className: "st-ic" }, h(I, { size: 22 })), h("span", { className: "st-txt" }, h("b", null, t), h("small", null, d)), h(ChevronRight, { size: 18, className: "st-go" })))))
       : h(React.Fragment, null,
         h("div", { className: "st-top" }, h("button", { className: "st-back", onClick: () => setView(null) }, h(IBack, { size: 18 }), " All resources"), h("div", { className: "st-title" }, h("span", { className: "st-ic sm" }, h(R[1], { size: 18 })), h("b", null, R[2]), h("small", null, `${sub} \xB7 ${SUBJ_CODE[sub]}`))),
         view === "notes" ? h(NotesView, { sub, role, toast }) : view === "topical" ? h(TopicalView, { sub, toast }) : view === "videos" ? h(VideosView, { sub, role, toast }) : view === "builder" ? h(BuilderView, { sub, toast }) : h(CardsView, { sub })));
