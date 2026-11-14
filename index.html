@@ -23,7 +23,7 @@ html[data-theme=dark] .mp-btn,html[data-theme=dark] .mp-pop,html[data-theme=dark
 .mp .mp-row{display:flex!important;flex-direction:row!important;align-items:center;gap:10px;margin:0!important;padding:11px 10px!important;min-height:0;line-height:1.3;font-weight:500}.mp .mp-row>span{display:block;margin:0!important;font-weight:inherit;font-size:15px;color:inherit;text-transform:none;letter-spacing:0}.mp .mp-row.all{position:sticky;top:-6px;z-index:1;background:#fff;font-weight:700}html[data-theme=dark] .mp .mp-row.all{background:#152238}
 .pl-head h2{font:800 26px Manrope,sans-serif;letter-spacing:-.6px;color:var(--ink,#17324f)}.pl-head p{font-size:15px}
 .mp .mp-row input[type=checkbox]{width:19px!important;height:19px!important;min-height:0!important;padding:0!important;margin:0!important;border:0!important;box-shadow:none!important;flex:0 0 19px}.au-forgot{display:block;margin-left:auto!important;border:0;background:none;color:#2f7fd1;font:700 14px "DM Sans",sans-serif;cursor:pointer;padding:2px 0;margin-top:-4px}.au-forgot.c{margin-right:auto!important;margin-top:4px}.up-modal .btn svg{vertical-align:-3px}
-.nd-code{background:#f4f6fa;border:1px solid #e3e8f0;border-radius:10px;padding:10px 12px;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;white-space:pre;margin:8px 0;color:#1d2b44}.docv{position:fixed;inset:0;z-index:9999;background:#fff;display:flex;flex-direction:column}.docv-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));border-bottom:1px solid #e3e8f0;font:600 15px/1.3 Manrope,system-ui,sans-serif;color:#13213a}.docv-bar b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.docv-f{flex:1;width:100%;border:0;background:#fff}</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+.nd-code{background:#f4f6fa;border:1px solid #e3e8f0;border-radius:10px;padding:10px 12px;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;white-space:pre;margin:8px 0;color:#1d2b44}.docv{position:fixed;inset:0;z-index:9999;background:#fff;display:flex;flex-direction:column}.docv-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));border-bottom:1px solid #e3e8f0;font:600 15px/1.3 Manrope,system-ui,sans-serif;color:#13213a}.docv-bar b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.docv-f{flex:1;width:100%;border:0;background:#fff}.qa-tabs{margin:4px 0 12px;display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.qa-tabs::-webkit-scrollbar{display:none}.qa-tabs button{flex:0 0 auto;white-space:nowrap}.qa-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-top:8px}.qa-stat{background:#f4f7fb;border-radius:12px;padding:10px 12px;display:flex;flex-direction:column}.qa-stat b{font-size:20px;color:#13213a}.qa-stat span{font-size:13px;color:#5b6b80}.qa-topics{display:flex;flex-direction:column;gap:10px;margin-top:8px}.qa-trow{display:grid;grid-template-columns:minmax(0,1fr) 34%;gap:12px;align-items:center}.qa-tname{min-width:0}.qa-tname b{display:block;font-size:15px}.qa-tname small{color:#5b6b80;font-size:12.5px}.qa-bar{height:10px;background:#eef2f7;border-radius:6px;overflow:hidden}.qa-bar i{display:block;height:100%;background:var(--t,#2f7fd1);border-radius:6px}.qa-card{margin-bottom:12px}.qa-top{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.qa-n{width:26px;height:26px;border-radius:8px;background:#eef3f9;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}.qa-freq{margin:8px 0;font-size:14px;color:#33465e}.qa-orig small,.qa-refs small{display:block;font-size:11.5px;letter-spacing:.04em;color:#6a7b90;font-weight:700;margin:6px 0}.qa-ans{margin:6px 0;font-size:14px}.qa-refs ul{margin:0;padding-left:18px;font-size:13.5px;color:#33465e;columns:2 220px}.qa-refs li{break-inside:avoid;margin:2px 0}</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="edu-supabase.js"></script>
 <script src="push.js" defer></script>
 <script src="account.js" defer></script>
@@ -1979,7 +1979,7 @@ function PaperLibrary({ questions, role, toast, saveQuestions, view, setView }) 
   const yNow = years.includes(Number(year)) ? Number(year) : years[0];
   const sessOf = entry && yNow ? [...new Set(entry.files.filter((f) => f[0] === yNow).map((f) => f[1]))].sort((x, z) => SORD[x] - SORD[z]) : [];
   const sNow = sessOf.includes(sessSel) ? sessSel : sessOf[sessOf.length - 1];
-  const views = [["Papers", "Papers"], ["Topics", "Topic guides"], ["Predicted", "Predicted paper"]];
+  const views = [["Papers", "Papers"], ["Topics", "Topic guides"], ["Analysis", "Question analysis"]];
   const tools = [["Repeats", "Repeats report"], ["Analyse", "Analyse repeats"], ["Store", "Upload & find repeats"], ["Links", "Add paper links"], ["Scan", "Upload PDF / photo"], ["Import", "Import questions"]];
   const tone = SUBJ_TONE[sub] || "#2f7fd1";
   const stripRef = React.useRef(null);
@@ -1994,7 +1994,7 @@ function PaperLibrary({ questions, role, toast, saveQuestions, view, setView }) 
         h("div", { className: "lf-row" }, h("span", { className: "lf-lbl" }, "Exam series"), h("div", { className: "lf-sess" }, sessOf.map((sn) => h("button", { key: sn, className: sn === sNow ? "on" : "", onClick: () => setSessSel(sn) }, SESS[sn] || sn))))),
       h("div", { className: "panel paper-panel" }, h("div", { className: "pp-head" }, h("span", { className: "sp-ic big" }, h(SubjectIcon, { sub, size: 24 })), h("div", null, h("b", null, `${SESS[sNow] || ""} ${yNow}`), h("small", null, `${sub} \xB7 Code ${SUBJ_CODE[sub] || entry.code || ""}`))), yNow && sNow && h(PaperYear, { key: yNow + sNow, entry, sub, y: yNow, only: sNow, store, onView: setViewer, toast, SP })),
       staff && driveBox) : h("div", { className: "panel" }, h("p", { className: "empty-note" }, `No ${sub} papers yet.`), staff && driveBox))
-    : tab === "Topics" ? h(TopicGuide, { sub, questions }) : tab === "Repeats" ? h(RepeatReport, { sub, questions }) : tab === "Analyse" ? h(AnalyseRepeats, { sub, questions }) : tab === "Predicted" ? h(PredictedPaper, { sub, questions, saveQuestions, toast }) : tab === "Store" ? h(UploadAnalyse, { sub, toast, store, onView: setViewer }) : tab === "Links" ? h(LinkImport, { sub, lk, setLk, toast }) : tab === "Scan" ? h(PaperScanner, { sub, questions, saveQuestions, toast }) : h(ImportCheck, { sub, questions, saveQuestions, toast }),
+    : tab === "Topics" ? h(TopicGuide, { sub, questions }) : tab === "Repeats" ? h(RepeatReport, { sub, questions }) : tab === "Analyse" ? h(AnalyseRepeats, { sub, questions }) : tab === "Analysis" ? h(QuestionAnalysis, { sub }) : tab === "Store" ? h(UploadAnalyse, { sub, toast, store, onView: setViewer }) : tab === "Links" ? h(LinkImport, { sub, lk, setLk, toast }) : tab === "Scan" ? h(PaperScanner, { sub, questions, saveQuestions, toast }) : h(ImportCheck, { sub, questions, saveQuestions, toast }),
     staff && h("div", { className: "lib-toolbar" }, h("select", { className: "lib-tools", value: tools.some(([k]) => k === tab) ? tab : "", onChange: (e) => setTab(e.target.value || "Papers"), "aria-label": "Teacher tools" }, h("option", { value: "" }, "Teacher tools\u2026"), tools.map(([k, l]) => h("option", { key: k, value: k }, l)))),
     viewer && h(PdfViewer, { ...viewer, onClose: () => setViewer(null) }));
 }
@@ -2535,90 +2535,6 @@ function AnalyseRepeats({ sub, questions }) {
     const g = past.filter((q) => (th.ids || []).includes(q.id));
     return /* @__PURE__ */ React.createElement("div", { className: "assignment-row", key: i }, /* @__PURE__ */ React.createElement("span", null, /* @__PURE__ */ React.createElement("b", null, th.theme), /* @__PURE__ */ React.createElement("small", null, th.note), g.length > 0 && /* @__PURE__ */ React.createElement("span", { className: "year-chips" }, yearsOf(g).map((y) => /* @__PURE__ */ React.createElement("span", { key: y }, y)))), /* @__PURE__ */ React.createElement("span", { className: "assignment-count" }, g.length, " q"));
   }))));
-}
-function PredictedPaper({ sub, questions, saveQuestions, toast }) {
-  const [cfg, setCfg] = useLocal("em-ai", { provider: "auto", base: "", model: "", key: "" });
-  const [n, setN] = useState(10);
-  const [grade, setGrade] = useState("Grade 10");
-  const [src0, setSrc] = useState("bank");
-  const [busy, setBusy] = useState(false);
-  const [res, setRes] = useState(null);
-  const [err, setErr] = useState("");
-  const data = useSubjectQs(sub);
-  useEffect(() => { setRes(null); setErr(""); }, [sub]);
-  const cleanQ = (t) => String(t).replace(/(\s*,)+\s*$/g, "").replace(/\s+,\s*,(\s*,)*/g, " ").replace(/\s+[A-Za-z ]{1,25}=\s*[A-Za-z\u03a9%\u00b0 0-9]{0,6}$/, "").replace(/\s{2,}/g, " ").trim();
-  const msTxt = (m) => !m ? "" : String(m.mcq || m.answer || (m.points || []).map((p) => p && (p.text || p.t) || p).filter((x) => typeof x === "string").join("; ") || "");
-  const cloudPast = useMemo(() => {
-    if (!data.qs || !data.qs.length) return [];
-    const all = unitsOf(data.qs).filter((u) => u.text && u.marks > 0);
-    const g = groupUnits(all);
-    const okText = (t) => { t = String(t); return t.length >= 15 && t.length <= 320 && !/\b(Fig|Figure|Table)\.?\s*\d|diagram|graph|shown (below|above|in)|the table|labelled|\bgrid\b|complete the/i.test(t) && (t.match(/\d/g) || []).length < 25 && !/\bA B C D\b/.test(t); };
-    const units = all, seen = new Set(), out = [];
-    g.rep.forEach((gr) => { gr.forEach((x) => seen.add(x.key)); const u = gr.find((x) => okText(x.text)); if (!u) return; out.push({ id: u.key, topic: u.topic || "", question: cleanQ(u.text), marks: u.marks, answer: msTxt(u.ms), years: [...new Set(gr.map((x) => x.q.year))] }); });
-    units.forEach((u) => { if (!seen.has(u.key) && okText(u.text)) out.push({ id: u.key, topic: u.topic || "", question: cleanQ(u.text), marks: u.marks, answer: msTxt(u.ms), years: [u.q.year] }); });
-    return out;
-  }, [data.qs]);
-  const past = [...questions.filter((q) => q.subject === sub && q.years && q.years.length > 0 && !q.ai), ...cloudPast];
-  const noBank = !data.loading && !past.length;
-  const src = noBank ? "ai" : src0;
-  const build = async () => {
-    setErr("");
-    setRes(null);
-    if (getAccess().level < 2) {
-      openUpgrade("feature");
-      return;
-    }
-    const N = Math.min(Math.max(Number(n) || 10, 1), 40);
-    const topics = SYLLABUS[sub] || [];
-    let tw = topics.map((t) => {
-      const tq = past.filter((q) => String(q.topic || "").toLowerCase() === t.toLowerCase());
-      return { t, tq, w: tq.reduce((a, q) => a + q.years.length, 0) + 0.5 * yearsOf(tq).length };
-    }).filter((x) => x.w > 0);
-    const mode = tw.length ? src : "ai";
-    if (!tw.length) tw = topics.map((t) => ({ t, tq: [], w: 1 }));
-    if (!tw.length) {
-      setErr(`Predicted papers are not available for ${sub} yet.`);
-      return;
-    }
-    const tot = tw.reduce((a, x) => a + x.w, 0);
-    let used = 0;
-    tw.forEach((x) => {
-      x.k = Math.floor(N * x.w / tot);
-      used += x.k;
-      x.r = N * x.w / tot - x.k;
-    });
-    [...tw].sort((a, b) => b.r - a.r).slice(0, N - used).forEach((x) => x.k++);
-    let picked = [];
-    setBusy(true);
-    try {
-      if (mode === "bank") {
-        tw.forEach((x) => {
-          [...x.tq].sort((a, b) => b.years.length - a.years.length || Math.max(...b.years) - Math.max(...a.years)).slice(0, x.k).forEach((q) => picked.push({ ...q, why: `Appeared in ${[...q.years].sort().join(", ")}` }));
-        });
-        if (picked.length < N) { const have = new Set(picked.map((q) => q.id)); [...past].filter((q) => !have.has(q.id)).sort((a, b) => b.years.length - a.years.length || Math.max(...b.years) - Math.max(...a.years)).slice(0, N - picked.length).forEach((q) => picked.push({ ...q, why: `Appeared in ${[...q.years].sort().join(", ")}` })); }
-      } else {
-        const act = tw.filter((x) => x.k > 0);
-        const code = SUBJ_CODE[sub] || "", dv = sub === "Dhivehi" || sub === "Islam";
-        const prompt = `You are a Cambridge exam setter for ${sub}${code && !dv ? ` (IGCSE / O Level ${code})` : ""}, ${grade}, Maldives secondary curriculum. For each topic below write the number of NEW exam questions needed, in the style, wording and difficulty of real past papers${dv ? ". Write the questions and answers in Dhivehi (Thaana script)" : ""}. Use the examples and key ideas only as a guide; do not copy them. Return ONLY a JSON array in topic order: [{"topic":"...","question":"...","marks":2,"answer":"mark scheme answer"}]. Topics: ${JSON.stringify(act.map((x) => ({ topic: x.t, needed: x.k, examples: x.tq.slice(0, 3).map((q) => String(q.question).slice(0, 200)), keyIdeas: String(((BUILT_NOTES[code] || {})[x.t]) || "").replace(/[#*|]/g, " ").replace(/\s+/g, " ").slice(0, 350) })))}`;
-        const arr = parseQs(await callAI(cfg, prompt));
-        picked = arr.filter((q) => q && q.question).map((q) => ({ id: Date.now() + Math.random(), subject: sub, grade, topic: q.topic || "", question: q.question, type: "Short answer", marks: q.marks || 2, years: [], frequency: 0, repeat: "Predicted", difficulty: "Medium", answer: q.answer || "", ai: true, why: "Written in the style of past papers" }));
-        if (!picked.length) throw new Error("The AI did not return any questions. Please try again.");
-      }
-      setRes({ picked, tw: tw.filter((x) => x.k > 0), N, mode });
-    } catch (e) {
-      setErr(e && e.message || "Could not build the paper.");
-    }
-    setBusy(false);
-  };
-  const title = `${sub} Predicted Practice Paper (estimate, not official)`;
-  const doPrint = (ans) => {
-    printDoc(paperHtml(title, res.picked, ans, grade, "60"), title + (ans ? " marking scheme" : ""), toast, !ans);
-  };
-  const saveAI = () => {
-    saveQuestions([...res.picked.map(({ why, ...q }) => q), ...questions]);
-    toast("Questions saved to the question bank.");
-  };
-  return /* @__PURE__ */ React.createElement("div", { className: "panel" }, /* @__PURE__ */ React.createElement("h3", null, "Predicted paper \xB7 ", sub), /* @__PURE__ */ React.createElement("p", { className: "muted" }, "An estimate built from how often each topic and question appeared in past papers. It cannot tell what will actually be asked, so use it as extra practice, not as a guarantee."), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Fld, { label: "Grade" }, /* @__PURE__ */ React.createElement("select", { value: grade, onChange: (e) => setGrade(e.target.value) }, GRADES.map((g) => /* @__PURE__ */ React.createElement("option", { key: g }, g)))), /* @__PURE__ */ React.createElement(Fld, { label: "Questions (1\u201340)" }, /* @__PURE__ */ React.createElement("input", { type: "number", min: "1", max: "40", value: n, onChange: (e) => setN(e.target.value) })), /* @__PURE__ */ React.createElement(Fld, { label: "Question source" }, /* @__PURE__ */ React.createElement("select", { value: src, disabled: noBank, onChange: (e) => setSrc(e.target.value) }, !noBank && /* @__PURE__ */ React.createElement("option", { value: "bank" }, "Most repeated past questions"), /* @__PURE__ */ React.createElement("option", { value: "ai" }, "AI writes new, past-paper style")))), src === "ai" && /* @__PURE__ */ React.createElement(AISettings, { cfg, setCfg }), /* @__PURE__ */ React.createElement("p", { className: "muted" }, data.loading && !past.length ? "Loading past paper questions\u2026" : noBank ? `The ${sub} question bank is still being built, so new questions are written from the syllabus topics and revision notes.` : `${past.length} past paper questions available for ${sub}.`), getAccess().level < 2 && /* @__PURE__ */ React.createElement(LockBanner, { need: "a paid plan" }), /* @__PURE__ */ React.createElement("button", { className: "btn-primary", disabled: busy || (data.loading && !past.length), onClick: build }, busy ? "Building\u2026" : "Build predicted paper"), err && /* @__PURE__ */ React.createElement("p", { className: "muted", style: { color: "#c0392b" } }, err), res && /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { className: "answer-box" }, /* @__PURE__ */ React.createElement("b", null, "Topic weighting"), res.tw.map((x) => /* @__PURE__ */ React.createElement("p", { key: x.t, style: { margin: "4px 0" } }, x.t, ": ", x.k, " question", x.k === 1 ? "" : "s", x.tq.length ? ((ys) => ys.length > 6 ? ` (seen in ${ys.length} years, ${ys[0]}\u2013${ys[ys.length - 1]})` : ` (seen in ${ys.join(", ")})`)(yearsOf(x.tq)) : ""))), res.picked.length < res.N && /* @__PURE__ */ React.createElement("p", { className: "muted" }, "Only ", res.picked.length, " of ", res.N, " questions could be found from the past papers. Import more papers or use AI."), res.picked.map((q, i) => /* @__PURE__ */ React.createElement("div", { className: "review-card", key: q.id, style: { borderTop: "1px solid #eff2f5", paddingTop: 12, marginTop: 12 } }, /* @__PURE__ */ React.createElement("b", null, i + 1, ". ", q.question, " (", q.marks, " marks)"), /* @__PURE__ */ React.createElement("small", { className: "muted" }, q.topic, " \xB7 ", q.why))), /* @__PURE__ */ React.createElement("div", { className: "mark-btns", style: { marginTop: 12 } }, /* @__PURE__ */ React.createElement("button", { className: "btn-primary", onClick: () => doPrint(false) }, /* @__PURE__ */ React.createElement(FileText, { size: 15 }), " Open paper"), /* @__PURE__ */ React.createElement("button", { className: "btn-secondary", onClick: () => doPrint(true) }, /* @__PURE__ */ React.createElement(Download, { size: 15 }), " Marking scheme"), res.mode === "ai" && /* @__PURE__ */ React.createElement("button", { className: "btn-secondary", onClick: saveAI }, "Save to question bank"))));
 }
 const levelOf = (user, subs) => {
   if (!user) return 0;
@@ -4408,10 +4324,96 @@ function DpeLibrary() {
     !keys.length ? h("p", { className: "muted" }, "No papers for this choice.") : keys.map((k) => h("div", { key: k, className: "dpe-row" }, h("b", null, k), h("div", { className: "mark-btns" }, [...groups[k]].sort((a, b) => a[3].localeCompare(b[3]) * -1 || a[4] - b[4]).map(link)))),
     h("p", { className: "muted" }, sub === "Arabic" ? "DPE publishes SSC Arabic for 2015 and 2019 only." : "Not on the DPE site: 2012 SSC papers and 2012 HSC Islam; 2012 HSC Dhivehi has no marking schemes. The 2018 HSC Dhivehi marking scheme II link on DPE opens scheme I."));
 }
+/* ===================== Question analysis (from the past paper database) ===================== */
+function useAnalysisUnits(sub) {
+  const full = ANALYSED.includes(sub);
+  const S = useSubjectQs(full ? sub : null);
+  const T = useTQ(full ? "__none__" : sub);
+  const [tqUnits, setTqUnits] = useState(null);
+  useEffect(() => {
+    if (full || !T.data) { setTqUnits(null); return; }
+    let live = true; const I = T.data;
+    Promise.all(I.topics.map((X) => tqLoadTopic(I, X.t))).then((arrs) => {
+      if (!live) return;
+      const u = [];
+      arrs.flat().forEach((q) => {
+        const P = I.papers[q.p] || {};
+        const text = [q.s || "", ...(q.pt || []).map((x) => x[2] || "")].join(" ").replace(/\s+/g, " ").trim();
+        u.push({ key: q.p + "#" + q.q, tq: q, P, text, own: text, topic: q.t, marks: q.m, ms: null,
+          q: { paper: q.p, sub, code: I.code, cv: `${P.c || ""}${P.v || ""}`, year: P.y, sess: P.s, q: q.q } });
+      });
+      setTqUnits(u);
+    });
+    return () => { live = false; };
+  }, [full, T.data]);
+  if (full) return { loading: S.loading, err: S.err, units: S.loading ? [] : unitsOf(S.qs), full };
+  return { loading: T.loading || (!!T.data && !tqUnits), err: "", units: tqUnits || [], full, none: !T.loading && !T.data };
+}
+const anaRef = (u) => `${paperCode(u.q)} \xB7 ${SESS_NAME[u.q.sess] || SESS[u.q.sess] || u.q.sess || ""} ${u.q.year} \xB7 Q${u.q.q || (u.q.qn || "")}${u.p && u.p.l ? u.p.l : ""}`.replace(/\s+/g, " ");
+function AnaGroup({ g, kind, n }) {
+  const [open, setOpen] = useState(false);
+  const [ms, setMs] = useState(false);
+  const papers = [...new Set(g.map((u) => u.q.paper))], years = [...new Set(g.map((u) => u.q.year))].sort();
+  const u0 = g[0];
+  const ans = u0.tq ? u0.tq.a : u0.ms && u0.ms.mcq ? (u0.ms.answer || u0.ms.ans || "") : "";
+  const txt = u0.own || u0.text || "";
+  return h("div", { className: "panel qa-card" },
+    h("div", { className: "qa-top" }, h("span", { className: "qa-n" }, n), h("span", { className: `count-pill ${kind}` }, `${kind === "sim" ? "Similar wording" : "Repeated"} \xD7${papers.length}`), h("span", { className: "chip" }, u0.topic || "Other")),
+    h("p", { className: "qa-freq" }, h("b", null, `Asked ${g.length} time${g.length > 1 ? "s" : ""}`), ` in ${papers.length} papers \xB7 ${years.length} year${years.length > 1 ? "s" : ""} (${years[0]}${years.length > 1 ? "–" + years[years.length - 1] : ""})`),
+    h("div", { className: "qa-orig" }, h("small", null, `ORIGINAL QUESTION \xB7 ${anaRef(u0)}`),
+      u0.tq ? h(QBody, { P: u0.P, q: u0.tq }) : h("p", { className: open ? "rep-text" : "rep-text clamp" }, txt),
+      !u0.tq && txt.length > 220 && h("button", { className: "text-link", onClick: () => setOpen(!open) }, open ? "Show less" : "Read more"),
+      ans && h("p", { className: "qa-ans" }, "Correct option: ", h("b", null, ans)),
+      !u0.tq && u0.ms && h("button", { className: "text-link", onClick: () => setMs(!ms) }, ms ? "Hide mark scheme" : "Show mark scheme"), ms && u0.ms && h(SchemeView, { s: u0.ms })),
+    h("div", { className: "qa-refs" }, h("small", null, `PAST PAPER REFERENCES (${g.length})`), h("ul", null, g.map((u) => h("li", { key: u.key }, anaRef(u))))));
+}
+function QuestionAnalysis({ sub }) {
+  const A = useAnalysisUnits(sub);
+  const [view, setView] = useState("overview");
+  const [tops, setTops] = useState([]);
+  const [lim, setLim] = useState(15);
+  useEffect(() => { setTops([]); setLim(15); }, [sub, view]);
+  const G = React.useMemo(() => A.units.length && A.units.some((u) => (u.text || "").length > 20) ? groupUnits(A.units) : { rep: [], sim: [] }, [A.units]);
+  if (A.loading) return h("div", { className: "panel" }, h("p", { className: "muted" }, "Analysing every past paper…"));
+  if (A.err) return h("div", { className: "panel" }, h("p", { className: "muted" }, A.err));
+  if (A.none || !A.units.length) return h("div", { className: "panel" }, h("p", { className: "empty-note" }, `Question analysis for ${sub} is not ready yet.`));
+  const U = A.units;
+  const papers = new Set(U.map((u) => u.q.paper)), years = [...new Set(U.map((u) => u.q.year))].filter(Boolean).sort();
+  const sess = new Set(U.map((u) => u.q.year + (u.q.sess || "")));
+  const topicStat = {};
+  U.forEach((u) => { const t = u.topic || "Other"; const o = topicStat[t] = topicStat[t] || { t, n: 0, papers: new Set(), rep: 0, sim: 0, top: 0 }; o.n++; o.papers.add(u.q.paper); });
+  G.rep.forEach((g) => { const o = topicStat[g[0].topic || "Other"]; if (o) { o.rep++; o.top = Math.max(o.top, new Set(g.map((u) => u.q.paper)).size); } });
+  G.sim.forEach((g) => { const o = topicStat[g[0].topic || "Other"]; if (o) o.sim++; });
+  const TS = Object.values(topicStat).sort((a, b) => b.n - a.n);
+  const maxN = TS.length ? TS[0].n : 1;
+  const textless = !G.rep.length && !G.sim.length && !U.some((u) => (u.text || "").length > 20);
+  const filt = (L) => tops.length ? L.filter((g) => tops.includes(g[0].topic || "Other")) : L;
+  const across = [...G.rep.map((g) => [g, "rep"]), ...G.sim.map((g) => [g, "sim"])].filter(([g]) => new Set(g.map((u) => u.q.year)).size >= 2)
+    .sort((a, b) => new Set(b[0].map((u) => u.q.year)).size - new Set(a[0].map((u) => u.q.year)).size);
+  const list = view === "rep" ? filt(G.rep).map((g) => [g, "rep"]) : view === "sim" ? filt(G.sim).map((g) => [g, "sim"]) : view === "years" ? across.filter(([g]) => !tops.length || tops.includes(g[0].topic || "Other")) : [];
+  const stat = (n, l) => h("div", { className: "qa-stat" }, h("b", null, n), h("span", null, l));
+  return h("div", { className: "qa" },
+    h("div", { className: "eb-seg qa-tabs" }, [["overview", "Overview"], ["rep", `Repeated (${G.rep.length})`], ["sim", `Similar (${G.sim.length})`], ["years", `Across years (${across.length})`]].map(([k, l]) => h("button", { key: k, className: view === k ? "on" : "", onClick: () => setView(k) }, l))),
+    view === "overview" ? h(React.Fragment, null,
+      h("div", { className: "panel" }, h("h3", null, `${sub} \xB7 all past papers`),
+        h("div", { className: "qa-stats" }, stat(papers.size, "papers"), stat(U.length, "questions"), stat(sess.size, "exam sessions"), stat(years.length ? `${years[0]}–${years[years.length - 1]}` : "–", "years"), stat(G.rep.length, "repeated groups"), stat(G.sim.length, "similar groups")),
+        textless && h("p", { className: "muted" }, "These papers are stored as pictures, so wording cannot be compared. Topic counts below come from every paper.")),
+      h("div", { className: "panel" }, h("h3", null, "Topic analysis"), h("p", { className: "muted" }, "How many questions each topic has had across all papers, and how often its questions repeat."),
+        h("div", { className: "qa-topics" }, TS.map((o) => h("div", { key: o.t, className: "qa-trow" },
+          h("div", { className: "qa-tname" }, h("b", { className: isDv(sub) ? "dv" : "", dir: isDv(sub) ? "rtl" : undefined }, o.t), h("small", null, `${o.n} questions \xB7 ${o.papers.size} papers` + (o.rep ? ` \xB7 ${o.rep} repeated` : "") + (o.sim ? ` \xB7 ${o.sim} similar` : "") + (o.top > 1 ? ` \xB7 most asked \xD7${o.top}` : ""))),
+          h("div", { className: "qa-bar" }, h("i", { style: { width: Math.max(4, Math.round(o.n / maxN * 100)) + "%" } })))))),
+      G.rep.length > 0 && h("div", { className: "panel" }, h("h3", null, "Most frequently repeated"), G.rep.slice(0, 5).map((g, i) => h(AnaGroup, { key: g[0].key, g, kind: "rep", n: i + 1 })), h("button", { className: "btn-secondary", onClick: () => setView("rep") }, "See all repeated questions")))
+    : h(React.Fragment, null,
+      h("div", { className: "lib-filter" }, h("div", { className: "lf-row" }, h("span", { className: "lf-lbl" }, "Topics"), h(MultiPick, { options: TS.map((o) => ({ v: o.t, l: o.t, n: o.n })), value: tops, onChange: setTops, all: "All topics" }))),
+      h("p", { className: "muted" }, view === "rep" ? "The same question asked again in different papers, most frequent first." : view === "sim" ? "Questions that test the same thing with different wording." : "Questions that have come up in two or more different years, longest-running first."),
+      !list.length ? h("div", { className: "panel" }, h("p", { className: "empty-note" }, textless ? "Wording comparison is not available for this subject." : "No questions found for this choice.")) :
+      h(React.Fragment, null, list.slice(0, lim).map(([g, k], i) => h(AnaGroup, { key: k + g[0].key, g, kind: k, n: i + 1 })),
+        list.length > lim && h("button", { className: "btn-secondary", onClick: () => setLim(lim + 15) }, `Show more (${list.length - lim} left)`))));
+}
 function LibraryTabs(props) {
   const [view, setView] = useState("Papers");
   return h(React.Fragment, null,
-    h("div", { className: "seg lib-src" }, [["Papers", "Papers"], ["Topics", "Topics"], ["Predicted", "Predicted"]].map(([k, l]) => h("button", { key: k, className: view === k ? "on" : "", onClick: () => { if (k !== "Papers" && isFreePlan()) { openUpgrade("feature"); return; } setView(k); } }, l, k !== "Papers" && isFreePlan() ? h(LockIc) : null))),
+    h("div", { className: "seg lib-src" }, [["Papers", "Papers"], ["Topics", "Topics"], ["Analysis", "Question analysis"]].map(([k, l]) => h("button", { key: k, className: view === k ? "on" : "", onClick: () => { if (k !== "Papers" && isFreePlan()) { openUpgrade("feature"); return; } setView(k); } }, l, k !== "Papers" && isFreePlan() ? h(LockIc) : null))),
     h(PaperLibrary, { ...props, view: isFreePlan() ? "Papers" : view, setView }));
 }
 /* ===================== Admin portal (shared data) ===================== */
