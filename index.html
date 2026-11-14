@@ -2685,7 +2685,7 @@ function AuthPage({ supabase: supabase2, setUser }) {
       if (supabase2) {
         const { data, error } = await supabase2.auth.signUp({ email: base.email, password: f.password, options: { data: base, emailRedirectTo: location.origin } });
         if (error) throw error;
-        if (!data.session) { setMode("login"); setErr("Account created. We sent a confirmation link to " + base.email + ". Open it, then log in here."); setBusy(false); return; }
+        if (!data.session) { const li = await supabase2.auth.signInWithPassword({ email: base.email, password: f.password }); if (li.error || !li.data.session) { setMode("login"); setErr("Account created. Please log in with your email and password."); setBusy(false); return; } }
         fin({ ...base, id: data.user && data.user.id, planAsk: true });
       } else {
         const users = readUsers();
