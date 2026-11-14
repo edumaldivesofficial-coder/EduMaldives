@@ -5404,8 +5404,8 @@ function useTQTopic(I, t) {
   useEffect(() => { let live = true; setQs(null); if (I && t) tqLoadTopic(I, t).then((x) => { if (live) setQs(x); }); return () => { live = false; }; }, [I, t]);
   return qs;
 }
-const SESS_NAME = { m: "Feb/Mar", s: "May/June", w: "Oct/Nov" };
-const tqCode = (P) => `${P.code || ""}/${P.c}${P.v}`;
+const SESS_NAME = { m: "Feb/Mar", s: "May/June", w: "Oct/Nov", x: "SSC", sp: "Specimen" };
+const tqCode = (P) => `${P.code || ""}/${P.c}${P.v || ""}`;
 const tqSource = (P, q) => `${tqCode(P)} \xB7 ${SESS_NAME[P.s] || ""} ${P.y} \xB7 Q${q.q}`;
 function QFig({ P, b }) {
   const [zoom, setZoom] = useState(false);
@@ -5463,11 +5463,11 @@ function TQCard({ P, q, sub, exam, ans, setAns, reveal, toast, n }) {
       if (done) { if (L === q.a) c += " ok"; else if (L === pick) c += " bad"; }
       return h("button", { key: L, className: c, onClick: () => choose(L), disabled: !!done }, L);
     })) : h("div", { className: "tq-written" },
-      q.pt.map(([l, m, t]) => h("label", { key: l || "a", className: "tq-part" }, h("span", null, l ? h("b", null, l) : "Your answer", m ? h("small", null, `${m} mark${m === 1 ? "" : "s"}`) : null), h("textarea", { className: "tq-ta", rows: 2, value: txt[l] || "", placeholder: "Type your answer", disabled: !!reveal, onChange: (e) => { const v = { ...txt, [l]: e.target.value }; setTxt(v); if (exam) setAns(v); } }))),
-      !exam && h("div", { className: "tq-btns" }, h("button", { className: "btn-primary", disabled: busy, onClick: mark }, busy ? "Marking…" : "Mark my answer"), h("button", { className: "btn-secondary", onClick: showMs }, show ? "Hide mark scheme" : "Show mark scheme"))),
+      q.pt.map(([l, m, t]) => h("label", { key: l || "a", className: "tq-part" }, h("span", null, l ? h("b", null, l) : "Your answer", m ? h("small", null, `${m} mark${m === 1 ? "" : "s"}`) : null), h("textarea", { className: "tq-ta", dir: "auto", rows: 2, value: txt[l] || "", placeholder: "Type your answer", disabled: !!reveal, onChange: (e) => { const v = { ...txt, [l]: e.target.value }; setTxt(v); if (exam) setAns(v); } }))),
+      !exam && h("div", { className: "tq-btns" }, !q.mb && h("button", { className: "btn-primary", disabled: busy, onClick: mark }, busy ? "Marking…" : "Mark my answer"), h("button", { className: "btn-secondary", onClick: showMs }, show ? "Hide mark scheme" : "Show mark scheme"))),
     done && isMcq && h("p", { className: pick === q.a ? "tq-fb ok" : "tq-fb bad" }, !pick ? `Not answered. The answer is ${q.a}.` : pick === q.a ? "Correct!" : `Not quite. The answer is ${q.a}.`),
     res && h("div", { className: "tq-res" }, h("b", null, `${res.sc} / ${q.m} marks`), res.r.map((x, i) => x && x.feedback ? h("p", { key: i }, (q.pt[i][0] ? q.pt[i][0] + " " : "") + x.feedback) : null)),
-    (show || (reveal && !isMcq)) && !isMcq && h("div", { className: "tq-ms" }, h("small", null, "MARK SCHEME"), q.pt.map(([l, m, t, a]) => h("p", { key: l || "a" }, l && h("b", null, l + " "), a || "See the official mark scheme.", m ? h("span", { className: "tq-msm" }, ` [${m}]`) : null))));
+    (show || (reveal && !isMcq)) && !isMcq && h("div", { className: "tq-ms" }, h("small", null, "MARK SCHEME"), q.mb ? h(QBody, { P, q: { b: q.mb } }) : q.pt.map(([l, m, t, a]) => h("p", { key: l || "a" }, l && h("b", null, l + " "), a || "See the official mark scheme.", m ? h("span", { className: "tq-msm" }, ` [${m}]`) : null))));
 }
 function TopicPick({ sub, topics, onPick, count, done, empty }) {
   if (!topics.length) return h("div", { className: "ps-empty" }, h(BookOpen, { size: 22 }), h("p", null, empty || `Coming soon for ${sub}.`));
