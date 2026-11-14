@@ -24,6 +24,7 @@ html[data-theme=dark] .mp-btn,html[data-theme=dark] .mp-pop,html[data-theme=dark
 .pl-head h2{font:800 26px Manrope,sans-serif;letter-spacing:-.6px;color:var(--ink,#17324f)}.pl-head p{font-size:15px}
 .mp .mp-row input[type=checkbox]{width:19px!important;height:19px!important;min-height:0!important;padding:0!important;margin:0!important;border:0!important;box-shadow:none!important;flex:0 0 19px}</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="edu-supabase.js"></script>
+<script src="push.js" defer></script>
 <script>(function(){var s=function(e){e.preventDefault()};['gesturestart','gesturechange','gestureend'].forEach(function(t){document.addEventListener(t,s,{passive:false})});document.addEventListener('touchmove',function(e){if(e.touches&&e.touches.length>1)e.preventDefault()},{passive:false});var last=0;document.addEventListener('touchend',function(e){var n=Date.now();if(n-last<300&&!(e.target.closest&&e.target.closest('input,textarea,select')))e.preventDefault();last=n},{passive:false});window.addEventListener('wheel',function(e){if(e.ctrlKey)e.preventDefault()},{passive:false});document.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&['+','-','=','0'].indexOf(e.key)>-1)e.preventDefault()})})();</script><link rel="icon" type="image/png" href="/icon-192.png"><title>EduMaldives</title><meta name="apple-mobile-web-app-title" content="EduMaldives"/><meta name="application-name" content="EduMaldives"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="mobile-web-app-capable" content="yes"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><link rel="manifest" href="/manifest.webmanifest"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@600&family=Noto+Sans+Thaana:wght@400;600;700&display=swap" rel="stylesheet"/>
 <style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
@@ -2680,12 +2681,14 @@ function AuthPage({ supabase: supabase2, setUser }) {
         if (!isAd) { await supabase2.auth.signOut(); setAdminMsg("This account is not an admin account."); setBusy(false); return; }
         Cloud.canEdit = true;
         if (await checkAdminPin(f.password)) setAdminOk(true);
+        window.__adminFresh = true;
       }
+      if (supabase2) { const { data: ia } = await supabase2.rpc("is_admin"); if (!ia) { setAdminMsg("This account is not an admin account."); setBusy(false); return; } }
       if (Cloud.shared && !Cloud.canEdit) { setAdminMsg("The admin portal is only for the portal owner and people they have given edit access."); setBusy(false); return; }
       if (!adminOk()) { setAskPin(true); setBusy(false); return; }
       let nm = "Admin";
       try { const me = Cloud.user && await Cloud.user.me(); if (me && me.name) nm = me.name; } catch (e) { }
-      setUser({ name: nm, role: "Admin", email: "", admin: true });
+      setUser({ name: nm, role: "Admin", email: "", admin: true }); if (window.__adminFresh) setTimeout(() => location.reload(), 120);
     } catch (e) { setAdminMsg("Could not open the admin portal. Please try again."); }
     setBusy(false);
   };
@@ -2783,7 +2786,7 @@ function AuthPage({ supabase: supabase2, setUser }) {
         h("button", { type: "submit", className: "au-go", disabled: busy }, busy ? "Please wait…" : mode === "register" ? "Create account" : "Log in"),
         h("button", { type: "button", className: "au-tour", onClick: () => window.dispatchEvent(new Event("em-show-intro")) }, h(BookOpen, { size: 16 }), " See how EduMaldives works"),
         h("p", { className: "au-switch" }, mode === "login" ? "New to EduMaldives? " : "Already have an account? ", h("button", { type: "button", onClick: () => sw(mode === "login" ? "register" : "login") }, mode === "login" ? "Create a free account" : "Log in")),
-        window.DEMO_MODE && h(React.Fragment, null, h("div", { className: "au-or" }, h("span", null, "or")), h("button", { type: "button", className: "au-demo", onClick: () => setUser({ name: "Demo visitor", role: "Demo", email: "" }) }, "Explore the demo without an account")),
+        false && h(React.Fragment, null, h("div", { className: "au-or" }, h("span", null, "or")), h("button", { type: "button", className: "au-demo", onClick: () => setUser({ name: "Demo visitor", role: "Demo", email: "" }) }, "Explore the demo without an account")),
         h("button", { type: "button", className: "au-admin", onClick: adminIn, disabled: busy }, h(ShieldCheck, { size: 16 }), "Admin portal"),
         adminMsg && h("p", { className: "au-err", role: "alert" }, adminMsg))), askPin && h(PinGate, { onOk: () => { setAskPin(false); adminIn(); }, onCancel: () => setAskPin(false) }));
 }

@@ -12,7 +12,8 @@
 
   var sessionP = sb.auth.getSession().then(function (r) { return r.data && r.data.session; }).catch(function () { return null; });
   var uidP = sessionP.then(function (s) { return s && s.user ? s.user.id : null; });
-  var adminP = uidP.then(function (u) { return u ? sb.rpc("is_admin").then(function (r) { return !!r.data; }) : false; }).catch(function () { return false; });
+  // Admins and teachers with an active teacher plan can edit shared content (classes, tasks, marks).
+  var adminP = uidP.then(function (u) { return u ? sb.rpc("is_staff").then(function (r) { return !!r.data; }) : false; }).catch(function () { return false; });
 
   /* ---------------- database ---------------- */
   var listeners = new Set();
