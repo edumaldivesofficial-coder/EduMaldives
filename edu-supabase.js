@@ -185,3 +185,23 @@
     }
   };
 })();
+
+/* Resolve stored-file links ("/_blob/sb:<path>") to short-lived signed URLs (payment slips, uploads). */
+(function () {
+  var cache = {};
+  function fix(el, attr) {
+    var v = el.getAttribute(attr);
+    if (!v || v.indexOf("/_blob/sb:") !== 0 || !window.__sbFileUrl) return;
+    var id = v.slice(7);
+    el.setAttribute(attr, "");
+    (cache[id] || (cache[id] = Promise.resolve(window.__sbFileUrl(id)).catch(function () { delete cache[id]; return null; }))).then(function (u) { if (u) el.setAttribute(attr, u); else el.setAttribute("data-missing", "1"); });
+  }
+  function one(n) { if (n.matches && n.matches("img,a,iframe,embed,object,source")) fix(n, n.tagName === "A" ? "href" : n.tagName === "OBJECT" ? "data" : "src"); }
+  function scan(root) { if (!root.querySelectorAll) return; one(root); root.querySelectorAll("img,a,iframe,embed,object,source").forEach(one); }
+  function start() {
+    scan(document.body || document.documentElement);
+    new MutationObserver(function (ms) { ms.forEach(function (m) { if (m.type === "attributes") one(m.target); else m.addedNodes.forEach(function (n) { if (n.nodeType === 1) scan(n); }); }); })
+      .observe(document.documentElement, { subtree: true, childList: true, attributes: true, attributeFilter: ["src", "href", "data"] });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
+})();
