@@ -33,6 +33,33 @@ html[data-theme=dark] .en-psg{background:#16233a;border-color:#2a3d56}html[data-
 html[data-theme=dark] .en-mk-row button{background:#1b2a40;border-color:#2a3d56;color:#dbe6f3}html[data-theme=dark] .en-mk-row button.on{background:var(--t,#278ed0);color:#fff}
 .en-band{margin:12px 0}.en-band ul{margin:6px 0;padding-left:18px;font-size:13.5px;line-height:1.55}
 .tq-self{margin-top:8px}
+
+.pb{display:grid;gap:14px;min-width:0}.pb-tabs{margin:2px 0 14px}
+.pb-subs{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.pb-sub{flex:none;display:flex;align-items:center;gap:9px;padding:7px 14px 7px 7px;border-radius:14px;border:1.5px solid #e1e8f0;background:#fff;color:#1d3047;font:600 14px "DM Sans",sans-serif;cursor:pointer;white-space:nowrap}
+.pb-sub small{font-weight:600;font-size:11.5px;color:#8a98aa}.pb-sub.on{border-color:var(--t,#278ed0);background:#eef6fd;box-shadow:0 0 0 3px rgba(39,142,208,.12)}
+html[data-theme=dark] .pb-sub{background:#15233a;border-color:#2a3d56;color:#dbe6f3}html[data-theme=dark] .pb-sub.on{background:#1b3150}
+.pb-card{display:grid;gap:14px}.pb-row{display:grid;gap:8px}.pb-lbl{font-size:12.5px;font-weight:700;letter-spacing:.04em;color:#6b7b90;text-transform:uppercase}
+.pb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.pb-grid .field{margin:0}
+.pb-note{margin:0}.pb-go{justify-self:start;min-width:180px}
+.pb-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.pb-back{width:40px;height:40px;border-radius:12px;border:1.5px solid #e1e8f0;background:#fff;display:grid;place-items:center;cursor:pointer;color:inherit;flex:none}
+html[data-theme=dark] .pb-back{background:#15233a;border-color:#2a3d56}
+.pb-tt{display:grid;min-width:0;flex:1}.pb-tt b{font-size:18px}.pb-tt small{color:#6b7b90}
+.pb-chips{display:flex;gap:6px;flex-wrap:wrap}.pb-chips span{font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:999px;background:#eef3f8;color:#3b4d63}
+html[data-theme=dark] .pb-chips span{background:#1b2a40;color:#c9d6e6}
+.pb-actions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.pb-det{border:1.5px solid #e1e8f0;border-radius:14px;padding:0 14px;margin-bottom:14px;background:#fafcfe}
+html[data-theme=dark] .pb-det{background:#132036;border-color:#2a3d56}
+.pb-det summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;font-weight:700}
+.pb-det summary::-webkit-details-marker{display:none}.pb-det summary::after{content:"+";font-size:20px;line-height:1;color:#6b7b90}.pb-det[open] summary::after{content:"\2212"}
+.pb-det summary small{margin-left:auto;font-weight:600;color:#6b7b90}.pb-det[open]{padding-bottom:14px}.pb-det .pb-grid{margin-bottom:10px}
+.pb-check{display:flex;gap:10px;align-items:center;margin:10px 0 4px;font-size:14.5px}.pb-check input{width:18px;height:18px}
+.pbq-list{display:grid;gap:12px}.pbq{border:1.5px solid #e6edf4;border-radius:16px;padding:14px 16px;background:#fff;min-width:0}
+html[data-theme=dark] .pbq{background:#15233a;border-color:#2a3d56}
+.pbq-h{display:flex;align-items:center;gap:10px;margin-bottom:8px}.pbq-h small{flex:1;color:#6b7b90;min-width:0}.pbq-tools{display:flex;gap:6px;justify-content:flex-end;margin-top:8px}
+.qtext-tq{margin:6px 0 10px}
+@media (max-width:560px){.pb-actions>button{flex:1 1 calc(50% - 8px)}.pb-go{justify-self:stretch}.pb-chips{width:100%}}
 </style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="edu-supabase.js"></script>
 <script src="push.js" defer></script>
@@ -770,7 +797,7 @@ html[data-theme=dark] .prep{background:#152238;border-color:#2a3d56}html[data-th
 .nd.dv .nd-steps .nd-md ol>li{padding-left:0;padding-right:34px}.nd.dv .nd-steps .nd-md ol>li::before{left:auto;right:0}
 .tg-name small.tg-en{display:block;font-size:12px;color:#8a9bb0;font-weight:500;margin-top:1px}
 .tg-name .dv{display:block;line-height:1.6}
-.dv-deck .fc-face p{font-size:20px}
+.dv-deck .fc-card{height:340px}.dv-deck .fc-face{overflow-y:auto;padding:22px 20px}.dv-deck .fc-face p{font-size:19px;line-height:1.9}.dv-deck .fc-back p{font-size:16.5px;font-weight:400;line-height:1.95;white-space:pre-line;text-align:right;width:100%}.dv-deck .fc-back .fc-tip{font-size:14px}
 .fc-tip{font-size:13px;opacity:.85;background:#ffffff26;border-radius:10px;padding:6px 10px}
 .qz-q{margin:0;font-size:16px;line-height:1.6;color:#13283f}
 .qz-opts{display:flex;flex-direction:column;gap:8px}
@@ -1882,7 +1909,7 @@ function AssignmentsPage2({ questions, saveQuestions, toast }) {
 }
 const SYLLABUS = Object.fromEntries(Object.entries({
   English: "Comprehension|Multiple matching|Note-making|Multiple choice (MCQ)|Informal email|Article, report, review & essay|Listening|Grammar & vocabulary",
-  Dhivehi: "Reading comprehension|Composition|Grammar|Poetry|Prose|Letter writing|Vocabulary|Spelling & dictation",
+  Dhivehi: "Essay & story writing|Instructional & account writing|Reading comprehension|Summary writing|Letter writing|Language & spelling",
   Mathematics: "Number & place value|Fractions, decimals & percentages|Ratio & proportion|Algebra|Equations & inequalities|Sequences|Graphs & functions|Geometry|Trigonometry|Mensuration|Statistics|Probability|Sets|Vectors & matrices|Indices & surds",
   Physics: "Measurements|Motion|Forces|Work, energy & power|Pressure|Thermal physics|Waves|Light|Sound|Electricity|Magnetism|Atomic physics|Space physics",
   Chemistry: "States of matter|Atoms & elements|Chemical bonding|Periodic table|Chemical reactions|Acids, bases & salts|Electrochemistry|Rates of reaction|Energy changes|Metals|Organic chemistry|Chemistry of the environment",
@@ -4148,7 +4175,7 @@ async function cambDownloadPdf(P, withMs, toast) {
   const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(a.href), 30000);
 }
-function CambridgeMock({ results, setResults, toast, teacher }) {
+function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
   const C = useCloud();
   const [meta, setMeta] = useLocal("em-camb-meta", { title: "", school: "", cls: "Grade 10", date: "", due: "", hideSrc: true });
   const [sending, setSending] = useState(false);
@@ -4156,7 +4183,7 @@ function CambridgeMock({ results, setResults, toast, teacher }) {
   const pdf = async (ms) => { setPdfBusy(ms ? "ms" : "qp"); await cambDownloadPdf(PP(), ms, toast); setPdfBusy(""); };
   const um = (p) => setMeta({ ...meta, ...p });
   const subs0 = Object.keys(CAMB_COMP).filter((s) => PAPER_INDEX[s]); const subs = teacher && subs0.filter((s) => teachSubs().includes(s)).length ? subs0.filter((s) => teachSubs().includes(s)) : subs0;
-  const [sub, setSub] = useState(subs[0] || "Mathematics");
+  const [sub, setSub] = useState(fixedSub || subs[0] || "Mathematics");
   const [comp, setComp] = useState("");
   const [mode, setMode] = useState("past");
   const [paperId, setPaperId] = useState("");
@@ -4251,21 +4278,16 @@ function CambridgeMock({ results, setResults, toast, teacher }) {
   const figBtn = (q) => { const pd = store[q.paper]; return pd && pd.qp ? h("button", { className: "btn-secondary sm", onClick: () => setViewer({ id: pd.qp.id, name: pd.qp.name, page: q.page }) }, "View diagram / original page") : null; };
 
   if (phase === "setup") return h(React.Fragment, null,
-    h("div", { className: "panel" },
-      h("div", { className: "form-row" },
-        h(Fld, { label: "Subject" }, h("select", { value: sub, onChange: (e) => setSub(e.target.value) }, subs.map((s) => h("option", { key: s }, s)))),
+    h("div", { className: "panel pb-card" },
+      !fixedSub && h(Fld, { label: "Subject" }, h("select", { value: sub, onChange: (e) => setSub(e.target.value) }, subs.map((s) => h("option", { key: s }, s)))),
+      h("div", { className: "pb-row" }, h("span", { className: "pb-lbl" }, "Build from"), h("div", { className: "eb-seg" }, [["past", "Past paper"], ["rep", "Repeated"], ["sim", "Similar"], ["mix", "Repeated + similar"]].map(([k, l]) => h("button", { key: k, className: mode === k ? "on" : "", onClick: () => setMode(k) }, l)))),
+      h("div", { className: "pb-grid" },
         h(Fld, { label: "Paper" }, h("select", { value: comp, onChange: (e) => setComp(e.target.value) }, comps.map((c) => h("option", { key: c, value: c }, compName(sub, c))))),
-        h(Fld, { label: "Build the paper from" }, h("select", { value: mode, onChange: (e) => setMode(e.target.value) }, h("option", { value: "past" }, "Real past paper"), h("option", { value: "rep" }, "Repeated questions"), h("option", { value: "sim" }, "Similar questions"), h("option", { value: "mix" }, "Repeated + similar"))),
         mode === "past" && h(Fld, { label: "Session" }, h("select", { value: paperId, onChange: (e) => setPaperId(e.target.value) }, plist.map((p) => h("option", { key: p.paper, value: p.paper }, paperLabel(p))))),
         h(Fld, { label: "Time (minutes)" }, h("input", { type: "number", min: 10, max: 240, value: mins, onChange: (e) => setMins(e.target.value) }))),
-      teacher && h("div", { className: "form-row" },
-        h(Fld, { label: "Paper title" }, h("input", { value: meta.title, placeholder: "e.g. Term 2 mock examination", onChange: (e) => um({ title: e.target.value }) })),
-        h(Fld, { label: "School name" }, h("input", { value: meta.school, placeholder: "Shown on the front page", onChange: (e) => um({ school: e.target.value }) })),
-        h(Fld, { label: "Grade" }, h("select", { value: meta.cls, onChange: (e) => um({ cls: e.target.value }) }, GRADES.map((g) => h("option", { key: g }, g)))),
-        h(Fld, { label: "Exam date" }, h("input", { type: "date", value: meta.date, onChange: (e) => um({ date: e.target.value }) }))),
-      h("p", { className: "muted" }, mode === "past" ? "You get the full paper exactly as Cambridge set it: same questions, order, marks and time." : `A new paper laid out like the latest ${compName(sub, comp)}: the same number of questions and the same mark for each question, filled with ${mode === "rep" ? "questions Cambridge has repeated" : mode === "sim" ? "questions Cambridge keeps asking in a similar way" : "repeated and similar questions"} from past papers, each with its official mark scheme.`),
+      h("p", { className: "muted pb-note" }, mode === "past" ? "You get the full paper exactly as Cambridge set it: same questions, order, marks and time." : `A new paper laid out like the latest ${compName(sub, comp)}: the same number of questions and the same mark for each question, filled with ${mode === "rep" ? "questions Cambridge has repeated" : mode === "sim" ? "questions Cambridge keeps asking in a similar way" : "repeated and similar questions"} from past papers, each with its official mark scheme.`),
       sub === "Business Studies" && comp === "2" && h("p", { className: "muted" }, "Paper 2 questions refer to that year's case study. Use “View original page” on each question to read it."),
-      data.loading ? h("p", { className: "muted" }, "Loading the question bank…") : data.err ? h("p", { className: "muted" }, data.err) : !comps.length ? h("p", { className: "muted" }, `No analysed ${sub} papers are in the portal yet.`) : h("button", { className: "btn-primary", disabled: !comp || (mode === "past" && !paperId), onClick: build }, "Create Cambridge-format paper")),
+      data.loading ? h("p", { className: "muted" }, "Loading the question bank…") : data.err ? h("p", { className: "muted" }, data.err) : !comps.length ? h("p", { className: "muted" }, `No analysed ${sub} papers are in the portal yet.`) : h("button", { className: "btn-primary pb-go", disabled: !comp || (mode === "past" && !paperId), onClick: build }, "Build paper")),
     viewer && h(PdfViewer, { ...viewer, onClose: () => setViewer(null) }));
 
   const Head = h("div", { className: "cam-head" }, h("div", { className: "cam-brand" }, "Cambridge IGCSE™ format · MOCK PAPER"), h("h2", null, `${P.sub.toUpperCase()}  ${P.code}/${P.comp}`), h("div", null, P.name), h("div", { className: "cam-row" }, h("b", null, phase === "run" ? `Time left ${fmt(left)}` : `${P.mins} minutes`), h("b", null, `Total ${P.total} marks`), h("span", null, P.label)));
@@ -4278,14 +4300,17 @@ function CambridgeMock({ results, setResults, toast, teacher }) {
         h("label", { className: "muted" }, "Marks awarded ", h("input", { type: "number", min: 0, max: p.m, style: { width: 64 }, value: res[key(qi, p.k)] ? res[key(qi, p.k)].score : "", onChange: (e) => setRes({ ...res, [key(qi, p.k)]: { ...(res[key(qi, p.k)] || {}), score: Math.min(Math.max(Number(e.target.value) || 0, 0), p.m), max: p.m } }) }), ` / ${p.m}`)))),
     h("div", { className: "cam-src" }, P.mode === "past" ? null : h("span", null, `From ${paperLabel(q)} Q${q.q}`, P.sources[qi] && P.sources[qi].kind === "extra" ? " · extra (no repeat found)" : P.sources[qi] && P.sources[qi].n ? ` · asked in ${P.sources[qi].n > 1 ? "several groups" : "a repeat group"}` : ""), P.mode === "past" && h("span", null, `${paperLabel(q)} Q${q.q}`), h("span", { className: "mark-btns" }, figBtn(q), teacher && phase === "paper" && h(React.Fragment, null, h("button", { className: "btn-secondary sm", "aria-label": "Move up", onClick: () => moveQ(qi, -1) }, "↑"), h("button", { className: "btn-secondary sm", "aria-label": "Move down", onClick: () => moveQ(qi, 1) }, "↓"), h("button", { className: "btn-secondary sm", onClick: () => swapQ(qi) }, "Swap question"), h("button", { className: "btn-secondary sm", onClick: () => removeQ(qi) }, "Remove")))))));
 
-  if (phase === "paper") return h(React.Fragment, null, h("div", { className: "panel cam-paper" }, Head,
+  if (phase === "paper") return h(React.Fragment, null, h("div", { className: "panel cam-paper" },
+    h(PBTop, { onBack: () => setPhase("setup"), title: `${P.sub} ${P.code}/${P.comp}`, sub: `${P.name} \xB7 ${P.label}`, chips: [`${P.questions.length} questions`, `${P.total} marks`, `${P.mins} min`] }),
+    h("div", { className: "pb-actions" },
+      teacher ? h("button", { className: "btn-primary", disabled: sending, onClick: sendAssign }, sending ? "Sending\u2026" : "Send to class") : h("button", { className: "btn-primary", onClick: () => { setLeft((Number(P.mins) || 60) * 60); setPhase("run"); } }, "Start timed exam"),
+      h("button", { className: "btn-secondary", onClick: () => printIt(false) }, "Question paper"),
+      h("button", { className: "btn-secondary", onClick: () => printIt(true) }, "Mark scheme"),
+      teacher && h("button", { className: "btn-secondary", onClick: () => { setLeft((Number(P.mins) || 60) * 60); setPhase("run"); } }, "Try as exam"),
+      P.mode !== "past" && h("button", { className: "btn-secondary", onClick: build }, "New version")),
+    teacher && h(PBDetails, { meta, um, sub: P.sub || sub, note: "Use \u2191 \u2193, Swap and Remove under each question to adjust the paper." }),
+    Head,
     h("div", { className: "cam-ins" }, h("b", null, "INSTRUCTIONS"), h("ul", null, h("li", null, P.mcq ? `There are ${P.questions.length} questions. For each one choose A, B, C or D.` : "Answer all questions. Show all necessary working."), h("li", null, `The total mark for this paper is ${P.total}. The marks for each part are shown in brackets [ ].`)), h("small", { className: "muted" }, P.mode === "past" ? "" : `Laid out like ${P.layout}. `, "Built from past Cambridge IGCSE questions; not an official Cambridge paper.")),
-    teacher && h("div", { className: "cam-ins" }, h("b", null, "Teacher tools"), h("div", { className: "form-row" }, h(Fld, { label: "Paper title" }, h("input", { value: meta.title, placeholder: "e.g. Term 2 mock examination", onChange: (e) => um({ title: e.target.value }) })), h(Fld, { label: "School" }, h("input", { value: meta.school, onChange: (e) => um({ school: e.target.value }) })), h(Fld, { label: "Grade" }, h("select", { value: meta.cls, onChange: (e) => um({ cls: e.target.value }) }, GRADES.map((g) => h("option", { key: g }, g)))), h(Fld, { label: "Due date and time" }, h("input", { type: "datetime-local", value: meta.due && meta.due.length === 10 ? meta.due + "T23:59" : meta.due, onChange: (e) => um({ due: e.target.value }) }))),
-      h(ClassPicker, { value: meta.classes || [], sub: P.sub || sub, onChange: (v) => um({ classes: v }) }),
-      h("label", { className: "planner-task", style: { border: 0 } }, h("input", { type: "checkbox", checked: !meta.hideSrc, onChange: (e) => um({ hideSrc: !e.target.checked }) }), h("span", null, "Show the source paper under each question")),
-      h("div", { className: "mark-btns" }, h("button", { className: "btn-primary", onClick: () => printIt(false) }, "Open question paper"), h("button", { className: "btn-secondary", onClick: () => printIt(true) }, "Open mark scheme"), false, false, h("button", { className: "btn-secondary", disabled: sending, onClick: sendAssign }, sending ? "Sending…" : "Send to students as assignment")),
-      h("p", { className: "muted" }, `${P.questions.length} questions · ${P.total} marks. Use Swap, ↑ ↓ and Remove on each question to adjust the paper.`)),
-    h("div", { className: "mark-btns" }, h("button", { className: "btn-primary", onClick: () => { setLeft((Number(P.mins) || 60) * 60); setPhase("run"); } }, teacher ? "Try it as a timed exam" : "Start timed exam"), h("button", { className: "btn-secondary", onClick: () => printIt(false) }, "Open question paper"), h("button", { className: "btn-secondary", onClick: () => printIt(true) }, "Open mark scheme"), !teacher && h(React.Fragment, null, false, false), P.mode !== "past" && h("button", { className: "btn-secondary", onClick: build }, "Make a different paper"), h("button", { className: "btn-secondary", onClick: () => setPhase("setup") }, "Back")),
     Paper(null)), viewer && h(PdfViewer, { ...viewer, onClose: () => setViewer(null) }));
 
   const unansweredMock = () => { let n = 0; P.questions.forEach((q, qi) => qItems(q).forEach((p) => { if ((p.m > 0 || P.mcq) && !String(ans[key(qi, p.k)] || "").trim()) n++; })); return n; };
@@ -4297,20 +4322,174 @@ function CambridgeMock({ results, setResults, toast, teacher }) {
     h("div", { className: "mark-btns" }, h("button", { className: "btn-primary", disabled: busy, onClick: markAll }, busy ? "Marking against the mark scheme…" : "Mark again"), h("button", { className: "btn-secondary", onClick: () => printIt(true) }, "Open mark scheme"), false, h("button", { className: "btn-secondary", onClick: save }, "Save result and finish")),
     Paper("review")), viewer && h(PdfViewer, { ...viewer, onClose: () => setViewer(null) }));
 }
+
+/* ===================== Paper builder: shared bits ===================== */
+function PBTop({ onBack, title, sub, chips }) {
+  return h("div", { className: "pb-top" },
+    h("button", { className: "pb-back", onClick: onBack, "aria-label": "Change settings" }, h(ChevL, { size: 20 })),
+    h("div", { className: "pb-tt" }, h("b", null, title), sub && h("small", null, sub)),
+    h("div", { className: "pb-chips" }, (chips || []).map((c) => h("span", { key: c }, c))));
+}
+function PBDetails({ meta, um, sub, note }) {
+  return h("details", { className: "pb-det" }, h("summary", null, h("span", null, "Paper details and class"), h("small", null, meta.classes && meta.classes.length ? `${meta.classes.length} class${meta.classes.length > 1 ? "es" : ""}` : "All students")),
+    h("div", { className: "pb-grid" },
+      h(Fld, { label: "Paper title" }, h("input", { value: meta.title || "", placeholder: "e.g. Term 2 mock examination", onChange: (e) => um({ title: e.target.value }) })),
+      h(Fld, { label: "School" }, h("input", { value: meta.school || "", placeholder: "Shown on the front page", onChange: (e) => um({ school: e.target.value }) })),
+      h(Fld, { label: "Grade" }, h("select", { value: meta.cls || "Grade 10", onChange: (e) => um({ cls: e.target.value }) }, GRADES.map((g) => h("option", { key: g }, g)))),
+      h(Fld, { label: "Exam date" }, h("input", { type: "date", value: meta.date || "", onChange: (e) => um({ date: e.target.value }) })),
+      h(Fld, { label: "Due date and time" }, h("input", { type: "datetime-local", value: meta.due && meta.due.length === 10 ? meta.due + "T23:59" : meta.due || "", onChange: (e) => um({ due: e.target.value }) }))),
+    h(ClassPicker, { value: meta.classes || [], sub, onChange: (v) => um({ classes: v }) }),
+    h("label", { className: "pb-check" }, h("input", { type: "checkbox", checked: !meta.hideSrc, onChange: (e) => um({ hideSrc: !e.target.checked }) }), h("span", null, "Show the source paper under each question")),
+    note && h("p", { className: "muted" }, note));
+}
+const TQ_COMP = {
+  "0450": { 1: ["Paper 1 Short Answer and Data Response", 90], 2: ["Paper 2 Case Study", 90] },
+  "0452": { 1: ["Paper 1 Multiple Choice", 60], 2: ["Paper 2 Structured Written Paper", 105] },
+  "0455": { 1: ["Paper 1 Multiple Choice", 45], 2: ["Paper 2 Structured Questions", 135] },
+  "0471": { 1: ["Paper 1 Written Paper", 150], 2: ["Paper 2 Alternative to Coursework", 150] },
+  "0478": { 1: ["Paper 1 Computer Systems", 105], 2: ["Paper 2 Algorithms, Programming and Logic", 105] },
+  "0510": { 1: ["Paper 1 Reading and Writing", 120], 2: ["Paper 2 Reading and Writing (Extended)", 120] },
+  "0580": { 1: ["Paper 1 (Core)", 90], 2: ["Paper 2 (Extended)", 90], 3: ["Paper 3 (Core)", 90], 4: ["Paper 4 (Extended)", 120] },
+  "0610": { 1: ["Paper 1 Multiple Choice (Core)", 45], 2: ["Paper 2 Multiple Choice (Extended)", 45], 3: ["Paper 3 Theory (Core)", 75], 4: ["Paper 4 Theory (Extended)", 75], 6: ["Paper 6 Alternative to Practical", 60] },
+  "0620": { 1: ["Paper 1 Multiple Choice", 45], 2: ["Paper 2 Theory (Core)", 75], 3: ["Paper 3 Theory (Extended)", 75] },
+  "0625": { 1: ["Paper 1 Multiple Choice (Core)", 45], 2: ["Paper 2 Multiple Choice (Extended)", 45], 3: ["Paper 3 Theory (Core)", 75], 4: ["Paper 4 Theory (Extended)", 75] },
+  "9100": { 1: ["Paper 1", 120], 2: ["Paper 2", 120] },
+  "9200": { 1: ["Paper 1", 120], 2: ["Paper 2", 120] }
+};
+const tqCompName = (code, c) => (TQ_COMP[code] && TQ_COMP[code][c] && TQ_COMP[code][c][0]) || `Paper ${c}`;
+const tqCompMins = (code, c) => (TQ_COMP[code] && TQ_COMP[code][c] && TQ_COMP[code][c][1]) || 90;
+const tqQNum = (q) => parseInt(String(q.q).replace(/\D+/g, " ").trim(), 10) || 0;
+function tqBlocksHtml(P, blocks) {
+  return (blocks || []).filter((b) => !(b[0] === "p" && TQ_JUNK.test(b[1]))).map((b) => {
+    if (b[0] === "p") return `<p>${b[1]}</p>`;
+    if (b[0] === "o") return `<p class="o"><b>${esc(b[1])}</b> ${b[2]}</p>`;
+    const [, y, hh, w, file, sw] = b; const src = file ? `tq/${P.code}/${file}` : "tq/img/" + P.f, SW = sw || P.w;
+    return `<div class="fig" style="width:min(100%,${Math.round(w)}px);aspect-ratio:${w}/${hh}"><img src="${src}" alt="" style="width:${SW / w * 100}%;margin-top:-${y / w * 100}%"></div>`;
+  }).join("");
+}
+function tqPaperHtml(T, withMs) {
+  const dv = isDv(T.sub);
+  const head = `<div class="hd"><div class="b">${T.school ? esc(T.school) + " &middot; " : ""}${esc(T.title || (withMs ? "MARK SCHEME" : "PRACTICE PAPER"))}</div>${T.cls || T.date ? `<div class="b">${esc(T.cls || "")}${T.cls && T.date ? " &middot; " : ""}${esc(T.date || "")}</div>` : ""}<h1>${esc(T.sub.toUpperCase())} ${esc(T.code)}/${esc(T.comp)}</h1><div>${esc(T.name)}${withMs ? " &middot; Mark scheme" : ""}</div><div class="r"><b>${withMs ? "" : esc(T.mins) + " minutes"}</b><b>Total ${T.total} marks</b><span>${esc(T.label)}</span></div>${!withMs && T.school ? '<div class="cn">Candidate name ______________________________ &nbsp; Class __________</div>' : ""}</div>`;
+  const ins = withMs ? "" : `<div class="ins"><b>INSTRUCTIONS</b><ul><li>Answer <b>all</b> questions.</li><li>The total mark for this paper is <b>${T.total}</b>. The marks for each question are shown in brackets [ ].</li></ul></div>`;
+  const body = T.questions.map((q, n) => {
+    const P = T.papers[q.p] || {};
+    const src = T.hideSrc ? "" : `<div class="src">${esc(tqSource(P, q))}</div>`;
+    if (withMs) {
+      const ans = q.a ? `<p><b>Answer: ${esc(q.a)}</b></p>` : q.mb ? tqBlocksHtml(P, q.mb) : (q.pt || []).map(([l, m, t, a]) => `<p>${l ? `<b>${esc(l)}</b> ` : ""}${esc(a || "See the official mark scheme.")}${m ? ` <span class="mk">[${m}]</span>` : ""}</p>`).join("");
+      return `<div class="q"><div class="qn">${n + 1}</div><div class="qb">${ans}<div class="tm">${q.m || 1} mark${(q.m || 1) > 1 ? "s" : ""}</div>${src}</div></div>`;
+    }
+    return `<div class="q"><div class="qn">${n + 1}</div><div class="qb">${tqBlocksHtml(P, q.b)}<div class="tm">[${q.m || 1}]</div>${src}</div></div>`;
+  }).join("");
+  return `<!doctype html><html${dv ? ' dir="rtl"' : ""}><head><meta charset="utf-8"><title>${esc(T.sub)} ${esc(T.code)}/${esc(T.comp)}</title><style>body{font-family:Arial,Helvetica,sans-serif;max-width:800px;margin:24px auto;padding:0 22px;color:#000;font-size:14px;line-height:1.5}.hd{border:2px solid #000;padding:14px 18px;margin-bottom:14px;direction:ltr;text-align:left}.hd .b{font-size:12px;letter-spacing:.08em}.hd h1{font-size:22px;margin:8px 0 2px}.hd .r{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px}.cn{margin-top:10px;font-size:13px}.ins{border:1px solid #000;padding:8px 14px;margin-bottom:16px;direction:ltr;text-align:left}.ins ul{margin:6px 0;padding-left:20px}.q{display:flex;gap:12px;padding:12px 0;border-top:1px solid #ccc;break-inside:avoid}.qn{font-weight:bold;font-size:16px;min-width:22px}.qb{flex:1;min-width:0}.qb p{margin:4px 0}.o{padding-left:6px}.fig{overflow:hidden;margin:6px 0;max-width:100%}.fig img{display:block}.tm{text-align:right;font-weight:bold;margin-top:4px}.mk{font-weight:bold}.src{font-size:11px;color:#555;margin-top:2px}</style></head><body>${head}${ins}${body}</body></html>`;
+}
+function TQPaper({ sub, teacher, toast }) {
+  const { loading, data } = useTQ(sub);
+  const C = useCloud();
+  const [meta, setMeta] = useLocal("em-camb-meta", { title: "", school: "", cls: "Grade 10", date: "", due: "", hideSrc: true });
+  const um = (p) => setMeta({ ...meta, ...p });
+  const [comp, setComp] = useState("");
+  const [mode, setMode] = useState("past");
+  const [paperId, setPaperId] = useState("");
+  const [sel, setSel] = useState([]);
+  const [n, setN] = useState(10);
+  const [mins, setMins] = useState(90);
+  const [T, setT] = useState(null);
+  const [phase, setPhase] = useState("setup");
+  const [busy, setBusy] = useState(false);
+  const [sending, setSending] = useState(false);
+  const code = SUBJ_CODE[sub];
+  const comps = useMemo(() => data ? [...new Set(Object.values(data.papers).map((p) => String(p.c)))].sort() : [], [data]);
+  const plist = useMemo(() => data ? Object.values(data.papers).filter((p) => String(p.c) === comp).sort((a, b) => b.y - a.y || "wsmx".indexOf(a.s) - "wsmx".indexOf(b.s) || String(a.v || "").localeCompare(String(b.v || ""))) : [], [data, comp]);
+  useEffect(() => { if (comps.length && !comps.includes(comp)) setComp(comps[0]); }, [comps]);
+  useEffect(() => { if (plist.length && !plist.some((p) => p.k === paperId)) setPaperId(plist[0].k); }, [plist]);
+  useEffect(() => { setMins(tqCompMins(code, comp)); }, [code, comp]);
+  if (loading) return h("p", { className: "muted" }, "Loading…");
+  if (!data) return h("div", { className: "ps-empty" }, h(IWand, { size: 22 }), h("p", null, `${sub} papers are not available here yet.`));
+  const pLabel = (p) => `${tqCode(p)} \xB7 ${SESS_NAME[p.s] || ""} ${p.y}`.replace(/\s+/g, " ");
+  const build = async () => {
+    setBusy(true);
+    const all = (await Promise.all(data.topics.map((t) => tqLoadTopic(data, t.t)))).flat();
+    setBusy(false);
+    const seen = new Set(); const uniq = all.filter((q) => { const k = q.p + "#" + q.q; if (seen.has(k)) return false; seen.add(k); return true; });
+    let qs;
+    if (mode === "past") qs = uniq.filter((q) => q.p === paperId).sort((a, b) => tqQNum(a) - tqQNum(b));
+    else { const tset = new Set(sel); qs = uniq.filter((q) => data.papers[q.p] && String(data.papers[q.p].c) === comp && (!sel.length || tset.has(q.t))).sort(() => Math.random() - 0.5).slice(0, n); }
+    if (!teacher && getAccess().level < 1 && qs.length > 5) { qs = qs.slice(0, 5); toast("Free plan: practice papers are limited to 5 questions. Open Plans to get the full paper."); }
+    if (!qs.length) { toast("No questions were found for this choice."); return; }
+    const P0 = mode === "past" ? data.papers[paperId] : null;
+    setT({ sub, code, comp, name: tqCompName(code, comp), mins: Number(mins) || 60, mode, papers: data.papers, questions: qs, label: P0 ? pLabel(P0) : `Mixed topics \xB7 ${qs.length} questions` });
+    setPhase("paper"); window.scrollTo({ top: 0 });
+  };
+  const total = T ? T.questions.reduce((a, q) => a + (q.m || 1), 0) : 0;
+  const TT = T ? { ...T, total, ...(teacher ? meta : { hideSrc: false }) } : null;
+  const setQs = (questions) => setT({ ...T, questions });
+  const moveQ = (i, d) => { const j = i + d; if (j < 0 || j >= T.questions.length) return; const q = [...T.questions]; [q[i], q[j]] = [q[j], q[i]]; setQs(q); };
+  const removeQ = (i) => setQs(T.questions.filter((_, k) => k !== i));
+  const open = (ms) => printDoc(tqPaperHtml(TT, ms), `${T.sub}-${T.code}-${T.comp}${ms ? "-mark-scheme" : ""}`, toast);
+  const plain = (q) => (q.b || []).filter((b) => b[0] !== "f").map((b) => b[0] === "o" ? b[1] + " " + String(b[2]).replace(/<[^>]+>/g, "") : String(b[1]).replace(/<[^>]+>/g, "")).join("\n").trim();
+  const sendAssign = async () => {
+    if (!C.db) { toast("Assignments need the online database."); return; }
+    if (T.questions.length > (planLimits().assignQ || Infinity)) { openUpgrade("assignQ"); return; }
+    if (!planGateUse("assign")) return;
+    setSending(true);
+    try {
+      const items = T.questions.map((q, qi) => { const P = T.papers[q.p] || {}; const ans = q.a || (q.pt || []).map(([l, m, t, a]) => (l ? l + " " : "") + (a || "")).join("\n").trim(); return { id: "i" + Date.now().toString(36) + qi, src: "tq:" + q.p + "#" + q.q, label: `Q${qi + 1} \xB7 ${tqSource(P, q)}`, question: plain(q) || `Question ${qi + 1}`, tq: { P: { code: P.code, c: P.c, v: P.v || "", y: P.y, s: P.s, w: P.w || 0, f: P.f || "" }, b: q.b || [] }, marks: q.m || 1, scheme: q.a ? { mcq: q.a, answer: q.a, marks: q.m || 1 } : ans && !q.mb ? { answer: ans, points: [], marks: q.m || 1 } : null, topic: q.t || "", mcq: !!q.a }; });
+      const id = "a" + Date.now().toString(36);
+      const doc = { title: meta.title || `${T.sub} ${T.code}/${T.comp} – ${T.label}`, kind: "mock", byName: myName(), classes: meta.classes || [], sub: T.sub, cls: meta.cls || "Grade 10", due: meta.due || "", instr: `${T.name}. Time allowed: ${T.mins} minutes. Answer all questions. Total ${total} marks.`, items, files: [], closed: false, total, by: C.uid || "", at: Date.now(), edited: Date.now() };
+      await C.db.doc("assign/" + id).set(JSON.parse(JSON.stringify(doc)));
+      toast((meta.classes && meta.classes.length ? "Paper sent to your class" : "Paper sent to all students") + " as an assignment. Open Assignments to follow submissions.");
+    } catch (e) { toast(errText(e)); }
+    setSending(false);
+  };
+  if (phase === "run" && T) return h(BuilderView, { sub, toast, preset: { qs: T.questions, mins: T.mins }, onExit: () => setPhase("paper") });
+  if (phase === "paper" && T) return h("div", { className: "panel cam-paper" },
+    h(PBTop, { onBack: () => setPhase("setup"), title: `${T.sub} ${T.code}/${T.comp}`, sub: `${T.name} \xB7 ${T.label}`, chips: [`${T.questions.length} questions`, `${total} marks`, `${T.mins} min`] }),
+    h("div", { className: "pb-actions" },
+      teacher ? h("button", { className: "btn-primary", disabled: sending, onClick: sendAssign }, sending ? "Sending…" : "Send to class") : h("button", { className: "btn-primary", onClick: () => setPhase("run") }, "Start timed exam"),
+      h("button", { className: "btn-secondary", onClick: () => open(false) }, "Question paper"),
+      h("button", { className: "btn-secondary", onClick: () => open(true) }, "Mark scheme"),
+      teacher && h("button", { className: "btn-secondary", onClick: () => setPhase("run") }, "Try as exam"),
+      T.mode !== "past" && h("button", { className: "btn-secondary", disabled: busy, onClick: build }, "New version")),
+    teacher && h(PBDetails, { meta, um, sub: T.sub, note: "Use ↑ ↓ and Remove under each question to adjust the paper." }),
+    h("div", { className: "pbq-list" }, T.questions.map((q, i) => { const P = T.papers[q.p] || {}; return h("div", { className: "pbq", key: q.p + "#" + q.q, dir: isDv(sub) ? "rtl" : undefined },
+      h("div", { className: "pbq-h" }, h("span", { className: "tq-n" }, i + 1), h("small", null, tqSource(P, q), " \xB7 ", topicLabel(sub, q.t)), h("b", null, `[${q.m || 1}]`)),
+      h(QBody, { P, q }),
+      teacher && h("div", { className: "pbq-tools" }, h("button", { className: "btn-secondary sm", "aria-label": "Move up", onClick: () => moveQ(i, -1) }, "↑"), h("button", { className: "btn-secondary sm", "aria-label": "Move down", onClick: () => moveQ(i, 1) }, "↓"), h("button", { className: "btn-secondary sm", onClick: () => removeQ(i) }, "Remove"))); })));
+  const tps = data.topics.map((x) => x.t);
+  return h("div", { className: "panel pb-card" },
+    h("div", { className: "pb-row" }, h("span", { className: "pb-lbl" }, "Build from"), h("div", { className: "eb-seg" }, [["past", "Past paper"], ["topics", "Topics mix"]].map(([k, l]) => h("button", { key: k, className: mode === k ? "on" : "", onClick: () => setMode(k) }, l)))),
+    h("div", { className: "pb-grid" },
+      h(Fld, { label: "Paper" }, h("select", { value: comp, onChange: (e) => setComp(e.target.value) }, comps.map((c) => h("option", { key: c, value: c }, tqCompName(code, c))))),
+      mode === "past" ? h(Fld, { label: "Session" }, h("select", { value: paperId, onChange: (e) => setPaperId(e.target.value) }, plist.map((p) => h("option", { key: p.k, value: p.k }, pLabel(p))))) : h(Fld, { label: "Questions" }, h("select", { value: n, onChange: (e) => setN(Number(e.target.value)) }, [5, 10, 15, 20, 30].map((x) => h("option", { key: x, value: x }, x)))),
+      h(Fld, { label: "Time (minutes)" }, h("input", { type: "number", min: 10, max: 240, value: mins, onChange: (e) => setMins(e.target.value) }))),
+    mode === "topics" && h("div", { className: "pb-row" }, h("span", { className: "pb-lbl" }, "Topics"), h("div", { className: "en-chips" }, h("button", { className: sel.length ? "chip" : "chip on", onClick: () => setSel([]) }, "All topics"), tps.map((t) => h("button", { key: t, className: sel.includes(t) ? "chip on" : "chip", onClick: () => setSel(sel.includes(t) ? sel.filter((x) => x !== t) : [...sel, t]) }, topicLabel(sub, t))))),
+    h("p", { className: "muted pb-note" }, mode === "past" ? "The full paper as it was set: same questions, order and marks, with the official answers." : "A new paper with questions picked at random from the topics you choose, from this paper type only."),
+    h("button", { className: "btn-primary pb-go", disabled: busy || !comp || (mode === "past" && !paperId), onClick: build }, busy ? "Building…" : "Build paper"));
+}
+function PaperStudio({ teacher, results, setResults, toast }) {
+  const mine = teacher ? teachSubs() : subjects;
+  const all = [...mine, ...subjects.filter((x) => !mine.includes(x))];
+  const [sub, setSub] = useLocal(teacher ? "em-pb-sub" : "em-mock-sub", all[0]);
+  const cur = all.includes(sub) ? sub : all[0];
+  return h("div", { className: "pb" },
+    h("div", { className: "pb-subs", role: "tablist", "aria-label": "Subject" }, all.map((x) => h("button", { key: x, role: "tab", "aria-selected": x === cur, className: x === cur ? "pb-sub on" : "pb-sub", onClick: () => setSub(x) }, h(SubjectBadge, { sub: x, size: 30 }), h("span", null, x), h("small", null, SUBJ_CODE[x])))),
+    ANALYSED.includes(cur) ? h(CambridgeMock, { key: cur, fixedSub: cur, results, setResults, toast, teacher }) : h(TQPaper, { key: cur, sub: cur, teacher, toast }));
+}
+const ItemQ = ({ it }) => it.tq && it.tq.b && it.tq.b.length ? h("div", { className: "qtext-tq", dir: it.tq.P && (it.tq.P.code === "9100" || it.tq.P.code === "9200") ? "rtl" : undefined }, h(QBody, { P: it.tq.P, q: { b: it.tq.b } })) : h(ItemQ, { it });
 function TeacherBuilder({ questions, saveQuestions, toast, setShowAdd }) {
   const [tab, setTab] = useState("camb");
   const [results, setResults] = useLocal("em-teacher-trials", []);
   return h(React.Fragment, null,
-    h(Title, { eyebrow: "PAPER BUILDER", title: "Build a Cambridge-format paper", desc: "Make a full paper for your class: a real past paper, or a new one built from repeated or similar Cambridge questions, with its official mark scheme." }),
-    h("div", { className: "tabs-row" }, h("button", { className: tab === "camb" ? "btn-primary" : "btn-secondary", onClick: () => setTab("camb") }, "Cambridge-format paper"), h("button", { className: tab === "custom" ? "btn-primary" : "btn-secondary", onClick: () => setTab("custom") }, "Custom paper (question bank)")),
-    tab === "camb" ? h(CambridgeMock, { results, setResults, toast, teacher: true }) : h(BuilderPage2, { questions, saveQuestions, toast, setShowAdd }));
+    h(Title, { eyebrow: "PAPER BUILDER", title: "Build an exam paper", desc: "Pick a subject, build a paper from real past papers, then send it to your class." }),
+    h("div", { className: "eb-seg pb-tabs" }, h("button", { className: tab === "camb" ? "on" : "", onClick: () => setTab("camb") }, "From past papers"), h("button", { className: tab === "custom" ? "on" : "", onClick: () => setTab("custom") }, "From my question bank")),
+    tab === "camb" ? h(PaperStudio, { results, setResults, toast, teacher: true }) : h(BuilderPage2, { questions, saveQuestions, toast, setShowAdd }));
 }
 function MockCentre({ questions, saveQuestions, results, setResults, toast }) {
   const [tab, setTab] = useState("camb");
   return h(React.Fragment, null,
     h(Title, { eyebrow: "EXAM CENTRE", title: "Mock examinations", desc: "Do a full practice exam, just like the real Cambridge exam. Pick a real old paper, or a new paper made from questions that come often." }),
-    h("div", { className: "tabs-row" }, h("button", { className: tab === "camb" ? "btn-primary" : "btn-secondary", onClick: () => setTab("camb") }, "Cambridge-format paper"), h("button", { className: tab === "quick" ? "btn-primary" : "btn-secondary", onClick: () => setTab("quick") }, "Quick quiz (my question bank)")),
-    tab === "camb" ? h(CambridgeMock, { results, setResults, toast }) : h(ExamEngine, { questions, saveQuestions, results, setResults, toast }));
+    h("div", { className: "eb-seg pb-tabs" }, h("button", { className: tab === "camb" ? "on" : "", onClick: () => setTab("camb") }, "Past paper exam"), h("button", { className: tab === "quick" ? "on" : "", onClick: () => setTab("quick") }, "Quick quiz")),
+    tab === "camb" ? h(PaperStudio, { results, setResults, toast }) : h(ExamEngine, { questions, saveQuestions, results, setResults, toast }));
 }
 
 /* ===================== National exams (DPE Maldives) ===================== */
@@ -4834,10 +5013,10 @@ function AssignmentEditor({ initial, onDone, toast }) {
       h(Fld, { label: "Due date and time" }, h("input", { type: "datetime-local", value: dueVal, onChange: (e) => up({ due: e.target.value }) }))),
     h("section", { className: "panel ae-sec" }, step(2, "Send to"), h(ClassPicker, { value: a.classes, sub: a.sub, onChange: (v) => up({ classes: v }), bare: true })),
     h("section", { className: "panel ae-sec" }, step(3, "Add questions"),
-      h("div", { className: "seg ae-src" }, [["past", "Past papers"], ["own", "Write my own"], ["ai", "AI"]].map(([k, l]) => h("button", { key: k, className: src === k ? "on" : "", onClick: () => setSrc(k) }, l))),
+      h("div", { className: "seg ae-src" }, [["past", "Past papers"], ["own", "Write my own"]].map(([k, l]) => h("button", { key: k, className: src === k ? "on" : "", onClick: () => setSrc(k) }, l))),
       src === "past" && h(PastPicker, { sub: a.sub, onAdd: addItem, onRemove: removeSrc, picked: a.items.map((x) => x.src) }),
       src === "own" && h("div", { className: "ae-own" }, h(Fld, { label: "Question" }, h("textarea", { rows: 3, "aria-label": "New question text", value: own.question, onChange: (e) => setOwn({ ...own, question: e.target.value }) })), h("div", { className: "form-row" }, h(Fld, { label: "Marks" }, h("input", { type: "number", min: 1, value: own.marks, onChange: (e) => setOwn({ ...own, marks: e.target.value }) }))), h(Fld, { label: "Answer key (optional)" }, h("textarea", { rows: 3, value: own.scheme, onChange: (e) => setOwn({ ...own, scheme: e.target.value }), placeholder: "M1 correct method\nA1 correct answer\nAnswer: 12.5" })), h("button", { className: "btn-primary", onClick: addOwn }, h(Plus, { size: 15 }), " Add question")),
-      src === "ai" && h("div", { className: "form-row" }, h(Fld, { label: "Topic" }, h("select", { value: ai.topic, onChange: (e) => setAi({ ...ai, topic: e.target.value }) }, h("option", { value: "*" }, "All topics"), (SYLLABUS[a.sub] || []).map((t) => h("option", { key: t }, t)))), h(Fld, { label: "How many" }, h("input", { type: "number", min: 1, max: 20, value: ai.n, onChange: (e) => setAi({ ...ai, n: e.target.value }) })), h("button", { className: "btn-primary", disabled: ai.busy, onClick: genAI, style: { alignSelf: "end" } }, ai.busy ? "Writing…" : "Make questions"))),
+      false && h("div", { className: "form-row" }, h(Fld, { label: "Topic" }, h("select", { value: ai.topic, onChange: (e) => setAi({ ...ai, topic: e.target.value }) }, h("option", { value: "*" }, "All topics"), (SYLLABUS[a.sub] || []).map((t) => h("option", { key: t }, t)))), h(Fld, { label: "How many" }, h("input", { type: "number", min: 1, max: 20, value: ai.n, onChange: (e) => setAi({ ...ai, n: e.target.value }) })), h("button", { className: "btn-primary", disabled: ai.busy, onClick: genAI, style: { alignSelf: "end" } }, ai.busy ? "Writing…" : "Make questions"))),
     h("section", { className: "panel ae-sec" }, step(4, `Your questions \xB7 ${a.items.length}`),
       a.items.length === 0 ? h("p", { className: "empty-note" }, "Questions you add show here.") : h("div", { className: "ae-items" }, a.items.map((it, i) => h("div", { className: "ae-q", key: it.id },
         h("div", { className: "ae-q-top" }, h("span", { className: "ae-num" }, i + 1), h("span", { className: "ae-q-src" }, it.label), h("span", { className: "ae-q-marks" }, `${it.marks} mark${it.marks > 1 ? "s" : ""}`)),
@@ -4852,7 +5031,7 @@ function AssignmentEditor({ initial, onDone, toast }) {
       h("div", { className: "pv-head" }, h("small", null, "PREVIEW \xB7 WHAT STUDENTS WILL SEE"), h("h2", null, a.title), h("p", null, [a.sub, a.cls, a.due ? "Due " + fmtDue(a.due) : "No due date", `${total} marks`].join(" \xB7 ")), h("span", { className: "pv-to" }, "To: ", target)),
       a.instr && h("p", { className: "pv-instr" }, a.instr),
       a.files.length > 0 && h("p", { className: "pv-instr" }, `${a.files.length} file${a.files.length > 1 ? "s" : ""} attached`),
-      h("div", { className: "pv-list" }, a.items.map((it, i) => h("div", { className: "pv-q", key: it.id }, h("div", { className: "pv-q-top" }, h("b", null, "Question " + (i + 1)), h("span", null, `${it.marks} mark${it.marks > 1 ? "s" : ""}`)), h("pre", { className: "qtext" }, it.question), !it.scheme && h("small", { className: "pv-warn" }, "No answer key: you will mark this one yourself.")))),
+      h("div", { className: "pv-list" }, a.items.map((it, i) => h("div", { className: "pv-q", key: it.id }, h("div", { className: "pv-q-top" }, h("b", null, "Question " + (i + 1)), h("span", null, `${it.marks} mark${it.marks > 1 ? "s" : ""}`)), h(ItemQ, { it }), !it.scheme && h("small", { className: "pv-warn" }, "No answer key: you will mark this one yourself.")))),
       h("div", { className: "pv-btns" }, h("button", { className: "btn-secondary", onClick: () => setPreview(false) }, "Back to edit"), h("button", { className: "btn-primary", disabled: busy, onClick: save }, busy ? "Sending…" : a.id ? "Save changes" : `Send to ${target}`)))));
 }
 /* ---------- Teacher: submissions ---------- */
@@ -4888,7 +5067,7 @@ function SubmissionReview({ a, uid, sub, name, grade, onClose, toast }) {
   if (!sub) return null;
   return h("div", { className: "panel" }, h("div", { className: "occ-head" }, h("h3", null, name, " \xB7 ", a.title), h("button", { className: "btn-secondary", onClick: onClose }, "Back")), h("p", { className: "muted" }, `Submitted ${new Date(sub.at).toLocaleString("en-GB")}`, isLate(a, sub.at) ? " \xB7 LATE" : ""), h(Attachments, { files: sub.files, onView: setView }),
     Object.keys(res).length ? h(MarkSummary, { s: markSummary(a.items.map((it) => res[it.id]).filter(Boolean), a.total), note: "Auto-marked against the official mark scheme. Answers marked \u201cNeeds teacher check\u201d need your decision; changing a mark confirms it." }) : h("p", { className: "muted" }, busy ? "Marking against the mark scheme…" : "Not marked yet."),
-    a.items.map((it, i) => { const r = res[it.id]; return h("div", { className: "review-card", key: it.id }, h("b", null, `${i + 1}. `, it.label, ` (${it.marks})`), h("pre", { className: "qtext" }, it.question), h("p", null, h("b", null, "Answer: "), ans[it.id] || h("i", { className: "muted" }, "No answer")), h(MarkResult, { r }), h("div", { className: "form-row" }, h(Fld, { label: `Mark (out of ${it.marks})` }, h("input", { type: "number", min: 0, max: it.marks, step: 0.5, value: r ? r.score : "", onChange: (e) => setRes({ ...res, [it.id]: { ...(r || { points: [], max: it.marks }), score: Math.min(it.marks, Math.max(0, Number(e.target.value) || 0)), max: it.marks, review: false, pending: false, by: "teacher" } }) })), h(Fld, { label: "Comment" }, h("input", { value: r && r.comment || "", onChange: (e) => setRes({ ...res, [it.id]: { ...(r || { score: 0, max: it.marks, points: [] }), comment: e.target.value } }) })))); }),
+    a.items.map((it, i) => { const r = res[it.id]; return h("div", { className: "review-card", key: it.id }, h("b", null, `${i + 1}. `, it.label, ` (${it.marks})`), h(ItemQ, { it }), h("p", null, h("b", null, "Answer: "), ans[it.id] || h("i", { className: "muted" }, "No answer")), h(MarkResult, { r }), h("div", { className: "form-row" }, h(Fld, { label: `Mark (out of ${it.marks})` }, h("input", { type: "number", min: 0, max: it.marks, step: 0.5, value: r ? r.score : "", onChange: (e) => setRes({ ...res, [it.id]: { ...(r || { points: [], max: it.marks }), score: Math.min(it.marks, Math.max(0, Number(e.target.value) || 0)), max: it.marks, review: false, pending: false, by: "teacher" } }) })), h(Fld, { label: "Comment" }, h("input", { value: r && r.comment || "", onChange: (e) => setRes({ ...res, [it.id]: { ...(r || { score: 0, max: it.marks, points: [] }), comment: e.target.value } }) })))); }),
     h(Fld, { label: "Overall comment" }, h("textarea", { rows: 2, value: cm, onChange: (e) => setCm(e.target.value) })), h("div", { className: "modal-actions" }, h("b", null, `Total: ${total} / ${a.total}`), h("button", { className: "btn-secondary", disabled: busy, onClick: remark }, busy ? "Working…" : "Mark with mark scheme"), h("button", { className: "btn-primary", disabled: busy, onClick: ret }, "Return to student")), view && h(FileViewer, { f: view, onClose: () => setView(null) }));
 }
 function TeacherAssignments({ toast }) {
@@ -4957,7 +5136,7 @@ function StudentWork({ a, mine, grade, onBack, toast }) {
   const res = grade ? grade.items : mine && mine.auto ? mine.auto.items : null;
   return h("div", { className: "panel" }, h("div", { className: "occ-head" }, h("h3", null, a.title), h("button", { className: "btn-secondary", onClick: onBack }, "Back")), h("p", { className: "muted" }, `${a.sub} \xB7 due ${fmtDue(a.due)} \xB7 ${a.total} marks`, a.closed ? " \xB7 closed" : ""), a.instr && h("p", null, a.instr), h(Attachments, { files: a.files, onView: setView }),
     grade ? h("div", { className: "grade-box" }, h("b", null, `Final mark: ${grade.total} / ${grade.max}`), grade.comment && h("p", null, grade.comment)) : mine && mine.auto ? h("div", { className: "grade-box" }, h(MarkSummary, { s: { total: mine.auto.total, max: mine.auto.max, pct: mine.auto.max ? Math.round(mine.auto.total / mine.auto.max * 100) : 0, grade: gradeFor(mine.auto.max ? Math.round(mine.auto.total / mine.auto.max * 100) : 0), flagged: mine.auto.flagged || 0 }, note: "Provisional mark from the official mark scheme. Your teacher confirms the final mark." })) : submitted ? h("div", { className: "grade-box" }, h("b", null, busy === "mark" ? "Marking…" : "Submitted – waiting for marking")) : null,
-    a.items.map((it, i) => h("div", { className: "review-card", key: it.id }, h("b", null, `${i + 1}. `, h("small", { className: "muted" }, it.label, ` \xB7 ${it.marks} mark${it.marks > 1 ? "s" : ""}`)), h("pre", { className: "qtext" }, it.question), it.mcq ? h("div", { className: "mcq-row" }, ["A", "B", "C", "D"].map((L) => h("label", { key: L, className: ans[it.id] === L ? "sel" : "" }, h("input", { type: "radio", name: it.id, disabled: locked, checked: ans[it.id] === L, onChange: () => setAns({ ...ans, [it.id]: L }) }), " ", L))) : h("textarea", { rows: 4, disabled: locked, value: ans[it.id] || "", onChange: (e) => setAns({ ...ans, [it.id]: e.target.value }), placeholder: "Your answer and working" }), res && res[it.id] && h(MarkResult, { r: res[it.id] }), grade && res && res[it.id] && res[it.id].comment && h("p", null, h("b", null, "Teacher: "), res[it.id].comment))),
+    a.items.map((it, i) => h("div", { className: "review-card", key: it.id }, h("b", null, `${i + 1}. `, h("small", { className: "muted" }, it.label, ` \xB7 ${it.marks} mark${it.marks > 1 ? "s" : ""}`)), h(ItemQ, { it }), it.mcq ? h("div", { className: "mcq-row" }, ["A", "B", "C", "D"].map((L) => h("label", { key: L, className: ans[it.id] === L ? "sel" : "" }, h("input", { type: "radio", name: it.id, disabled: locked, checked: ans[it.id] === L, onChange: () => setAns({ ...ans, [it.id]: L }) }), " ", L))) : h("textarea", { rows: 4, disabled: locked, value: ans[it.id] || "", onChange: (e) => setAns({ ...ans, [it.id]: e.target.value }), placeholder: "Your answer and working" }), res && res[it.id] && h(MarkResult, { r: res[it.id] }), grade && res && res[it.id] && res[it.id].comment && h("p", null, h("b", null, "Teacher: "), res[it.id].comment))),
     h("h4", null, "Your files"), h(Attachments, { files, onView: setView }), !locked && h("label", { className: "btn-secondary file-label" }, h(Upload, { size: 14 }), busy === "up" ? " Uploading…" : " Upload photo or PDF of your work", h("input", { type: "file", multiple: true, accept: "image/*,application/pdf", onChange: addFiles, disabled: !!busy || !C.assets })), !C.assets && !locked && h("p", { className: "muted" }, "File upload is not available for your account; type your answers instead."),
     !locked && h("div", { className: "modal-actions" }, h("button", { className: "btn-secondary", disabled: !!busy, onClick: draft }, "Save draft"), h("button", { className: "btn-primary", disabled: !!busy, onClick: submit }, busy === "submit" ? "Submitting…" : "Submit")), view && h(FileViewer, { f: view, onClose: () => setView(null) }));
 }
@@ -5397,7 +5576,7 @@ const IReload = svgI(["M3 12a9 9 0 1 0 3-6.7L3 8", "M3 3v5h5"]);
 const IZoom = svgI(["M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z", "m21 21-4.3-4.3", "M11 8v6", "M8 11h6"]);
 const TOPIC_DV = {
   Islam: { "Grade 9 · Aqeedah": "ގްރޭޑް 9 · އަޤީދާ", "Grade 9 · Hadith studies": "ގްރޭޑް 9 · ހަދީޘް ޢިލްމު", "Grade 9 · Islamic fiqh": "ގްރޭޑް 9 · އިސްލާމީ ފިޤްހު", "Grade 9 · Islamic civilization": "ގްރޭޑް 9 · އިސްލާމީ ޙަޟާރާ", "Grade 9 · Islamic culture": "ގްރޭޑް 9 · އިސްލާމީ ޘަޤާފަތް", "Grade 9 · Islamic ethics": "ގްރޭޑް 9 · އިސްލާމީ އަޚްލާޤް", "Grade 10 · Aqeedah": "ގްރޭޑް 10 · އިސްލާމީ ޢަޤީދާ", "Grade 10 · Hadith studies": "ގްރޭޑް 10 · ޙަދީޘް ޢިލްމު", "Grade 10 · Islamic fiqh": "ގްރޭޑް 10 · އިސްލާމީ ފިޤްހު", "Grade 10 · Islamic history": "ގްރޭޑް 10 · އިސްލާމީ ތާރީޚް", "Grade 10 · Islamic culture": "ގްރޭޑް 10 · އިސްލާމީ ޘަޤާފަތް", "Grade 10 · Islamic ethics": "ގްރޭޑް 10 · އިސްލާމީ އަޚްލާޤް" },
-  Dhivehi: { "Reading comprehension": "ދޭހަ", "Composition": "ރިސާލާ ލިޔުން", "Grammar": "ނަޙްވު", "Poetry": "ޅެން", "Prose": "ނަޘުރު", "Letter writing": "ސިޓީ ލިޔުން", "Vocabulary": "ބަސްތަކުގެ މާނަ", "Spelling & dictation": "އިމްލާ" }
+  Dhivehi: { "Essay & story writing": "މަޒުމޫނު އަދި ވާހަކަ ލިޔުން", "Instructional & account writing": "އިރުޝާދުދޭ ލިޔުމާއި ރިކައުންޓް", "Reading comprehension": "ދޭހަ", "Summary writing": "ޚުލާޞާކުރުން", "Letter writing": "ސިޓީ ލިޔުން", "Language & spelling": "ބަހުގެ ޤަވާޢިދާއި އިމްލާ" }
 };
 const isDv = (sub) => sub === "Dhivehi" || sub === "Islam";
 const topicLabel = (sub, t) => (TOPIC_DV[sub] && TOPIC_DV[sub][t]) || t;
@@ -5770,11 +5949,11 @@ const cardsPrompt = (sub, code, topic) => {
 function CardsDeck({ sub, topic }) {
   const code = SUBJ_CODE[sub];
   const prompt = cardsPrompt(sub, code, topic);
-  const D = useAIDoc(sub, "cards2", topic, prompt);
   const dv = isDv(sub);
-  const g = (GUIDE[sub] || { t: {} }).t[topic];
   const pack = useStudyPack(code);
   const pc = (pack.cards || {})[topic];
+  const D = useAIDoc(sub, "cards2", dv || pack.loading || (Array.isArray(pc) && pc.length) ? null : topic, prompt);
+  const g = dv ? null : (GUIDE[sub] || { t: {} }).t[topic];
   const cards = Array.isArray(pc) && pc.length ? pc : Array.isArray(D.data) && D.data.length ? D.data : pack.loading ? [] : g ? [{ front: topic, back: g[0] }, { front: "Example: " + topic, back: g[1] }] : [];
   const [i, setI] = useState(0);
   const [flip, setFlip] = useState(false);
@@ -5953,7 +6132,7 @@ function EnBuilder({ sub, toast }) {
     gate.level < 1 && h("p", { className: "tq-free" }, `Free plan: ${gate.left("build")} practice paper left.`),
     h("button", { className: "btn-primary eb-start", disabled: !pool.length, onClick: start }, pool.length ? `Start \xB7 ${Math.min(n, pool.length)} ${sec === "writing" ? "task" : "exercise"}${Math.min(n, pool.length) > 1 ? "s" : ""}` : "No tasks match"));
 }
-function BuilderView({ sub, toast }) {
+function BuilderView({ sub, toast, preset, onExit }) {
   const { loading, data } = useTQ(sub);
   const [sel, setSel] = useState([]);
   const [kind, setKind] = useState("mix");
@@ -5983,6 +6162,9 @@ function BuilderView({ sub, toast }) {
     setResults((r) => [{ id, date: new Date(id).toLocaleDateString("en-GB"), subject: `${sub} \xB7 practice test`, count: test.qs.length, score: live.sc, total: live.tot, pct, grade: gradeFor(pct) }, ...(r || []).filter((x) => x.id !== id)].slice(0, 30));
   }, [live && live.sc, live && live.tot]);
   useEffect(() => { setSel([]); setTest(null); setN(langB ? 2 : 10); setMins(langB ? 60 : 20); }, [sub]);
+  const startedRef = React.useRef(false);
+  useEffect(() => { if (preset) { setTest({ qs: preset.qs, mins: preset.mins, end: Date.now() + preset.mins * 60000 }); setAns({}); setDone(false); setScore(null); setSm({}); setLeft(preset.mins * 60); window.scrollTo({ top: 0 }); } }, [preset]);
+  useEffect(() => { if (test) startedRef.current = true; else if (preset && startedRef.current && onExit) onExit(); }, [test]);
   useEffect(() => {
     if (!test || done || !test.mins) return;
     const t = setInterval(() => { const l = Math.max(0, Math.round((test.end - Date.now()) / 1000)); setLeft(l); if (!l) finish(); }, 1000);
@@ -5990,6 +6172,7 @@ function BuilderView({ sub, toast }) {
   }, [test, done]);
   if (loading) return h("p", { className: "muted" }, "Loading…");
   if (!data) return h("div", { className: "ps-empty" }, h(IWand, { size: 22 }), h("p", null, `The practice exam builder is coming soon for ${sub}.`));
+  if (preset && !test) return h("p", { className: "muted" }, "Loading\u2026");
   const count = {}; data.topics.forEach((T) => { count[T.t] = T.n; });
   const topics = data.topics.map((T) => T.t).sort();
   const useT = data.topics.filter((T) => !sel.length || sel.includes(T.t));
