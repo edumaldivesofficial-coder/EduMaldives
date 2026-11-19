@@ -1090,6 +1090,71 @@ html[data-theme=dark] .ps-p{background:#152238;border-color:color-mix(in srgb,va
 html[data-theme=dark] .ps-name small,html[data-theme=dark] .ps-m{color:#a9b9cc}
 html[data-theme=dark] .ps-empty{background:#152238;border-color:#2a3d56;color:#a9b9cc}
 @media(max-width:600px){.ps-items li{grid-template-columns:1fr auto;gap:2px 10px}.ps-ex{grid-column:1/-1}.ps-txt{grid-column:1}.tg-body{padding-left:16px}}
+
+/* v95 */
+.ps.dv,.ps.dv *{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif}
+.ps.dv .ps-head b{font-size:1.25em}.ps.dv .ps-note,.ps.dv .ps-txt{line-height:2}.ps.dv .ps-p{white-space:nowrap}
+.ps.dv .ps-items li{direction:rtl;text-align:right}
+.tg-body.dv{line-height:2;text-align:right;font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif}
+.tg-body.dv p{font-size:16px;margin:6px 0 10px}
+.tg-pp{display:inline-block;font-size:13px;font-weight:700;color:var(--blue);background:var(--sky);border-radius:999px;padding:2px 12px}
+.tg-kh{display:block;font-weight:700;color:var(--muted);margin-top:4px}
+.tg-keys{margin:4px 0 4px;padding:0 20px 0 0;list-style:disc}.tg-keys li{margin:3px 0;font-size:15.5px}
+.tg-name.dv{font-size:16px;line-height:1.9;text-align:right;flex:1}
+.au-code{border:1px dashed #9cc8ea;background:#f2f8fe;border-radius:14px;padding:14px;margin:6px 0 10px;text-align:center}
+.au-code>span{display:block;font-size:13px;color:var(--muted);font-weight:600}
+.au-code>b{display:block;font-size:30px;letter-spacing:.18em;color:var(--navy);margin:4px 0 8px;font-variant-numeric:tabular-nums}
+.au-code .au-field{text-align:left;margin:0}.au-code input{text-align:center;font-size:20px;letter-spacing:.2em}
+.au-terms{font-size:12.5px;color:var(--muted);margin:2px 0 8px}
+.en-bubbles{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 14px}
+.en-bub{position:relative;margin:0!important;background:#eef6fd;border:1px solid #cfe3f5;border-radius:18px;padding:10px 14px;max-width:min(100%,300px);font-style:italic;line-height:1.5}
+.en-bub::after{content:"";position:absolute;left:22px;bottom:-8px;width:14px;height:14px;background:#eef6fd;border-right:1px solid #cfe3f5;border-bottom:1px solid #cfe3f5;transform:rotate(45deg)}
+.en-bub:nth-child(even){background:#fff6e8;border-color:#f4dcb4}.en-bub:nth-child(even)::after{background:#fff6e8;border-color:#f4dcb4}
+.en-rule{font-size:13.5px;color:var(--muted)}
+.en-read{margin:8px 0 12px}
+.en-read-i{font-size:14px;color:var(--muted);margin:0 0 8px;font-style:italic}
+.en-psg.full{max-height:none!important;padding:16px 18px;background:#fff;border-color:#e3eaf2;font-size:16.5px}
+.en-psg.full p{line-height:1.75;margin:0 0 12px}
+.en-psg-h{font-weight:800;font-size:18px;color:var(--navy)}
+.en-psg-h2{font-weight:800;color:var(--blue);margin-top:14px!important}
+.en-qs-h{font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:16px 0 4px}
+.qfig-row{display:flex;align-items:flex-start;width:100%}
+.qfig-row>div{min-width:0}.qfig-row .qfig-wrap{width:100%;display:block}.qfig-row .qfig{width:100%!important;border-radius:0}
+.qa2-intro{color:var(--muted);font-size:14px;margin:4px 2px 12px}
+.qa2-topics{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 10px;margin-bottom:4px;scrollbar-width:none}
+.qa2-topics::-webkit-scrollbar{display:none}.qa2-topics .chip{flex:none;white-space:nowrap}
+.qa2-more{display:block;margin:6px auto 20px}
+.ana{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow)}
+.ana-top{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.ana-count{flex:none;width:58px;height:58px;border-radius:16px;background:linear-gradient(135deg,#278ed0,#1c6fb0);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.ana-count b{font-size:22px}.ana-count small{font-size:10.5px;opacity:.9;margin-top:3px}
+.ana-meta{display:flex;flex-direction:column;gap:3px;min-width:0}
+.ana-meta>b{font-size:15.5px;color:var(--navy)}.ana-meta>span{font-size:13px;color:var(--muted)}
+.ana-topic{align-self:flex-start;background:var(--sky);color:var(--blue)!important;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px!important}
+.ana-q{border-top:1px solid var(--line);padding-top:10px}
+.ana-q>small{display:block;color:var(--muted);font-size:12px;font-weight:600;margin-bottom:6px}
+.ana-text{font-size:16px;line-height:1.6;margin:0}
+.ana-btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.ana-ms{margin-top:10px}
+.ana-refs{margin-top:10px;background:#f7f9fc;border-radius:12px;padding:10px 12px;font-size:13px}
+.ana-yr{display:flex;gap:10px;padding:5px 0;border-bottom:1px solid var(--line)}.ana-yr:last-child{border:0}
+.ana-yr b{flex:none;width:40px;color:var(--navy)}.ana-yr span{color:#41536a;line-height:1.5}
+.qa-trow{width:100%;text-align:left;background:none;border:0;cursor:pointer}
+html[data-theme=dark] .ana{background:#13203a;border-color:#24364f}
+html[data-theme=dark] .ana-meta>b{color:#e6eef8}
+html[data-theme=dark] .ana-refs{background:#0f1a2e}html[data-theme=dark] .ana-yr span{color:#b6c4d6}html[data-theme=dark] .ana-yr b{color:#e6eef8}
+html[data-theme=dark] .en-psg.full{background:#13203a;border-color:#2a3d56}
+html[data-theme=dark] .en-bub{background:#173252;border-color:#2b4a70}html[data-theme=dark] .en-bub::after{background:#173252;border-color:#2b4a70}
+html[data-theme=dark] .en-bub:nth-child(even),html[data-theme=dark] .en-bub:nth-child(even)::after{background:#3a2c17;border-color:#5a4426}
+html[data-theme=dark] .au-code{background:#13203a;border-color:#2a4a6e}html[data-theme=dark] .au-code>b{color:#e6eef8}
+html[data-theme=dark] .en-psg-h{color:#e6eef8}
+@media(max-width:600px){.ana{padding:14px 12px}.ana-count{width:50px;height:50px}.en-psg.full{padding:14px;font-size:16px}}
+.ps.dv .ps-m::after{content:" މާކުސް"}.ps.dv .ps-m{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;font-size:14px}
+.tg-body.dv{display:flex;flex-direction:column;align-items:stretch}.tg-pp{align-self:flex-start}
+.qfig-row{border:1px solid #e6edf4;border-radius:12px;background:#fff;padding:8px;box-sizing:border-box;margin:4px 0}
+.qfig-row .qfig-wrap{padding:0!important;border:0!important;border-radius:0!important;background:transparent!important}
+.qfig-row .qimg-zoom{display:none}
+html[data-theme=dark] .qfig-row{border-color:#2a3d56}
 </style></head>
 <body><div id="root"></div>
 <script>window.PAPERS_BASE=null;window.DEMO_MODE=true;</script><script>(()=>{var CQ=Object.create;var Yv=Object.defineProperty;var AQ=Object.getOwnPropertyDescriptor;var SQ=Object.getOwnPropertyNames;var zN=Object.getPrototypeOf,TQ=Object.prototype.hasOwnProperty;var BQ=Reflect.get;var UN=r=>{throw TypeError(r)};var qQ=(r,t,e)=>t in r?Yv(r,t,{enumerable:!0,configurable:!0,writable:!0,value:e}):r[t]=e;var Wh=(r,t)=>()=>{try{return t||r((t={exports:{}}).exports,t),t.exports}catch(e){throw t=0,e}},EQ=(r,t)=>{for(var e in t)Yv(r,e,{get:t[e],enumerable:!0})},IQ=(r,t,e,a)=>{if(t&&typeof t=="object"||typeof t=="function")for(let n of SQ(t))!TQ.call(r,n)&&n!==e&&Yv(r,n,{get:()=>t[n],enumerable:!(a=AQ(t,n))||a.enumerable});return r};var Zv=(r,t,e)=>(e=r!=null?CQ(zN(r)):{},IQ(t||!r||!r.__esModule?Yv(e,"default",{value:r,enumerable:!0}):e,r));var R=(r,t,e)=>qQ(r,typeof t!="symbol"?t+"":t,e),EL=(r,t,e)=>t.has(r)||UN("Cannot "+e);var d=(r,t,e)=>(EL(r,t,"read from private field"),e?e.call(r):t.get(r)),S=(r,t,e)=>t.has(r)?UN("Cannot add the same private member more than once"):t instanceof WeakSet?t.add(r):t.set(r,e),C=(r,t,e,a)=>(EL(r,t,"write to private field"),a?a.call(r,e):t.set(r,e),e),M=(r,t,e)=>(EL(r,t,"access private method"),e);var le=(r,t,e,a)=>({set _(n){C(r,t,n,e)},get _(){return d(r,t,a)}}),WN=(r,t,e)=>BQ(zN(r),e,t);var tP=Wh(He=>{"use strict";var OL=Symbol.for("react.transitional.element"),RQ=Symbol.for("react.portal"),OQ=Symbol.for("react.fragment"),HQ=Symbol.for("react.strict_mode"),DQ=Symbol.for("react.profiler"),FQ=Symbol.for("react.consumer"),NQ=Symbol.for("react.context"),PQ=Symbol.for("react.forward_ref"),zQ=Symbol.for("react.suspense"),UQ=Symbol.for("react.memo"),XN=Symbol.for("react.lazy"),WQ=Symbol.for("react.activity"),_N=Symbol.iterator;function _Q(r){return r===null||typeof r!="object"?null:(r=_N&&r[_N]||r["@@iterator"],typeof r=="function"?r:null)}var $N={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},YN=Object.assign,ZN={};function lp(r,t,e){this.props=r,this.context=t,this.refs=ZN,this.updater=e||$N}lp.prototype.isReactComponent={};lp.prototype.setState=function(r,t){if(typeof r!="object"&&typeof r!="function"&&r!=null)throw Error("takes an object of state variables to update or a function which returns an object of state variables.");this.updater.enqueueSetState(this,r,t,"setState")};lp.prototype.forceUpdate=function(r){this.updater.enqueueForceUpdate(this,r,"forceUpdate")};function QN(){}QN.prototype=lp.prototype;function HL(r,t,e){this.props=r,this.context=t,this.refs=ZN,this.updater=e||$N}var DL=HL.prototype=new QN;DL.constructor=HL;YN(DL,lp.prototype);DL.isPureReactComponent=!0;var VN=Array.isArray;function RL(){}var Qr={H:null,A:null,T:null,S:null},JN=Object.prototype.hasOwnProperty;function FL(r,t,e){var a=e.ref;return{$$typeof:OL,type:r,key:t,ref:a!==void 0?a:null,props:e}}function VQ(r,t){return FL(r.type,t,r.props)}function NL(r){return typeof r=="object"&&r!==null&&r.$$typeof===OL}function GQ(r){var t={"=":"=0",":":"=2"};return"$"+r.replace(/[=:]/g,function(e){return t[e]})}var GN=/\/+/g;function IL(r,t){return typeof r=="object"&&r!==null&&r.key!=null?GQ(""+r.key):t.toString(36)}function KQ(r){switch(r.status){case"fulfilled":return r.value;case"rejected":throw r.reason;default:switch(typeof r.status=="string"?r.then(RL,RL):(r.status="pending",r.then(function(t){r.status==="pending"&&(r.status="fulfilled",r.value=t)},function(t){r.status==="pending"&&(r.status="rejected",r.reason=t)})),r.status){case"fulfilled":return r.value;case"rejected":throw r.reason}}throw r}function sp(r,t,e,a,n){var i=typeof r;(i==="undefined"||i==="boolean")&&(r=null);var o=!1;if(r===null)o=!0;else switch(i){case"bigint":case"string":case"number":o=!0;break;case"object":switch(r.$$typeof){case OL:case RQ:o=!0;break;case XN:return o=r._init,sp(o(r._payload),t,e,a,n)}}if(o)return n=n(r),o=a===""?"."+IL(r,0):a,VN(n)?(e="",o!=null&&(e=o.replace(GN,"$&/")+"/"),sp(n,t,e,"",function(c){return c})):n!=null&&(NL(n)&&(n=VQ(n,e+(n.key==null||r&&r.key===n.key?"":(""+n.key).replace(GN,"$&/")+"/")+o)),t.push(n)),1;o=0;var s=a===""?".":a+":";if(VN(r))for(var l=0;l<r.length;l++)a=r[l],i=s+IL(a,l),o+=sp(a,t,e,i,n);else if(l=_Q(r),typeof l=="function")for(r=l.call(r),l=0;!(a=r.next()).done;)a=a.value,i=s+IL(a,l++),o+=sp(a,t,e,i,n);else if(i==="object"){if(typeof r.then=="function")return sp(KQ(r),t,e,a,n);throw t=String(r),Error("Objects are not valid as a React child (found: "+(t==="[object Object]"?"object with keys {"+Object.keys(r).join(", ")+"}":t)+"). If you meant to render a collection of children, use an array instead.")}return o}function Qv(r,t,e){if(r==null)return r;var a=[],n=0;return sp(r,a,"","",function(i){return t.call(e,i,n++)}),a}function XQ(r){if(r._status===-1){var t=r._result;t=t(),t.then(function(e){(r._status===0||r._status===-1)&&(r._status=1,r._result=e)},function(e){(r._status===0||r._status===-1)&&(r._status=2,r._result=e)}),r._status===-1&&(r._status=0,r._result=t)}if(r._status===1)return r._result.default;throw r._result}var KN=typeof reportError=="function"?reportError:function(r){if(typeof window=="object"&&typeof window.ErrorEvent=="function"){var t=new window.ErrorEvent("error",{bubbles:!0,cancelable:!0,message:typeof r=="object"&&r!==null&&typeof r.message=="string"?String(r.message):String(r),error:r});if(!window.dispatchEvent(t))return}else if(typeof process=="object"&&typeof process.emit=="function"){process.emit("uncaughtException",r);return}console.error(r)},$Q={map:Qv,forEach:function(r,t,e){Qv(r,function(){t.apply(this,arguments)},e)},count:function(r){var t=0;return Qv(r,function(){t++}),t},toArray:function(r){return Qv(r,function(t){return t})||[]},only:function(r){if(!NL(r))throw Error("React.Children.only expected to receive a single React element child.");return r}};He.Activity=WQ;He.Children=$Q;He.Component=lp;He.Fragment=OQ;He.Profiler=DQ;He.PureComponent=HL;He.StrictMode=HQ;He.Suspense=zQ;He.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=Qr;He.__COMPILER_RUNTIME={__proto__:null,c:function(r){return Qr.H.useMemoCache(r)}};He.cache=function(r){return function(){return r.apply(null,arguments)}};He.cacheSignal=function(){return null};He.cloneElement=function(r,t,e){if(r==null)throw Error("The argument must be a React element, but you passed "+r+".");var a=YN({},r.props),n=r.key;if(t!=null)for(i in t.key!==void 0&&(n=""+t.key),t)!JN.call(t,i)||i==="key"||i==="__self"||i==="__source"||i==="ref"&&t.ref===void 0||(a[i]=t[i]);var i=arguments.length-2;if(i===1)a.children=e;else if(1<i){for(var o=Array(i),s=0;s<i;s++)o[s]=arguments[s+2];a.children=o}return FL(r.type,n,a)};He.createContext=function(r){return r={$$typeof:NQ,_currentValue:r,_currentValue2:r,_threadCount:0,Provider:null,Consumer:null},r.Provider=r,r.Consumer={$$typeof:FQ,_context:r},r};He.createElement=function(r,t,e){var a,n={},i=null;if(t!=null)for(a in t.key!==void 0&&(i=""+t.key),t)JN.call(t,a)&&a!=="key"&&a!=="__self"&&a!=="__source"&&(n[a]=t[a]);var o=arguments.length-2;if(o===1)n.children=e;else if(1<o){for(var s=Array(o),l=0;l<o;l++)s[l]=arguments[l+2];n.children=s}if(r&&r.defaultProps)for(a in o=r.defaultProps,o)n[a]===void 0&&(n[a]=o[a]);return FL(r,i,n)};He.createRef=function(){return{current:null}};He.forwardRef=function(r){return{$$typeof:PQ,render:r}};He.isValidElement=NL;He.lazy=function(r){return{$$typeof:XN,_payload:{_status:-1,_result:r},_init:XQ}};He.memo=function(r,t){return{$$typeof:UQ,type:r,compare:t===void 0?null:t}};He.startTransition=function(r){var t=Qr.T,e={};Qr.T=e;try{var a=r(),n=Qr.S;n!==null&&n(e,a),typeof a=="object"&&a!==null&&typeof a.then=="function"&&a.then(RL,KN)}catch(i){KN(i)}finally{t!==null&&e.types!==null&&(t.types=e.types),Qr.T=t}};He.unstable_useCacheRefresh=function(){return Qr.H.useCacheRefresh()};He.use=function(r){return Qr.H.use(r)};He.useActionState=function(r,t,e){return Qr.H.useActionState(r,t,e)};He.useCallback=function(r,t){return Qr.H.useCallback(r,t)};He.useContext=function(r){return Qr.H.useContext(r)};He.useDebugValue=function(){};He.useDeferredValue=function(r,t){return Qr.H.useDeferredValue(r,t)};He.useEffect=function(r,t){return Qr.H.useEffect(r,t)};He.useEffectEvent=function(r){return Qr.H.useEffectEvent(r)};He.useId=function(){return Qr.H.useId()};He.useImperativeHandle=function(r,t,e){return Qr.H.useImperativeHandle(r,t,e)};He.useInsertionEffect=function(r,t){return Qr.H.useInsertionEffect(r,t)};He.useLayoutEffect=function(r,t){return Qr.H.useLayoutEffect(r,t)};He.useMemo=function(r,t){return Qr.H.useMemo(r,t)};He.useOptimistic=function(r,t){return Qr.H.useOptimistic(r,t)};He.useReducer=function(r,t,e){return Qr.H.useReducer(r,t,e)};He.useRef=function(r){return Qr.H.useRef(r)};He.useState=function(r){return Qr.H.useState(r)};He.useSyncExternalStore=function(r,t,e){return Qr.H.useSyncExternalStore(r,t,e)};He.useTransition=function(){return Qr.H.useTransition()};He.version="19.2.8"});var cp=Wh((fst,eP)=>{"use strict";eP.exports=tP()});var fP=Wh(sa=>{"use strict";function WL(r,t){var e=r.length;r.push(t);t:for(;0<e;){var a=e-1>>>1,n=r[a];if(0<Jv(n,t))r[a]=t,r[e]=n,e=a;else break t}}function Zl(r){return r.length===0?null:r[0]}function e6(r){if(r.length===0)return null;var t=r[0],e=r.pop();if(e!==t){r[0]=e;t:for(var a=0,n=r.length,i=n>>>1;a<i;){var o=2*(a+1)-1,s=r[o],l=o+1,c=r[l];if(0>Jv(s,e))l<n&&0>Jv(c,s)?(r[a]=c,r[l]=e,a=l):(r[a]=s,r[o]=e,a=o);else if(l<n&&0>Jv(c,e))r[a]=c,r[l]=e,a=l;else break t}}return t}function Jv(r,t){var e=r.sortIndex-t.sortIndex;return e!==0?e:r.id-t.id}sa.unstable_now=void 0;typeof performance=="object"&&typeof performance.now=="function"?(rP=performance,sa.unstable_now=function(){return rP.now()}):(PL=Date,aP=PL.now(),sa.unstable_now=function(){return PL.now()-aP});var rP,PL,aP,e0=[],_h=[],YQ=1,vs=null,ci=3,_L=!1,vx=!1,kx=!1,VL=!1,oP=typeof setTimeout=="function"?setTimeout:null,sP=typeof clearTimeout=="function"?clearTimeout:null,nP=typeof setImmediate<"u"?setImmediate:null;function t6(r){for(var t=Zl(_h);t!==null;){if(t.callback===null)e6(_h);else if(t.startTime<=r)e6(_h),t.sortIndex=t.expirationTime,WL(e0,t);else break;t=Zl(_h)}}function GL(r){if(kx=!1,t6(r),!vx)if(Zl(e0)!==null)vx=!0,fp||(fp=!0,hp());else{var t=Zl(_h);t!==null&&KL(GL,t.startTime-r)}}var fp=!1,yx=-1,lP=5,cP=-1;function hP(){return VL?!0:!(sa.unstable_now()-cP<lP)}function zL(){if(VL=!1,fp){var r=sa.unstable_now();cP=r;var t=!0;try{t:{vx=!1,kx&&(kx=!1,sP(yx),yx=-1),_L=!0;var e=ci;try{e:{for(t6(r),vs=Zl(e0);vs!==null&&!(vs.expirationTime>r&&hP());){var a=vs.callback;if(typeof a=="function"){vs.callback=null,ci=vs.priorityLevel;var n=a(vs.expirationTime<=r);if(r=sa.unstable_now(),typeof n=="function"){vs.callback=n,t6(r),t=!0;break e}vs===Zl(e0)&&e6(e0),t6(r)}else e6(e0);vs=Zl(e0)}if(vs!==null)t=!0;else{var i=Zl(_h);i!==null&&KL(GL,i.startTime-r),t=!1}}break t}finally{vs=null,ci=e,_L=!1}t=void 0}}finally{t?hp():fp=!1}}}var hp;typeof nP=="function"?hp=function(){nP(zL)}:typeof MessageChannel<"u"?(UL=new MessageChannel,iP=UL.port2,UL.port1.onmessage=zL,hp=function(){iP.postMessage(null)}):hp=function(){oP(zL,0)};var UL,iP;function KL(r,t){yx=oP(function(){r(sa.unstable_now())},t)}sa.unstable_IdlePriority=5;sa.unstable_ImmediatePriority=1;sa.unstable_LowPriority=4;sa.unstable_NormalPriority=3;sa.unstable_Profiling=null;sa.unstable_UserBlockingPriority=2;sa.unstable_cancelCallback=function(r){r.callback=null};sa.unstable_forceFrameRate=function(r){0>r||125<r?console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"):lP=0<r?Math.floor(1e3/r):5};sa.unstable_getCurrentPriorityLevel=function(){return ci};sa.unstable_next=function(r){switch(ci){case 1:case 2:case 3:var t=3;break;default:t=ci}var e=ci;ci=t;try{return r()}finally{ci=e}};sa.unstable_requestPaint=function(){VL=!0};sa.unstable_runWithPriority=function(r,t){switch(r){case 1:case 2:case 3:case 4:case 5:break;default:r=3}var e=ci;ci=r;try{return t()}finally{ci=e}};sa.unstable_scheduleCallback=function(r,t,e){var a=sa.unstable_now();switch(typeof e=="object"&&e!==null?(e=e.delay,e=typeof e=="number"&&0<e?a+e:a):e=a,r){case 1:var n=-1;break;case 2:n=250;break;case 5:n=1073741823;break;case 4:n=1e4;break;default:n=5e3}return n=e+n,r={id:YQ++,callback:t,priorityLevel:r,startTime:e,expirationTime:n,sortIndex:-1},e>a?(r.sortIndex=e,WL(_h,r),Zl(e0)===null&&r===Zl(_h)&&(kx?(sP(yx),yx=-1):kx=!0,KL(GL,e-a))):(r.sortIndex=n,WL(e0,r),vx||_L||(vx=!0,fp||(fp=!0,hp()))),r};sa.unstable_shouldYield=hP;sa.unstable_wrapCallback=function(r){var t=ci;return function(){var e=ci;ci=t;try{return r.apply(this,arguments)}finally{ci=e}}}});var uP=Wh((ust,dP)=>{"use strict";dP.exports=fP()});var gP=Wh(Ti=>{"use strict";var ZQ=cp();function pP(r){var t="https://react.dev/errors/"+r;if(1<arguments.length){t+="?args[]="+encodeURIComponent(arguments[1]);for(var e=2;e<arguments.length;e++)t+="&args[]="+encodeURIComponent(arguments[e])}return"Minified React error #"+r+"; visit "+t+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}function Vh(){}var Si={d:{f:Vh,r:function(){throw Error(pP(522))},D:Vh,C:Vh,L:Vh,m:Vh,X:Vh,S:Vh,M:Vh},p:0,findDOMNode:null},QQ=Symbol.for("react.portal");function JQ(r,t,e){var a=3<arguments.length&&arguments[3]!==void 0?arguments[3]:null;return{$$typeof:QQ,key:a==null?null:""+a,children:r,containerInfo:t,implementation:e}}var jx=ZQ.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;function r6(r,t){if(r==="font")return"";if(typeof t=="string")return t==="use-credentials"?t:""}Ti.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE=Si;Ti.createPortal=function(r,t){var e=2<arguments.length&&arguments[2]!==void 0?arguments[2]:null;if(!t||t.nodeType!==1&&t.nodeType!==9&&t.nodeType!==11)throw Error(pP(299));return JQ(r,t,null,e)};Ti.flushSync=function(r){var t=jx.T,e=Si.p;try{if(jx.T=null,Si.p=2,r)return r()}finally{jx.T=t,Si.p=e,Si.d.f()}};Ti.preconnect=function(r,t){typeof r=="string"&&(t?(t=t.crossOrigin,t=typeof t=="string"?t==="use-credentials"?t:"":void 0):t=null,Si.d.C(r,t))};Ti.prefetchDNS=function(r){typeof r=="string"&&Si.d.D(r)};Ti.preinit=function(r,t){if(typeof r=="string"&&t&&typeof t.as=="string"){var e=t.as,a=r6(e,t.crossOrigin),n=typeof t.integrity=="string"?t.integrity:void 0,i=typeof t.fetchPriority=="string"?t.fetchPriority:void 0;e==="style"?Si.d.S(r,typeof t.precedence=="string"?t.precedence:void 0,{crossOrigin:a,integrity:n,fetchPriority:i}):e==="script"&&Si.d.X(r,{crossOrigin:a,integrity:n,fetchPriority:i,nonce:typeof t.nonce=="string"?t.nonce:void 0})}};Ti.preinitModule=function(r,t){if(typeof r=="string")if(typeof t=="object"&&t!==null){if(t.as==null||t.as==="script"){var e=r6(t.as,t.crossOrigin);Si.d.M(r,{crossOrigin:e,integrity:typeof t.integrity=="string"?t.integrity:void 0,nonce:typeof t.nonce=="string"?t.nonce:void 0})}}else t==null&&Si.d.M(r)};Ti.preload=function(r,t){if(typeof r=="string"&&typeof t=="object"&&t!==null&&typeof t.as=="string"){var e=t.as,a=r6(e,t.crossOrigin);Si.d.L(r,e,{crossOrigin:a,integrity:typeof t.integrity=="string"?t.integrity:void 0,nonce:typeof t.nonce=="string"?t.nonce:void 0,type:typeof t.type=="string"?t.type:void 0,fetchPriority:typeof t.fetchPriority=="string"?t.fetchPriority:void 0,referrerPolicy:typeof t.referrerPolicy=="string"?t.referrerPolicy:void 0,imageSrcSet:typeof t.imageSrcSet=="string"?t.imageSrcSet:void 0,imageSizes:typeof t.imageSizes=="string"?t.imageSizes:void 0,media:typeof t.media=="string"?t.media:void 0})}};Ti.preloadModule=function(r,t){if(typeof r=="string")if(t){var e=r6(t.as,t.crossOrigin);Si.d.m(r,{as:typeof t.as=="string"&&t.as!=="script"?t.as:void 0,crossOrigin:e,integrity:typeof t.integrity=="string"?t.integrity:void 0})}else Si.d.m(r)};Ti.requestFormReset=function(r){Si.d.r(r)};Ti.unstable_batchedUpdates=function(r,t){return r(t)};Ti.useFormState=function(r,t,e){return jx.H.useFormState(r,t,e)};Ti.useFormStatus=function(){return jx.H.useHostTransitionStatus()};Ti.version="19.2.8"});var bP=Wh((gst,xP)=>{"use strict";function mP(){if(!(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__>"u"||typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE!="function"))try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(mP)}catch(r){console.error(r)}}mP(),xP.exports=gP()});var B_=Wh(A8=>{"use strict";var ln=uP(),_z=cp(),tJ=bP();function Tt(r){var t="https://react.dev/errors/"+r;if(1<arguments.length){t+="?args[]="+encodeURIComponent(arguments[1]);for(var e=2;e<arguments.length;e++)t+="&args[]="+encodeURIComponent(arguments[e])}return"Minified React error #"+r+"; visit "+t+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}function Vz(r){return!(!r||r.nodeType!==1&&r.nodeType!==9&&r.nodeType!==11)}function cb(r){var t=r,e=r;if(r.alternate)for(;t.return;)t=t.return;else{r=t;do t=r,(t.flags&4098)!==0&&(e=t.return),r=t.return;while(r)}return t.tag===3?e:null}function Gz(r){if(r.tag===13){var t=r.memoizedState;if(t===null&&(r=r.alternate,r!==null&&(t=r.memoizedState)),t!==null)return t.dehydrated}return null}function Kz(r){if(r.tag===31){var t=r.memoizedState;if(t===null&&(r=r.alternate,r!==null&&(t=r.memoizedState)),t!==null)return t.dehydrated}return null}function wP(r){if(cb(r)!==r)throw Error(Tt(188))}function eJ(r){var t=r.alternate;if(!t){if(t=cb(r),t===null)throw Error(Tt(188));return t!==r?null:r}for(var e=r,a=t;;){var n=e.return;if(n===null)break;var i=n.alternate;if(i===null){if(a=n.return,a!==null){e=a;continue}break}if(n.child===i.child){for(i=n.child;i;){if(i===e)return wP(n),r;if(i===a)return wP(n),t;i=i.sibling}throw Error(Tt(188))}if(e.return!==a.return)e=n,a=i;else{for(var o=!1,s=n.child;s;){if(s===e){o=!0,e=n,a=i;break}if(s===a){o=!0,a=n,e=i;break}s=s.sibling}if(!o){for(s=i.child;s;){if(s===e){o=!0,e=i,a=n;break}if(s===a){o=!0,a=i,e=n;break}s=s.sibling}if(!o)throw Error(Tt(189))}}if(e.alternate!==a)throw Error(Tt(190))}if(e.tag!==3)throw Error(Tt(188));return e.stateNode.current===e?r:t}function Xz(r){var t=r.tag;if(t===5||t===26||t===27||t===6)return r;for(r=r.child;r!==null;){if(t=Xz(r),t!==null)return t;r=r.sibling}return null}var ea=Object.assign,rJ=Symbol.for("react.element"),a6=Symbol.for("react.transitional.element"),qx=Symbol.for("react.portal"),xp=Symbol.for("react.fragment"),$z=Symbol.for("react.strict_mode"),AM=Symbol.for("react.profiler"),Yz=Symbol.for("react.consumer"),c0=Symbol.for("react.context"),yC=Symbol.for("react.forward_ref"),SM=Symbol.for("react.suspense"),TM=Symbol.for("react.suspense_list"),jC=Symbol.for("react.memo"),Gh=Symbol.for("react.lazy"),BM=Symbol.for("react.activity"),aJ=Symbol.for("react.memo_cache_sentinel"),vP=Symbol.iterator;function Lx(r){return r===null||typeof r!="object"?null:(r=vP&&r[vP]||r["@@iterator"],typeof r=="function"?r:null)}var nJ=Symbol.for("react.client.reference");function qM(r){if(r==null)return null;if(typeof r=="function")return r.$$typeof===nJ?null:r.displayName||r.name||null;if(typeof r=="string")return r;switch(r){case xp:return"Fragment";case AM:return"Profiler";case $z:return"StrictMode";case SM:return"Suspense";case TM:return"SuspenseList";case BM:return"Activity"}if(typeof r=="object")switch(r.$$typeof){case qx:return"Portal";case c0:return r.displayName||"Context";case Yz:return(r._context.displayName||"Context")+".Consumer";case yC:var t=r.render;return r=r.displayName,r||(r=t.displayName||t.name||"",r=r!==""?"ForwardRef("+r+")":"ForwardRef"),r;case jC:return t=r.displayName||null,t!==null?t:qM(r.type)||"Memo";case Gh:t=r._payload,r=r._init;try{return qM(r(t))}catch{}}return null}var Ex=Array.isArray,Me=_z.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,wr=tJ.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,nu={pending:!1,data:null,method:null,action:null},EM=[],bp=-1;function rc(r){return{current:r}}function vn(r){0>bp||(r.current=EM[bp],EM[bp]=null,bp--)}function Vr(r,t){bp++,EM[bp]=r.current,r.current=t}var ec=rc(null),$x=rc(null),af=rc(null),H6=rc(null);function D6(r,t){switch(Vr(af,t),Vr($x,r),Vr(ec,null),t.nodeType){case 9:case 11:r=(r=t.documentElement)&&(r=r.namespaceURI)?Az(r):0;break;default:if(r=t.tagName,t=t.namespaceURI)t=Az(t),r=m_(t,r);else switch(r){case"svg":r=1;break;case"math":r=2;break;default:r=0}}vn(ec),Vr(ec,r)}function Hp(){vn(ec),vn($x),vn(af)}function IM(r){r.memoizedState!==null&&Vr(H6,r);var t=ec.current,e=m_(t,r.type);t!==e&&(Vr($x,r),Vr(ec,e))}function F6(r){$x.current===r&&(vn(ec),vn($x)),H6.current===r&&(vn(H6),ob._currentValue=nu)}var XL,kP;function tu(r){if(XL===void 0)try{throw Error()}catch(e){var t=e.stack.trim().match(/\n( *(at )?)/);XL=t&&t[1]||"",kP=-1<e.stack.indexOf(`
@@ -1908,7 +1973,7 @@ function AssignmentsPage2({ questions, saveQuestions, toast }) {
   } }, "Switch to AI questions"), gen.length > 0 && /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("p", { className: "muted" }, f.src === "past" ? "Past paper questions from your question bank." : f.src === "syllabus" ? "Questions from your question bank for the chosen syllabus topic or topics." : "AI-generated. Review and edit every question and answer before giving them to students."), gen.map((q, i) => /* @__PURE__ */ React.createElement("div", { className: "review-card", key: i, style: { borderTop: "1px solid #eff2f5", paddingTop: 12, marginTop: 12 } }, /* @__PURE__ */ React.createElement("label", { className: "planner-task", style: { border: 0, padding: 0 } }, /* @__PURE__ */ React.createElement("input", { type: "checkbox", checked: q.on, onChange: (e) => upd(i, { on: e.target.checked }) }), /* @__PURE__ */ React.createElement("b", null, "Question ", i + 1, " \xB7 ", q.marks, " marks", q.years ? ` \xB7 Past paper ${[...q.years].sort().join(", ")}` : "")), /* @__PURE__ */ React.createElement("textarea", { style: { width: "100%", minHeight: 60, padding: 10, border: "1px solid #dfe6ee", borderRadius: 9, font: "inherit", boxSizing: "border-box" }, value: q.question, readOnly: !!q.id, onChange: (e) => upd(i, { question: e.target.value }) }), /* @__PURE__ */ React.createElement("div", { className: "answer-box" }, /* @__PURE__ */ React.createElement("b", null, "Model answer"), /* @__PURE__ */ React.createElement("textarea", { style: { width: "100%", minHeight: 50, padding: 10, border: "1px solid #dfe6ee", borderRadius: 9, font: "inherit", boxSizing: "border-box" }, value: q.answer, readOnly: !!q.id, onChange: (e) => upd(i, { answer: e.target.value }) })))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Fld, { label: "Assignment title" }, /* @__PURE__ */ React.createElement("input", { value: f.title, onChange: (e) => up({ title: e.target.value }), placeholder: `${f.sub} \u2013 ${tl}` })), /* @__PURE__ */ React.createElement(Fld, { label: "Due date" }, /* @__PURE__ */ React.createElement("input", { type: "date", value: f.due, onChange: (e) => up({ due: e.target.value }) })), /* @__PURE__ */ React.createElement(Fld, { label: "Students" }, /* @__PURE__ */ React.createElement("input", { type: "number", value: f.of, onChange: (e) => up({ of: e.target.value }) }))), /* @__PURE__ */ React.createElement("div", { className: "mark-btns" }, /* @__PURE__ */ React.createElement("button", { className: "btn-secondary", onClick: saveBank }, "Add to question bank"), /* @__PURE__ */ React.createElement("button", { className: "btn-primary", onClick: makeAssign }, "Create assignment (", chosen.length, ")")))), show && /* @__PURE__ */ React.createElement("form", { className: "panel modal-form", onSubmit: add }, /* @__PURE__ */ React.createElement(Fld, { label: "Title" }, /* @__PURE__ */ React.createElement("input", { name: "title", required: true })), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Fld, { label: "Subject" }, /* @__PURE__ */ React.createElement("input", { name: "subject", required: true })), /* @__PURE__ */ React.createElement(Fld, { label: "Class" }, /* @__PURE__ */ React.createElement("select", { name: "cls" }, GRADES.map((g) => /* @__PURE__ */ React.createElement("option", { key: g }, g))))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Fld, { label: "Due date" }, /* @__PURE__ */ React.createElement("input", { type: "date", name: "due", required: true })), /* @__PURE__ */ React.createElement(Fld, { label: "Students" }, /* @__PURE__ */ React.createElement("input", { type: "number", name: "of", defaultValue: "20" }))), /* @__PURE__ */ React.createElement("div", { className: "modal-actions" }, /* @__PURE__ */ React.createElement("button", { type: "button", className: "btn-secondary", onClick: () => setShow(false) }, "Cancel"), /* @__PURE__ */ React.createElement("button", { className: "btn-primary" }, "Save"))), markA && /* @__PURE__ */ React.createElement(MarkPanel, { a: markA, questions, cfg, setCfg, toast, onClose: () => setMarkId(null) }), /* @__PURE__ */ React.createElement("div", { className: "panel" }, /* @__PURE__ */ React.createElement("h3", null, "Assignments ", /* @__PURE__ */ React.createElement("span", { className: "count-pill" }, list.length)), list.map((a) => /* @__PURE__ */ React.createElement("div", { className: "assignment-row", key: a.id }, /* @__PURE__ */ React.createElement("span", null, /* @__PURE__ */ React.createElement("b", null, a.title), /* @__PURE__ */ React.createElement("small", null, a.subject, " \xB7 ", a.cls, a.due ? ` \xB7 due ${a.due}` : "", (a.qs || []).length ? ` \xB7 ${a.qs.length} questions` : "")), /* @__PURE__ */ React.createElement("span", { className: "assignment-count" }, a.done, " / ", a.of, " submitted"), (a.qs || []).length > 0 && /* @__PURE__ */ React.createElement("button", { className: "btn-secondary", onClick: () => setMarkId(a.id) }, "Mark"), (a.qs || []).length > 0 && /* @__PURE__ */ React.createElement("button", { className: "btn-secondary", onClick: () => printA(a), title: "Open paper" }, /* @__PURE__ */ React.createElement(FileText, { size: 14 })), /* @__PURE__ */ React.createElement("button", { className: "btn-secondary", onClick: () => bump(a.id), title: "Record a submission" }, "+1"), /* @__PURE__ */ React.createElement("button", { className: "more-btn", title: "Delete", onClick: () => setList(list.filter((x) => x.id !== a.id)) }, /* @__PURE__ */ React.createElement(Trash2, { size: 16 })))), !list.length && /* @__PURE__ */ React.createElement("p", { className: "muted" }, "No assignments yet.")));
 }
 const SYLLABUS = Object.fromEntries(Object.entries({
-  English: "Comprehension|Multiple matching|Note-making|Multiple choice (MCQ)|Informal email|Article, report, review & essay|Listening|Grammar & vocabulary",
+  English: "Comprehension|Multiple matching|Note-making|Multiple choice (MCQ)|Informal email|Article|Essay|Report|Review|Listening|Grammar & vocabulary",
   Dhivehi: "Essay & story writing|Instructional & account writing|Reading comprehension|Summary writing|Letter writing|Language & spelling",
   Mathematics: "Number & place value|Fractions, decimals & percentages|Ratio & proportion|Algebra|Equations & inequalities|Sequences|Graphs & functions|Geometry|Trigonometry|Mensuration|Statistics|Probability|Sets|Vectors & matrices|Indices & surds",
   Physics: "Measurements|Motion|Forces|Work, energy & power|Pressure|Thermal physics|Waves|Light|Sound|Electricity|Magnetism|Atomic physics|Space physics",
@@ -1994,10 +2059,10 @@ function PaperLibrary({ questions, role, toast, saveQuestions, view, setView }) 
   const [viewer, setViewer] = useState(null);
   const [lk, setLk] = useLocal("em-paperlinks2", {});
   const base0 = PAPER_INDEX[sub] || dpeEntry(sub);
-  const base = base0 && ["Physics", "Chemistry", "Biology"].includes(sub) ? { ...base0, files: base0.files.filter((f) => !/^5/.test(String(f[3] || ""))) } : base0;
+  const base = base0 && SCI_SET[sub] ? { ...base0, files: base0.files.filter((f) => keepPaper(sub, f[3], f[0])) } : base0;
   const baseNames = new Set(base ? base.files.map((f) => f[4]) : []);
   const storeRows = Object.values(store).filter((d) => d.year && !String(d.id).endsWith("_x")).flatMap((d) => [["qp", "qp"], ["ms", "ms"], ["ins", "in"]].filter(([k]) => d[k] && !baseNames.has(d[k].name)).map(([k, t]) => [d.year, d.sess, t, String(d.cv || ""), d[k].name]));
-  const extra = [...(PAPER_LINKS[sub] || {}).files || [], ...lk[sub] || [], ...storeRows].filter((f) => !(["Physics", "Chemistry", "Biology"].includes(sub) && /^5/.test(String(f[3] || ""))));
+  const extra = [...(PAPER_LINKS[sub] || {}).files || [], ...lk[sub] || [], ...storeRows].filter((f) => keepPaper(sub, f[3], f[0]));
   const entry = base || extra.length ? { ...base || {}, code: base && base.code || extra[0] && extra[0][4].split("_")[0] || "", root: base ? base.root : "", files: [...base ? base.files : [], ...extra] } : null;
   const years = entry ? [...new Set(entry.files.map((f) => f[0]))].filter((y) => y >= 2005).sort((a, b) => b - a) : [];
   const yrs = year === "All" ? years : [Number(year)];
@@ -2042,7 +2107,10 @@ Multiple matching=Match nine statements to the right section or text. Read the q
 Note-making=Make short notes under given headings from a text, a few words each.\xA7Benefits of cycling: \u2022 cheaper than the bus \u2022 good for health.
 Multiple choice (MCQ)=Read one text and choose A, B or C for six questions about details, views and meaning.\xA7Decide whether the writer is critical, neutral or enthusiastic.
 Informal email=Write 120\u2013160 words to a friend, covering all three bullet points in a friendly tone.\xA7"Hi Sara, guess what happened at the beach festival..."
-Article, report, review & essay=Write 120\u2013160 words in a formal or semi-formal style, giving and supporting opinions.\xA7A school magazine article on whether students should do volunteer work.
+Article=Write for a school magazine or website: a catchy title, an engaging opening, clear paragraphs and your views with reasons.\xA7
+Essay=Discuss a topic in a balanced, formal way: introduction, points for and against with reasons, and a clear conclusion with your opinion.\xA7
+Report=Write formally for a teacher or manager: a title, short headings, facts about what happened, and recommendations at the end.\xA7
+Review=Describe and judge a place, film, book, product, app or event: what it is, good points, weak points, and a clear recommendation.\xA7
 Listening=Pick the right answer while listening to short extracts, a talk and an interview.\xA7Read the options before the audio starts and listen for the speaker's final choice.
 Grammar & vocabulary=Use accurate tenses, linking words and a range of vocabulary in writing.\xA7"However", "as a result" and "on the other hand" link ideas clearly.`],
   Dhivehi: ["Read Dhivehi texts aloud daily, practise writing with correct Thaana spelling, and review model compositions.", `Reading comprehension=Read a Dhivehi passage and answer meaning, vocabulary and inference questions.\xA7Find the main idea of a short passage and give one supporting sentence.
@@ -2173,11 +2241,10 @@ const GUIDE = Object.fromEntries(Object.entries(GUIDE_RAW).map(([s, [learn, body
   return [k.trim(), [a, b]];
 })) }]));
 const STEPS = "Steps: 1) read the explanation, 2) study the example, 3) do the bank questions for this topic, 4) check the model answer, 5) revisit it in a mock exam.";
-const SCI_STRUCT = (n) => ({ note: "Core students take Papers 1 and 3. Extended students take Papers 2 and 4.", papers: [
-  { p: "Paper 1", name: "Multiple choice (Core)", time: "45 min", marks: 40, items: [["40 questions", "Choose A, B, C or D. Core content only."]] },
+const SCI_STRUCT = (n) => ({ note: "Students take three papers: Paper 2, Paper 4 and Paper 6.", papers: [
   { p: "Paper 2", name: "Multiple choice (Extended)", time: "45 min", marks: 40, items: [["40 questions", "Choose A, B, C or D. Core and Supplement content."]] },
-  { p: "Paper 3", name: "Theory (Core)", time: "1 h 15 min", marks: 80, items: [["Structured questions", "Short answers, calculations and diagrams on Core " + n + "."]] },
-  { p: "Paper 4", name: "Theory (Extended)", time: "1 h 15 min", marks: 80, items: [["Structured questions", "Longer answers and calculations on all " + n + " content."]] }] });
+  { p: "Paper 4", name: "Theory (Extended)", time: "1 h 15 min", marks: 80, items: [["Structured questions", "Short and longer answers, calculations and diagrams on all " + n + " content."]] },
+  { p: "Paper 6", name: "Alternative to Practical", time: "1 h", marks: 40, items: [["Practical questions", "Read results, plan experiments, draw tables and graphs, and spot errors and improvements."]] }] });
 const STRUCT = {
   English: { title: "English as a Second Language", code: "0510", note: "For exams from 2024. Students in the Maldives sit Paper 1 and Paper 2.", papers: [
     { p: "Paper 1", name: "Reading and writing", time: "2 h", marks: 60, items: [["Exercise 1", "Comprehension: short answers on one text", 8], ["Exercise 2", "Multiple matching: 9 questions on up to 5 texts", 9], ["Exercise 3", "Note-making", 7], ["Exercise 4", "Multiple choice (MCQ): 6 questions on one text", 6], ["Exercise 5", "Informal email, 120–160 words", 15], ["Exercise 6", "Article, report, essay or review, 120–160 words", 15]] },
@@ -2199,12 +2266,12 @@ const STRUCT = {
   Economics: { title: "Economics", code: "0455", papers: [
     { p: "Paper 1", name: "Multiple choice", time: "45 min", marks: 30, items: [["30 questions", "Choose A, B, C or D."]] },
     { p: "Paper 2", name: "Structured questions", time: "2 h 15 min", marks: 90, items: [["Section A", "One compulsory question based on source material", 30], ["Section B", "Answer three of four questions", 60]] }] },
-  Islam: { title: "Islam", code: "9100", note: "National O Level exam set by the Department of Public Examinations. Past papers and marking schemes are in Past papers.", papers: [
-    { p: "Paper 1", name: "Islam Paper 1", time: null, marks: null, items: [["Written paper", "Answer the questions in the paper. Check the marking scheme after you try."]] },
-    { p: "Paper 2", name: "Islam Paper 2", time: null, marks: null, items: [["Written paper", "Answer the questions in the paper. Check the marking scheme after you try."]] }] },
-  Dhivehi: { title: "Dhivehi", code: "9200", note: "National O Level exam set by the Department of Public Examinations. Past papers and marking schemes are in Past papers.", papers: [
-    { p: "Paper 1", name: "Dhivehi Paper 1", time: null, marks: null, items: [["Written paper", "Reading and language questions. Check the marking scheme after you try."]] },
-    { p: "Paper 2", name: "Dhivehi Paper 2", time: null, marks: null, items: [["Written paper", "Writing tasks. Check the marking scheme after you try."]] }] },
+  Islam: { dv: true, title: "އިސްލާމީ ތަރުބިޔަތު", code: "9100", note: "ޑިޕާޓްމަންޓް އޮފް ޕަބްލިކް އެގްޒަމިނޭޝަންސް (ޑީ.ޕީ.އީ) އިން ހިންގާ އެސް.އެސް.ސީ އިމްތިޙާނު. ގްރޭޑް 9 އާއި 10 ގެ ސިލަބަސްއިން ސުވާލު އަންނާނެއެވެ. ދެ ކަރުދާސް، ޖުމްލަ 100 މާކުސް.", papers: [
+    { p: "ކަރުދާސް I", name: "ކުރު ޖަވާބުދޭ ސުވާލު", time: "1 ގަޑިއިރު", marks: 30, items: [["30 ސުވާލު", "ކޮންމެ ސުވާލަކަށް 1 މާކުސް. ހުރިހާ ސުވާލަކަށް ކުރުކޮށް ޖަވާބުދޭންވާނެއެވެ.", 30], ["ބައިތައް", "އިސްލާމީ ތާރީޚާއި ޙަޟާރަތް، އިސްލާމީ ޘަޤާފަތް، އިސްލާމީ އަޚްލާޤު"]] },
+    { p: "ކަރުދާސް II", name: "ތަފްޞީލީ ސުވާލު", time: "2 ގަޑިއިރު", marks: 70, items: [["ފުރަތަމަ ބައި", "މަޖުބޫރު ސުވާލު. ހުރިހާ ސުވާލަކަށް ޖަވާބުދޭންވާނެއެވެ."], ["ދެވަނަ ބައި", "އިޚްތިޔާރީ ސުވާލު. ކޮންމެ ބަޔަކުން އިރުޝާދު ދީފައިވާ ގޮތަށް ސުވާލު ޚިޔާރުކޮށް ޖަވާބުދޭންވާނެއެވެ."], ["ބައިތައް", "އިސްލާމީ ޢަޤީދާ، ޙަދީޘް ޢިލްމު، އިސްލާމީ ފިޤްހު"]] }] },
+  Dhivehi: { dv: true, title: "ދިވެހިބަސް", code: "9200", note: "ޑިޕާޓްމަންޓް އޮފް ޕަބްލިކް އެގްޒަމިނޭޝަންސް (ޑީ.ޕީ.އީ) އިން ހިންގާ އެސް.އެސް.ސީ އިމްތިޙާނު. ދެ ކަރުދާސް، ޖުމްލަ 100 މާކުސް.", papers: [
+    { p: "ކަރުދާސް I", name: "ލިޔުން", time: "2 ގަޑިއިރު", marks: 40, items: [["1 ވަނަ ސުވާލު", "މަޒުމޫނު ނުވަތަ ވާހަކަ. 35 ފޮޅުވަތަށް ވުރެ ކުރު ނުކޮށް، 45 ފޮޅުވަތަށް ވުރެ ދިގު ނުކޮށް.", 25], ["2 ވަނަ ސުވާލު", "އިރުޝާދުދޭ ލިޔުން ނުވަތަ ހަޤީޤީ ރިކައުންޓް. 20 އާއި 25 ފޮޅުވަތުގެ ދެމެދުގައި.", 15]] },
+    { p: "ކަރުދާސް II", name: "ކިޔުމާއި ލިޔުން", time: "2 ގަޑިއިރު 30 މިނިޓު", marks: 60, items: [["1 ވަނަ ސުވާލު", "ދޭހަ: ދޭހަ 1 (20 މާކުސް) އަދި ދޭހަ 2 (15 މާކުސް).", 35], ["2 ވަނަ ސުވާލު", "ޚުލާޞާކުރުން. 12 ފޮޅުވަތަށް ވުރެ ދިގު ނުކޮށް.", 10], ["3 ވަނަ ސުވާލު", "ސިޓީ ލިޔުން. ދީފައިވާ ސިޓީ ނޯޓަށް ސިޓީއެއް ލިޔުން.", 15]] }] },
   "Computer Science": { title: "Computer Science", code: "0478", papers: [
     { p: "Paper 1", name: "Computer systems", time: "1 h 45 min", marks: 75, items: [["Short and structured questions", "Answer all. Covers topics 1–6: data, hardware, software, internet and emerging tech."]] },
     { p: "Paper 2", name: "Algorithms, programming and logic", time: "1 h 45 min", marks: 75, items: [["Short and structured questions", "Answer all. Covers topics 7–10."], ["Last question", "Scenario: write an algorithm or program", 15]] }] },
@@ -2215,15 +2282,18 @@ const STRUCT = {
 function PaperStructure({ sub }) {
   const st = STRUCT[sub];
   if (!st) return h("div", { className: "ps-empty" }, h(BookOpen, { size: 22 }), h("p", null, `The paper structure for ${sub} will be added soon.`));
-  return h("div", { className: "ps" },
+  const dv = !!st.dv;
+  return h("div", { className: dv ? "ps dv" : "ps", dir: dv ? "rtl" : undefined },
     h("div", { className: "ps-head" }, h("b", null, st.title), h("span", { className: "ps-code" }, st.code)),
     st.note && h("p", { className: "ps-note" }, st.note),
     st.papers.map((pp) => h("div", { className: "ps-paper", key: pp.p },
-      h("div", { className: "ps-top" }, h("span", { className: "ps-p" }, pp.p), h("div", { className: "ps-name" }, h("b", null, pp.name), h("small", null, [pp.time, pp.marks ? pp.marks + " marks" : null].filter(Boolean).join(" \xB7 ")))),
+      h("div", { className: "ps-top" }, h("span", { className: "ps-p" }, pp.p), h("div", { className: "ps-name" }, h("b", null, pp.name), h("small", null, [pp.time, pp.marks ? pp.marks + (dv ? " މާކުސް" : " marks") : null].filter(Boolean).join(" \xB7 ")))),
       h("ol", { className: "ps-items" }, pp.items.map(([a, b, m]) => h("li", { key: a }, h("span", { className: "ps-ex" }, a), h("span", { className: "ps-txt" }, b), m ? h("span", { className: "ps-m" }, m) : null))))));
 }
+const GUIDE_DV = {"Islam":{"Grade 9 · Aqeedah":["ކަރުދާސް II","މި ބައިގައި ރިސާލަތާއި ނަބީކަމާ ބެހޭ ޢަޤީދާ ދަސްކުރެވެއެވެ. ރަސޫލުބޭކަލުން ފޮނުއްވުނު ސަބަބުތަކާއި، ނަބީކަން ނިމުނުކަމާއި، ދީނުގައި ޙައްދު ފަހަނައަޅައި ދިޔަ ބައިބައިމީހުންނާ މެދު ސުންނަތް ޖަމާޢަތުގެ ގޮތް ދެނެގަނެވެއެވެ.",["ރަސޫލުބޭކަލުންނާއި ނަބިއްޔުންގެ މާނަ","މީސްތަކުންނަށް ރަސޫލުން ބޭނުންވާ ސަބަބުތައް","ނަބީކަން ނިމުނުކަން ސާބިތުކޮށްދޭ ދަލީލުތައް","މުޙައްމަދު ﷺ ގެ ރިސާލަތުގެ ޚާއްޞަ ސިފަތައް","މުޢުޖިޒާތުގެ ސިފަތައް","ޢީސާގެފާނާ މެދު މުސްލިމުންގެ ޢަޤީދާ","ދީނުގައި ޙައްދު ފަހަނައެޅުމާއި ބައެއް ފިރުޤާތައް"]],"Grade 9 · Hadith studies":["ކަރުދާސް II","ޙަދީޘް ޢިލްމު ތަރައްޤީވެގެން އައި ގޮތާއި، ޙަދީޘް ރައްކާތެރިކުރުމަށް މުސްލިމުން ގެންގުޅުނު މަންހަޖާއި، ގިނަ ޙަދީޘް ރިވާކުރެއްވި ޞަޙާބީ ބޭކަލުން ދެނެގަނެވެއެވެ. އަދި ކިޔަވައިދޭ ޙަދީޘްތަކުން ދޭހަވާ ކަންކަން ބަޔާންކުރަން ދަސްވެއެވެ.",["ޙަދީޘް ޢިލްމުގެ ރަންޒަމާން","ގިނަ ޙަދީޘް ރިވާކުރެއްވި ޞަޙާބީން (އަބޫ ހުރައިރާ، ޢާއިޝާ، ޢަބްދުﷲ ބުން ޢުމަރު)","ޙަދީޘް ލިޔެ ރައްކާތެރިކުރުމުގެ މަންހަޖު","މިޒަމާނުގައި ޙަދީޘް ރައްކާތެރިކުރެވޭނެ ގޮތްތައް","ޙަދީޘްތަކުން ދޭހަވާ ކަންކަން ބުނެދިނުން"]],"Grade 9 · Islamic fiqh":["ކަރުދާސް II","ކައިވެނީގެ ޙުކުމްތަކާއި ވަރީގެ ޙުކުމްތައް ދަސްކުރެވެއެވެ. އިމްތިޙާނުގައި މާނަކުރުމާއި، ޝަރުޠުތަކާއި، ދީފައިވާ ޙާލަތެއްގެ ޙުކުމް ސަބަބާއެކު ބަޔާންކުރުމުގެ ސުވާލު އަންނާނެއެވެ.",["ކައިވެނީގެ ރުކުންތައް","ވަލީވެރިޔާގެ ޝަރުޠުތައް","ޚިޠުބާ (ކައިވެނިކުރުމަށް ވަޢުދުވުން)","ކައިވެނީގެ ރަން","ވަރީގެ ބާވަތްތައް: ޞަރީޙު، ކިނާޔަތް، ތަޢުލީޤު","ޢިއްދަ"]],"Grade 9 · Islamic civilization":["ކަރުދާސް I","އިސްލާމީ ޙަޟާރަތު ފެށިގެން އައި ގޮތާއި، ރަންޒަމާނުގައި މުސްލިމުން ޢިލްމާއި ފަންނުގެ ދާއިރާތަކަށް ކުރި ޚިދުމަތްތައް ދަސްކުރެވެއެވެ.",["އިސްލާމީ ޙަޟާރަތުގެ ދެ މަރުޙަލާ","އުމަވީ އަދި ޢައްބާސީ ޒަމާނުގެ ރަންޒަމާން","ތަރުޖަމާކުރުމާއި ބައިތުލްޙިކްމާ","ސައިންސްގެ ދާއިރާގެ މުސްލިމު ޢިލްމުވެރިން","ޤަޠަޢީ ޙުކުމާއި އިޖުތިހާދު","ޢިލްމު އިސްލާމީ ނަޒަރަކުން ބައްޓަންކުރުން"]],"Grade 9 · Islamic culture":["ކަރުދާސް I","މިޒަމާނުގެ މުޖުތަމަޢުގައި ފެންނަ ފިކުރީ މައްސަލަތަކާ މެދު އިސްލާމްދީން ދެކޭ ގޮތް ދަސްކުރެވެއެވެ.",["ދީނުގައި ހައްދުފަހަނައަޅައި ދިއުން","މުސްލިމަކު ކާފިރުކުރުމާއި އޭގެ ގެއްލުންތައް","ދެ ޖިންސުގެ ހަމަހަމަކަން","އިސްލާމް ފޯބިއާ"]],"Grade 9 · Islamic ethics":["ކަރުދާސް I","މުސްލިމެއްގެ އަޚްލާޤާއި އާދާބު ދަސްކުރެވެއެވެ. ކޮންމެ އަޚްލާޤެއްގެ މާނަ، ފައިދާ، އަދި ޚިލާފުވުމުން ލިބޭ ގެއްލުން ބުނެދޭން ދަސްކުރާށެވެ.",["މަޚްލޫޤުންނަށް އޯގާތެރިވުން","ﷲ އަށްޓަކައި ލޯބިވުން","ތައުބާވުން","ނަފްސު ހިސާބުކުރުން","ހަވާނަފްސަށް ތަބާވުން","ޣީބަ ބުނުން","ނަޒާހަތްތެރިކަމާއި އިޖްތިމާޢީ ހަމަހަމަކަން","ހެދުން އެޅުމުގެ އަދަބު"]],"Grade 10 · Aqeedah":["ކަރުދާސް II","އާޚިރަތް ދުވަހަށް އީމާންވުމާއި، ބިދުޢައިން ރައްކާތެރިވުމާއި، ޝަހާދަތުގެ ދެ ކަލިމަ ދަސްކުރެވެއެވެ.",["އާޚިރަތް ދުވަހަށް އީމާންވުމުގައި ހިމެނޭ ކަންކަން","ޤިޔާމަތުގެ ޢަލާމާތްތައް","ޝަފާޢަތްގެ ބާވަތްތައް","ބިދުޢައިގެ މާނައާއި ޙުކުމް","ޝަހާދަތުގެ ދެ ކަލިމަ","ޝައިޠާނިއްޔާ"]],"Grade 10 · Hadith studies":["ކަރުދާސް II","ޙަދީޘް ރިވާކުރެއްވި ބޭކަލުންނާއި، ޞަޙާބީކަން ސާބިތުވާ ގޮތާއި، ވަޟްޢީ ޙަދީޘްގެ ނުރައްކާ ދަސްކުރެވެއެވެ. އަދި ކިޔަވައިދޭ ޙަދީޘްތަކުން ލިބޭ ފައިދާ ބުނެދޭން ދަސްވެއެވެ.",["ޢަބްދުﷲ ބުން މަސްޢޫދު އަދި ޢަބްދުﷲ ބުން ޢަމްރު","އިމާމް މާލިކު އަދި އަލްމުވައްޠާ","ޞަޙާބީއެއްކަން ސާބިތުވާ ޝަރުޠުތައް","ވަޟްޢީ ޙަދީޘާއި އޭގެ އަސަރު","ރޯދައާއި ކެއުމުގެ އަދަބުގެ ޙަދީޘްތައް"]],"Grade 10 · Islamic fiqh":["ކަރުދާސް II","ޖިނާއީ ޙުކުމްތައް ދަސްކުރެވެއެވެ: ޙައްދުތަކާއި، ޤަތުލުގެ ބާވަތްތަކާއި، ދިޔައާއި ޤިޞާޞްއާއި ތަޢުޒީރު. ދީފައިވާ ޙާދިސާއެއްގައި ވަނީ ކޮން ބާވަތެއްގެ ޤަތުލެއްކަން ސަބަބާއެކު ބަޔާންކުރަން ދަސްކުރާށެވެ.",["ޙައްދުގެ މާނަ","ޒިނޭގެ ޙައްދު","ބަނގުރާ ބުއިމުގެ ޙައްދު","ވައްކަމުގެ ޙައްދާއި ނިޞާބު","ޤަތުލުގެ ބާވަތްތައް: ޢަމްދު، ޝިބްހު ޢަމްދު، ޚަޠައު","ދިޔަ އަދި ޤިޞާޞް","ޝަރީޢަތުގެ މަޤްޞަދުތައް"]],"Grade 10 · Islamic history":["ކަރުދާސް I","އިސްލާމީ ދުނިޔޭގެ ޢިލްމީ މަރުކަޒުތަކާއި ބިނާތަކާއި، އިސްތިޢުމާރު އައިސް މުސްލިމު ޤައުމުތަކަށް ކުރި އަސަރު ދަސްކުރެވެއެވެ.",["ޖާމިޢަތުލް ޤަރަވިއްޔީން","ބަޣުދާދުގެ ބައިތުލްޙިކްމާ","އަލްމަދްރަސަތުލް މުސްތަންޞިރިއްޔާ","ބުޚާރާ އާއި ކަލްޔާން މުންނާރު","އަލްއިދުރީސީ","އިސްތިޢުމާރުގެ ސަބަބުތަކާއި ގޮތްތައް"]],"Grade 10 · Islamic culture":["ކަރުދާސް I","އިސްލާމްދީނާ ދެކޮޅަށް ހިންގާ ފިކުރީ ހަނގުރާމައާއި، ފިކުރީ މަޛުހަބުތަކާއި، އިސްލާމްދީން މެދުމިނުގެ ދީނަކަށްވާ ގޮތް ދަސްކުރެވެއެވެ.",["ފިކުރީ ހަނގުރާމަ (ޢާއްމު އަދި ޚާއްޞަ މާނަ)","އޮރިއެންޓަލިޒަމް","ފިކުރީ މަޛުހަބުތައް: އެތީސްޓުން، ޤުރްއާނިއްޔޫން","ތަންޞީރީ ޙަރަކާތް","އިސްލާމްދީން މެދުމިނުގެ ދީނަކަށްވުން"]],"Grade 10 · Islamic ethics":["ކަރުދާސް I","މުޖުތަމަޢުގައި މުސްލިމަކު ގެންގުޅެންޖެހޭ އަޚްލާޤު ދަސްކުރެވެއެވެ. ކޮންމެ އަޚްލާޤެއްގެ މާނަ، ހަމަތައް، ފައިދާ އަދި ގެއްލުން ބުނެދޭން ދަސްކުރާށެވެ.",["ވެރިންނަށް ކިޔަމަންވުން","ހެޔޮކަމަށް އަމުރުކޮށް ނުބައިކަން މަނާކުރުން","ވަގުތަށް ޙުރުމަތްތެރިވުން","ދޫ ރައްކާތެރިކުރުން","ރިޝްވަތު","ޙަލާލު ރިޒުޤު","ގާތްތިމާގެ މީހުންނާ ގުޅުން ބަދަހިކުރުން","އުޚުއްވަތްތެރިކަމާއި ޣައިރު މުސްލިމުންނަށް އިޙްތިރާމްކުރުން"]]},"Dhivehi":{"Essay & story writing":["ކަރުދާސް I · 25 މާކުސް","ކަރުދާސް I ގެ 1 ވަނަ ސުވާލުގައި ދީފައިވާ މައުޟޫޢުތަކުން އެއް މައުޟޫޢަކަށް މަޒުމޫނެއް، ނުވަތަ ދީފައިވާ ފެށުމަކުން ވާހަކައެއް ލިޔަންޖެހެއެވެ. ލިޔުން 35 ފޮޅުވަތަށް ވުރެ ކުރު ނުކޮށް، 45 ފޮޅުވަތަށް ވުރެ ދިގު ނުކުރަންވާނެއެވެ.",["މަޒުމޫނުގެ ބާވަތްތައް: ދެކޭ ގޮތް ހާމަކުރާ، އޮޅުންފިލުވައިދޭ، އެއްކޮޅަށް އަދި ދެކޮޅަށް ވާހަކަދައްކާ ލިޔުން","މާކުސް: އޮށްޓަރު 9، ހުށަހެޅުން 8، ބަހުގެ ބޭނުން 8","ފެށުމުގައި ހޫކް ޖުމްލައާއި ތީސީސް ބަޔާން","ވާހަކައިގައި ހަރުދަނާ ޕްލޮޓާއި ސިފަކުރުން","ސުވާލުގައި އެދޭ ސްޓައިލް ހިފެހެއްޓުން"]],"Instructional & account writing":["ކަރުދާސް I · 15 މާކުސް","ކަރުދާސް I ގެ 2 ވަނަ ސުވާލުގައި އިރުޝާދުދޭ ލިޔުމެއް ނުވަތަ ހަޤީޤީ ރިކައުންޓެއް ލިޔަންޖެހެއެވެ. ލިޔުން 20 ފޮޅުވަތަށް ވުރެ ކުރު ނުކޮށް، 25 ފޮޅުވަތަށް ވުރެ ދިގު ނުކުރަންވާނެއެވެ.",["މާކުސް: އޮށްޓަރު 5، ހުށަހެޅުން 5، ބަހުގެ ބޭނުން 5","އިރުޝާދުދޭ ލިޔުމުގައި ޙަރަކާތުގެ ލަފުޒާއި ޢަމުރުގެ ލަފުޒު","ތަޢާރަފާއި ނިންމުން","ރިކައުންޓުގެ ބާވަތްތައް: ހަޤީޤީ ރިކައުންޓް، ބައޮގްރަފިކަލް ރިކައުންޓް"]],"Reading comprehension":["ކަރުދާސް II · 35 މާކުސް","ކަރުދާސް II ގެ 1 ވަނަ ސުވާލުގައި ދެ ލިޔުމެއް ކިޔައި، ދީފައިވާ ސުވާލުތަކަށް ޖަވާބުދޭންޖެހެއެވެ. ދޭހަ 1 އަށް 20 މާކުސް، ދޭހަ 2 އަށް 15 މާކުސް.",["ޖަވާބު ލިޔަންވާނީ އަމިއްލަ ޢިބާރާތުން","ލިޔުމުން އަކުރުން އަކުރަށް ކޮޕީކުރުމުން މާކުސް އުނިވޭ","ސުވާލާ ނުގުޅޭ ވާހަކަ ނުލިޔުން","ސުވާލުގައި ބުނާ ޢަދަދަށް ނުކުތާ ލިޔުން","މާކުހަށް ބަލައިގެން ޖަވާބުގެ ދިގުމިން ނިންމުން"]],"Summary writing":["ކަރުދާސް II · 10 މާކުސް","ކަރުދާސް II ގެ 2 ވަނަ ސުވާލުގައި ދޭހަ 1 ގެ ލިޔުމުން ދީފައިވާ ތީމާއާ ގުޅޭ ނުކުތާތައް ހޯދައި ޚުލާޞާއެއް ލިޔަންޖެހެއެވެ. ޚުލާޞާ 12 ފޮޅުވަތަށް ވުރެ ދިގު ނުކުރަންވާނެއެވެ.",["މާކުސް: މަޢުލޫމާތު 6، ޢިބާރާތްކުރުން 4","ދީފައިވާ ތީމާއަށް އަމާޒުވުން","އަމިއްލަ ޢިބާރާތުން ލިޔުން","ގުޅުވައިދޭ ލަފުޒުތައް ބޭނުންކުރުން","ތީމާއާ ނުގުޅޭ ނުކުތާ ނުހިމެނުން"]],"Letter writing":["ކަރުދާސް II · 15 މާކުސް","ކަރުދާސް II ގެ 3 ވަނަ ސުވާލުގައި ދީފައިވާ ސިޓީ ނޯޓަށް ރަސްމީ ސިޓީއެއް ލިޔަންޖެހެއެވެ. ސިޓީގެ އޮނިގަނޑާއި މައިގަނޑާއި ބަހަށް މާކުސް ލިބެއެވެ.",["މާކުސް: މައިގަނޑު 5، ހުށަހެޅުން 5، ޢިބާރާތްކުރުން 5","ބިސްމި، ފޮނުވާ މީހާގެ އެޑްރެސް، އެޑްރެސްކުރުން","ވެދުން ސަލާމަށްފަހު ދަންނަވަމެވެ.","އިޙްތިރާމް ޤަބޫލުކުރެއްވުން އެދެމެވެ.","ތާރީޚު (ހިޖްރީ ތާރީޚު ކުރިން)، ޚާދިމުކުމް، ސޮއި، ނަން","ސިޓީ ނޯޓުގައިވާ ހުރިހާ ނުކުތާއެއް ހިމެނުން"]],"Language & spelling":["ހުރިހާ ލިޔުމަކަށް","ކޮންމެ ލިޔުމެއްގެ ބަހުގެ މާކުސް ލިބެނީ ޢިބާރާތުގެ ސާފުކަމާއި، ބަސްކޮށާރާއި، ބަހުގެ ޤަވާޢިދާއި، އިމްލާއަށް ބަލައިގެންނެވެ.",["ޢިބާރާތްކުރުމުގެ ސާފުކަމާއި ސާދާކަން","މުނާސަބު ބަސްކޮށާރު","ބަހުގެ ޤަވާޢިދާއި ހަމަ","އިމްލާ (އަކުރާއި ފިލި)","ބަހުގެ މާކުސް: މަޒުމޫނު 8، ސިޓީ 5، އިރުޝާދުދޭ ލިޔުން 5، ޚުލާޞާ 4"]]}};
 function TopicGuide({ sub, questions }) {
   const g = GUIDE[sub] || { learn: "", t: {} };
+  const gdv = GUIDE_DV[sub];
   const [mode, setMode] = useState("structure");
   const [open, setOpen] = useState(null);
   useEffect(() => setOpen(null), [sub]);
@@ -2231,14 +2301,15 @@ function TopicGuide({ sub, questions }) {
   return h("div", { className: "tg" },
     h("div", { className: "tg-seg" }, [["structure", "Paper structure"], ["topics", `Topics \xB7 ${list.length}`]].map(([k, l]) => h("button", { key: k, className: mode === k ? "on" : "", onClick: () => setMode(k) }, l))),
     mode === "structure" ? h(PaperStructure, { sub }) : h(React.Fragment, null,
-      g.learn && h("div", { className: "tg-tip" }, h(Sparkles, { size: 18 }), h("p", null, g.learn)),
+      g.learn && !gdv && h("div", { className: "tg-tip" }, h(Sparkles, { size: 18 }), h("p", null, g.learn)),
       h("div", { className: "tg-list" }, list.map((t, i) => {
         const qs = questions.filter((q) => q.subject === sub && String(q.topic || "").toLowerCase() === t.toLowerCase());
         const e = g.t[t] || ["", ""];
         const on = open === t;
         return h("div", { key: t, className: on ? "tg-item on" : "tg-item" },
-          h("button", { className: "tg-row", "aria-expanded": on, onClick: () => setOpen(on ? null : t) }, h("span", { className: "tg-n" }, i + 1), h("span", { className: "tg-name" }, t), qs.length > 0 && h("span", { className: "tg-q" }, qs.length, qs.length === 1 ? " question" : " questions"), h(ChevronDown, { size: 18, className: "tg-chev" })),
-          on && h("div", { className: "tg-body" }, e[0] && h("p", null, e[0]), e[1] && h("div", { className: "tg-ex" }, h("small", null, "Example"), h("p", null, e[1]))));
+          h("button", { className: "tg-row", "aria-expanded": on, onClick: () => setOpen(on ? null : t) }, h("span", { className: "tg-n" }, i + 1), gdv ? h("span", { className: "tg-name dv", dir: "rtl" }, topicLabel(sub, t)) : h("span", { className: "tg-name" }, t), qs.length > 0 && h("span", { className: "tg-q" }, qs.length, qs.length === 1 ? " question" : " questions"), h(ChevronDown, { size: 18, className: "tg-chev" })),
+          on && (gdv && gdv[t] ? h("div", { className: "tg-body dv", dir: "rtl" }, h("span", { className: "tg-pp" }, gdv[t][0]), h("p", null, gdv[t][1]), h("small", { className: "tg-kh" }, "މި ބައިގައި ހިމެނޭ ކަންކަން"), h("ul", { className: "tg-keys" }, gdv[t][2].map((k) => h("li", { key: k }, k))))
+            : h("div", { className: "tg-body" }, e[0] && h("p", null, e[0]))));
       }))));
 }
 
@@ -2650,16 +2721,19 @@ function AuthPage({ supabase: supabase2, setUser }) {
   };
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
-  const [f, setF] = useState({ name: "", email: "", phone: "", password: "", role: "Student", grade: "Grade 10", school: "", terms: false });
+  const [f, setF] = useState({ name: "", email: "", phone: "", password: "", role: "Student", grade: "Grade 10", school: "", terms: true });
+  const [regCode, setRegCode] = useState("");
+  const [codeIn, setCodeIn] = useState("");
   const up = (p) => setF({ ...f, ...p });
   const fin = (u) => { setUser(u); if (supabase2) setTimeout(() => location.reload(), 80); };
   const register = async () => {
     setErr("");
     if (f.name.trim().length < 2) return setErr("Enter your full name.");
     if (!/^\S+@\S+\.\S+$/.test(f.email)) return setErr("Enter a valid email address.");
-    if (f.phone.replace(/\D/g, "").length < 7) return setErr("Enter your mobile number.");
-    if (f.password.length < 8) return setErr("Password must be at least 8 characters.");
-    if (!f.terms) return setErr("Please accept the terms to continue.");
+    if (f.phone.trim() && f.phone.replace(/\D/g, "").length < 7) return setErr("Check your mobile number, or leave it empty.");
+    if (f.password.length < 6) return setErr("Password must be at least 6 characters.");
+    if (!regCode) { setRegCode(String(Math.floor(100000 + Math.random() * 900000))); setCodeIn(""); return; }
+    if (codeIn.replace(/\D/g, "") !== regCode) return setErr("The code does not match. Type the 6 numbers shown above.");
     setBusy(true);
     try {
       const base = { name: f.name.trim(), email: f.email.trim().toLowerCase(), phone: f.phone.trim(), role: f.role, grade: f.role === "Student" ? f.grade : "", school: f.school.trim() };
@@ -2715,7 +2789,7 @@ function AuthPage({ supabase: supabase2, setUser }) {
     }
     setBusy(false);
   };
-  const sw = (m) => { setMode(m); setErr(""); };
+  const sw = (m) => { setMode(m); setErr(""); setRegCode(""); };
   const go = (e) => { e.preventDefault(); if (!busy) (mode === "register" ? register : login)(); };
   const forgot = () => { if (window.__forgotPw) window.__forgotPw(f.email); };
   const inp = (label, key, props = {}) => h("label", { className: "au-field" }, h("span", null, label), h("input", { value: f[key], onChange: (e) => up({ [key]: e.target.value }), ...props }));
@@ -2736,15 +2810,16 @@ function AuthPage({ supabase: supabase2, setUser }) {
         mode !== "admin" && h("div", { className: "au-seg", role: "tablist" }, [["login", "Log in"], ["register", "Register"]].map(([m, l]) => h("button", { key: m, type: "button", role: "tab", "aria-selected": mode === m, className: mode === m ? "on" : "", onClick: () => sw(m) }, l))),
         mode === "register" && inp("Full name", "name", { autoComplete: "name", placeholder: "e.g. Aishath Ali" }),
         inp("Email", "email", { type: "email", autoComplete: "email", placeholder: "you@example.com" }),
-        mode === "register" && inp("Mobile number (+960)", "phone", { type: "tel", autoComplete: "tel", placeholder: "7xxxxxx" }),
-        h("label", { className: "au-field" }, h("span", null, "Password"), h("div", { className: "au-pw" }, h("input", { type: showPw ? "text" : "password", value: f.password, onChange: (e) => up({ password: e.target.value }), autoComplete: mode === "register" ? "new-password" : "current-password", placeholder: mode === "register" ? "At least 8 characters" : "Your password" }), h("button", { type: "button", className: "au-eye", onClick: () => setShowPw(!showPw), "aria-label": showPw ? "Hide password" : "Show password" }, showPw ? "Hide" : "Show"))),
+
+        h("label", { className: "au-field" }, h("span", null, "Password"), h("div", { className: "au-pw" }, h("input", { type: showPw ? "text" : "password", value: f.password, onChange: (e) => up({ password: e.target.value }), autoComplete: mode === "register" ? "new-password" : "current-password", placeholder: mode === "register" ? "At least 6 characters" : "Your password" }), h("button", { type: "button", className: "au-eye", onClick: () => setShowPw(!showPw), "aria-label": showPw ? "Hide password" : "Show password" }, showPw ? "Hide" : "Show"))),
         mode !== "register" && supabase2 && h("button", { type: "button", className: "au-forgot", onClick: forgot }, "Forgot password?"),
         mode === "register" && h(React.Fragment, null,
           h("div", { className: "au-field" }, h("span", null, "I am a"), h("div", { className: "au-roles" }, [["Student", BookOpen, "Practise past papers and see your progress"], ["Teacher", Users, "Create classes and set work for students"]].map(([r, Ic, d]) => h("button", { key: r, type: "button", className: f.role === r ? "on" : "", onClick: () => up({ role: r }) }, h(Ic, { size: 18 }), h("b", null, r), h("small", null, d))))),
-          h("div", { className: "au-row" }, f.role === "Student" && h("label", { className: "au-field" }, h("span", null, "Grade"), h("select", { value: f.grade, onChange: (e) => up({ grade: e.target.value }) }, GRADES.map((g) => h("option", { key: g }, g)))), inp("School (optional)", "school", { placeholder: "Your school" })),
-          h("label", { className: "au-check" }, h("input", { type: "checkbox", checked: f.terms, onChange: (e) => up({ terms: e.target.checked }) }), h("span", null, "I agree to the terms and privacy policy"))),
+          f.role === "Student" && h("label", { className: "au-field" }, h("span", null, "Grade"), h("select", { value: f.grade, onChange: (e) => up({ grade: e.target.value }) }, GRADES.map((g) => h("option", { key: g }, g)))),
+          regCode && h("div", { className: "au-code" }, h("span", null, "Your sign-up code"), h("b", { "aria-live": "polite" }, regCode.replace(/(\d{3})(\d{3})/, "$1 $2")), h("label", { className: "au-field" }, h("span", null, "Type the code to finish"), h("input", { value: codeIn, inputMode: "numeric", autoComplete: "one-time-code", maxLength: 7, placeholder: "6 numbers", autoFocus: true, onChange: (e) => { setCodeIn(e.target.value); setErr(""); } }))),
+          h("p", { className: "au-terms" }, "By creating an account you agree to the terms and privacy policy.")),
         err && h("p", { className: "au-err", role: "alert" }, err),
-        h("button", { type: "submit", className: "au-go", disabled: busy }, busy ? "Please wait…" : mode === "register" ? "Create account" : mode === "admin" ? "Log in as admin" : "Log in"),
+        h("button", { type: "submit", className: "au-go", disabled: busy }, busy ? "Please wait…" : mode === "register" ? (regCode ? "Finish and create account" : "Continue") : mode === "admin" ? "Log in as admin" : "Log in"),
         mode === "admin" && h("button", { type: "button", className: "au-forgot c", onClick: () => sw("login") }, "\u2190 Back to student and teacher login"),
         mode !== "admin" && h("button", { type: "button", className: "au-tour", onClick: () => window.dispatchEvent(new Event("em-show-intro")) }, h(BookOpen, { size: 16 }), " See how EduMaldives works"),
         mode !== "admin" && h("p", { className: "au-switch" }, mode === "login" ? "New to EduMaldives? " : "Already have an account? ", h("button", { type: "button", onClick: () => sw(mode === "login" ? "register" : "login") }, mode === "login" ? "Create a free account" : "Log in")),
@@ -3779,7 +3854,7 @@ async function loadSubjectQs(sub, force) {
   const sig = papers.docs.length + ":" + papers.docs.reduce((m, d) => Math.max(m, Number(d.data().at) || 0), 0) + ":" + (PRE_GROUPS[sub] ? PRE_GROUPS[sub].at || 1 : 0) + ":v2";
   if (!force) {
     const c = await idb.get("qs:" + sub).catch(() => null);
-    if (c && c.sig === sig && Array.isArray(c.qs) && c.qs.length) { qCache[sub] = c.qs.filter((q) => !isPrac(q)); return qCache[sub]; }
+    if (c && c.sig === sig && Array.isArray(c.qs) && c.qs.length) { qCache[sub] = c.qs.filter((q) => !isPrac(q) && keepPaper(sub, q.comp || q.cv, q.year)); return qCache[sub]; }
   }
   const bundles = await db.collection("pqp").where("sub", "==", sub).limit(1000).get();
   const have = new Set(bundles.docs.map((d) => d.id));
@@ -3794,8 +3869,9 @@ async function loadSubjectQs(sub, force) {
     const P = d.data() || {};
     (P.qs || []).forEach((q) => { const id = safeId(P.paper + "_q" + q.q); if (!out.has(id)) out.set(id, { id, paper: P.paper, sub: P.sub, code: P.code, year: P.year, sess: P.sess, cv: P.cv, comp: String(P.cv || "")[0] || "", ...q }); });
   });
-  qCache[sub] = [...out.values()].filter((q) => !isPrac(q));
-  if (qCache[sub].length) idb.put("qs:" + sub, { sig, qs: qCache[sub] }).catch(() => {});
+  const allQs = [...out.values()].filter((q) => !isPrac(q));
+  if (allQs.length) idb.put("qs:" + sub, { sig, qs: allQs }).catch(() => {});
+  qCache[sub] = allQs.filter((q) => keepPaper(sub, q.comp || q.cv, q.year));
   return qCache[sub];
 }
 function useSubjectQs(sub) {
@@ -3945,11 +4021,11 @@ function RepeatBank({ role, toast, mode }) {
 /* ===================== Cambridge-format mock paper ===================== */
 const CAMB_COMP = {
   Mathematics: { 1: ["Paper 1 (Core)", 90], 2: ["Paper 2 (Extended)", 120], 3: ["Paper 3 (Core)", 90], 4: ["Paper 4 (Extended)", 120] },
-  Physics: { 1: ["Paper 1 Multiple Choice (Core)", 45], 2: ["Paper 2 Multiple Choice (Extended)", 45], 3: ["Paper 3 Theory (Core)", 75], 4: ["Paper 4 Theory (Extended)", 75], 5: ["Paper 5 Practical Test", 75], 6: ["Paper 6 Alternative to Practical", 60] },
-  Chemistry: { 1: ["Paper 1 Multiple Choice", 45], 2: ["Paper 2 Theory (Core)", 75], 3: ["Paper 3 Theory (Extended)", 75], 5: ["Paper 5 Practical Test", 75], 6: ["Paper 6 Alternative to Practical", 60] },
+  Physics: { 2: ["Paper 2 Multiple Choice (Extended)", 45], 4: ["Paper 4 Theory (Extended)", 75], 6: ["Paper 6 Alternative to Practical", 60] },
+  Chemistry: { 2: ["Paper 2 Multiple Choice (Extended)", 45], 4: ["Paper 4 Theory (Extended)", 75], 6: ["Paper 6 Alternative to Practical", 60] },
   "Business Studies": { 1: ["Paper 1 Short Answer and Data Response", 90], 2: ["Paper 2 Case Study", 90] }
 };
-const CAMB_ERA = { Physics: 2016, Chemistry: 2002, "Business Studies": 2015, Mathematics: 2002 };
+const CAMB_ERA = { Physics: 2016, Chemistry: 2016, "Business Studies": 2015, Mathematics: 2002 };
 const CAMB_CODE = { Mathematics: "0580", Physics: "0625", Chemistry: "0620", "Business Studies": "0450" };
 const qMarks = (q) => q.parts && q.parts.length ? q.parts.reduce((a, p) => a + (Number(p.m) || (p.ms && p.ms.marks) || 0), 0) : Number(q.marks || (q.ms && q.ms.marks) || 1);
 const isMcqQ = (q) => !!(q.ms && q.ms.mcq) || (q.parts || []).some((p) => p.ms && p.ms.mcq);
@@ -4350,11 +4426,11 @@ const TQ_COMP = {
   "0478": { 1: ["Paper 1 Computer Systems", 105], 2: ["Paper 2 Algorithms, Programming and Logic", 105] },
   "0510": { 1: ["Paper 1 Reading and Writing", 120], 2: ["Paper 2 Reading and Writing (Extended)", 120] },
   "0580": { 1: ["Paper 1 (Core)", 90], 2: ["Paper 2 (Extended)", 90], 3: ["Paper 3 (Core)", 90], 4: ["Paper 4 (Extended)", 120] },
-  "0610": { 1: ["Paper 1 Multiple Choice (Core)", 45], 2: ["Paper 2 Multiple Choice (Extended)", 45], 3: ["Paper 3 Theory (Core)", 75], 4: ["Paper 4 Theory (Extended)", 75], 6: ["Paper 6 Alternative to Practical", 60] },
-  "0620": { 1: ["Paper 1 Multiple Choice", 45], 2: ["Paper 2 Theory (Core)", 75], 3: ["Paper 3 Theory (Extended)", 75] },
-  "0625": { 1: ["Paper 1 Multiple Choice (Core)", 45], 2: ["Paper 2 Multiple Choice (Extended)", 45], 3: ["Paper 3 Theory (Core)", 75], 4: ["Paper 4 Theory (Extended)", 75] },
-  "9100": { 1: ["Paper 1", 120], 2: ["Paper 2", 120] },
-  "9200": { 1: ["Paper 1", 120], 2: ["Paper 2", 120] }
+  "0610": { 2: ["Paper 2 Multiple Choice (Extended)", 45], 4: ["Paper 4 Theory (Extended)", 75], 6: ["Paper 6 Alternative to Practical", 60] },
+  "0620": { 1: ["Paper 1 Multiple Choice", 45], 3: ["Paper 3 Theory (Extended)", 75], 6: ["Paper 6 Alternative to Practical", 60] },
+  "0625": { 2: ["Paper 2 Multiple Choice (Extended)", 45], 4: ["Paper 4 Theory (Extended)", 75], 6: ["Paper 6 Alternative to Practical", 60] },
+  "9100": { 1: ["Paper 1 · 30 marks", 60], 2: ["Paper 2 · 70 marks", 120] },
+  "9200": { 1: ["Paper 1 · 40 marks", 120], 2: ["Paper 2 · 60 marks", 150] }
 };
 const tqCompName = (code, c) => (TQ_COMP[code] && TQ_COMP[code][c] && TQ_COMP[code][c][0]) || `Paper ${c}`;
 const tqCompMins = (code, c) => (TQ_COMP[code] && TQ_COMP[code][c] && TQ_COMP[code][c][1]) || 90;
@@ -4540,22 +4616,36 @@ function useAnalysisUnits(sub) {
   return { loading: T.loading || (!!T.data && !tqUnits), err: "", units: tqUnits || [], full, none: !T.loading && !T.data };
 }
 const anaRef = (u) => `${paperCode(u.q)} \xB7 ${SESS_NAME[u.q.sess] || SESS[u.q.sess] || u.q.sess || ""} ${u.q.year} \xB7 Q${u.q.q || (u.q.qn || "")}${u.p && u.p.l ? u.p.l : ""}`.replace(/\s+/g, " ");
-function AnaGroup({ g, kind, n }) {
-  const [open, setOpen] = useState(false);
-  const [ms, setMs] = useState(false);
-  const papers = [...new Set(g.map((u) => u.q.paper))], years = [...new Set(g.map((u) => u.q.year))].sort();
-  const u0 = g[0];
-  const ans = u0.tq ? u0.tq.a : u0.ms && u0.ms.mcq ? (u0.ms.answer || u0.ms.ans || "") : "";
-  const txt = u0.own || u0.text || "";
-  return h("div", { className: "panel qa-card" },
-    h("div", { className: "qa-top" }, h("span", { className: "qa-n" }, n), h("span", { className: `count-pill ${kind}` }, `${kind === "sim" ? "Similar wording" : "Repeated"} \xD7${papers.length}`), h("span", { className: "chip" }, u0.topic || "Other")),
-    h("p", { className: "qa-freq" }, h("b", null, `Asked ${g.length} time${g.length > 1 ? "s" : ""}`), ` in ${papers.length} papers \xB7 ${years.length} year${years.length > 1 ? "s" : ""} (${years[0]}${years.length > 1 ? "–" + years[years.length - 1] : ""})`),
-    h("div", { className: "qa-orig" }, h("small", null, `ORIGINAL QUESTION \xB7 ${anaRef(u0)}`),
-      u0.tq ? h(QBody, { P: u0.P, q: u0.tq }) : h("p", { className: open ? "rep-text" : "rep-text clamp" }, txt),
-      !u0.tq && txt.length > 220 && h("button", { className: "text-link", onClick: () => setOpen(!open) }, open ? "Show less" : "Read more"),
-      ans && h("p", { className: "qa-ans" }, "Correct option: ", h("b", null, ans)),
-      !u0.tq && u0.ms && h("button", { className: "text-link", onClick: () => setMs(!ms) }, ms ? "Hide mark scheme" : "Show mark scheme"), ms && u0.ms && h(SchemeView, { s: u0.ms })),
-    h("div", { className: "qa-refs" }, h("small", null, `PAST PAPER REFERENCES (${g.length})`), h("ul", null, g.map((u) => h("li", { key: u.key }, anaRef(u))))));
+const anaTxt = (s) => String(s || "").replace(/[\u0000-\u0008\u000b-\u001f\u007f-�■-◿]+/g, " ").replace(/\s*,\s*$/, "").replace(/\s+/g, " ").trim();
+const anaYears = (g) => [...new Set(g.map((u) => u.q.year))].filter(Boolean).sort();
+function AnaCard({ g, kind, n, tqMap, sub }) {
+  const [msOn, setMsOn] = useState(false);
+  const [refOn, setRefOn] = useState(false);
+  const papers = [...new Set(g.map((u) => u.q.paper))], years = anaYears(g);
+  const byNew = [...g].sort((x, y) => (y.q.year || 0) - (x.q.year || 0));
+  let show = null;
+  for (const u of byNew) { if (u.tq) { show = { u, P: u.P, q: u.tq }; break; } const k = u.q.paper + "#" + String(u.q.q || u.q.qn || "").replace(/\D.*$/, ""); if (tqMap && tqMap.get(k)) { const x = tqMap.get(k); show = { u, P: x.P, q: x.q }; break; } }
+  const u0 = show ? show.u : byNew[0];
+  const part = u0.p && u0.p.l ? u0.p.l : "";
+  const txt = anaTxt(u0.own || u0.text || "");
+  const ms = show ? null : u0.ms;
+  const tqAns = show && (show.q.a || (show.q.pt || []).map(([l, m, t, a]) => (l ? l + " " : "") + (a || "")).join("\n").trim());
+  const msImg = show && show.q.mb;
+  const yr = years.length ? (years.length > 1 ? `${years[0]}–${years[years.length - 1]}` : String(years[0])) : "";
+  const byYear = {}; byNew.forEach((u) => { (byYear[u.q.year] = byYear[u.q.year] || []).push(u); });
+  const dv = isDv(sub);
+  return h("article", { className: "ana" },
+    h("div", { className: "ana-top" },
+      h("div", { className: "ana-count" }, h("b", null, papers.length), h("small", null, "papers")),
+      h("div", { className: "ana-meta" }, h("b", null, kind === "sim" ? "Similar question" : "Same question", " asked ", papers.length, " times"), h("span", null, [yr, years.length > 1 ? years.length + " different years" : ""].filter(Boolean).join(" \xB7 ")), h("span", { className: dv ? "ana-topic dv" : "ana-topic", dir: dv ? "rtl" : undefined }, topicLabel(sub, u0.topic || "Other")))),
+    h("div", { className: "ana-q", dir: dv ? "rtl" : undefined },
+      h("small", { dir: "ltr" }, "Latest: ", anaRef(u0), part && show ? ` \xB7 look at part ${part}` : ""),
+      show ? h(QBody, { P: show.P, q: show.q }) : h("p", { className: "ana-text" }, txt || "Open the paper to see this question.")),
+    h("div", { className: "ana-btns" },
+      (tqAns || msImg || ms) && h("button", { className: msOn ? "chip on" : "chip", onClick: () => setMsOn(!msOn) }, msOn ? "Hide answer" : "Show answer"),
+      h("button", { className: refOn ? "chip on" : "chip", onClick: () => setRefOn(!refOn) }, `Where it was asked (${g.length})`)),
+    msOn && h("div", { className: "tq-ms ana-ms", dir: dv ? "rtl" : undefined }, h("small", { dir: "ltr" }, "MARK SCHEME"), msImg ? h(QBody, { P: show.P, q: { b: show.q.mb } }) : tqAns ? h("p", { className: "en-ms" }, tqAns) : h(SchemeView, { s: ms })),
+    refOn && h("div", { className: "ana-refs" }, Object.keys(byYear).sort((x, y) => y - x).map((y) => h("div", { key: y, className: "ana-yr" }, h("b", null, y), h("span", null, byYear[y].map((u) => anaRef(u).replace(/ · \S+ \/ \S+ \d{4}| · [A-Za-z/ ]+ \d{4}/, (m) => m)).join(", "))))));
 }
 const anaClean = (s) => String(s || "")
   .replace(/\b(?:DATA SHEET|The Periodic Table of (?:the )?Elements|Permission to reproduce items|Cambridge (?:Assessment )?International Education is part|To avoid the issue of disclosure)[\s\S]*$/i, " ")
@@ -4581,54 +4671,60 @@ function anaRefine(L, thr) {
   });
   return out.sort((a, b) => new Set(b.map((u) => u.q.paper)).size - new Set(a.map((u) => u.q.paper)).size);
 }
+function useTqMap(sub, on) {
+  const T = useTQ(on ? sub : "__none__");
+  const [m, setM] = useState(null);
+  useEffect(() => {
+    if (!on || !T.data) return; let live = true; const I = T.data;
+    Promise.all(I.topics.map((X) => tqLoadTopic(I, X.t))).then((arrs) => { if (!live) return; const mm = new Map(); arrs.flat().forEach((q) => mm.set(q.p + "#" + q.q, { P: I.papers[q.p] || {}, q })); setM(mm); });
+    return () => { live = false; };
+  }, [on, T.data]);
+  return m;
+}
+const anaRepCache = {};
 function QuestionAnalysis({ sub }) {
   const A = useAnalysisUnits(sub);
-  const [view, setView] = useState("overview");
-  const [tops, setTops] = useState([]);
-  const [lim, setLim] = useState(15);
-  useEffect(() => { setTops([]); setLim(15); }, [sub, view]);
+  const tqMap = useTqMap(sub, A.full);
+  const [view, setView] = useState("rep");
+  const [top, setTop] = useState("");
+  const [lim, setLim] = useState(10);
+  const [pre, setPre] = useState(null);
+  const code = SUBJ_CODE[sub];
+  useEffect(() => { setTop(""); setLim(10); }, [sub, view]);
+  useEffect(() => { let live = true; setPre(null); if (A.full) return; if (anaRepCache[code] !== undefined) { setPre(anaRepCache[code]); return; } fetch(`tq/${code}/rep.json?v=${CONTENT_V}`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : null).catch(() => null).then((d) => { anaRepCache[code] = d; if (live) setPre(d); }); return () => { live = false; }; }, [code, A.full]);
   const CU = React.useMemo(() => A.units.map((u) => u.tq ? u : { ...u, text: anaClean(u.text), own: u.own != null ? anaClean(u.own) : u.own }), [A.units]);
   const G = React.useMemo(() => {
+    if (pre && pre.g && CU.length) { const by = new Map(CU.map((u) => [u.key, u])); return { rep: [], sim: pre.g.map((x) => x.map(([p, q]) => by.get(p + "#" + q)).filter(Boolean)).filter((x) => x.length > 1) }; }
     if (!CU.length || !CU.some((u) => (u.text || "").length > 20)) return { rep: [], sim: [] };
     const g0 = groupUnits(CU), rep = anaRefine(g0.rep, 0.6);
     const rk = new Set(rep.map((g) => g.map((u) => u.key).sort().join("|")));
     return { rep, sim: anaRefine(g0.sim, 0.34).filter((g) => !rk.has(g.map((u) => u.key).sort().join("|"))) };
-  }, [CU]);
-  if (A.loading) return h("div", { className: "panel" }, h("p", { className: "muted" }, "Analysing every past paper…"));
+  }, [CU, pre]);
+  if (A.loading) return h("div", { className: "panel" }, h("p", { className: "muted" }, "Looking through every past paper…"));
   if (A.err) return h("div", { className: "panel" }, h("p", { className: "muted" }, A.err));
   if (A.none || !A.units.length) return h("div", { className: "panel" }, h("p", { className: "empty-note" }, `Question analysis for ${sub} is not ready yet.`));
   const U = CU;
   const papers = new Set(U.map((u) => u.q.paper)), years = [...new Set(U.map((u) => u.q.year))].filter(Boolean).sort();
-  const sess = new Set(U.map((u) => u.q.year + (u.q.sess || "")));
+  const np = (g) => new Set(g.map((u) => u.q.paper)).size;
+  const all = [...G.rep.map((g) => [g, "rep"]), ...G.sim.map((g) => [g, "sim"])].sort((a, b) => np(b[0]) - np(a[0]) || anaYears(b[0]).slice(-1)[0] - anaYears(a[0]).slice(-1)[0]);
   const topicStat = {};
-  U.forEach((u) => { const t = u.topic || "Other"; const o = topicStat[t] = topicStat[t] || { t, n: 0, papers: new Set(), rep: 0, sim: 0, top: 0 }; o.n++; o.papers.add(u.q.paper); });
-  G.rep.forEach((g) => { const o = topicStat[g[0].topic || "Other"]; if (o) { o.rep++; o.top = Math.max(o.top, new Set(g.map((u) => u.q.paper)).size); } });
-  G.sim.forEach((g) => { const o = topicStat[g[0].topic || "Other"]; if (o) o.sim++; });
+  U.forEach((u) => { const t = u.topic || "Other"; const o = topicStat[t] = topicStat[t] || { t, n: 0, papers: new Set(), g: 0 }; o.n++; o.papers.add(u.q.paper); });
+  all.forEach(([g]) => { const o = topicStat[g[0].topic || "Other"]; if (o) o.g++; });
   const TS = Object.values(topicStat).sort((a, b) => b.n - a.n);
   const maxN = TS.length ? TS[0].n : 1;
-  const textless = !G.rep.length && !G.sim.length && !U.some((u) => (u.text || "").length > 20);
-  const filt = (L) => tops.length ? L.filter((g) => tops.includes(g[0].topic || "Other")) : L;
-  const across = [...G.rep.map((g) => [g, "rep"]), ...G.sim.map((g) => [g, "sim"])].filter(([g]) => new Set(g.map((u) => u.q.year)).size >= 2)
-    .sort((a, b) => new Set(b[0].map((u) => u.q.year)).size - new Set(a[0].map((u) => u.q.year)).size);
-  const list = view === "rep" ? filt(G.rep).map((g) => [g, "rep"]) : view === "sim" ? filt(G.sim).map((g) => [g, "sim"]) : view === "years" ? across.filter(([g]) => !tops.length || tops.includes(g[0].topic || "Other")) : [];
-  const stat = (n, l) => h("div", { className: "qa-stat" }, h("b", null, n), h("span", null, l));
-  return h("div", { className: "qa" },
-    h("div", { className: "eb-seg qa-tabs" }, [["overview", "Overview"], ["rep", `Repeated (${G.rep.length})`], ["sim", `Similar (${G.sim.length})`], ["years", `Across years (${across.length})`]].map(([k, l]) => h("button", { key: k, className: view === k ? "on" : "", onClick: () => setView(k) }, l))),
-    view === "overview" ? h(React.Fragment, null,
-      h("div", { className: "panel" }, h("h3", null, `${sub} \xB7 all past papers`),
-        h("div", { className: "qa-stats" }, stat(papers.size, "papers"), stat(U.length, "questions"), stat(sess.size, "exam sessions"), stat(years.length ? `${years[0]}–${years[years.length - 1]}` : "–", "years"), stat(G.rep.length, "repeated groups"), stat(G.sim.length, "similar groups")),
-        textless && h("p", { className: "muted" }, "These papers are stored as pictures, so wording cannot be compared. Topic counts below come from every paper.")),
-      h("div", { className: "panel" }, h("h3", null, "Topic analysis"), h("p", { className: "muted" }, "How many questions each topic has had across all papers, and how often its questions repeat."),
-        h("div", { className: "qa-topics" }, TS.map((o) => h("div", { key: o.t, className: "qa-trow" },
-          h("div", { className: "qa-tname" }, h("b", { className: isDv(sub) ? "dv" : "", dir: isDv(sub) ? "rtl" : undefined }, o.t), h("small", null, `${o.n} questions \xB7 ${o.papers.size} papers` + (o.rep ? ` \xB7 ${o.rep} repeated` : "") + (o.sim ? ` \xB7 ${o.sim} similar` : "") + (o.top > 1 ? ` \xB7 most asked \xD7${o.top}` : ""))),
-          h("div", { className: "qa-bar" }, h("i", { style: { width: Math.max(4, Math.round(o.n / maxN * 100)) + "%" } })))))),
-      G.rep.length > 0 && h("div", { className: "panel" }, h("h3", null, "Most frequently repeated"), G.rep.slice(0, 5).map((g, i) => h(AnaGroup, { key: g[0].key, g, kind: "rep", n: i + 1 })), h("button", { className: "btn-secondary", onClick: () => setView("rep") }, "See all repeated questions")))
+  const list = top ? all.filter(([g]) => (g[0].topic || "Other") === top) : all;
+  const dv = isDv(sub);
+  const yr = years.length ? `${years[0]}–${years[years.length - 1]}` : "";
+  return h("div", { className: "qa2" },
+    h("div", { className: "eb-seg qa-tabs" }, [["rep", "Repeated questions"], ["topics", "Topics"]].map(([k, l]) => h("button", { key: k, className: view === k ? "on" : "", onClick: () => setView(k) }, l))),
+    h("p", { className: "qa2-intro" }, view === "rep" ? `Questions that came again in other papers, most asked first. Checked across ${papers.size} papers (${yr}).` : `How many questions each topic had across ${papers.size} papers (${yr}). Tap a topic to see its repeated questions.`),
+    view === "topics" ? h("div", { className: "qa-topics panel" }, TS.map((o) => h("button", { key: o.t, className: "qa-trow", onClick: () => { setView("rep"); setTimeout(() => setTop(o.t), 0); } },
+      h("div", { className: "qa-tname" }, h("b", { className: dv ? "dv" : "", dir: dv ? "rtl" : undefined }, topicLabel(sub, o.t)), h("small", null, `${o.n} questions` + (o.g ? ` \xB7 ${o.g} repeated` : ""))),
+      h("div", { className: "qa-bar" }, h("i", { style: { width: Math.max(4, Math.round(o.n / maxN * 100)) + "%" } })))))
     : h(React.Fragment, null,
-      h("div", { className: "lib-filter" }, h("div", { className: "lf-row" }, h("span", { className: "lf-lbl" }, "Topics"), h(MultiPick, { options: TS.map((o) => ({ v: o.t, l: o.t, n: o.n })), value: tops, onChange: setTops, all: "All topics" }))),
-      h("p", { className: "muted" }, view === "rep" ? "The same question asked again in different papers, most frequent first." : view === "sim" ? "Questions that test the same thing with different wording." : "Questions that have come up in two or more different years, longest-running first."),
-      !list.length ? h("div", { className: "panel" }, h("p", { className: "empty-note" }, textless ? "Wording comparison is not available for this subject." : "No questions found for this choice.")) :
-      h(React.Fragment, null, list.slice(0, lim).map(([g, k], i) => h(AnaGroup, { key: k + g[0].key, g, kind: k, n: i + 1 })),
-        list.length > lim && h("button", { className: "btn-secondary", onClick: () => setLim(lim + 15) }, `Show more (${list.length - lim} left)`))));
+      TS.length > 1 && h("div", { className: "qa2-topics" }, h("button", { className: top ? "chip" : "chip on", onClick: () => { setTop(""); setLim(10); } }, `All topics (${all.length})`), TS.filter((o) => o.g).map((o) => h("button", { key: o.t, className: top === o.t ? "chip on" : "chip", onClick: () => { setTop(o.t); setLim(10); } }, h("span", { className: dv ? "dv" : "" }, topicLabel(sub, o.t)), ` (${o.g})`))),
+      !list.length ? h("div", { className: "panel" }, h("p", { className: "muted" }, all.length ? "No repeated questions in this topic." : "No repeated questions were found for this subject yet.")) : list.slice(0, lim).map(([g, kind], i) => h(AnaCard, { key: g[0].key, g, kind, n: i + 1, tqMap, sub })),
+      list.length > lim && h("button", { className: "btn-secondary qa2-more", onClick: () => setLim(lim + 10) }, `Show more (${list.length - lim} left)`)));
 }
 function LibraryTabs(props) {
   const [view, setView] = useState("Papers");
@@ -5563,6 +5659,8 @@ function ChatBox({ ownerUid, cls, teacherSide, title, onClose, toast }) {
     h("div", { className: "chat-in" }, h("textarea", { rows: 1, value: txt, placeholder: "Write a message", onChange: (e) => setTxt(e.target.value), onKeyDown: (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } } }), h("button", { className: "btn-primary", disabled: busy || !txt.trim(), onClick: send }, "Send"))));
 }
 /* ===================== Study library ===================== */
+const SCI_SET = { "0610": 1, "0620": 1, "0625": 1, Physics: 1, Chemistry: 1, Biology: 1 };
+const keepPaper = (k, c, y) => { if (!SCI_SET[k]) return true; c = String(c || "")[0]; if (!c) return true; return (Number(y) || 2020) >= 2016 ? "246".includes(c) : "136".includes(c); };
 const SUBJ_CODE = { English: "0510", Dhivehi: "9200", Islam: "9100", Mathematics: "0580", Physics: "0625", Chemistry: "0620", Biology: "0610", "Computer Science": "0478", "Business Studies": "0450", Accounting: "0452", Economics: "0455", "Travel & Tourism": "0471" };
 const svgI = (d) => ({ size = 20, className }) => h("svg", { width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.9, strokeLinecap: "round", strokeLinejoin: "round", className, "aria-hidden": true }, d.map((p, i) => h("path", { key: i, d: p })));
 const INotes = svgI(["M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z", "M14 2v6h6", "M8 13h8", "M8 17h5"]);
@@ -5575,7 +5673,7 @@ const IBack = svgI(["m15 18-6-6 6-6"]);
 const IReload = svgI(["M3 12a9 9 0 1 0 3-6.7L3 8", "M3 3v5h5"]);
 const IZoom = svgI(["M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14z", "m21 21-4.3-4.3", "M11 8v6", "M8 11h6"]);
 const TOPIC_DV = {
-  Islam: { "Grade 9 · Aqeedah": "ގްރޭޑް 9 · އަޤީދާ", "Grade 9 · Hadith studies": "ގްރޭޑް 9 · ހަދީޘް ޢިލްމު", "Grade 9 · Islamic fiqh": "ގްރޭޑް 9 · އިސްލާމީ ފިޤްހު", "Grade 9 · Islamic civilization": "ގްރޭޑް 9 · އިސްލާމީ ޙަޟާރާ", "Grade 9 · Islamic culture": "ގްރޭޑް 9 · އިސްލާމީ ޘަޤާފަތް", "Grade 9 · Islamic ethics": "ގްރޭޑް 9 · އިސްލާމީ އަޚްލާޤް", "Grade 10 · Aqeedah": "ގްރޭޑް 10 · އިސްލާމީ ޢަޤީދާ", "Grade 10 · Hadith studies": "ގްރޭޑް 10 · ޙަދީޘް ޢިލްމު", "Grade 10 · Islamic fiqh": "ގްރޭޑް 10 · އިސްލާމީ ފިޤްހު", "Grade 10 · Islamic history": "ގްރޭޑް 10 · އިސްލާމީ ތާރީޚް", "Grade 10 · Islamic culture": "ގްރޭޑް 10 · އިސްލާމީ ޘަޤާފަތް", "Grade 10 · Islamic ethics": "ގްރޭޑް 10 · އިސްލާމީ އަޚްލާޤް" },
+  Islam: {"Grade 9 · Aqeedah": "ގްރޭޑް 9 · އިސްލާމީ ޢަޤީދާ", "Grade 9 · Hadith studies": "ގްރޭޑް 9 · ޙަދީޘް ޢިލްމު", "Grade 9 · Islamic fiqh": "ގްރޭޑް 9 · އިސްލާމީ ފިޤްހު", "Grade 9 · Islamic civilization": "ގްރޭޑް 9 · އިސްލާމީ ޙަޟާރަތް", "Grade 9 · Islamic culture": "ގްރޭޑް 9 · އިސްލާމީ ޘަޤާފަތް", "Grade 9 · Islamic ethics": "ގްރޭޑް 9 · އިސްލާމީ އަޚްލާޤު", "Grade 10 · Aqeedah": "ގްރޭޑް 10 · އިސްލާމީ ޢަޤީދާ", "Grade 10 · Hadith studies": "ގްރޭޑް 10 · ޙަދީޘް ޢިލްމު", "Grade 10 · Islamic fiqh": "ގްރޭޑް 10 · އިސްލާމީ ފިޤްހު", "Grade 10 · Islamic history": "ގްރޭޑް 10 · އިސްލާމީ ތާރީޚު", "Grade 10 · Islamic culture": "ގްރޭޑް 10 · އިސްލާމީ ޘަޤާފަތް", "Grade 10 · Islamic ethics": "ގްރޭޑް 10 · އިސްލާމީ އަޚްލާޤު", "Islamic history & civilisation": "އިސްލާމީ ތާރީޚާއި ޙަޟާރަތް", "Islamic culture": "އިސްލާމީ ޘަޤާފަތް", "Islamic morals & manners": "އިސްލާމީ އަޚްލާޤާއި އާދާބު", "Islamic aqeedah": "އިސްލާމީ ޢަޤީދާ", "Hadith studies": "ޙަދީޘް ޢިލްމު", "Islamic fiqh": "އިސްލާމީ ފިޤްހު", "Other": "އެހެނިހެން"},
   Dhivehi: { "Essay & story writing": "މަޒުމޫނު އަދި ވާހަކަ ލިޔުން", "Instructional & account writing": "އިރުޝާދުދޭ ލިޔުމާއި ރިކައުންޓް", "Reading comprehension": "ދޭހަ", "Summary writing": "ޚުލާޞާކުރުން", "Letter writing": "ސިޓީ ލިޔުން", "Language & spelling": "ބަހުގެ ޤަވާޢިދާއި އިމްލާ" }
 };
 const isDv = (sub) => sub === "Dhivehi" || sub === "Islam";
@@ -5590,7 +5688,7 @@ const STUDY_RES = [
 ];
 const LANG_SUBS = ["English", "Dhivehi"];
 const slugT = (t) => String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
-const CONTENT_V = "20261116a";
+const CONTENT_V = "20261119a";
 const tqCache = {}, tqTopicCache = {};
 function useTQ(sub) {
   const code = SUBJ_CODE[sub];
@@ -5600,7 +5698,7 @@ function useTQ(sub) {
     if (tqCache[code] !== undefined) { setSt({ data: tqCache[code] }); return; }
     setSt({ loading: true });
     fetch(`tq/${code}/i.json?v=${CONTENT_V}`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : null).catch(() => null).then((d) => {
-      if (d) { d.code = code; Object.entries(d.papers).forEach(([k, p]) => { p.k = k; p.code = code; }); }
+      if (d) { d.code = code; Object.entries(d.papers).forEach(([k, p]) => { if (!keepPaper(code, p.c, p.y)) { delete d.papers[k]; return; } p.k = k; p.code = code; }); }
       tqCache[code] = d; if (live) setSt({ data: d });
     });
     return () => { live = false; };
@@ -5610,7 +5708,7 @@ function useTQ(sub) {
 function tqLoadTopic(I, t) {
   const T = I.topics.find((x) => x.t === t); if (!T) return Promise.resolve([]);
   const k = I.code + "/" + T.f;
-  if (!tqTopicCache[k]) tqTopicCache[k] = fetch(`tq/${k}.json?v=${CONTENT_V}`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : []).catch(() => { delete tqTopicCache[k]; return []; });
+  if (!tqTopicCache[k]) tqTopicCache[k] = fetch(`tq/${k}.json?v=${CONTENT_V}`, { cache: "no-cache" }).then((r) => r.ok ? r.json() : []).then((a) => SCI_SET[I.code] ? a.filter((q) => I.papers[q.p]) : a).catch(() => { delete tqTopicCache[k]; return []; });
   return tqTopicCache[k];
 }
 function useTQTopic(I, t) {
@@ -5641,11 +5739,16 @@ function QBody({ P, q }) {
     const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { setVis(true); io.disconnect(); } }, { rootMargin: "600px 0px" });
     io.observe(el); return () => io.disconnect();
   }, []);
-  return h("div", { className: "qbody", ref }, (q.b || []).filter((b) => !(b[0] === "p" && TQ_JUNK.test(b[1]))).map((b, i) => b[0] === "o"
+  const B0 = (q.b || []).filter((b) => !(b[0] === "p" && (TQ_JUNK.test(b[1]) || /^\s*(\d{1,2}|\[\d{1,2}\]|\[Total:?\s*\d+\])\s*$/i.test(String(b[1]).replace(/<[^>]+>/g, "")))) && !(b[0] === "f" && P && P.code === "0471" && b[2] < 60 && b[3] > 380));
+  const B = []; B0.forEach((b) => { const L = B[B.length - 1]; const prev = L && (L[0] === "row" ? L[1][L[1].length - 1] : L); if (b[0] === "f" && prev && prev[0] === "f" && Math.abs(prev[2] - b[2]) <= 0.15 * Math.max(prev[2], b[2]) && (L[0] === "row" ? L[1].reduce((a, x) => a + x[3], 0) : prev[3]) + b[3] <= 1.05 * (b[5] || P.w || 9999)) { if (L[0] === "row") L[1].push(b); else B[B.length - 1] = ["row", [prev, b]]; } else B.push(b); });
+  const fig = (b, i) => vis ? h(QFig, { key: i, P, b }) : h("div", { key: i, className: "qfig ph", style: { aspectRatio: `${b[3]} / ${b[2]}`, width: `min(100%, ${Math.round(b[3] * 0.8)}px)` } });
+  return h("div", { className: "qbody", ref }, B.map((b, i) => b[0] === "row"
+    ? h("div", { key: i, className: "qfig-row", style: { maxWidth: b[1].reduce((a, x) => a + x[3], 0) + "px" } }, b[1].map((x, k) => h("div", { key: k, style: { flex: `${x[3]} 1 0` } }, fig(x, k))))
+    : b[0] === "o"
     ? h("p", { key: i, className: "qopt" }, h("b", null, b[1]), h("span", { dangerouslySetInnerHTML: { __html: b[2] } }))
     : b[0] === "p"
     ? h("p", { key: i, className: /^\(\w{1,4}\)/.test(b[1]) ? "qp qpart" : "qp", dangerouslySetInnerHTML: { __html: b[1].replace(/^(\(\w{1,4}\))/, "<b>$1</b>") } })
-    : vis ? h(QFig, { key: i, P, b }) : h("div", { key: i, className: "qfig ph", style: { aspectRatio: `${b[3]} / ${b[2]}`, width: `min(100%, ${Math.round(b[3] * 0.8)}px)` } })));
+    : fig(b, i)));
 }
 function tqStats() { try { return JSON.parse(LS.getItem("em-tq-done") || "{}"); } catch (e) { return {}; } }
 function tqMark(id, v) { const s = tqStats(); s[id] = v; lsSet("em-tq-done", s); }
@@ -5900,7 +6003,7 @@ function NoteDoc({ sub, topic, role, toast }) {
   const sharedMd = shared.data && shared.data.body && shared.data.body.md || "";
   const pack = useStudyPack(code);
   const builtMd = (pack.notes || {})[topic] || (BUILT_NOTES[code] || {})[topic] || "";
-  const md = sharedMd || (busy ? live : builtMd || local);
+  const md = sharedMd || builtMd;
   const gate = usePlanGate();
   const make = async (force) => {
     if (busy) return;
@@ -5909,7 +6012,7 @@ function NoteDoc({ sub, topic, role, toast }) {
     try { const t = await aiStream(notesPrompt(sub, code, topic, g), (x) => setLive(x), isDv(sub) ? "complex" : "default"); if (t && t.length > 200) { setLocal(t); try { LS.setItem(key, t); } catch (e) { } } else throw new Error("The notes did not finish. Please try again."); } catch (e) { setErr(e.message || "Could not make the notes right now."); }
     setBusy(false);
   };
-  useEffect(() => { if (!builtMd && !sharedMd && !local && !shared.loading && !pack.loading && !busy && !err && aiAvailable() && gate.can("notes", sub + "|" + topic)) make(); }, [key, shared.loading, pack.loading]);
+
   const [edit, setEdit] = useState(null);
   const nKey = sub + "|" + topic;
   const [allowed] = useState(() => gate.can("notes", nKey));
@@ -5923,8 +6026,7 @@ function NoteDoc({ sub, topic, role, toast }) {
   const dv = isDv(sub);
   return h("div", { className: dv ? "nd dv" : "nd", dir: dv ? "rtl" : undefined },
     !md && h("div", { className: "nd-card" }, g[0] && h("p", null, g[0]),
-      busy || shared.loading ? h("div", { className: "nd-skel" }, h("i"), h("i"), h("i")) : err ? h("p", { className: "muted" }, err) : !aiAvailable() ? h("p", { className: "muted" }, "Full notes for this topic will appear here soon.") : gate.blocked("notes") ? h(UpgradeNote, { what: "notes" }) : null,
-      !busy && aiAvailable() && !gate.blocked("notes") && h("button", { className: "btn-primary", onClick: () => make() }, "Make notes")),
+      shared.loading || pack.loading ? h("div", { className: "nd-skel" }, h("i"), h("i"), h("i")) : h("p", { className: "muted", dir: "ltr" }, "Notes for this topic are being added.")),
     secs.map((s, i) => h("section", { className: cls(s.h), key: i }, s.h && h("h4", null, s.h), h("div", { className: "nd-md", dangerouslySetInnerHTML: { __html: s.html } }))),
     busy && md && h("p", { className: "muted nd-writing", dir: "ltr" }, "Writing…"),
     md && !busy && h("p", { className: "nd-foot", dir: "ltr" }, sharedMd ? "Checked and shared by your teachers." : builtMd ? "EduMaldives revision notes, written to the syllabus." : "Made with AI from the syllabus. Check with your teacher if anything looks wrong.",
@@ -5952,9 +6054,8 @@ function CardsDeck({ sub, topic }) {
   const dv = isDv(sub);
   const pack = useStudyPack(code);
   const pc = (pack.cards || {})[topic];
-  const D = useAIDoc(sub, "cards2", dv || pack.loading || (Array.isArray(pc) && pc.length) ? null : topic, prompt);
-  const g = dv ? null : (GUIDE[sub] || { t: {} }).t[topic];
-  const cards = Array.isArray(pc) && pc.length ? pc : Array.isArray(D.data) && D.data.length ? D.data : pack.loading ? [] : g ? [{ front: topic, back: g[0] }, { front: "Example: " + topic, back: g[1] }] : [];
+  const D = { busy: false, data: null, err: "" };
+  const cards = Array.isArray(pc) && pc.length ? pc : [];
   const [i, setI] = useState(0);
   const [flip, setFlip] = useState(false);
   const [known, setKnown] = useState(0);
@@ -6000,7 +6101,30 @@ function VideosView({ sub, role, toast }) {
 }
 
 /* ===================== English practice exam builder (text, answer in the app) ===================== */
-const EN_WT = [["email", "Email"], ["letter", "Letter"], ["article", "Article"], ["report", "Report"], ["review", "Review"], ["essay", "Essay"], ["speech", "Speech / talk"], ["blog", "Blog post"]];
+const EN_WT = [["email", "Email"], ["letter", "Letter"], ["article", "Article"], ["report", "Report"], ["review", "Review"], ["essay", "Essay"]];
+const EN_LINK = /\b(however|although|moreover|furthermore|firstly|secondly|finally|in addition|therefore|because|as a result|on the other hand|for example|for instance|in conclusion|overall|while|whereas|also|besides|consequently|despite|instead|so that)\b/gi;
+function enWriteAuto(it, text) {
+  const t = String(text || "").trim(); const wc = enWords(t);
+  const mx = it.m - 6 > 0 ? it.m - 6 : 9;
+  if (wc < 20) return { c: 0, l: 0 };
+  const m = String(it.words || "").match(/(\d+)\D+(\d+)/); const lo = m ? +m[1] : 100, hi = m ? +m[2] : 160;
+  const lenF = wc >= lo && wc <= hi + 20 ? 1 : wc >= lo * 0.75 ? 0.7 : wc >= lo * 0.5 ? 0.45 : 0.2;
+  const low = t.toLowerCase();
+  const pts = [...(it.text || []).filter((x) => /^[•\-]/.test(x)), ...(it.cm || [])];
+  const kw = (x) => String(x).toLowerCase().replace(/[^a-z\s]/g, " ").split(/\s+/).filter((w) => w.length > 4 && !/^(about|which|their|there|would|could|should|other|these|those|write|your|explain|describe)$/.test(w));
+  const cov = pts.length ? pts.filter((x) => { const K = kw(x); return !K.length || K.some((w) => low.includes(w.slice(0, Math.max(5, w.length - 2)))); }).length / pts.length : 0.7;
+  const c = Math.max(0, Math.min(6, Math.round(6 * (0.55 * cov + 0.45 * lenF))));
+  const sents = t.split(/[.!?]+\s/).filter((x) => x.trim().split(/\s+/).length > 2);
+  const avg = sents.length ? wc / sents.length : wc;
+  const paras = t.split(/\n\s*\n|\n(?=\s*[A-Z])/).filter((x) => x.trim().length > 20).length;
+  const links = new Set((t.match(EN_LINK) || []).map((x) => x.toLowerCase())).size;
+  const words = low.match(/[a-z']+/g) || []; const variety = words.length ? new Set(words).size / words.length : 0;
+  const caps = sents.length ? sents.filter((x) => /^[\s"'“]*[A-Z0-9]/.test(x.trim())).length / sents.length : 0;
+  const f = [paras >= 3 ? 1 : paras === 2 ? 0.6 : 0.3, Math.min(1, links / 4), avg >= 9 && avg <= 24 ? 1 : 0.5, Math.min(1, Math.max(0, (variety - 0.35) / 0.25)), caps, lenF];
+  const l = Math.max(0, Math.min(mx, Math.round(mx * f.reduce((a, b) => a + b, 0) / f.length)));
+  return { c, l };
+}
+const enAutoText = (q, a) => { if (!String(a || "").trim() || !q.a) return null; try { return Number(localMark({ scheme: { answer: q.a, points: [] }, marks: q.m || 1, student: a }).score) || 0; } catch (e) { return null; } };
 const EN_RK = [["reading", "Reading comprehension"], ["matching", "Multiple matching"], ["notes", "Note-making"], ["summary", "Summary writing"]];
 const EN_RSUB = ["Place", "Movie", "Cinema", "Restaurant", "Book", "Product", "App & website", "Event", "Other"];
 const EN_BANDS = { c: [[6, "Task fully done: all points covered and well developed; reader fully informed."], [4, "Most points covered with some development; reader mostly informed."], [2, "Some points covered; ideas are simple or not developed."], [0, "Little relevant content."]], l: [[9, "Wide range of vocabulary and sentence types, accurate, well organised, right tone for the reader."], [6, "Good range, mostly accurate, clear paragraphs, tone mostly right."], [3, "Simple language with errors that sometimes make meaning unclear."], [0, "Errors make it hard to follow."]] };
@@ -6084,7 +6208,7 @@ function EnBuilder({ sub, toast }) {
     setDone(true);
     setMk((m) => {
       const o = { ...m };
-      test.items.forEach((it, i) => { if (!it.w) it.qs.forEach((q, j) => { const v = enAuto(q, ans[i + ":" + j]); if (v != null) o[i + ":" + j] = v; else if (!String(ans[i + ":" + j] || "").trim() && o[i + ":" + j] == null) o[i + ":" + j] = 0; }); else if (!String(ans[i] || "").trim()) { o[i + ":c"] = 0; o[i + ":l"] = 0; } });
+      test.items.forEach((it, i) => { if (!it.w) it.qs.forEach((q, j) => { const a = ans[i + ":" + j]; const v = enAuto(q, a); if (v != null) o[i + ":" + j] = v; else if (!String(a || "").trim()) o[i + ":" + j] = 0; else { const t = enAutoText(q, a); if (t != null) o[i + ":" + j] = t; } }); else { const e = enWriteAuto(it, ans[i]); o[i + ":c"] = e.c; o[i + ":l"] = e.l; } });
       return o;
     });
     window.scrollTo({ top: 0 });
@@ -6097,24 +6221,25 @@ function EnBuilder({ sub, toast }) {
     const nAll = test.items.reduce((a, it) => a + (it.w ? 1 : it.qs.length), 0);
     return h("div", { className: "eb-run en-run" },
       h("div", { className: "eb-bar" }, h("button", { className: "st-back", onClick: async () => { if (done || (await askConfirm("Leave this test? Your answers will be lost.", { yes: "Leave", no: "Stay" }))) setTest(null); } }, h(IBack, { size: 18 }), done ? " New test" : " Leave"), h("span", null, `${nAns}/${nAll} answered`), test.mins && !done ? h("b", { className: left < 60 ? "eb-time low" : "eb-time" }, `${mm}:${ss}`) : null, !done && h("button", { className: "btn-primary sm", onClick: async () => { if (nAns >= nAll || (await askConfirm("Some answers are empty. Finish anyway?", { yes: "Finish", no: "Keep going" }))) finish(); } }, "Finish")),
-      done && h("div", { className: "eb-score" }, h("b", null, `${score.sc} / ${score.tot}`), h("span", null, score.todo ? `${score.todo} answer${score.todo > 1 ? "s" : ""} still to mark. Use the mark scheme below and tap your marks.` : `${score.tot ? Math.round(score.sc / score.tot * 100) : 0}% \xB7 saved to My Progress`)),
+      done && h("div", { className: "eb-score" }, h("b", null, `${score.sc} / ${score.tot}`), h("span", null, score.todo ? `${score.todo} answer${score.todo > 1 ? "s" : ""} still to mark. Use the mark scheme below and tap your marks.` : `${score.tot ? Math.round(score.sc / score.tot * 100) : 0}% \xB7 marked automatically \xB7 saved to My Progress`)),
       test.items.map((it, i) => h("article", { key: it.id, className: "tq-card en-card" },
         h("div", { className: "tq-head" }, h("span", { className: "tq-n" }, i + 1), h("div", { className: "tq-src" }, h("b", null, enSrc(D, it)), h("small", null, it.w ? `${(EN_WT.find((x) => x[0] === it.type) || [, "Writing"])[1]}${it.sub ? " \xB7 " + it.sub : ""} \xB7 ${it.m} marks${it.words ? " \xB7 " + it.words + " words" : ""}` : `${(EN_RK.find((x) => x[0] === it.kind) || [, ""])[1]} \xB7 ${it.m} marks`))),
         it.w ? h(React.Fragment, null,
-          h("div", { className: "en-task" }, it.text.map((t, k) => h("p", { key: k, className: /^•/.test(t) ? "en-bul" : "" }, t))),
+          h("div", { className: "en-task" }, it.text.map((t, k) => t === "@@CM" ? (it.cm && it.cm.length ? h("div", { key: k, className: "en-bubbles" }, it.cm.map((c, z) => h("p", { key: z, className: "en-bub" }, c))) : null) : h("p", { key: k, className: /^•/.test(t) ? "en-bul" : /^You will receive|^Your .* should be between/.test(t) ? "en-rule" : "" }, t))),
           h("textarea", { className: "tq-ta en-ta", dir: "auto", rows: 12, value: ans[i] || "", placeholder: "Write your answer here", disabled: done, onChange: (e) => setA(i, e.target.value) }),
           (() => { const wc = enWords(ans[i]); const m = String(it.words || "").match(/(\d+)\D+(\d+)/); const lo = m ? +m[1] : 0, hi = m ? +m[2] : 0; return h("p", { className: m && wc && (wc < lo || wc > hi) ? "en-wc off" : "en-wc" }, `${wc} words` + (m ? ` \xB7 aim for ${lo}–${hi}` : "")); })(),
-          done && h("div", { className: "tq-ms en-guide" }, h("small", null, "MARK YOUR WRITING"),
-            h("p", { className: "muted" }, "Read your answer against these descriptions and choose the closest band. Ask your teacher to check it too."),
+          done && h("div", { className: "tq-ms en-guide" }, h("small", null, "YOUR MARK"),
+            h("p", { className: "muted" }, "Marked automatically from your word count, the task points you covered, paragraphs, linking words and sentence variety. Compare with the bands and change it if needed. Your teacher can check it too."),
             [["c", "Content", 6], ["l", "Language", it.m - 6 > 0 ? it.m - 6 : 9]].map(([k, l, mx]) => h("div", { key: k, className: "en-band" }, h("b", null, `${l} (out of ${mx})`), h("ul", null, EN_BANDS[k].map(([v, d]) => h("li", { key: v }, h("b", null, Math.round(v / (k === "c" ? 6 : 9) * mx) + "+ "), d))), h(EnMarks, { max: mx, val: mk[i + ":" + k], set: (v) => setM(i + ":" + k, v) })))))
         : h(React.Fragment, null,
-          it.passage && it.passage.length > 0 && h("div", { className: psg[i] ? "en-psg open" : "en-psg" }, it.passage.map((t, k) => h("p", { key: k }, t)), h("button", { className: "text-link en-psg-t", onClick: () => setPsg((o) => ({ ...o, [i]: !o[i] })) }, psg[i] ? "Show less" : "Show the full text")),
+          it.passage && it.passage.length > 0 && h("div", { className: "en-read" }, /^(Read|Look at)\b/.test(it.passage[0]) && h("p", { className: "en-read-i" }, it.passage[0]), h("div", { className: "en-psg full" }, (/^(Read|Look at)\b/.test(it.passage[0]) ? it.passage.slice(1) : it.passage).map((t, k) => h("p", { key: k, className: k === 0 && t.length < 90 && !/[.!?]$/.test(t) ? "en-psg-h" : /^[A-H]\s+[A-Z]/.test(t) && t.length < 60 ? "en-psg-h2" : "" }, t)))),
+          it.passage && it.passage.length > 0 && h("p", { className: "en-qs-h" }, "Questions"),
           it.qs.map((q, j) => h("div", { key: j, className: "en-q" },
             q.stem && (j === 0 || it.qs[j - 1].stem !== q.stem) && h("p", { className: "en-stem" }, q.stem), h("div", { className: "en-qh" }, q.n ? h("b", null, q.n) : null, h("p", null, String(q.q).replace(/\s*[.…]{2,}\s*$/gm, "")), h("small", null, `[${q.m}]`)),
             /^[A-H]$/.test(String(q.a || "").trim()) ? h("div", { className: "tq-mcq" }, enLetters(it, q).map((L) => { const v = ans[i + ":" + j]; let c = "tq-opt"; if (!done && v === L) c += " sel"; if (done) { if (L === q.a.trim()) c += " ok"; else if (L === v) c += " bad"; } return h("button", { key: L, className: c, disabled: done, onClick: () => setA(i + ":" + j, L) }, L); }))
             : h("textarea", { className: "tq-ta", dir: "auto", rows: q.m > 3 ? 6 : q.m > 1 ? 3 : 1, value: ans[i + ":" + j] || "", placeholder: "Your answer", disabled: done, onChange: (e) => setA(i + ":" + j, e.target.value) }),
             done && h("div", { className: "tq-ms" }, h("small", null, "MARK SCHEME"), h("p", { className: "en-ms" }, q.a || "Compare with the official mark scheme in Past Papers."),
-              enAuto(q, ans[i + ":" + j]) != null ? h("p", { className: mk[i + ":" + j] ? "tq-fb ok" : "tq-fb bad" }, mk[i + ":" + j] ? "Correct \xB7 1 mark" : "Not correct \xB7 0 marks") : h(EnMarks, { label: "Your mark", max: q.m, val: mk[i + ":" + j], set: (v) => setM(i + ":" + j, v) }))))))));
+              enAuto(q, ans[i + ":" + j]) != null ? h("p", { className: mk[i + ":" + j] ? "tq-fb ok" : "tq-fb bad" }, mk[i + ":" + j] ? "Correct \xB7 1 mark" : "Not correct \xB7 0 marks") : h(EnMarks, { label: "Auto mark (tap to change)", max: q.m, val: mk[i + ":" + j], set: (v) => setM(i + ":" + j, v) }))))))));
   }
   const seg = (val, set, opts) => h("div", { className: "eb-seg" }, opts.map(([k, l]) => h("button", { key: k, className: val === k ? "on" : "", onClick: () => set(k) }, l)));
   const chips = (val, set, opts) => h("div", { className: "en-chips" }, opts.map(([k, l, c]) => h("button", { key: k, className: val === k ? "chip on" : "chip", onClick: () => set(k), disabled: c === 0 }, l, c != null ? h("small", null, " " + c) : null)));
@@ -6192,7 +6317,7 @@ function BuilderView({ sub, toast, preset, onExit }) {
     if (!test) return;
     setDone(true); setBusy(true);
     let mc = 0, tot = 0; const items = [], idx = [], auto = {};
-    const canAI = gate.level >= 1 && aiAvailable();
+    const canAI = true;
     test.qs.forEach((q, i) => {
       tot += q.m || 1;
       if (q.a) { if (ans[i] === q.a) mc += 1; return; }
