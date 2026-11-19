@@ -82,6 +82,14 @@ html[data-theme=dark] .bo-o.on .bo-r{box-shadow:inset 0 0 0 3px #1b3150}
 .rq-ans-box{margin-top:8px;background:#ecf8f1;border:1px solid #bfe6cf;border-radius:12px;padding:10px 14px;color:#174a2e}.rq-ans-box>small{display:block;font-size:11.5px;font-weight:800;letter-spacing:.06em;color:#1d8a4f;margin-bottom:4px}.rq-ans-box p{margin:4px 0}.rq-mcq-a{display:flex;gap:12px;align-items:baseline;font-size:16px}.rq-mcq-a b{font-size:18px}
 .occ-tq{padding-top:8px}.occ-tq .tq-card{box-shadow:none;border:0;padding:0;background:transparent}
 html[data-theme=dark] .gc-q{color:#e6edf5}html[data-theme=dark] .rq-opt{background:#1b2a40;border-color:#2a3d56}html[data-theme=dark] .rq-opt b,html[data-theme=dark] .rq-part b{color:#9cc8f0}html[data-theme=dark] .rq-ans-btn{background:#1b2a40;border-color:#2a3d56;color:#9cc8f0}html[data-theme=dark] .rq-ans-box{background:#16332a;border-color:#245a40;color:#cdeedb}
+.gc{padding:16px 16px 12px}.gc-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}.gc-badge{font:700 12.5px "DM Sans",sans-serif;border-radius:999px;padding:4px 10px;background:#fdecec;color:#b42318}.gc-badge.sim{background:#eef4ff;color:#2f5fb3}.gc-topic{font:600 13px "DM Sans",sans-serif;color:#5d7389}
+.gc-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:10px}.gc-actions .rq-ans{margin:0;flex-basis:100%}.gc-actions .rq-ans:has(.rq-ans-box){order:2}
+.gc-papers{display:inline-flex;align-items:center;gap:4px;border:0;background:transparent;color:#5d7389;font:600 13.5px "DM Sans",sans-serif;padding:6px 2px;cursor:pointer}.gc-papers[aria-expanded=true] svg{transform:rotate(180deg)}
+.gc .occ-list{margin-top:8px}.rq-dia{display:inline-block;font:600 12px "DM Sans",sans-serif;color:#5d7389;background:#eef3f8;border:1px dashed #c9d6e3;border-radius:8px;padding:2px 8px;margin:0 4px}.rq-note{font-size:13.5px;color:#6b7f95;background:#f5f8fc;border-radius:10px;padding:8px 12px}
+.rq-filters .form-row{margin-bottom:4px}.rq-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:6px}.rq-stat{margin:0;font-size:13.5px}.rq-morebtn{font-weight:700}.rq-refresh{display:inline-flex;align-items:center;gap:4px}
+html[data-theme=dark] .gc-topic,html[data-theme=dark] .gc-papers{color:#9fb3c8}html[data-theme=dark] .rq-dia,html[data-theme=dark] .rq-note{background:#1b2a40;border-color:#2a3d56;color:#9fb3c8}
+.nd-md li.nd-qa{list-style:none;margin:10px 0;padding:10px 12px;background:#f5f8fc;border:1px solid #e3eaf2;border-radius:12px}.nd-qa .nd-q{font-weight:700;color:#13497a}.nd-qa .nd-a{margin-top:4px}.nd-qa .nd-a span{display:block}html[data-theme=dark] .nd-md li.nd-qa{background:#1b2a40;border-color:#2a3d56}html[data-theme=dark] .nd-qa .nd-q{color:#9cc8f0}
+.nd.dv .nd-md ul:has(>li.nd-qa),.nd-md ul:has(>li.nd-qa){padding:0}
 </style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="edu-supabase.js"></script>
 <script src="install.js" defer></script><script src="push.js" defer></script>
@@ -3985,21 +3993,23 @@ function Occurrence({ u, store, onView, toast }) {
       pd && pd.qp && h("button", { className: "text-link occ-open", onClick: () => onView({ id: pd.qp.id, name: pd.qp.name, page: u.q.page }) }, "Open full paper ", h(ArrowUpRight, { size: 14 }))));
 }
 function GroupCard({ g, kind, store, onView, toast }) {
+  const [open, setOpen] = useState(false);
   const [more, setMore] = useState(false);
   const [full, setFull] = useState(false);
   const papers = [...new Set(g.map((u) => u.q.paper))], years = [...new Set(g.map((u) => u.q.year))].sort();
-  const shown = more ? g : g.slice(0, 3);
-  const txt = g[0].own || g[0].text;
-  const u0 = g[0], qref = React.useRef(null);
+  const shown = more ? g : g.slice(0, 4);
+  const u0 = g.find((u) => u.tq) || g[0], qref = React.useRef(null);
   const [long, setLong] = useState(false);
   useEffect(() => { const el = qref.current; if (!el) return; const chk = () => setLong(el.scrollHeight > el.clientHeight + 6); chk(); const t = setTimeout(chk, 700); return () => clearTimeout(t); }, [u0.key]);
+  const yr = years.length > 1 ? `${years[0]}–${years[years.length - 1]}` : String(years[0] || "");
+  const dv = isDv(u0.q.sub);
   return h("div", { className: "panel group-card gc" },
-    h("div", { className: "group-top" }, h("span", { className: `count-pill ${kind}` }, kind === "rep" ? `Repeated \xD7${papers.length}` : kind === "sim" ? `Similar \xD7${papers.length}` : "Single"), h("span", { className: "chip" }, g[0].topic)),
+    h("div", { className: "gc-top" }, kind !== "all" && h("span", { className: `gc-badge ${kind}` }, kind === "rep" ? `Asked ${papers.length} times` : `Similar ×${papers.length}`), h("span", { className: "gc-topic", dir: dv ? "rtl" : undefined }, dv ? topicLabel(u0.q.sub, u0.topic) : u0.topic)),
     h("div", { ref: qref, className: full ? "gc-q" : long ? "gc-q clamp fade" : "gc-q clamp" }, u0.tq ? h(QBody, { P: u0.tq.P, q: u0.tq.q }) : h(TextQ, { u: u0 })), (long || full) && h("button", { className: "text-link gc-more", onClick: () => setFull(!full) }, full ? "Show less" : "Read more"),
-    h(RQAnswer, { u: u0 }),
-    h("p", { className: "gc-years" }, `Asked in ${years.length > 6 ? years.slice(0, 3).join(", ") + " \u2026 " + years.slice(-2).join(", ") : years.join(", ")}`),
-    h("div", { className: "occ-list" }, shown.map((u) => h(Occurrence, { key: u.key, u, store, onView, toast }))),
-    g.length > 3 && h("button", { className: "text-link gc-all", onClick: () => setMore(!more) }, more ? "Show fewer" : `Show all ${g.length} times it was asked`));
+    h("div", { className: "gc-actions" }, h(RQAnswer, { u: u0 }),
+      h("button", { type: "button", className: "gc-papers", "aria-expanded": open, onClick: () => setOpen(!open) }, `${papers.length} ${papers.length === 1 ? "paper" : "papers"} · ${yr}`, h(ChevronDown, { size: 16 }))),
+    open && h("div", { className: "occ-list" }, shown.map((u) => h(Occurrence, { key: u.key, u, store, onView, toast }))),
+    open && g.length > 4 && h("button", { className: "text-link gc-all", onClick: () => setMore(!more) }, more ? "Show fewer" : `Show all ${g.length}`));
 }
 const ANALYSED = ["Mathematics", "Physics", "Chemistry", "Business Studies"];
 const RQ_SUBS = ["Mathematics", "Physics", "Chemistry", "Biology", "Computer Science", "Business Studies", "Accounting", "Economics", "Travel & Tourism", "English", "Islam", "Dhivehi"];
@@ -4012,9 +4022,36 @@ function splitMcq(s) {
   if (o.some((x) => !x || x.length > 180)) return null;
   return { stem: t.slice(0, iA).trim(), o };
 }
+const DIA = "\u0001";
+const JUNK_W = new Set(["cm", "mm", "m", "s", "N", "kg", "g", "J", "W", "V", "A", "Hz", "K", "Pa", "/", "\u2013", "-", "=", "+", "\xD7", "%", "\xB0C", "\xB0"]);
+function stripDiagram(t, sub) {
+  if (sub === "Mathematics") return t;
+  const w = String(t).split(" "), junk = w.map((x, i) => !/[.?!:;]$/.test(x) && (/^[\d.,\-\u2212]+$/.test(x) || /^[A-Za-z]$/.test(x) || JUNK_W.has(x) || (x.length > 2 && w.slice(Math.max(0, i - 6), i).includes(x))));
+  const out = []; let i = 0;
+  while (i < w.length) {
+    if (!junk[i]) { out.push(w[i]); i++; continue; }
+    let j = i, n = 0, nums = 0, last = i;
+    while (j < w.length && (junk[j] || (!/[.?!:;]$/.test(w[j]) && j + 1 < w.length && junk[j + 1]))) { if (junk[j]) { n++; last = j; if (/\d/.test(w[j])) nums++; } j++; }
+    if (n >= 6 && nums >= 2) { out.push(DIA); i = last + 1; } else { out.push(w[i]); i++; }
+  }
+  return out.join(" ").replace(new RegExp("(\\s*" + DIA + ")+", "g"), " " + DIA).trim();
+}
+function DiaText({ t }) {
+  const parts = String(t).split(DIA);
+  return parts.map((x, i) => h(React.Fragment, { key: i }, x, i < parts.length - 1 && h("span", { className: "rq-dia" }, "Diagram in the paper")));
+}
 function TextQ({ u }) {
   const sp = u.ms && u.ms.mcq && !u.p ? splitMcq(u.text) : null;
-  if (sp) return h("div", { className: "rq-q" }, h("p", { className: "rq-stem" }, sp.stem), h("div", { className: "rq-opts" }, sp.o.map((x, i) => h("p", { key: i, className: "rq-opt" }, h("b", null, "ABCD"[i]), h("span", null, x)))));
+  if (!sp) {
+    const clean = stripDiagram(u.text, u.q.sub);
+    if (clean !== u.text) {
+      const lines = clean.split("\n").map((x) => x.trim()).filter(Boolean);
+      const mcq = u.ms && u.ms.mcq && !u.p;
+      const stem = mcq ? (lines[0] || "").replace(new RegExp("\\s*" + DIA + "[\\s\\S]*$"), "").replace(/\s+A\s*$/, "") : null;
+      return h("div", { className: "rq-q" }, mcq ? h(React.Fragment, null, h("p", { className: "rq-stem" }, stem), h("p", { className: "rq-note" }, "The answer options are diagrams. Tap the papers button below and open a paper to see them.")) : lines.map((x, i) => h("p", { key: i, className: i ? "rq-part" : "rq-stem" }, h(DiaText, { t: x }))));
+    }
+  }
+  if (sp) return h("div", { className: "rq-q" }, h("p", { className: "rq-stem" }, h(DiaText, { t: stripDiagram(sp.stem, u.q.sub) })), h("div", { className: "rq-opts" }, sp.o.map((x, i) => h("p", { key: i, className: "rq-opt" }, h("b", null, "ABCD"[i]), h("span", null, x)))));
   const lines = String(u.text || "").split("\n").map((x) => x.trim()).filter(Boolean);
   return h("div", { className: "rq-q" }, lines.map((x, i) => {
     const m = i > 0 && /^(\(\w{1,4}\)(\(\w{1,4}\))*)\s*(.*)$/.exec(x);
@@ -4102,9 +4139,12 @@ function RepeatBank({ role, toast, mode }) {
   const comps = [...new Set(units.map((u) => String(u.q.comp)))].filter(Boolean).sort();
   const topicCounts = useMemo(() => { const m = {}; groups.rep.forEach((g) => m[g[0].topic] = (m[g[0].topic] || 0) + 1); return m; }, [groups]);
   const nPapers = new Set(units.map((u) => u.q.paper)).size;
+  const [moreF, setMoreF] = useState(false);
+  const nFilt = (view !== "rep" ? 1 : 0) + (years.length ? 1 : 0) + (compsSel.length ? 1 : 0) + (qtxt ? 1 : 0);
   const topicList = isAn ? (SYLLABUS[sub] || []) : tqd.I ? tqd.I.topics.map((t) => t.t) : [];
   return h(React.Fragment, null, h(Title, mode === "practice" ? { eyebrow: "PRACTICE", title: "Practice questions", desc: "Practise real exam questions. Check your answer straight away." } : { eyebrow: "EXAM INSIGHTS", title: "Repeated & similar questions", desc: "Questions that come again and again in Cambridge exams, sorted by subject and topic. Each one has the right answer, and you can check your work straight away." }),
-    h("div", { className: "panel" }, h("div", { className: "form-row" }, h(Fld, { label: "Subject" }, h("select", { value: sub, onChange: (e) => setSub(e.target.value) }, subs.map((s) => h("option", { key: s }, s)))), h(Fld, { label: "Show" }, h("select", { value: view, onChange: (e) => { setView(e.target.value); setLim(25); } }, h("option", { value: "rep" }, "Repeated questions"), h("option", { value: "sim" }, "Similar questions (same concept)"), h("option", { value: "all" }, "All questions"))), h(FldD, { label: "Topics" }, h(MultiPick, { all: "All topics", value: topics, onChange: (v) => { setTopics(v); setLim(25); }, options: topicList.map((t) => ({ v: t, l: isDv(sub) ? topicLabel(sub, t) : t, n: topicCounts[t] })) })), h(FldD, { label: "Years" }, h(MultiPick, { all: "All years", value: years, onChange: (v) => { setYears(v); setLim(25); }, options: yrs.map((y) => ({ v: String(y), l: String(y) })) })), h(FldD, { label: "Papers" }, h(MultiPick, { all: "All papers", value: compsSel, onChange: (v) => { setCompsSel(v); setLim(25); }, options: comps.map((c) => ({ v: c, l: "Paper " + c })) }))), h("div", { className: "form-row" }, h(Fld, { label: "Search" }, h("input", { value: qtxt, onChange: (e) => setQtxt(e.target.value), placeholder: "Word or phrase" }))), h("p", { className: "muted" }, data.loading ? "Loading questions…" : data.err ? data.err : `${nPapers} papers \xB7 ${units.length} questions \xB7 ${groups.rep.length} repeated groups \xB7 ${groups.sim.length} similar groups`, !data.loading && isAn && h("button", { className: "btn-secondary rq-refresh", onClick: data.reload }, h(Repeat2, { size: 16 }), " Refresh"))),
+    h("div", { className: "panel rq-filters" }, h("div", { className: "form-row" }, h(Fld, { label: "Subject" }, h("select", { value: sub, onChange: (e) => setSub(e.target.value) }, subs.map((s) => h("option", { key: s }, s)))), h(FldD, { label: "Topics" }, h(MultiPick, { all: "All topics", value: topics, onChange: (v) => { setTopics(v); setLim(25); }, options: topicList.map((t) => ({ v: t, l: isDv(sub) ? topicLabel(sub, t) : t, n: topicCounts[t] })) }))), moreF && h("div", { className: "form-row" }, h(Fld, { label: "Show" }, h("select", { value: view, onChange: (e) => { setView(e.target.value); setLim(25); } }, h("option", { value: "rep" }, "Repeated questions"), h("option", { value: "sim" }, "Similar questions (same concept)"), h("option", { value: "all" }, "All questions"))), h(FldD, { label: "Years" }, h(MultiPick, { all: "All years", value: years, onChange: (v) => { setYears(v); setLim(25); }, options: yrs.map((y) => ({ v: String(y), l: String(y) })) })), h(FldD, { label: "Papers" }, h(MultiPick, { all: "All papers", value: compsSel, onChange: (v) => { setCompsSel(v); setLim(25); }, options: comps.map((c) => ({ v: c, l: "Paper " + c })) })), h(Fld, { label: "Search" }, h("input", { value: qtxt, onChange: (e) => setQtxt(e.target.value), placeholder: "Word or phrase" }))),
+      h("div", { className: "rq-bar" }, h("button", { type: "button", className: "text-link rq-morebtn", onClick: () => setMoreF(!moreF) }, moreF ? "Fewer filters" : nFilt ? `More filters (${nFilt})` : "More filters"), h("span", { className: "muted rq-stat" }, data.loading ? "Loading questions\u2026" : data.err ? data.err : `${view === "sim" ? groups.sim.length + " similar" : view === "all" ? units.length : groups.rep.length + " repeated"} questions \xB7 ${nPapers} papers`), !data.loading && isAn && role !== "Student" && h("button", { className: "text-link rq-refresh", onClick: data.reload }, h(Repeat2, { size: 15 }), " Refresh"))),
     !data.loading && !data.err && nPapers === 0 && h("div", { className: "panel" }, h("p", null, `No ${sub} questions here yet.`), isAn && h("p", { className: "muted" }, role !== "Student" ? "Go to Past Papers → View → “Upload & find repeats”, choose the question papers and mark schemes, and keep “Analyse with AI” ticked." : "Your teacher adds papers. Check back soon.")),
     list.slice(0, lim).map((g, i) => h(GroupCard, { key: (g[0] && g[0].key) + i, g, kind: view === "all" ? "one" : view, store, onView: setViewer, toast })),
     list.length > lim && h("button", { className: "btn-secondary", onClick: () => setLim(lim + 25) }, `Show more (${list.length - lim} left)`),
@@ -5790,7 +5830,7 @@ const STUDY_RES = [
 ];
 const LANG_SUBS = ["English", "Dhivehi"];
 const slugT = (t) => String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
-const CONTENT_V = "20261119c";
+const CONTENT_V = "20261120a";
 const tqCache = {}, tqTopicCache = {};
 function useTQ(sub) {
   const code = SUBJ_CODE[sub];
@@ -6017,6 +6057,7 @@ function mdHtml(md) {
       continue;
     }
     if ((m = l.match(/^(#{1,4})\s+(.*)/))) { flushP(); flushL(); o += `<h5>${mdInline(m[2])}</h5>`; continue; }
+    if ((m = l.match(/^[-*•]\s+\*\*([^*]+?[?؟!])\*\*\s*(.+)$/))) { flushP(); if (list !== "ul") { flushL(); o += "<ul>"; list = "ul"; } const ans = m[2].trim().split(/\s+(?=\d+[.)]\s)/).map((x) => `<span>${mdInline(x)}</span>`).join(""); o += `<li class="nd-qa"><div class="nd-q">${mdInline(m[1])}</div><div class="nd-a">${ans}</div></li>`; continue; }
     if ((m = l.match(/^[-*•]\s+(.*)/))) { flushP(); if (list !== "ul") { flushL(); o += "<ul>"; list = "ul"; } o += `<li>${mdInline(m[1])}</li>`; continue; }
     if ((m = l.match(/^\d+[.)]\s+(.*)/))) { flushP(); if (list !== "ol") { flushL(); o += "<ol>"; list = "ol"; } o += `<li>${mdInline(m[1])}</li>`; continue; }
     if ((m = l.match(/^>\s?(.*)/))) { flushP(); flushL(); o += `<p class="nd-call">${mdInline(m[1])}</p>`; continue; }
