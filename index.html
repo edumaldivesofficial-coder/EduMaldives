@@ -212,6 +212,56 @@ html[data-theme=dark] .pl2-chip{background:#16243a;border-color:#2a3d56;color:#e
 .pl2-idea span{display:flex;flex-direction:column;gap:2px;min-width:0}.pl2-idea b{font-size:14px;line-height:1.2}.pl2-idea em{margin:0;font-size:12.5px}
 .pl2-idea svg{flex:none;color:#2f7fd1}
 .eb-tn{overflow-wrap:anywhere;hyphens:auto}
+
+/* v98 time picker */
+.pb-time{display:grid;gap:8px;margin-top:6px}.la-err{margin:8px 0 0;font-size:13px;color:#b42318}.tp{display:grid;gap:10px}
+.tp-pick{display:grid;grid-template-columns:52px 1fr 52px;gap:10px;align-items:center}
+.tp-step{height:52px;border:1.5px solid #dfe6ef;border-radius:14px;background:#fff;font:600 24px/1 "DM Sans",sans-serif;color:#1f5d9e;cursor:pointer}
+.tp-val{display:flex;align-items:baseline;justify-content:center;gap:8px;height:52px;border:1.5px solid #dfe6ef;border-radius:14px;background:#fff;padding:0 12px}
+.tp-val input{width:70px;border:0;background:none;font:700 24px/52px "DM Sans",sans-serif;text-align:right;color:#14263d;padding:0}
+.tp-val input:focus{outline:none}.tp-val span{font-size:14px;color:#6b7b90}
+.tp-quick{display:flex;flex-wrap:wrap;gap:8px}
+html[data-theme=dark] .tp-step,html[data-theme=dark] .tp-val{background:#16243a;border-color:#2a3d56;color:#9cc8f0}html[data-theme=dark] .tp-val input{color:#eef3f9}
+/* v98 listening */
+.ln-sel{width:100%;min-height:48px;padding:0 12px;border:1.5px solid #dfe6ef;border-radius:12px;background:#fff;font:600 15px "DM Sans",sans-serif;color:#14263d}
+.ln-exs{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
+.ln-x{min-height:46px;border:1.5px solid #dfe6ef;border-radius:12px;background:#fff;font:700 14px "DM Sans",sans-serif;color:#22374f;cursor:pointer}
+.ln-x.on{border-color:#2f7fd1;background:#eaf3fd;color:#1f5d9e}
+.ln-head{display:flex;flex-direction:column;gap:2px;margin:4px 2px 10px}.ln-head b{font-size:17px}.ln-head span{font-size:13.5px;color:#6b7b90}
+.ln-sticky{position:sticky;top:6px;z-index:6;margin-bottom:12px}
+.la{background:#fff;border:1px solid #dfe6ef;border-radius:18px;padding:12px 14px;box-shadow:0 6px 20px #14263d14}
+.la-row{display:flex;align-items:center;gap:12px}
+.la-play{flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;border:0;background:#2f7fd1;color:#fff;cursor:pointer}
+.la-mid{flex:1;min-width:0}
+.la-t{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:#6b7b90}.la-t b{color:#14263d}
+.la-bar{width:100%;margin:8px 0 2px;accent-color:#2f7fd1}
+.la-btns{display:grid;grid-template-columns:1fr 1.6fr 1fr;gap:8px;margin-top:8px}
+.la-btns button{min-height:38px;border:1px solid #dfe6ef;border-radius:10px;background:#f7fafd;font:600 13px "DM Sans",sans-serif;color:#22374f;cursor:pointer}
+.ln-tip{font-size:13.5px;color:#5b6b80;margin:0 2px 14px}
+.ln-ex{margin:0 0 22px}.ln-ex h3{margin:0 0 4px;font-size:18px}.ln-instr{margin:0 0 10px;font-size:14px;color:#3b4d63;line-height:1.5}
+.lp{display:grid;gap:10px}
+.lp-pg{display:block;border:1px solid #e3e9f1;border-radius:12px;overflow:hidden;background:#fff}
+.lp-pg img{display:block;width:100%;height:auto}
+.ln-ans{margin-top:12px;padding:14px;border:1px solid #e3e9f1;border-radius:16px;background:#fff}
+.ln-ans-h{margin:0 0 8px;font-weight:700;font-size:14px;color:#22374f}
+.ln-q{display:grid;grid-template-columns:56px 1fr;gap:10px;align-items:center;padding:8px 0;border-top:1px solid #eff2f5}
+.ln-q:first-of-type{border-top:0}
+.ln-qn{font-weight:700;color:#1f5d9e;font-size:14px}
+.ln-let{display:flex;flex-wrap:wrap;gap:6px}.ln-q.wide{grid-template-columns:1fr;gap:8px}.ln-q.wide .ln-let{flex-wrap:nowrap}.ln-q.wide .ln-l{flex:1 1 0;width:auto;min-width:0;max-width:52px}
+.ln-l{width:42px;height:42px;border:1.5px solid #dfe6ef;border-radius:10px;background:#fff;font:700 15px "DM Sans",sans-serif;color:#22374f;cursor:pointer}
+.ln-l.sel{border-color:#2f7fd1;background:#2f7fd1;color:#fff}
+.ln-l.ok{border-color:#1e9e5a;background:#e6f6ec;color:#17784a}.ln-l.bad{border-color:#d64545;background:#fdecec;color:#b42318}
+.ln-in{width:100%;min-height:44px;padding:0 12px;border:1.5px solid #dfe6ef;border-radius:10px;font:inherit;font-size:16px;background:#fff;color:inherit}
+.ln-q.ok .ln-in{border-color:#1e9e5a}.ln-q.bad .ln-in{border-color:#d64545}
+.ln-key{grid-column:2;display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14px}
+.ln-key small{font-weight:700;color:#17784a;text-transform:uppercase;font-size:11.5px;letter-spacing:.05em}
+.ln-self{display:flex;gap:6px;margin-left:auto}
+html[data-theme=dark] .ln-sel,html[data-theme=dark] .ln-x,html[data-theme=dark] .la,html[data-theme=dark] .ln-ans,html[data-theme=dark] .ln-l,html[data-theme=dark] .ln-in,html[data-theme=dark] .la-btns button{background:#16243a;border-color:#2a3d56;color:#e6edf5}
+html[data-theme=dark] .ln-x.on{background:#1b3150;border-color:#4a95e0;color:#cfe3fa}html[data-theme=dark] .la-t b,html[data-theme=dark] .ln-ans-h{color:#eef3f9}
+html[data-theme=dark] .lp-pg{border-color:#2a3d56;background:#fff}
+html[data-theme=dark] .ln-q{border-color:#2f4058}html[data-theme=dark] .ln-instr{color:#c9d6e5}
+/* v98: theme switch always in the top bar */
+.top-actions .tb-theme{display:inline-flex!important}
 </style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="edu-supabase.js"></script>
 <script src="install.js" defer></script><script src="push.js" defer></script>
@@ -4608,7 +4658,7 @@ function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
       const items = [];
       P.questions.forEach((q, qi) => qItems(q).filter((p) => p.m > 0 || P.mcq).forEach((p) => items.push({ id: "i" + Date.now().toString(36) + qi + "_" + p.k, src: "pq:" + q.id + "#" + p.k, label: `Q${qi + 1}${p.l || ""} · ${paperLabel(q)} Q${q.q}${p.l || ""}`, question: (q.stem ? camClean(q.stem) + "\n" : "") + (p.l ? p.l + " " : "") + (p.t || ""), marks: p.m || 1, scheme: p.ms || null, topic: q.topic || "", mcq: !!(p.ms && p.ms.mcq) })));
       const id = "a" + Date.now().toString(36);
-      const doc = { title: meta.title || `${P.sub} ${P.code}/${P.comp} – ${P.label}`, kind: "mock", byName: myName(), classes: meta.classes || [], sub: P.sub, cls: meta.cls || "Grade 10", due: meta.due || "", instr: `${P.name}. Time allowed: ${P.mins} minutes. Answer all questions. Total ${P.total} marks.`, mins: Number(P.mins) || 0, items, files: [], closed: false, total: items.reduce((n, it) => n + (Number(it.marks) || 0), 0), by: C.uid || "", at: Date.now(), edited: Date.now() };
+      const doc = { title: meta.title || `${P.sub} ${P.code}/${P.comp} – ${P.label}`, kind: "mock", byName: myName(), classes: meta.classes || [], sub: P.sub, cls: meta.cls || "Grade 10", due: meta.due || "", instr: `${P.name}. ${tlimOf(meta, P.mins) ? `Time allowed: ${tlimOf(meta, P.mins)} minutes. ` : ""}Answer all questions. Total ${P.total} marks.`, mins: tlimOf(meta, P.mins), items, files: [], closed: false, total: items.reduce((n, it) => n + (Number(it.marks) || 0), 0), by: C.uid || "", at: Date.now(), edited: Date.now() };
       await C.db.doc("assign/" + id).set(JSON.parse(JSON.stringify(doc)));
       toast((meta.classes && meta.classes.length ? "Paper sent to your class" : "Paper sent to all students") + " as an assignment. Open Assignments to follow submissions.");
     } catch (e) { toast(errText(e)); }
@@ -4672,7 +4722,7 @@ function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
       h("button", { className: "btn-secondary", onClick: () => printIt(true) }, "Mark scheme"),
       teacher && h("button", { className: "btn-secondary", onClick: () => { setLeft((Number(P.mins) || 60) * 60); setPhase("run"); } }, "Try as exam"),
       P.mode !== "past" && h("button", { className: "btn-secondary", onClick: build }, "New version")),
-    teacher && h(PBDetails, { meta, um, sub: P.sub || sub, note: "Use \u2191 \u2193, Swap and Remove under each question to adjust the paper." }),
+    teacher && h(PBDetails, { meta, um, pmins: P.mins, sub: P.sub || sub, note: "Use \u2191 \u2193, Swap and Remove under each question to adjust the paper." }),
     Head,
     h("div", { className: "cam-ins" }, h("b", null, "INSTRUCTIONS"), h("ul", null, h("li", null, P.mcq ? `There are ${P.questions.length} questions. For each one choose A, B, C or D.` : "Answer all questions. Show all necessary working."), h("li", null, `The total mark for this paper is ${P.total}. The marks for each part are shown in brackets [ ].`)), h("small", { className: "muted" }, P.mode === "past" ? "" : `Laid out like ${P.layout}. `, "Built from past Cambridge IGCSE questions; not an official Cambridge paper.")),
     Paper(null)), viewer && h(PdfViewer, { ...viewer, onClose: () => setViewer(null) }));
@@ -4694,7 +4744,8 @@ function PBTop({ onBack, title, sub, chips }) {
     h("div", { className: "pb-tt" }, h("b", null, title), sub && h("small", null, sub)),
     h("div", { className: "pb-chips" }, (chips || []).map((c) => h("span", { key: c }, c))));
 }
-function PBDetails({ meta, um, sub, note }) {
+const tlimOf = (meta, pm) => { const t = meta.tlim; return t === 0 ? 0 : typeof t === "number" && t > 0 ? t : Number(pm) || 0; };
+function PBDetails({ meta, um, sub, note, pmins }) {
   return h("details", { className: "pb-det" }, h("summary", null, h("span", null, "Paper details and class"), h("small", null, meta.classes && meta.classes.length ? `${meta.classes.length} class${meta.classes.length > 1 ? "es" : ""}` : "All students")),
     h("div", { className: "pb-grid" },
       h(Fld, { label: "Paper title" }, h("input", { value: meta.title || "", placeholder: "e.g. Term 2 mock examination", onChange: (e) => um({ title: e.target.value }) })),
@@ -4703,6 +4754,7 @@ function PBDetails({ meta, um, sub, note }) {
       h(Fld, { label: "Exam date" }, h("input", { type: "date", value: meta.date || "", onChange: (e) => um({ date: e.target.value }) })),
       h(Fld, { label: "Due date and time" }, h("input", { type: "datetime-local", value: meta.due && meta.due.length === 10 ? meta.due + "T23:59" : meta.due || "", onChange: (e) => um({ due: e.target.value }) }))),
     h(ClassPicker, { value: meta.classes || [], sub, onChange: (v) => um({ classes: v }) }),
+    h("div", { className: "pb-time" }, h("span", { className: "lf-lbl" }, "Time limit for students"), h(TimePick, { val: meta.tlim == null ? "auto" : meta.tlim, set: (v) => um({ tlim: v === "auto" ? null : v }), note: meta.tlim === 0 ? "No timer. Students hand in when they are ready." : `Students get ${tlimOf(meta, pmins)} minutes${meta.tlim == null ? " (the real paper time)" : ""}. Work is handed in automatically when the time ends.` })),
     h("label", { className: "pb-check" }, h("input", { type: "checkbox", checked: !meta.hideSrc, onChange: (e) => um({ hideSrc: !e.target.checked }) }), h("span", null, "Show the source paper under each question")),
     note && h("p", { className: "muted" }, note));
 }
@@ -4799,7 +4851,7 @@ function TQPaper({ sub, teacher, toast }) {
     try {
       const items = T.questions.map((q, qi) => { const P = T.papers[q.p] || {}; const ans = q.a || (q.pt || []).map(([l, m, t, a]) => (l ? l + " " : "") + (a || "")).join("\n").trim(); return { id: "i" + Date.now().toString(36) + qi, src: "tq:" + q.p + "#" + q.q, label: `Q${qi + 1} \xB7 ${tqSource(P, q)}`, question: plain(q) || `Question ${qi + 1}`, tq: { P: { code: P.code, c: P.c, v: P.v || "", y: P.y, s: P.s, w: P.w || 0, f: P.f || "" }, b: q.b || [] }, marks: q.m || 1, scheme: q.a ? { mcq: q.a, answer: q.a, marks: q.m || 1 } : ans && !q.mb ? { answer: ans, points: [], marks: q.m || 1 } : null, topic: q.t || "", mcq: !!q.a }; });
       const id = "a" + Date.now().toString(36);
-      const doc = { title: meta.title || `${T.sub} ${T.code}/${T.comp} – ${T.label}`, kind: "mock", byName: myName(), classes: meta.classes || [], sub: T.sub, cls: meta.cls || "Grade 10", due: meta.due || "", instr: `${T.name}. Time allowed: ${T.mins} minutes. Answer all questions. Total ${total} marks.`, items, files: [], closed: false, total, by: C.uid || "", at: Date.now(), edited: Date.now() };
+      const doc = { title: meta.title || `${T.sub} ${T.code}/${T.comp} – ${T.label}`, kind: "mock", byName: myName(), classes: meta.classes || [], sub: T.sub, cls: meta.cls || "Grade 10", due: meta.due || "", instr: `${T.name}. ${tlimOf(meta, T.mins) ? `Time allowed: ${tlimOf(meta, T.mins)} minutes. ` : ""}Answer all questions. Total ${total} marks.`, mins: tlimOf(meta, T.mins), items, files: [], closed: false, total, by: C.uid || "", at: Date.now(), edited: Date.now() };
       await C.db.doc("assign/" + id).set(JSON.parse(JSON.stringify(doc)));
       toast((meta.classes && meta.classes.length ? "Paper sent to your class" : "Paper sent to all students") + " as an assignment. Open Assignments to follow submissions.");
     } catch (e) { toast(errText(e)); }
@@ -4814,7 +4866,7 @@ function TQPaper({ sub, teacher, toast }) {
       h("button", { className: "btn-secondary", onClick: () => open(true) }, "Mark scheme"),
       teacher && h("button", { className: "btn-secondary", onClick: () => setPhase("run") }, "Try as exam"),
       T.mode !== "past" && h("button", { className: "btn-secondary", disabled: busy, onClick: build }, "New version")),
-    teacher && h(PBDetails, { meta, um, sub: T.sub, note: "Use ↑ ↓ and Remove under each question to adjust the paper." }),
+    teacher && h(PBDetails, { meta, um, pmins: T.mins, sub: T.sub, note: "Use ↑ ↓ and Remove under each question to adjust the paper." }),
     h("div", { className: "pbq-list" }, T.questions.map((q, i) => { const P = T.papers[q.p] || {}; return h("div", { className: "pbq", key: q.p + "#" + q.q, dir: isDv(sub) ? "rtl" : undefined },
       h("div", { className: "pbq-h" }, h("span", { className: "tq-n" }, i + 1), h("small", null, tqSource(P, q), " \xB7 ", topicLabel(sub, q.t)), h("b", null, `[${q.m || 1}]`)),
       h(QBody, { P, q }),
@@ -5407,7 +5459,8 @@ function AssignmentEditor({ initial, onDone, toast }) {
     h("section", { className: "panel ae-sec" }, step(1, "Details"),
       h(Fld, { label: "Title" }, h("input", { value: a.title, onChange: (e) => up({ title: e.target.value }), placeholder: "e.g. Electricity practice" })),
       h("div", { className: "form-row" }, h(Fld, { label: "Subject" }, h("select", { value: a.sub, onChange: (e) => up({ sub: e.target.value, classes: [] }) }, teachSubs().map((s) => h("option", { key: s }, s)))), h(Fld, { label: "Grade" }, h("select", { value: a.cls, onChange: (e) => up({ cls: e.target.value }) }, GRADES.map((g) => h("option", { key: g }, g))))),
-      h(Fld, { label: "Due date and time" }, h("input", { type: "datetime-local", value: dueVal, onChange: (e) => up({ due: e.target.value }) }))),
+      h(Fld, { label: "Due date and time" }, h("input", { type: "datetime-local", value: dueVal, onChange: (e) => up({ due: e.target.value }) })),
+      h("div", { className: "pb-time" }, h("span", { className: "lf-lbl" }, "Time limit"), h(TimePick, { val: Number(a.mins) || 0, auto: false, set: (v) => up({ mins: Number(v) || 0 }), note: Number(a.mins) ? `Students get ${a.mins} minutes once they start. Work is handed in automatically when the time ends.` : "No timer. Students hand in before the due date." }))),
     h("section", { className: "panel ae-sec" }, step(2, "Send to"), h(ClassPicker, { value: a.classes, sub: a.sub, onChange: (v) => up({ classes: v }), bare: true })),
     h("section", { className: "panel ae-sec" }, step(3, "Add questions"),
       h("div", { className: "seg ae-src" }, [["past", "Past papers"], ["own", "Write my own"]].map(([k, l]) => h("button", { key: k, className: src === k ? "on" : "", onClick: () => setSrc(k) }, l))),
@@ -6009,7 +6062,7 @@ const STUDY_RES = [
 ];
 const LANG_SUBS = ["English", "Dhivehi"];
 const slugT = (t) => String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
-const CONTENT_V = "20261120b";
+const CONTENT_V = "20261120c";
 const tqCache = {}, tqTopicCache = {};
 function useTQ(sub) {
   const code = SUBJ_CODE[sub];
@@ -6477,6 +6530,220 @@ function EnMarks({ max, val, set, label }) {
   const o = []; for (let i = 0; i <= max; i++) o.push(i);
   return h("div", { className: "en-mk" }, label && h("span", null, label), h("div", { className: "en-mk-row" }, o.map((i) => h("button", { key: i, className: val === i ? "on" : "", onClick: () => set(i) }, i))));
 }
+/* ===================== English listening (0510) ===================== */
+const LMEDIA = "https://edumaldivesofficial-coder.github.io/edumaldives-media/";
+let lPackP = null;
+function useListenPack() {
+  const [d, setD] = useState(null);
+  useEffect(() => {
+    let live = true;
+    if (!lPackP) lPackP = fetch("tq/0510/L.json" + (typeof CONTENT_V === "string" ? "?v=" + CONTENT_V : ""), { cache: "no-cache" }).then((r) => r.ok ? r.json() : null).catch(() => { lPackP = null; return null; });
+    lPackP.then((x) => { if (live) setD(x || false); });
+    return () => { live = false; };
+  }, []);
+  return d;
+}
+const L_TYPES = [["new", "2024 onwards", "Paper 2 · 40 multiple-choice questions"], ["ext", "2021–2023 Extended", "Paper 4 · written answers"], ["core", "2021–2023 Core", "Paper 3 · written answers"]];
+const lType = (P) => P.fmt === "new" ? "new" : P.c === 4 ? "ext" : "core";
+const lName = (P) => `${SESS_NAME[P.s] || P.s} ${P.y} \xB7 Paper ${P.c}${P.v}`;
+const lFmt = (s) => { s = Math.max(0, Math.floor(s)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+const lLetterAns = (a) => { const m = /^(?:speaker\s*\d+\s*)?([A-H])$/i.exec(String(a || "").trim()); return m ? m[1].toUpperCase() : null; };
+function lLetters(ex) {
+  if (ex.L) return ex.L.split("");
+  const t = ex.instr || "";
+  let m = /\(?\b([A-H])\s*[–-]\s*([A-H])\b\)?/.exec(t);
+  if (m) { const a = m[1].charCodeAt(0), b = m[2].charCodeAt(0); if (b > a) return Array.from({ length: b - a + 1 }, (_, i) => String.fromCharCode(a + i)); }
+  m = /\b((?:[A-H],\s*)+[A-H])\s+or\s+([A-H])\b/.exec(t);
+  if (m) return [...m[1].split(/,\s*/), m[2]];
+  let mx = 67; (ex.items || []).forEach((it) => { const L = lLetterAns(it.a); if (L) mx = Math.max(mx, L.charCodeAt(0)); });
+  return Array.from({ length: mx - 64 }, (_, i) => String.fromCharCode(65 + i));
+}
+/* Mark a written answer against a mark-scheme answer. Brackets are optional words; "/" separates alternatives. */
+const lNorm = (s) => String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/(\d)[.:](\d)/g, "$1 $2").replace(/[‘’']/g, "").replace(/[^a-z0-9£$%.\s-]/g, " ").replace(/-/g, " ").replace(/\s+/g, " ").trim();
+function lAlts(a) {
+  let s = String(a || "").replace(/\n/g, " ");
+  s = s.split(/\b(?:accept|allow|ignore|do not|don't|reject|must|not\b|NB\b|note:)/i)[0];
+  const outs = [];
+  const wc = (x) => x.replace(/\([^)]*\)/g, " ").trim().split(/\s+/).filter(Boolean).length;
+  const all = [];
+  s.split(/\s+OR\s+|;/).forEach((g) => {
+    const alts = [];
+    /* "(in/at) / (the) park": a piece that is only optional words belongs to the next piece */
+    let carry = "";
+    g.split(/\s\/\s/).map((x) => x.trim()).filter(Boolean).forEach((x) => { if (/^(\([^)]*\)\s*)+$/.test(x)) carry += x + " "; else { alts.push(carry + x); carry = ""; } });
+    if (carry.trim()) alts.push(carry.trim());
+    /* "thirty / 30 billion": a lone number word may be missing the shared unit, so it is not auto-accepted */
+    const unitAlt = alts.find((x) => /^\d[\d,.]*\s+[a-z]/i.test(x.replace(/\([^)]*\)/g, "").trim()));
+    alts.forEach((x) => { if (unitAlt && x !== unitAlt && wc(x) === 1 && !/\d/.test(x)) return; all.push(x); });
+  });
+  all.forEach((alt) => {
+    let vs = [""];
+    const re = /\(([^)]*)\)|([^()]+)/g; let m;
+    while ((m = re.exec(alt))) {
+      if (m[1] != null) { const opts = m[1].split("/").map((x) => x.trim()); vs = vs.flatMap((v) => [v, ...opts.map((o) => v + o)]); }
+      else { const parts = m[2].split("/").map((x) => x.trim()); if (parts.length > 1 && !/\s/.test(m[2].trim())) vs = vs.flatMap((v) => parts.map((p) => v + p)); else vs = vs.map((v) => v + m[2]); }
+      if (vs.length > 64) vs = vs.slice(0, 64);
+    }
+    vs.forEach((v) => { const n = lNorm(v); if (n) outs.push(n); });
+  });
+  return [...new Set(outs)];
+}
+function lMark(it, ans) {
+  const L = lLetterAns(it.a);
+  if (L) return String(ans || "").trim().toUpperCase() === L ? it.m || 1 : 0;
+  const s = lNorm(ans); if (!s) return 0;
+  const alts = lAlts(it.a);
+  if (alts.some((a) => a === s || a.replace(/\s/g, "") === s.replace(/\s/g, ""))) return it.m || 1;
+  return null; /* not sure: student checks with the mark scheme */
+}
+function LAudio({ id, segs, labels, onDone }) {
+  const ref = React.useRef(null);
+  const [k, setK] = useState(0);
+  const [cur, setCur] = useState(segs[0][0]);
+  const [playing, setPlaying] = useState(false);
+  const [ready, setReady] = useState(false);
+  const [ended, setEnded] = useState(false);
+  const [bad, setBad] = useState(false);
+  const want = React.useRef(segs[0][0]);
+  const seg = segs[k] || segs[0];
+  useEffect(() => {
+    const a = ref.current; if (!a) return;
+    const meta = () => { setReady(true); try { a.currentTime = want.current; } catch (e) { } };
+    const tick = () => {
+      const t = a.currentTime; setCur(t);
+      const s = segs[kRef.current];
+      if (t >= s[1]) {
+        if (kRef.current + 1 < segs.length) { kRef.current += 1; setK(kRef.current); a.currentTime = segs[kRef.current][0]; }
+        else { a.pause(); setEnded(true); onDone && onDone(); }
+      }
+    };
+    const pl = () => setPlaying(true), pa = () => setPlaying(false);
+    a.addEventListener("loadedmetadata", meta); a.addEventListener("timeupdate", tick); a.addEventListener("play", pl); a.addEventListener("pause", pa);
+    return () => { a.removeEventListener("loadedmetadata", meta); a.removeEventListener("timeupdate", tick); a.removeEventListener("play", pl); a.removeEventListener("pause", pa); a.pause(); };
+  }, []);
+  const kRef = React.useRef(0);
+  const go = (t) => { const a = ref.current; want.current = t; if (a && a.readyState >= 1) a.currentTime = t; setCur(t); };
+  const toggle = () => { const a = ref.current; if (!a) return; if (a.paused) { if (ended) { kRef.current = 0; setK(0); setEnded(false); go(segs[0][0]); } else if (a.readyState >= 1 && (a.currentTime < seg[0] - 1 || a.currentTime > seg[1])) go(seg[0]); a.play().catch(() => { }); } else a.pause(); };
+  const back = () => go(Math.max(seg[0], cur - 10));
+  const fwd = () => go(Math.min(seg[1] - 0.5, cur + 10));
+  const restart = () => go(seg[0]);
+  const len = seg[1] - seg[0], pos = Math.min(len, Math.max(0, cur - seg[0]));
+  return h("div", { className: "la" },
+    h("audio", { ref, src: LMEDIA + "audio/" + id + ".mp3", preload: "metadata", playsInline: true, onError: () => setBad(true), onCanPlay: () => setBad(false) }),
+    h("div", { className: "la-row" },
+      h("button", { type: "button", className: "la-play", onClick: toggle, "aria-label": playing ? "Pause" : "Play" }, playing ? h("svg", { viewBox: "0 0 24 24", width: 24, height: 24, fill: "currentColor" }, h("rect", { x: 6, y: 5, width: 4, height: 14, rx: 1 }), h("rect", { x: 14, y: 5, width: 4, height: 14, rx: 1 })) : h("svg", { viewBox: "0 0 24 24", width: 24, height: 24, fill: "currentColor" }, h("path", { d: "M8 5.5v13l11-6.5z" }))),
+      h("div", { className: "la-mid" },
+        h("div", { className: "la-t" }, h("b", null, labels ? labels[k] + (segs.length > 1 ? ` \xB7 ${k + 1} of ${segs.length}` : "") : "Full paper"), h("span", null, ended ? "Finished" : !ready && !playing ? "Tap play to start" : `${lFmt(pos)} / ${lFmt(len)}`)),
+        h("input", { type: "range", className: "la-bar", min: 0, max: Math.round(len), step: 1, value: Math.round(pos), "aria-label": "Position in the recording", onChange: (e) => go(seg[0] + Number(e.target.value)) }))),
+    h("div", { className: "la-btns" },
+      h("button", { type: "button", onClick: back }, "↺ 10 s"),
+      h("button", { type: "button", onClick: restart }, "Start of this part"),
+      h("button", { type: "button", onClick: fwd }, "10 s ↻")),
+    bad && h("p", { className: "la-err" }, "The recording could not load. Check your connection, or open edumaldives.vercel.app to listen."));
+}
+function LPages({ P, ex }) {
+  return h("div", { className: "lp" }, ex.pages.map((p, i) => {
+    const sz = ex.sz && ex.sz[i] || [1000, 1300];
+    const src = LMEDIA + "img/" + P.id + "/p" + p + ".webp";
+    return h("a", { key: p, className: "lp-pg", href: src, target: "_blank", rel: "noopener" }, h("img", { src, loading: "lazy", alt: `Question paper page ${p}`, width: sz[0], height: sz[1], style: { aspectRatio: `${sz[0]} / ${sz[1]}` } }));
+  }));
+}
+function ListenBuilder({ toast, top }) {
+  const L = useListenPack();
+  const gate = usePlanGate();
+  const [ty, setTy] = useState("new");
+  const [pid, setPid] = useState("");
+  const [mode, setMode] = useState("ex");
+  const [exs, setExs] = useState([1]);
+  const [test, setTest] = useState(null);
+  const [ans, setAns] = useState({});
+  const [mk, setMk] = useState({});
+  const [done, setDone] = useState(false);
+  const [, setResults] = useLocal("em-results", []);
+  useEffect(() => {
+    if (!done || !test) return;
+    const items = test.sel.flatMap((n) => test.P.ex[n - 1].items);
+    let sc = 0, tot = 0;
+    items.forEach((it) => { tot += it.m || 1; sc += mk[it.id] || 0; });
+    const pct = tot ? Math.round(sc / tot * 100) : 0;
+    const what = test.full ? "full paper" : test.sel.length > 1 ? "exercises " + test.sel.join(", ") : "exercise " + test.sel[0];
+    setResults((r) => [{ id: test.id, date: new Date(test.id).toLocaleDateString("en-GB"), subject: `English \xB7 listening (${what})`, count: items.length, score: sc, total: tot, pct, grade: gradeFor(pct) }, ...(r || []).filter((x) => x.id !== test.id)].slice(0, 30));
+  }, [done, mk]);
+  if (L === null) return h("p", { className: "muted" }, "Loading listening papers…");
+  if (!L || !L.papers || !L.papers.length) return h("div", { className: "ps-empty" }, h(IWand, { size: 22 }), h("p", null, "Listening papers could not load. Check your connection and try again."));
+  const papers = L.papers.filter((P) => lType(P) === ty).sort((a, b) => b.y - a.y || "wsm".indexOf(a.s) - "wsm".indexOf(b.s) || a.v - b.v);
+  const P0 = papers.find((P) => P.id === pid) || null;
+  const nEx = Math.max(...papers.map((P) => P.ex.length));
+  const exList = Array.from({ length: P0 ? P0.ex.length : nEx }, (_, i) => i + 1);
+  const flip = (n) => setExs(exs.includes(n) ? (exs.length > 1 ? exs.filter((x) => x !== n) : exs) : [...exs, n].sort());
+  const start = () => {
+    if (!gate.use("build", String(Date.now()))) return;
+    const cand = P0 ? [P0] : papers.filter((P) => mode === "full" || exs.every((n) => P.ex[n - 1]));
+    if (!cand.length) { toast("No paper has those exercises. Choose fewer exercises."); return; }
+    const P = cand[Math.floor(Math.random() * cand.length)];
+    const sel = mode === "full" ? P.ex.map((e) => e.n) : exs.filter((n) => P.ex[n - 1]);
+    setTest({ id: Date.now(), P, sel, full: mode === "full" }); setAns({}); setMk({}); setDone(false);
+    window.scrollTo({ top: 0 });
+  };
+  if (test) {
+    const { P, sel } = test;
+    const E = sel.map((n) => P.ex[n - 1]);
+    const items = E.flatMap((e) => e.items.map((it) => ({ ...it, ex: e.n })));
+    const nAns = items.filter((it) => String(ans[it.id] || "").trim()).length;
+    const segs = test.full ? [[Math.max(0, E[0].t[0] - 2), E[E.length - 1].t[1]]] : E.map((e) => e.t);
+    let sc = 0, tot = 0, todo = 0;
+    items.forEach((it) => { tot += it.m || 1; const v = mk[it.id]; if (v == null) todo++; else sc += v; });
+    const finish = () => {
+      const o = {};
+      items.forEach((it) => { const v = lMark(it, ans[it.id]); if (v != null) o[it.id] = v; });
+      setMk(o); setDone(true); window.scrollTo({ top: 0 });
+    };
+    return h("div", { className: "eb-run en-run ln-run" },
+      h("div", { className: "eb-bar" }, h("button", { className: "st-back", onClick: async () => { if (done || (await askConfirm("Leave this test? Your answers will be lost.", { yes: "Leave", no: "Stay" }))) setTest(null); } }, h(IBack, { size: 18 }), done ? " New test" : " Leave"), h("span", null, `${nAns}/${items.length} answered`), !done && h("button", { className: "btn-primary sm", onClick: async () => { if (nAns >= items.length || (await askConfirm("Some answers are empty. Finish anyway?", { yes: "Finish", no: "Keep going" }))) finish(); } }, "Finish")),
+      h("div", { className: "ln-head" }, h("b", null, lName(P)), h("span", null, test.full ? "Full listening paper" : sel.length > 1 ? `Exercises ${sel.join(", ")}` : `Exercise ${sel[0]}`)),
+      done && h("div", { className: "eb-score" }, h("b", null, `${sc} / ${tot}`), h("span", null, todo ? `${todo} answer${todo > 1 ? "s" : ""} to check. Compare with the answer and tap Right or Wrong.` : `${tot ? Math.round(sc / tot * 100) : 0}% \xB7 saved to My Progress`)),
+      h("div", { className: "ln-sticky" }, h(LAudio, { key: test.id, id: P.id, segs, labels: test.full ? null : sel.map((n) => `Exercise ${n}`) })),
+      !done && h("p", { className: "ln-tip" }, "Press play. The recording starts at the beginning of ", test.full ? "the paper" : sel.length > 1 ? "each exercise you chose" : `Exercise ${sel[0]}`, ". You hear each part twice, just like the exam."),
+      E.map((e) => h("section", { key: e.n, className: "ln-ex" },
+        h("h3", null, `Exercise ${e.n}`), e.instr && h("p", { className: "ln-instr" }, e.instr),
+        h(LPages, { P, ex: e }),
+        h("div", { className: "ln-ans" }, h("p", { className: "ln-ans-h" }, done ? "Your answers" : "Your answers — answer here as you listen"),
+          e.items.map((it) => {
+            const L1 = lLetterAns(it.a), v = ans[it.id] || "", m = mk[it.id];
+            const res = done ? (m == null ? "" : m > 0 ? " ok" : " bad") : "";
+            return h("div", { key: it.id, className: "ln-q" + (L1 && lLetters(e).length > 4 ? " wide" : "") + res },
+              h("span", { className: "ln-qn" }, it.lab || it.id),
+              L1 ? h("div", { className: "ln-let" }, lLetters(e).map((x) => { let c = "ln-l"; if (v === x) c += " sel"; if (done && x === L1) c += " ok"; else if (done && v === x) c += " bad"; return h("button", { key: x, type: "button", className: c, disabled: done, "aria-pressed": v === x, onClick: () => setAns((a) => ({ ...a, [it.id]: x })) }, x); }))
+                : h("input", { className: "ln-in", value: v, disabled: done, placeholder: "Your answer", autoCapitalize: "off", autoComplete: "off", spellCheck: false, onChange: (ev) => setAns((a) => ({ ...a, [it.id]: ev.target.value })) }),
+              done && h("div", { className: "ln-key" }, h("small", null, "Answer"), h("span", null, L1 || it.a), !L1 && h("div", { className: "ln-self" }, [[it.m || 1, "Right"], [0, "Wrong"]].map(([val, lab]) => h("button", { key: lab, type: "button", className: m === val ? "chip on" : "chip", onClick: () => setMk((o) => ({ ...o, [it.id]: val })) }, lab)))));
+          })))),
+      !done && h("button", { className: "btn-primary eb-start", onClick: async () => { if (nAns >= items.length || (await askConfirm("Some answers are empty. Finish anyway?", { yes: "Finish", no: "Keep going" }))) finish(); } }, "Finish and mark"));
+  }
+  const T = L_TYPES.find((x) => x[0] === ty);
+  return h("div", { className: "eb" }, h("div", { className: "eb-card" }, top,
+    h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Paper type"), h(BuildOpts, { mode: ty, setMode: (v) => { setTy(v); setPid(""); setExs([1]); }, opts: L_TYPES.map(([k, l, d]) => [k, l, d]) })),
+    h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Paper"), h("select", { className: "ln-sel", value: pid, onChange: (e) => { setPid(e.target.value); setExs([1]); } }, h("option", { value: "" }, `Any paper (${papers.length})`), papers.map((P) => h("option", { key: P.id, value: P.id }, lName(P))))),
+    h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Practise"), h("div", { className: "eb-seg" }, [["ex", "Exercises"], ["full", "Full paper"]].map(([k, l]) => h("button", { key: k, type: "button", className: mode === k ? "on" : "", onClick: () => setMode(k) }, l)))),
+    mode === "ex" && h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Exercises"), h("div", { className: "ln-exs" }, exList.map((n) => h("button", { key: n, type: "button", className: exs.includes(n) ? "ln-x on" : "ln-x", "aria-pressed": exs.includes(n), onClick: () => flip(n) }, `Exercise ${n}`))), h("p", { className: "eb-note" }, "Pick one or more. The recording starts exactly where each exercise begins.")),
+    mode === "full" && h("p", { className: "eb-note" }, "The whole listening paper from the first exercise to the last, like the real exam.")),
+    gate.level < 1 && h("p", { className: "tq-free" }, `Free plan: ${gate.left("build")} practice paper left.`),
+    h("button", { className: "btn-primary eb-start", onClick: start }, mode === "full" ? "Start full listening paper" : `Start \xB7 ${exs.length > 1 ? exs.length + " exercises" : "Exercise " + exs[0]}`));
+}
+function TimePick({ val, set, auto = true, note }) {
+  const md = val === "auto" ? "auto" : !val ? "off" : "pick";
+  const n = typeof val === "number" && val > 0 ? val : 30;
+  const clamp = (x) => Math.max(1, Math.min(300, Math.round(x)));
+  const [txt, setTxt] = useState(String(n));
+  useEffect(() => { setTxt(String(n)); }, [n]);
+  return h("div", { className: "tp" },
+    h("div", { className: "eb-seg" }, [...(auto ? [["auto", "Exam time"]] : []), ["pick", "Choose time"], ["off", "No limit"]].map(([k, l]) => h("button", { key: k, type: "button", className: md === k ? "on" : "", onClick: () => set(k === "auto" ? "auto" : k === "off" ? 0 : n) }, l))),
+    md === "pick" && h("div", { className: "tp-pick" },
+      h("button", { type: "button", className: "tp-step", "aria-label": "5 minutes less", onClick: () => set(clamp(n > 5 ? n - 5 : n - 1)) }, "−"),
+      h("label", { className: "tp-val" }, h("input", { type: "number", inputMode: "numeric", min: 1, max: 300, value: txt, "aria-label": "Minutes", onChange: (e) => { setTxt(e.target.value); const v = parseInt(e.target.value, 10); if (v > 0) set(Math.min(300, v)); }, onBlur: () => setTxt(String(n)) }), h("span", null, "minutes")),
+      h("button", { type: "button", className: "tp-step", "aria-label": "5 minutes more", onClick: () => set(clamp(n < 5 ? n + 1 : n + 5)) }, "+")),
+    md === "pick" && h("div", { className: "tp-quick" }, [10, 20, 30, 45, 60, 90, 120].map((v) => h("button", { key: v, type: "button", className: n === v ? "chip on" : "chip", onClick: () => set(v) }, v < 60 ? v + " min" : v === 60 ? "1 hour" : v % 60 ? `${Math.floor(v / 60)} h ${v % 60}` : `${v / 60} hours`))),
+    h("p", { className: "eb-note" }, note || (md === "auto" ? "Set from the marks at real exam pace. The test hands itself in when the time ends." : md === "pick" ? `You have ${n} minutes. The test hands itself in when the time ends.` : "No timer. Finish when you are ready.")));
+}
 function EnBuilder({ sub, toast }) {
   const D = useEnPack();
   const gate = usePlanGate();
@@ -6486,7 +6753,7 @@ function EnBuilder({ sub, toast }) {
   const [rk, setRk] = useState("reading");
   const [src, setSrc] = useState("all");
   const [n, setN] = useState(1);
-  const [mins, setMins] = useState(30);
+  const [mins, setMins] = useState("auto");
   const [test, setTest] = useState(null);
   const [ans, setAns] = useState({});
   const [mk, setMk] = useState({});
@@ -6526,7 +6793,8 @@ function EnBuilder({ sub, toast }) {
     const pick = [...pool].sort(() => Math.random() - 0.5).slice(0, n).map((x) => sec === "writing" ? { ...x, w: true } : x);
     const label = sec === "writing" ? (EN_WT.find((x) => x[0] === wt) || [, "Writing"])[1] + (wt === "review" && rs ? ` (${rs})` : "") + " writing" : (EN_RK.find((x) => x[0] === rk) || [, "Reading"])[1];
     const init = {};
-    setTest({ id: Date.now(), items: pick, mins, end: Date.now() + mins * 60000, label }); setAns({}); setMk(init); setDone(false); setLeft(mins * 60); setPsg({});
+    const tm = mins === "auto" ? (sec === "writing" ? 30 * pick.length : Math.max(10, Math.ceil(pick.reduce((a, x) => a + (Number(x.m) || 0), 0) * 1.3 / 5) * 5)) : mins;
+    setTest({ id: Date.now(), items: pick, mins: tm, end: Date.now() + tm * 60000, label }); setAns({}); setMk(init); setDone(false); setLeft(tm * 60); setPsg({});
     window.scrollTo({ top: 0 });
   };
   enFinRef.current = (tu) => { if (tu === true) tellUser("Your time is over. Your work has been handed in and marked.", "Time is up"); finish(); };
@@ -6569,16 +6837,18 @@ function EnBuilder({ sub, toast }) {
   }
   const seg = (val, set, opts) => h("div", { className: "eb-seg" }, opts.map(([k, l]) => h("button", { key: k, className: val === k ? "on" : "", onClick: () => set(k) }, l)));
   const chips = (val, set, opts) => h("div", { className: "en-chips" }, opts.map(([k, l, c]) => h("button", { key: k, className: val === k ? "chip on" : "chip", onClick: () => set(k), disabled: c === 0 }, l, c != null ? h("small", null, " " + c) : null)));
+  const secRow = h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Section"), seg(sec, (v) => { setSec(v); setN(1); setMins("auto"); }, [["writing", "Writing"], ["reading", "Reading"], ["listening", "Listening"]]));
+  if (sec === "listening") return h(ListenBuilder, { toast, top: secRow });
   return h("div", { className: "eb" },
     h("div", { className: "eb-card" },
-      h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Section"), seg(sec, (v) => { setSec(v); setN(1); setMins(v === "writing" ? 30 : 45); }, [["writing", "Writing"], ["reading", "Reading & notes"]])),
+      secRow,
       sec === "writing" ? h(React.Fragment, null,
         h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Writing type"), chips(wt, (v) => { setWt(v); setRs(""); }, EN_WT.map(([k, l]) => [k, l, cnt(k)]))),
         wt === "review" && h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Review of"), chips(rs, setRs, [["", "Any", W.filter((x) => x.type === "review").length], ...EN_RSUB.map((k) => [k, k, W.filter((x) => x.type === "review" && x.sub === k).length])])),
         h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Tasks from"), seg(src, setSrc, [["all", "All"], ["past", "Past papers"], ["new", "Practice tasks"]])))
       : h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Exercise type"), chips(rk, setRk, EN_RK.map(([k, l]) => [k, l, R.filter((x) => x.kind === k).length]))),
       h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, sec === "writing" ? "Tasks" : "Exercises"), seg(n, setN, [[1, "1"], [2, "2"], [3, "3"]])),
-      h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Time limit"), seg(mins, setMins, [[0, "Off"], [15, "15 min"], [30, "30 min"], [45, "45 min"], [60, "1 hour"], [90, "1 h 30"]])),
+      h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Time limit"), h(TimePick, { val: mins, set: setMins, note: mins === "auto" ? (sec === "writing" ? "About 30 minutes for each writing task, like the exam. The test hands itself in when the time ends." : "Set from the marks, like the real exam. The test hands itself in when the time ends.") : null })),
       h("p", { className: "muted" }, sec === "writing" ? "Type your answer in the app. A word counter helps you keep to the limit. When you finish, mark it with the content and language bands." : "Read the text and type your answers in the app. Letter answers are marked for you; for the rest, compare with the mark scheme and tap your marks.")),
     gate.level < 1 && h("p", { className: "tq-free" }, `Free plan: ${gate.left("build")} practice paper left.`),
     h("button", { className: "btn-primary eb-start", disabled: !pool.length, onClick: start }, pool.length ? `Start \xB7 ${Math.min(n, pool.length)} ${sec === "writing" ? "task" : "exercise"}${Math.min(n, pool.length) > 1 ? "s" : ""}` : "No tasks match"));
@@ -6680,7 +6950,7 @@ function BuilderView({ sub, toast, preset, onExit }) {
           h("div", { className: "eb-grid" }, topics.map((t) => h("button", { key: t, className: sel.includes(t) ? "eb-t on" : "eb-t", onClick: () => tog(t) }, h("span", { className: "eb-box" }, sel.includes(t) ? h(CheckCircle2, { size: 16 }) : null), h("span", { className: "eb-tn" }, t), h("small", null, count[t])))))),
       data.topics.some((T) => T.m > 0) && h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Question type"), seg(kind, setKind, [["mix", "Mixed"], ["mcq", "MCQ"], ["str", "Written"]])),
       h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Questions"), seg(n, setN, (langB ? [[1, "1"], [2, "2"], [3, "3"], [5, "5"]] : [[5, "5"], [10, "10"], [20, "20"], [30, "30"]]).filter(([k]) => k <= maxN))),
-      h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Time limit"), seg(mins, setMins, [["auto", "Exam time"], [0, "No limit"]]), h("p", { className: "eb-note" }, mins === "auto" ? "Set from the marks, like the real exam (about 1 minute for each mark). The test hands itself in when the time ends." : "No timer. Finish when you are ready.")), langB && h("p", { className: "muted" }, "Questions come from real past papers, with the reading texts included. Compare your answers with the official mark scheme when you finish.")),
+      h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Time limit"), h(TimePick, { val: mins, set: setMins })), langB && h("p", { className: "muted" }, "Questions come from real past papers, with the reading texts included. Compare your answers with the official mark scheme when you finish.")),
     gate.level < 1 && h("p", { className: "tq-free" }, `Free plan: ${gate.left("build")} practice paper left, up to 10 questions.`),
     h("button", { className: "btn-primary eb-start", disabled: !poolN || busy, onClick: start }, busy ? "Loading questions\u2026" : poolN ? `Start test \xB7 ${Math.min(n, maxN, poolN)} questions` : "No questions match"));
 }
