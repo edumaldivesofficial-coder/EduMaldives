@@ -60,6 +60,21 @@ html[data-theme=dark] .pbq{background:#15233a;border-color:#2a3d56}
 .pbq-h{display:flex;align-items:center;gap:10px;margin-bottom:8px}.pbq-h small{flex:1;color:#6b7b90;min-width:0}.pbq-tools{display:flex;gap:6px;justify-content:flex-end;margin-top:8px}
 .qtext-tq{margin:6px 0 10px}
 @media (max-width:560px){.pb-actions>button{flex:1 1 calc(50% - 8px)}.pb-go{justify-self:stretch}.pb-chips{width:100%}}
+.bo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bo-o{position:relative;display:flex;align-items:center;gap:10px;min-height:64px;padding:12px 30px 12px 12px;border:1.5px solid #e3e9f1;border-radius:14px;background:#fff;text-align:left;cursor:pointer;font:inherit;color:inherit;transition:border-color .15s,box-shadow .15s,background .15s}
+.bo-o:hover{border-color:#bcd3ec}
+.bo-o.on{border-color:#2f7fd1;background:#f3f8fe;box-shadow:0 0 0 3px #2f7fd11a}
+.bo-i{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#eef3f9;color:#56708e}
+.bo-o.on .bo-i{background:#2f7fd1;color:#fff}
+.bo-t{display:grid;gap:2px;min-width:0}.bo-t b{font-size:14.5px;line-height:1.2;color:#14263d}.bo-t small{font-size:12px;line-height:1.3;color:#6b7b90}
+.bo-r{position:absolute;top:10px;right:10px;width:16px;height:16px;border-radius:50%;border:1.5px solid #c5d1df}
+.bo-o.on .bo-r{border-color:#2f7fd1;background:#2f7fd1;box-shadow:inset 0 0 0 3px #fff}
+@media (max-width:520px){.bo-o{flex-direction:column;align-items:flex-start;gap:8px;padding:12px;min-height:0}.bo-i{width:34px;height:34px}.bo-t b{font-size:14.5px}}
+html[data-theme=dark] .bo-o{background:#16243a;border-color:#2a3d56}
+html[data-theme=dark] .bo-o.on{background:#1b3150;border-color:#4a95e0}
+html[data-theme=dark] .bo-i{background:#22344d;color:#a9b9cc}
+html[data-theme=dark] .bo-t b{color:#eef3f9}html[data-theme=dark] .bo-t small{color:#9fb0c4}
+html[data-theme=dark] .bo-o.on .bo-r{box-shadow:inset 0 0 0 3px #1b3150}
 </style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="edu-supabase.js"></script>
 <script src="push.js" defer></script>
@@ -4356,12 +4371,12 @@ function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
   if (phase === "setup") return h(React.Fragment, null,
     h("div", { className: "panel pb-card" },
       !fixedSub && h(Fld, { label: "Subject" }, h("select", { value: sub, onChange: (e) => setSub(e.target.value) }, subs.map((s) => h("option", { key: s }, s)))),
-      h("div", { className: "pb-row" }, h("span", { className: "pb-lbl" }, "Build from"), h("div", { className: "eb-seg" }, [["past", "Past paper"], ["rep", "Repeated"], ["sim", "Similar"], ["mix", "Repeated + similar"]].map(([k, l]) => h("button", { key: k, className: mode === k ? "on" : "", onClick: () => setMode(k) }, l)))),
+      h("div", { className: "pb-row" }, h("span", { className: "pb-lbl" }, "Build from"), h(BuildOpts, { mode, setMode, opts: [["past", "Past paper", "A full real paper"], ["rep", "Repeated", "Questions asked again"], ["sim", "Similar", "Asked in a similar way"], ["mix", "Mixed", "Repeated + similar"]] })),
       h("div", { className: "pb-grid" },
         h(Fld, { label: "Paper" }, h("select", { value: comp, onChange: (e) => setComp(e.target.value) }, comps.map((c) => h("option", { key: c, value: c }, compName(sub, c))))),
         mode === "past" && h(Fld, { label: "Session" }, h("select", { value: paperId, onChange: (e) => setPaperId(e.target.value) }, plist.map((p) => h("option", { key: p.paper, value: p.paper }, paperLabel(p))))),
         h(Fld, { label: "Time (minutes)" }, h("input", { type: "number", min: 10, max: 240, value: mins, onChange: (e) => setMins(e.target.value) }))),
-      h("p", { className: "muted pb-note" }, mode === "past" ? "You get the full paper exactly as Cambridge set it: same questions, order, marks and time." : `A new paper laid out like the latest ${compName(sub, comp)}: the same number of questions and the same mark for each question, filled with ${mode === "rep" ? "questions Cambridge has repeated" : mode === "sim" ? "questions Cambridge keeps asking in a similar way" : "repeated and similar questions"} from past papers, each with its official mark scheme.`),
+      h("p", { className: "muted pb-note" }, mode === "past" ? "The full paper exactly as set, with the official mark scheme." : `Same layout and marks as ${compName(sub, comp)}, filled with ${mode === "rep" ? "repeated" : mode === "sim" ? "similar" : "repeated and similar"} past-paper questions.`),
       sub === "Business Studies" && comp === "2" && h("p", { className: "muted" }, "Paper 2 questions refer to that year's case study. Use “View original page” on each question to read it."),
       data.loading ? h("p", { className: "muted" }, "Loading the question bank…") : data.err ? h("p", { className: "muted" }, data.err) : !comps.length ? h("p", { className: "muted" }, `No analysed ${sub} papers are in the portal yet.`) : h("button", { className: "btn-primary pb-go", disabled: !comp || (mode === "past" && !paperId), onClick: build }, "Build paper")),
     viewer && h(PdfViewer, { ...viewer, onClose: () => setViewer(null) }));
@@ -4533,14 +4548,21 @@ function TQPaper({ sub, teacher, toast }) {
       teacher && h("div", { className: "pbq-tools" }, h("button", { className: "btn-secondary sm", "aria-label": "Move up", onClick: () => moveQ(i, -1) }, "↑"), h("button", { className: "btn-secondary sm", "aria-label": "Move down", onClick: () => moveQ(i, 1) }, "↓"), h("button", { className: "btn-secondary sm", onClick: () => removeQ(i) }, "Remove"))); })));
   const tps = data.topics.map((x) => x.t);
   return h("div", { className: "panel pb-card" },
-    h("div", { className: "pb-row" }, h("span", { className: "pb-lbl" }, "Build from"), h("div", { className: "eb-seg" }, [["past", "Past paper"], ["topics", "Topics mix"]].map(([k, l]) => h("button", { key: k, className: mode === k ? "on" : "", onClick: () => setMode(k) }, l)))),
+    h("div", { className: "pb-row" }, h("span", { className: "pb-lbl" }, "Build from"), h(BuildOpts, { mode, setMode, opts: [["past", "Past paper", "A full real paper"], ["topics", "Topics mix", "Pick the topics"]] })),
     h("div", { className: "pb-grid" },
       h(Fld, { label: "Paper" }, h("select", { value: comp, onChange: (e) => setComp(e.target.value) }, comps.map((c) => h("option", { key: c, value: c }, tqCompName(code, c))))),
       mode === "past" ? h(Fld, { label: "Session" }, h("select", { value: paperId, onChange: (e) => setPaperId(e.target.value) }, plist.map((p) => h("option", { key: p.k, value: p.k }, pLabel(p))))) : h(Fld, { label: "Questions" }, h("select", { value: n, onChange: (e) => setN(Number(e.target.value)) }, [5, 10, 15, 20, 30].map((x) => h("option", { key: x, value: x }, x)))),
       h(Fld, { label: "Time (minutes)" }, h("input", { type: "number", min: 10, max: 240, value: mins, onChange: (e) => setMins(e.target.value) }))),
     mode === "topics" && h("div", { className: "pb-row" }, h("span", { className: "pb-lbl" }, "Topics"), h("div", { className: "en-chips" }, h("button", { className: sel.length ? "chip" : "chip on", onClick: () => setSel([]) }, "All topics"), tps.map((t) => h("button", { key: t, className: sel.includes(t) ? "chip on" : "chip", onClick: () => setSel(sel.includes(t) ? sel.filter((x) => x !== t) : [...sel, t]) }, topicLabel(sub, t))))),
-    h("p", { className: "muted pb-note" }, mode === "past" ? "The full paper as it was set: same questions, order and marks, with the official answers." : "A new paper with questions picked at random from the topics you choose, from this paper type only."),
+    h("p", { className: "muted pb-note" }, mode === "past" ? "The full paper exactly as set, with the official answers." : "Questions picked from the topics you choose."),
     h("button", { className: "btn-primary pb-go", disabled: busy || !comp || (mode === "past" && !paperId), onClick: build }, busy ? "Building…" : "Build paper"));
+}
+const BO_IC = { past: "M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6", rep: "M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2M20 4v5h-5M4 20v-5h5", sim: "M8 4h11v11H8zM5 8v12h12", mix: "M4 7h4l8 10h4M4 17h4l2-2.5M14 9.5 16 7h4M18 5l2 2-2 2M18 15l2 2-2 2", topics: "M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" };
+function BuildOpts({ opts, mode, setMode }) {
+  return h("div", { className: "bo", role: "radiogroup", "aria-label": "Build from" }, opts.map(([k, t, d]) => h("button", { key: k, type: "button", role: "radio", "aria-checked": mode === k, className: mode === k ? "bo-o on" : "bo-o", onClick: () => setMode(k) },
+    h("span", { className: "bo-i" }, h("svg", { viewBox: "0 0 24 24", width: 20, height: 20, fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round" }, h("path", { d: BO_IC[k] || BO_IC.past }))),
+    h("span", { className: "bo-t" }, h("b", null, t), h("small", null, d)),
+    h("span", { className: "bo-r" }))));
 }
 function PaperStudio({ teacher, results, setResults, toast }) {
   const mine = teacher ? teachSubs() : subjects;
@@ -4616,7 +4638,7 @@ function useAnalysisUnits(sub) {
   return { loading: T.loading || (!!T.data && !tqUnits), err: "", units: tqUnits || [], full, none: !T.loading && !T.data };
 }
 const anaRef = (u) => `${paperCode(u.q)} \xB7 ${SESS_NAME[u.q.sess] || SESS[u.q.sess] || u.q.sess || ""} ${u.q.year} \xB7 Q${u.q.q || (u.q.qn || "")}${u.p && u.p.l ? u.p.l : ""}`.replace(/\s+/g, " ");
-const anaTxt = (s) => String(s || "").replace(/[\u0000-\u0008\u000b-\u001f\u007f-�■-◿]+/g, " ").replace(/\s*,\s*$/, "").replace(/\s+/g, " ").trim();
+const anaTxt = (s) => String(s || "").replace(/[\u0000-\u0008\u000b-\u001f\u007f\ue000-\uf8ff\ufffd\u25a0-\u25ff]+/g, " ").replace(/\s*,\s*$/, "").replace(/\s+/g, " ").trim();
 const anaYears = (g) => [...new Set(g.map((u) => u.q.year))].filter(Boolean).sort();
 function AnaCard({ g, kind, n, tqMap, sub }) {
   const [msOn, setMsOn] = useState(false);
@@ -5688,7 +5710,7 @@ const STUDY_RES = [
 ];
 const LANG_SUBS = ["English", "Dhivehi"];
 const slugT = (t) => String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
-const CONTENT_V = "20261119a";
+const CONTENT_V = "20261119b";
 const tqCache = {}, tqTopicCache = {};
 function useTQ(sub) {
   const code = SUBJ_CODE[sub];
