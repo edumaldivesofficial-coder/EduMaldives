@@ -90,6 +90,128 @@ html[data-theme=dark] .gc-q{color:#e6edf5}html[data-theme=dark] .rq-opt{backgrou
 html[data-theme=dark] .gc-topic,html[data-theme=dark] .gc-papers{color:#9fb3c8}html[data-theme=dark] .rq-dia,html[data-theme=dark] .rq-note{background:#1b2a40;border-color:#2a3d56;color:#9fb3c8}
 .nd-md li.nd-qa{list-style:none;margin:10px 0;padding:10px 12px;background:#f5f8fc;border:1px solid #e3eaf2;border-radius:12px}.nd-qa .nd-q{font-weight:700;color:#13497a}.nd-qa .nd-a{margin-top:4px}.nd-qa .nd-a span{display:block}html[data-theme=dark] .nd-md li.nd-qa{background:#1b2a40;border-color:#2a3d56}html[data-theme=dark] .nd-qa .nd-q{color:#9cc8f0}
 .nd.dv .nd-md ul:has(>li.nd-qa),.nd-md ul:has(>li.nd-qa){padding:0}
+.rq-hint{margin:4px 2px 12px;font-size:13.5px;line-height:1.5;color:#5b6b80}
+.gc-part{margin:2px 0 8px;font-size:13px;color:#5b6b80}
+.qfig-cap{margin:-4px 0 12px;font-size:13px;color:#5b6b80}
+.ana-chips{display:flex;flex-wrap:wrap;gap:6px}
+.ana-ref{display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border:1px solid #dfe6ef;border-radius:8px;background:#fff;font-size:12.5px;line-height:1.2;color:#22374f;white-space:nowrap}
+.ana-ref em{font-style:normal;color:#6b7b90}
+.ana-yr{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:start;padding:10px 0;border-top:1px solid #edf1f6}
+.ana-yr:first-child{border-top:0}
+html[data-theme=dark] .rq-hint,html[data-theme=dark] .gc-part,html[data-theme=dark] .qfig-cap{color:#9fb0c4}
+html[data-theme=dark] .ana-ref{background:#16243a;border-color:#2a3d56;color:#e6edf5}
+
+/* v97: one icon style */
+svg[stroke="currentColor"]:not(.si){stroke-width:1.8px}
+/* v97: calm, consistent subject animations: only on the subject strip and home tiles */
+svg.si{animation:none;transform-box:fill-box;transform-origin:center}
+.sp-tile.on svg.si,.sp-tile:hover svg.si,.subject-tile:hover svg.si{animation:si-float 3.2s ease-in-out infinite}
+.sp-tile.on svg.si-0625,.sp-tile:hover svg.si-0625,.subject-tile:hover svg.si-0625{animation:si-spin 8s linear infinite}
+.sp-tile.on svg.si-0580,.sp-tile:hover svg.si-0580,.subject-tile:hover svg.si-0580{animation:si-pulse 2.6s ease-in-out infinite}
+.sp-tile.on svg.si-0620,.sp-tile.on svg.si-0610,.sp-tile:hover svg.si-0620,.sp-tile:hover svg.si-0610,.subject-tile:hover svg.si-0620,.subject-tile:hover svg.si-0610{animation:si-tilt 3s ease-in-out infinite}
+.sp-tile.on svg.si-9100,.sp-tile:hover svg.si-9100,.subject-tile:hover svg.si-9100{animation:si-glow 3.6s ease-in-out infinite}
+.sp-tile.on svg.si-0471,.sp-tile:hover svg.si-0471,.subject-tile:hover svg.si-0471{animation:si-fly 3.4s ease-in-out infinite}
+.sp-tile.on svg.si-0478,.sp-tile.on svg.si-0452,.sp-tile.on svg.si-0450,.sp-tile:hover svg.si-0478,.sp-tile:hover svg.si-0452,.sp-tile:hover svg.si-0450,.subject-tile:hover svg.si-0478,.subject-tile:hover svg.si-0452,.subject-tile:hover svg.si-0450{animation:si-bob 2.8s ease-in-out infinite}
+.sp-tile.on svg.si-0455 path,.sp-tile.on svg.si-0510 path,.sp-tile.on svg.si-9200 path,.sp-tile:hover svg.si-0455 path,.sp-tile:hover svg.si-0510 path,.sp-tile:hover svg.si-9200 path,.subject-tile:hover svg.si-0455 path,.subject-tile:hover svg.si-0510 path,.subject-tile:hover svg.si-9200 path{stroke-dasharray:1;animation:si-draw 3.6s ease-in-out infinite}
+.sp-tile.on svg.si-0455,.sp-tile.on svg.si-0510,.sp-tile.on svg.si-9200,.sp-tile:hover svg.si-0455,.sp-tile:hover svg.si-0510,.sp-tile:hover svg.si-9200{animation:none}
+@keyframes si-draw{0%{stroke-dashoffset:1}45%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:-1}}
+@media (prefers-reduced-motion:reduce){svg.si,svg.si path{animation:none!important;stroke-dasharray:none!important}}
+/* v97: symmetric boxes */
+.eb-grid,.qa-grid,.pg-tiles,.subject-grid,.stats-grid,.bo{grid-auto-rows:1fr}
+.eb-t{min-height:48px;height:100%}
+.eb-tn{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.eb-t small{min-width:28px;text-align:right}
+.eb-note{margin:6px 0 0;font-size:12.5px;line-height:1.45;color:#6b7b90}
+html[data-theme=dark] .eb-note{color:#9fb0c4}
+/* v97: timed class tests */
+.tw-start{text-align:center}
+.tw-start .occ-head{text-align:left}
+.tw-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 12px}
+.tw-facts div{display:flex;flex-direction:column;gap:2px;padding:14px 8px;border:1px solid #e3e9f1;border-radius:14px;background:#f7fafd}
+.tw-facts b{font-size:22px;color:#14263d}.tw-facts small{font-size:12.5px;color:#6b7b90}
+.tw-go{width:100%;max-width:360px;margin-top:6px}
+.tw-bar{position:sticky;top:8px;z-index:5;display:flex;align-items:center;gap:8px;margin:-4px 0 14px;padding:10px 14px;border-radius:12px;background:#eef5fd;color:#1f5d9e;font-size:14px}
+.tw-bar b{margin-left:auto;font-variant-numeric:tabular-nums;font-size:16px}
+.tw-bar.low{background:#fdecec;color:#b42318}
+html[data-theme=dark] .tw-facts div{background:#16243a;border-color:#2a3d56}html[data-theme=dark] .tw-facts b{color:#eef3f9}
+html[data-theme=dark] .tw-bar{background:#1b3150;color:#cfe3fa}html[data-theme=dark] .tw-bar.low{background:#4a1d1d;color:#ffd4d4}
+
+/* v97 planner */
+.pl2{display:grid;gap:14px;max-width:760px}
+.pl2-head{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px}
+.pl2-sum small{display:block;font-size:12.5px;color:#6b7b90;text-transform:capitalize}.pl2-sum h3{margin:2px 0;font-size:19px}.pl2-sum p{margin:0;color:#5b6b80;font-size:14px}
+.pl2-streak{display:flex;flex-direction:column;align-items:center;justify-content:center;width:76px;height:76px;border-radius:16px;background:#fff6e8;color:#a15c07}
+.pl2-streak b{font-size:24px;line-height:1}.pl2-streak small{font-size:11px;text-align:center;line-height:1.2;margin-top:3px}
+.pl2-add{display:grid;gap:8px}
+.pl2-lbl{font-size:12.5px;font-weight:700;letter-spacing:.04em;color:#5b6b80;text-transform:uppercase;margin-top:6px}
+.pl2-in{width:100%;min-height:48px;padding:0 14px;border:1.5px solid #dfe6ef;border-radius:12px;font:inherit;font-size:16px;background:#fff;color:inherit}
+.pl2-in:focus{outline:none;border-color:#2f7fd1;box-shadow:0 0 0 3px #2f7fd11f}
+.pl2-chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}.pl2-chips::-webkit-scrollbar{display:none}
+.pl2-chips .chip{flex:none}
+.pl2-time{display:grid;grid-template-columns:repeat(4,1fr)}
+.pl2-go{min-height:48px;margin-top:8px;justify-content:center}
+.pl2-ideas{margin-top:8px;padding-top:12px;border-top:1px solid #edf1f6}
+.pl2-ideas small{display:block;font-size:12.5px;color:#6b7b90;margin-bottom:8px}
+.pl2-ideas>div{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pl2-idea{display:flex;align-items:center;gap:6px;min-height:44px;padding:8px 12px;border:1px dashed #c9d6e5;border-radius:12px;background:#fafcfe;font:600 13.5px/1.2 inherit;color:#22374f;cursor:pointer;text-align:left}
+.pl2-idea em{margin-left:auto;font-style:normal;font-weight:500;font-size:12px;color:#6b7b90}
+.pl2-lh{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}.pl2-lh h3{margin:0}
+.pl2-row{display:grid;grid-template-columns:44px 1fr 40px;align-items:center;gap:6px;min-height:62px;border-bottom:1px solid #eff2f5}
+.pl2-row:last-of-type{border-bottom:0}
+.pl2-check{display:grid;place-items:center;width:40px;height:40px;border:0;background:none;color:#1e9e5a;cursor:pointer;padding:0}
+.pl2-check span{width:22px;height:22px;border-radius:50%;border:2px solid #b9c6d6}
+.pl2-txt{display:flex;flex-direction:column;align-items:flex-start;gap:3px;border:0;background:none;padding:8px 0;text-align:left;font:inherit;color:inherit;cursor:pointer;min-width:0}
+.pl2-txt b{font-size:15px;line-height:1.3;color:#14263d}.pl2-txt small{font-size:12.5px;color:#6b7b90}
+.pl2-row.done .pl2-txt b{text-decoration:line-through;color:#8a98aa}
+.pl2-del{display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:10px;background:none;color:#98a5b6;cursor:pointer}
+.pl2-del:hover{background:#fdecec;color:#b42318}
+.pl2-track{margin-top:12px}
+@media (max-width:520px){.pl2-head{grid-template-columns:auto 1fr;}.pl2-streak{grid-column:1/-1;width:auto;height:auto;flex-direction:row;gap:8px;padding:10px;justify-content:flex-start}.pl2-streak small{margin:0;font-size:13px}}
+html[data-theme=dark] .pl2-in{background:#16243a;border-color:#2a3d56}
+html[data-theme=dark] .pl2-idea{background:#16243a;border-color:#2a3d56;color:#e6edf5}
+html[data-theme=dark] .pl2-txt b{color:#eef3f9}html[data-theme=dark] .pl2-row{border-color:#2f4058}
+html[data-theme=dark] .pl2-streak{background:#3a2a10;color:#ffd79a}
+html[data-theme=dark] .pl2-ideas{border-color:#2f4058}
+/* v97 progress */
+.pg2-hero{display:flex;align-items:center;gap:18px;margin-bottom:14px}
+.pg2-hero p{margin:6px 0 0;font-size:15px;line-height:1.5;color:#3b4d63}
+.pg2-lv{display:inline-block;padding:4px 10px;border-radius:999px;font-weight:700;font-size:13px}
+.lv-g .pg2-lv{background:#e6f6ec;color:#17784a}.lv-b .pg2-lv{background:#e8f1fc;color:#1f5d9e}.lv-o .pg2-lv{background:#fff1e0;color:#a15c07}.lv-r .pg2-lv{background:#fdecec;color:#b42318}
+.pg2-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:1fr;gap:12px;margin-bottom:14px}
+.pg2-tile{display:flex;flex-direction:column;gap:3px;margin:0}
+.pg2-tile small{font-size:12.5px;color:#6b7b90}.pg2-tile b{font-size:24px;line-height:1.2;color:#14263d}.pg2-tile span{font-size:13px;color:#5b6b80;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:760px){.pg2-tiles{grid-template-columns:1fr 1fr}}
+.pg2-h{margin:0 0 4px}.pg2-note{margin:0 0 12px;font-size:13px}
+.pg2-key{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 10px;font-size:12.5px;color:#6b7b90}
+.pg2-key span{display:inline-flex;align-items:center;gap:5px}.pg2-key i{width:9px;height:9px;border-radius:50%}
+.dot-g,.bg-g{background:#1e9e5a}.dot-b,.bg-b{background:#2b86d6}.dot-o,.bg-o{background:#e08a1e}.dot-r,.bg-r{background:#d64545}
+.c-g{color:#17784a}.c-b{color:#1f5d9e}.c-o{color:#a15c07}.c-r{color:#b42318}
+.pg2-sub{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:center;padding:12px 0;border-top:1px solid #eff2f5}
+.pg2-sub-t{display:flex;justify-content:space-between;align-items:baseline;gap:8px}.pg2-sub-t b{font-size:14.5px}
+.pg2-pc{font-weight:700;font-size:15px}
+.pg2-bar{display:block;height:8px;margin:6px 0 4px;border-radius:99px;background:#edf1f6;overflow:hidden}.pg2-bar i{display:block;height:100%;border-radius:99px}
+.pg2-sub small{font-size:12.5px;color:#6b7b90}
+.pg2-chart{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:8px;align-items:end;height:190px}
+.pg2-col{display:flex;flex-direction:column;align-items:center;gap:5px;height:100%}
+.pg2-v{font-size:12px;font-weight:700;color:#3b4d63}
+.pg2-cb{flex:1;width:100%;max-width:38px;display:flex;align-items:flex-end;border-radius:8px;background:#f1f5f9;overflow:hidden}.pg2-cb i{display:block;width:100%;border-radius:8px 8px 0 0}
+.pg2-col small{font-size:11px;color:#6b7b90;white-space:nowrap}
+.pg2-pill{flex:none;padding:5px 10px;border-radius:999px;font-weight:700;font-size:13px;background:#f1f5f9}
+.pg2-next{width:100%;min-height:48px;justify-content:center;margin-top:4px}
+html[data-theme=dark] .pg2-hero p,html[data-theme=dark] .pg2-v{color:#c9d6e5}
+html[data-theme=dark] .pg2-tile b{color:#eef3f9}html[data-theme=dark] .pg2-bar,html[data-theme=dark] .pg2-cb,html[data-theme=dark] .pg2-pill{background:#22344d}
+html[data-theme=dark] .pg2-sub{border-color:#2f4058}
+
+.pl2-ring{--p:0;flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;width:84px;height:84px;border-radius:50%;background:radial-gradient(closest-side,#fff 78%,transparent 80% 100%),conic-gradient(#1e9e5a calc(var(--p)*1%),#e6ecf3 0)}
+.pl2-ring b{font-size:20px;line-height:1;color:#14263d}.pl2-ring small{font-size:11.5px;color:#6b7b90;margin-top:2px}
+html[data-theme=dark] .pl2-ring{background:radial-gradient(closest-side,#101c2e 78%,transparent 80% 100%),conic-gradient(#3cc47c calc(var(--p)*1%),#22344d 0)}html[data-theme=dark] .pl2-ring b{color:#eef3f9}
+.pl2-chip{flex:none;min-height:38px;padding:0 14px;border:1.5px solid #dfe6ef;border-radius:999px;background:#fff;color:#22374f;font:600 14px "DM Sans",sans-serif;cursor:pointer;white-space:nowrap}
+.pl2-chip.on{border-color:#2f7fd1;background:#eaf3fd;color:#1f5d9e}
+html[data-theme=dark] .pl2-chip{background:#16243a;border-color:#2a3d56;color:#e6edf5}html[data-theme=dark] .pl2-chip.on{background:#1b3150;border-color:#4a95e0;color:#cfe3fa}
+.pl2-idea{font:600 14px "DM Sans",sans-serif;gap:10px;min-height:56px}
+.pl2-idea span{display:flex;flex-direction:column;gap:2px;min-width:0}.pl2-idea b{font-size:14px;line-height:1.2}.pl2-idea em{margin:0;font-size:12.5px}
+.pl2-idea svg{flex:none;color:#2f7fd1}
+.eb-tn{overflow-wrap:anywhere;hyphens:auto}
 </style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="edu-supabase.js"></script>
 <script src="install.js" defer></script><script src="push.js" defer></script>
@@ -1806,24 +1928,48 @@ function BuilderPage2({ questions, saveQuestions, toast, setShowAdd }) {
 }
 const PLAN0 = [{ id: 1, t: "Review Mathematics \u2013 Algebra", m: 25 }, { id: 2, t: "Complete English comprehension practice", m: 20 }, { id: 3, t: "Revise Biology \u2013 Human biology", m: 25 }, { id: 4, t: "Attempt one timed mock paper", m: 45 }];
 function PlannerPage2({ toast }) {
+  const today = new Date().toDateString();
   const [tasks, setTasks] = useLocal("em-plan", PLAN0.map((t) => ({ ...t, done: false })));
+  const [day, setDay] = useLocal("em-plan-day", today);
+  const [streak, setStreak] = useLocal("em-plan-streak", { n: 0, last: "" });
   const [text, setText] = useState("");
-  const [m, setM] = useState(20);
-  const done = tasks.filter((t) => t.done).length;
-  const pct = tasks.length ? Math.round(done / tasks.length * 100) : 0;
-  const add = (e) => {
-    e.preventDefault();
-    if (!text.trim()) return;
-    setTasks([...tasks, { id: Date.now(), t: text.trim(), m: Number(m) || 20, done: false }]);
-    setText("");
-  };
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Title, { eyebrow: "STAY ON TRACK", title: "Study planner", desc: "Make a list of things to study. Your list stays on this device." }), /* @__PURE__ */ React.createElement("div", { className: "planner-layout" }, /* @__PURE__ */ React.createElement("div", { className: "panel" }, /* @__PURE__ */ React.createElement("div", { className: "panel-head" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", null, "Today\u2019s study plan"), /* @__PURE__ */ React.createElement("p", null, tasks.reduce((a, t) => a + (t.done ? 0 : t.m), 0), " min remaining")), /* @__PURE__ */ React.createElement("span", { className: "count-pill" }, done, "/", tasks.length, " done")), /* @__PURE__ */ React.createElement("form", { className: "mini-form", onSubmit: add }, /* @__PURE__ */ React.createElement("input", { placeholder: "Add a task, e.g. Chemistry \u2013 bonding", value: text, onChange: (e) => setText(e.target.value) }), /* @__PURE__ */ React.createElement("input", { type: "number", min: "5", value: m, onChange: (e) => setM(e.target.value), title: "Minutes" }), /* @__PURE__ */ React.createElement("button", { className: "btn-primary" }, /* @__PURE__ */ React.createElement(Plus, { size: 15 }), " Add")), tasks.map((t) => /* @__PURE__ */ React.createElement("label", { className: `planner-task ${t.done ? "completed" : ""}`, key: t.id }, /* @__PURE__ */ React.createElement("input", { type: "checkbox", checked: t.done, onChange: (e) => setTasks(tasks.map((x) => x.id === t.id ? { ...x, done: e.target.checked } : x)) }), /* @__PURE__ */ React.createElement("span", null, /* @__PURE__ */ React.createElement("b", null, t.t), /* @__PURE__ */ React.createElement("small", null, t.m, " min")), /* @__PURE__ */ React.createElement("button", { type: "button", className: "more-btn", title: "Delete", onClick: (e) => {
-    e.preventDefault();
-    setTasks(tasks.filter((x) => x.id !== t.id));
-  } }, /* @__PURE__ */ React.createElement(Trash2, { size: 16 })))), /* @__PURE__ */ React.createElement("div", { className: "planner-progress" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("span", null, "Daily progress"), /* @__PURE__ */ React.createElement("b", null, pct, "%")), /* @__PURE__ */ React.createElement("div", { className: "progress-track" }, /* @__PURE__ */ React.createElement("i", { style: { width: `${pct}%` } })))), /* @__PURE__ */ React.createElement("div", { className: "panel planner-side" }, /* @__PURE__ */ React.createElement("div", { className: "calendar-icon" }, /* @__PURE__ */ React.createElement(Target, { size: 27 })), /* @__PURE__ */ React.createElement("h3", null, "Consistency beats cramming."), /* @__PURE__ */ React.createElement("p", null, "A little focused practice every day can make exam preparation feel more manageable."), /* @__PURE__ */ React.createElement("button", { className: "btn-secondary", onClick: () => {
-    setTasks(tasks.map((t) => ({ ...t, done: false })));
-    toast("Plan reset for a new day.");
-  } }, "Reset for a new day"))));
+  const [m, setM] = useState(30);
+  const [sb, setSb] = useState("");
+  useEffect(() => { if (day !== today) { setTasks((L) => (L || []).filter((t) => !t.done || t.keep).map((t) => ({ ...t, done: false }))); setDay(today); } }, []);
+  const list = tasks || [];
+  const done = list.filter((t) => t.done).length, left = list.filter((t) => !t.done).reduce((a, t) => a + (Number(t.m) || 0), 0);
+  const pct = list.length ? Math.round(done / list.length * 100) : 0;
+  useEffect(() => { if (list.length && done === list.length && streak.last !== today) { const y = new Date(Date.now() - 864e5).toDateString(); setStreak({ n: streak.last === y ? streak.n + 1 : 1, last: today }); toast("Well done! Today's plan is complete."); } }, [done, list.length]);
+  const addT = (t, mins, sub) => { if (!String(t).trim()) return; setTasks([...list, { id: Date.now(), t: String(t).trim(), m: Number(mins) || 30, sub: sub || "", done: false }]); };
+  const add = (e) => { e.preventDefault(); if (!text.trim()) { toast("Write what you will study."); return; } addT(text, m, sb); setText(""); };
+  const flip = (id) => setTasks(list.map((x) => x.id === id ? { ...x, done: !x.done } : x));
+  const del = (id) => setTasks(list.filter((x) => x.id !== id));
+  const ideas = [["Revise notes", 20], ["Flashcards", 15], ["Practice exam", 30], ["Past paper", 60]];
+  const order = [...list.filter((t) => !t.done), ...list.filter((t) => t.done)];
+  const dateTxt = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" });
+  return h(React.Fragment, null,
+    h(Title, { eyebrow: "STAY ON TRACK", title: "Study planner", desc: "Plan today in a few taps. Your plan is saved on this device." }),
+    h("div", { className: "pl2" },
+      h("div", { className: "panel pl2-head" },
+        h("div", { className: "pl2-ring", style: { "--p": pct } }, h("b", null, list.length ? `${done}/${list.length}` : "0"), h("small", null, "done")),
+        h("div", { className: "pl2-sum" }, h("small", null, dateTxt), h("h3", null, !list.length ? "Nothing planned yet" : done === list.length ? "All done for today" : `${done} of ${list.length} done`), h("p", null, list.length ? (left ? `${left} minutes left` : "Great work today.") : "Add your first task below.")),
+        streak.n > 0 && h("div", { className: "pl2-streak" }, h("b", null, streak.n), h("small", null, (streak.n === 1 ? "day" : "days") + " in a row"))),
+      h("form", { className: "panel pl2-add", onSubmit: add },
+        h("label", { className: "pl2-lbl", htmlFor: "pl2-in" }, "What will you study?"),
+        h("input", { id: "pl2-in", className: "pl2-in", placeholder: "e.g. Chemistry: bonding", value: text, onChange: (e) => setText(e.target.value) }),
+        h("span", { className: "pl2-lbl" }, "Subject"),
+        h("div", { className: "pl2-chips" }, [["", "Any"], ...subjects.map((x) => [x, x])].map(([k, l]) => h("button", { type: "button", key: k || "any", className: sb === k ? "pl2-chip on" : "pl2-chip", onClick: () => setSb(k) }, l))),
+        h("span", { className: "pl2-lbl" }, "Time"),
+        h("div", { className: "eb-seg pl2-time" }, [15, 30, 45, 60].map((v) => h("button", { type: "button", key: v, className: m === v ? "on" : "", onClick: () => setM(v) }, v === 60 ? "1 hour" : v + " min"))),
+        h("button", { className: "btn-primary pl2-go", type: "submit" }, h(Plus, { size: 16 }), " Add to today"),
+        h("div", { className: "pl2-ideas" }, h("small", null, "Quick add"), h("div", null, ideas.map(([t, v]) => h("button", { type: "button", key: t, className: "pl2-idea", onClick: () => addT(sb ? `${sb}: ${t.toLowerCase()}` : t, v, sb) }, h(Plus, { size: 16 }), h("span", null, h("b", null, t), h("em", null, `${v} min`))))))),
+      h("div", { className: "panel pl2-list" },
+        h("div", { className: "pl2-lh" }, h("h3", null, "Today's plan"), done > 0 && h("button", { type: "button", className: "text-link", onClick: () => setTasks(list.filter((t) => !t.done)) }, "Clear finished")),
+        !list.length ? h("p", { className: "empty-note" }, "Your plan is empty. Add a task or use Quick add.") : order.map((t) => h("div", { key: t.id, className: t.done ? "pl2-row done" : "pl2-row" },
+          h("button", { type: "button", className: "pl2-check", "aria-pressed": !!t.done, "aria-label": t.done ? "Mark as not done" : "Mark as done", onClick: () => flip(t.id) }, t.done ? h(CheckCircle2, { size: 24 }) : h("span", null)),
+          h("button", { type: "button", className: "pl2-txt", onClick: () => flip(t.id) }, h("b", null, t.t), h("small", null, [t.sub, `${t.m} min`].filter(Boolean).join(" \xB7 "))),
+          h("button", { type: "button", className: "pl2-del", "aria-label": "Delete task", onClick: () => del(t.id) }, h(Trash2, { size: 17 })))),
+        list.length > 0 && h("div", { className: "progress-track pl2-track" }, h("i", { style: { width: pct + "%" } })))));
 }
 const DEFM = { anthropic: "claude-sonnet-5-5", openai: "gpt-4o-mini", gemini: "gemini-2.0-flash", groq: "llama-3.3-70b-versatile", openrouter: "meta-llama/llama-3.3-70b-instruct:free", custom: "" };
 const BASES = { openai: "https://api.openai.com/v1", groq: "https://api.groq.com/openai/v1", openrouter: "https://openrouter.ai/api/v1" };
@@ -2983,6 +3129,7 @@ function UpgradeNote({ what }) {
 }
 let __confirmSet = null;
 function askConfirm(msg, o = {}) { return new Promise((res) => { if (!__confirmSet) { res(true); return; } __confirmSet({ msg, ...o, res }); }); }
+function tellUser(msg, title, yes) { return askConfirm(msg, { title: title || "", one: true, yes: yes || "OK" }); }
 function askText(msg, def = "") { return new Promise((res) => { if (!__confirmSet) { res(null); return; } __confirmSet({ msg, input: true, val: String(def || ""), title: "", yes: "Save", no: "Cancel", res }); }); }
 async function confirmFinish(left) {
   const a = await askConfirm(left > 0 ? `You have ${left} unanswered question${left > 1 ? "s" : ""}. Do you want to finish anyway?` : "Do you want to finish and hand in your answers?", { title: "Finish test?", yes: "Finish", no: "Keep working" });
@@ -2998,7 +3145,7 @@ function ConfirmHost() {
     c.title !== "" && h("h3", null, c.title || "Please confirm"),
     h("p", null, c.msg),
     c.input && h("input", { className: "cf-in", autoFocus: true, value: c.val, onChange: (e) => setC({ ...c, val: e.target.value }), onKeyDown: (e) => { if (e.key === "Enter") done(true); } }),
-    h("div", { className: "up-btns" }, h("button", { className: "btn-secondary", onClick: () => done(false) }, c.no || "Cancel"), h("button", { className: "btn-primary", autoFocus: !c.input, onClick: () => done(true) }, c.yes || "OK"))));
+    h("div", { className: "up-btns" }, !c.one && h("button", { className: "btn-secondary", onClick: () => done(false) }, c.no || "Cancel"), h("button", { className: "btn-primary", autoFocus: !c.input, onClick: () => done(true) }, c.yes || "OK"))));
 }
 function UpgradeModal({ go }) {
   const [k, setK] = useState(null);
@@ -3757,7 +3904,7 @@ const paperCode = (d) => { const c = d.code || String(d.paper || "").split("_")[
 const paperLabel = (d) => `${paperCode(d)} \xB7 ${SESS[d.sess] || d.sess} ${d.year}`;
 function SchemeView({ s }) {
   if (!s) return h("p", { className: "muted" }, "No mark scheme has been uploaded for this question yet.");
-  return h("div", { className: "scheme" }, s.mcq ? h("p", null, h("b", null, "Answer: "), s.mcq) : null, s.answer ? h("p", null, h("b", null, "Answer: "), s.answer) : null, (s.points || []).length ? h("ul", null, s.points.map((p, i) => h("li", { key: i }, h("span", { className: "code-pill" }, p.code), " ", p.text, p.dep ? h("small", { className: "muted" }, ` (dep ${p.dep})`) : null))) : null, (s.alt || []).length ? h("p", null, h("b", null, "Also accept: "), s.alt.join("; ")) : null, (s.partial || []).length ? h(React.Fragment, null, h("b", null, "Partial marks"), h("ul", null, s.partial.map((p, i) => h("li", { key: "p" + i }, p)))) : s.notes ? h("p", { className: "muted" }, s.notes) : null, (s.levels || []).length ? h("ul", null, s.levels.map((l, i) => h("li", { key: i }, h("b", null, l.level, " (", l.marks, "): "), l.descriptor))) : null);
+  return h("div", { className: "scheme" }, s.mcq ? h("p", null, h("b", null, "Answer: "), s.mcq) : null, s.answer ? h("p", null, h("b", null, "Answer: "), s.answer) : null, (s.points || []).length ? h("ul", null, s.points.map((p, i) => h("li", { key: i }, h("span", { className: "code-pill" }, p.code), " ", p.text, p.dep ? h("small", { className: "muted" }, ` (dep ${p.dep})`) : null))) : null, (s.alt || []).length ? h("p", null, h("b", null, "Also accept: "), s.alt.join("; ")) : null, (s.partial || []).filter((p) => !/^\s*[\d.,\s]*$/.test(String(p))).length ? h(React.Fragment, null, h("b", null, "Partial marks"), h("ul", null, s.partial.filter((p) => !/^\s*[\d.,\s]*$/.test(String(p))).map((p, i) => h("li", { key: "p" + i }, p)))) : s.notes ? h("p", { className: "muted" }, s.notes) : null, (s.levels || []).length ? h("ul", null, s.levels.map((l, i) => h("li", { key: i }, h("b", null, l.level, " (", l.marks, "): "), l.descriptor))) : null);
 }
 function MarkResult({ r }) {
   if (!r) return null;
@@ -3998,14 +4145,16 @@ function GroupCard({ g, kind, store, onView, toast }) {
   const [full, setFull] = useState(false);
   const papers = [...new Set(g.map((u) => u.q.paper))], years = [...new Set(g.map((u) => u.q.year))].sort();
   const shown = more ? g : g.slice(0, 4);
-  const u0 = g.find((u) => u.tq) || g[0], qref = React.useRef(null);
+  const u0 = g.find((u) => u.tq && !u.p) || g.find((u) => u.tq) || [...g].sort((a, b) => (/\bfor\b\s*[-−]?\d|=\s*for\b/.test(a.text) ? 1 : 0) - (/\bfor\b\s*[-−]?\d|=\s*for\b/.test(b.text) ? 1 : 0) || (b.q.year || 0) - (a.q.year || 0))[0] || g[0], qref = React.useRef(null);
   const [long, setLong] = useState(false);
   useEffect(() => { const el = qref.current; if (!el) return; const chk = () => setLong(el.scrollHeight > el.clientHeight + 6); chk(); const t = setTimeout(chk, 700); return () => clearTimeout(t); }, [u0.key]);
   const yr = years.length > 1 ? `${years[0]}–${years[years.length - 1]}` : String(years[0] || "");
   const dv = isDv(u0.q.sub);
+  const hasFig = !!(u0.tq && (u0.tq.q.b || []).some((b) => b[0] === "f"));
   return h("div", { className: "panel group-card gc" },
-    h("div", { className: "gc-top" }, kind !== "all" && h("span", { className: `gc-badge ${kind}` }, kind === "rep" ? `Asked ${papers.length} times` : `Similar ×${papers.length}`), h("span", { className: "gc-topic", dir: dv ? "rtl" : undefined }, dv ? topicLabel(u0.q.sub, u0.topic) : u0.topic)),
-    h("div", { ref: qref, className: full ? "gc-q" : long ? "gc-q clamp fade" : "gc-q clamp" }, u0.tq ? h(QBody, { P: u0.tq.P, q: u0.tq.q }) : h(TextQ, { u: u0 })), (long || full) && h("button", { className: "text-link gc-more", onClick: () => setFull(!full) }, full ? "Show less" : "Read more"),
+    h("div", { className: "gc-top" }, kind !== "all" && kind !== "one" && h("span", { className: `gc-badge ${kind}` }, kind === "rep" ? `In ${papers.length} papers` : `Similar · ${papers.length} papers`), h("span", { className: "gc-topic", dir: dv ? "rtl" : undefined }, dv ? topicLabel(u0.q.sub, u0.topic) : u0.topic)),
+    u0.tq && u0.p && u0.p.l && h("p", { className: "gc-part" }, "Look at part ", h("b", null, u0.p.l), " \u00B7 ", anaRef(u0)),
+    h("div", { ref: qref, className: full || hasFig ? "gc-q" : long ? "gc-q clamp fade" : "gc-q clamp" }, u0.tq ? h(QBody, { P: u0.tq.P, q: u0.tq.q }) : h(TextQ, { u: u0 })), !hasFig && (long || full) && h("button", { className: "text-link gc-more", onClick: () => setFull(!full) }, full ? "Show less" : "Read more"),
     h("div", { className: "gc-actions" }, h(RQAnswer, { u: u0 }),
       h("button", { type: "button", className: "gc-papers", "aria-expanded": open, onClick: () => setOpen(!open) }, `${papers.length} ${papers.length === 1 ? "paper" : "papers"} · ${yr}`, h(ChevronDown, { size: 16 }))),
     open && h("div", { className: "occ-list" }, shown.map((u) => h(Occurrence, { key: u.key, u, store, onView, toast }))),
@@ -4040,6 +4189,10 @@ function DiaText({ t }) {
   const parts = String(t).split(DIA);
   return parts.map((x, i) => h(React.Fragment, { key: i }, x, i < parts.length - 1 && h("span", { className: "rq-dia" }, "Diagram in the paper")));
 }
+const mathFix = (t) => String(t || "")
+  .replace(/([-−]?\s?\d+(?:\.\d+)?|\b[a-z])\s+G\s+(?=[-−]?\s?\d|[a-z]\b)/g, "$1 ⩽ ").replace(/([-−]?\s?\d+(?:\.\d+)?|\b[a-z])\s+H\s+(?=[-−]?\s?\d|[a-z]\b)/g, "$1 ⩾ ")
+  .replace(/(?:[-–−]?\d+(?:\.\d+)?\s+){5,}[-–−]?\d+(?:\.\d+)?(?:\s+[xy]\b)?/g, " ").replace(/_{3,}|\.{4,}/g, " ").replace(/(?:\s*,){2,}\s*$|\s*,\s*$/g, "").replace(/[ \t]+/g, " ").trim();
+const FIG_LAB = /^(?=.*\d)[\d.,\s]+(?:[a-zA-Zµ°Ω%/]{1,4})?(?:\s+[\d.,]+\s*(?:[a-zA-Zµ°Ω%/]{1,4})?)*$/;
 function TextQ({ u }) {
   const sp = u.ms && u.ms.mcq && !u.p ? splitMcq(u.text) : null;
   if (!sp) {
@@ -4052,7 +4205,7 @@ function TextQ({ u }) {
     }
   }
   if (sp) return h("div", { className: "rq-q" }, h("p", { className: "rq-stem" }, h(DiaText, { t: stripDiagram(sp.stem, u.q.sub) })), h("div", { className: "rq-opts" }, sp.o.map((x, i) => h("p", { key: i, className: "rq-opt" }, h("b", null, "ABCD"[i]), h("span", null, x)))));
-  const lines = String(u.text || "").split("\n").map((x) => x.trim()).filter(Boolean);
+  const lines = String(u.text || "").split("\n").map((x) => mathFix(x)).filter(Boolean);
   return h("div", { className: "rq-q" }, lines.map((x, i) => {
     const m = i > 0 && /^(\(\w{1,4}\)(\(\w{1,4}\))*)\s*(.*)$/.exec(x);
     return h("p", { key: i, className: i ? "rq-part" : "rq-stem" }, m ? h(React.Fragment, null, h("b", null, m[1]), " ", m[3]) : x);
@@ -4131,7 +4284,7 @@ function RepeatBank({ role, toast, mode }) {
   const data = isAn ? data0 : { loading: tqd.loading, err: "", qs: [], reload: () => {} };
   const store = usePaperStore(isAn ? sub : null);
   useEffect(() => { setTopics([]); setYears([]); setCompsSel([]); setLim(25); }, [sub]);
-  const units = useMemo(() => isAn ? unitsOf(data0.qs).map((u) => { const t = !u.p && tqd.twin[u.q.paper + ":" + u.q.q]; return t ? { ...u, tq: t } : u; }) : tqd.units, [isAn, data0.qs, tqd]);
+  const units = useMemo(() => isAn ? unitsOf(data0.qs).map((u) => { const t = tqd.twin[u.q.paper + ":" + u.q.q]; return t ? { ...u, tq: t } : u; }) : tqd.units, [isAn, data0.qs, tqd]);
   const groups = useMemo(() => groupUnits(units), [units]);
   const match = (u) => (!topics.length || topics.includes(u.topic)) && (!years.length || years.includes(String(u.q.year))) && (!compsSel.length || compsSel.includes(String(u.q.comp))) && (!qtxt || u.text.toLowerCase().includes(qtxt.toLowerCase()));
   const list = view === "rep" ? groups.rep.filter((g) => g.some(match)) : view === "sim" ? groups.sim.filter((g) => g.some(match)) : units.filter(match).sort((a, b) => b.q.year - a.q.year || String(a.q.paper).localeCompare(b.q.paper)).map((u) => [u]);
@@ -4146,6 +4299,7 @@ function RepeatBank({ role, toast, mode }) {
     h("div", { className: "panel rq-filters" }, h("div", { className: "form-row" }, h(Fld, { label: "Subject" }, h("select", { value: sub, onChange: (e) => setSub(e.target.value) }, subs.map((s) => h("option", { key: s }, s)))), h(FldD, { label: "Topics" }, h(MultiPick, { all: "All topics", value: topics, onChange: (v) => { setTopics(v); setLim(25); }, options: topicList.map((t) => ({ v: t, l: isDv(sub) ? topicLabel(sub, t) : t, n: topicCounts[t] })) }))), moreF && h("div", { className: "form-row" }, h(Fld, { label: "Show" }, h("select", { value: view, onChange: (e) => { setView(e.target.value); setLim(25); } }, h("option", { value: "rep" }, "Repeated questions"), h("option", { value: "sim" }, "Similar questions (same concept)"), h("option", { value: "all" }, "All questions"))), h(FldD, { label: "Years" }, h(MultiPick, { all: "All years", value: years, onChange: (v) => { setYears(v); setLim(25); }, options: yrs.map((y) => ({ v: String(y), l: String(y) })) })), h(FldD, { label: "Papers" }, h(MultiPick, { all: "All papers", value: compsSel, onChange: (v) => { setCompsSel(v); setLim(25); }, options: comps.map((c) => ({ v: c, l: "Paper " + c })) })), h(Fld, { label: "Search" }, h("input", { value: qtxt, onChange: (e) => setQtxt(e.target.value), placeholder: "Word or phrase" }))),
       h("div", { className: "rq-bar" }, h("button", { type: "button", className: "text-link rq-morebtn", onClick: () => setMoreF(!moreF) }, moreF ? "Fewer filters" : nFilt ? `More filters (${nFilt})` : "More filters"), h("span", { className: "muted rq-stat" }, data.loading ? "Loading questions\u2026" : data.err ? data.err : `${view === "sim" ? groups.sim.length + " similar" : view === "all" ? units.length : groups.rep.length + " repeated"} questions \xB7 ${nPapers} papers`), !data.loading && isAn && role !== "Student" && h("button", { className: "text-link rq-refresh", onClick: data.reload }, h(Repeat2, { size: 15 }), " Refresh"))),
     !data.loading && !data.err && nPapers === 0 && h("div", { className: "panel" }, h("p", null, `No ${sub} questions here yet.`), isAn && h("p", { className: "muted" }, role !== "Student" ? "Go to Past Papers → View → “Upload & find repeats”, choose the question papers and mark schemes, and keep “Analyse with AI” ticked." : "Your teacher adds papers. Check back soon.")),
+    !data.loading && !data.err && view !== "all" && list.length > 0 && h("p", { className: "rq-hint" }, view === "sim" ? "Questions asked in a similar way. The wording changes a little each time." : "The same kind of question, asked again in other papers. The numbers and shapes change, the method stays the same."),
     list.slice(0, lim).map((g, i) => h(GroupCard, { key: (g[0] && g[0].key) + i, g, kind: view === "all" ? "one" : view, store, onView: setViewer, toast })),
     list.length > lim && h("button", { className: "btn-secondary", onClick: () => setLim(lim + 25) }, `Show more (${list.length - lim} left)`),
     !data.loading && nPapers > 0 && list.length === 0 && h("p", { className: "muted" }, "Nothing matches these filters."),
@@ -4424,7 +4578,7 @@ function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
     const t = setInterval(() => setLeft((l) => l - 1), 1000);
     return () => clearInterval(t);
   }, [phase]);
-  useEffect(() => { if (phase === "run" && left <= 0) { toast("Time is up. Your paper has been handed in."); setPhase("review"); } }, [left, phase]);
+  useEffect(() => { if (phase === "run" && left <= 0) { tellUser("Your time is over. Your paper has been handed in. Check your answers with the mark scheme below.", "Time is up"); setPhase("review"); } }, [left, phase]);
   const build = () => {
     try {
       const cap = getAccess().level >= 1 ? 0 : 5;
@@ -4454,7 +4608,7 @@ function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
       const items = [];
       P.questions.forEach((q, qi) => qItems(q).filter((p) => p.m > 0 || P.mcq).forEach((p) => items.push({ id: "i" + Date.now().toString(36) + qi + "_" + p.k, src: "pq:" + q.id + "#" + p.k, label: `Q${qi + 1}${p.l || ""} · ${paperLabel(q)} Q${q.q}${p.l || ""}`, question: (q.stem ? camClean(q.stem) + "\n" : "") + (p.l ? p.l + " " : "") + (p.t || ""), marks: p.m || 1, scheme: p.ms || null, topic: q.topic || "", mcq: !!(p.ms && p.ms.mcq) })));
       const id = "a" + Date.now().toString(36);
-      const doc = { title: meta.title || `${P.sub} ${P.code}/${P.comp} – ${P.label}`, kind: "mock", byName: myName(), classes: meta.classes || [], sub: P.sub, cls: meta.cls || "Grade 10", due: meta.due || "", instr: `${P.name}. Time allowed: ${P.mins} minutes. Answer all questions. Total ${P.total} marks.`, items, files: [], closed: false, total: items.reduce((n, it) => n + (Number(it.marks) || 0), 0), by: C.uid || "", at: Date.now(), edited: Date.now() };
+      const doc = { title: meta.title || `${P.sub} ${P.code}/${P.comp} – ${P.label}`, kind: "mock", byName: myName(), classes: meta.classes || [], sub: P.sub, cls: meta.cls || "Grade 10", due: meta.due || "", instr: `${P.name}. Time allowed: ${P.mins} minutes. Answer all questions. Total ${P.total} marks.`, mins: Number(P.mins) || 0, items, files: [], closed: false, total: items.reduce((n, it) => n + (Number(it.marks) || 0), 0), by: C.uid || "", at: Date.now(), edited: Date.now() };
       await C.db.doc("assign/" + id).set(JSON.parse(JSON.stringify(doc)));
       toast((meta.classes && meta.classes.length ? "Paper sent to your class" : "Paper sent to all students") + " as an assignment. Open Assignments to follow submissions.");
     } catch (e) { toast(errText(e)); }
@@ -4786,7 +4940,7 @@ function AnaCard({ g, kind, n, tqMap, sub }) {
       (tqAns || msImg || ms) && h("button", { className: msOn ? "chip on" : "chip", onClick: () => setMsOn(!msOn) }, msOn ? "Hide answer" : "Show answer"),
       h("button", { className: refOn ? "chip on" : "chip", onClick: () => setRefOn(!refOn) }, `Where it was asked (${g.length})`)),
     msOn && h("div", { className: "tq-ms ana-ms", dir: dv ? "rtl" : undefined }, h("small", { dir: "ltr" }, "MARK SCHEME"), msImg ? h(QBody, { P: show.P, q: { b: show.q.mb } }) : tqAns ? h("p", { className: "en-ms" }, tqAns) : h(SchemeView, { s: ms })),
-    refOn && h("div", { className: "ana-refs" }, Object.keys(byYear).sort((x, y) => y - x).map((y) => h("div", { key: y, className: "ana-yr" }, h("b", null, y), h("span", null, byYear[y].map((u) => anaRef(u).replace(/ · \S+ \/ \S+ \d{4}| · [A-Za-z/ ]+ \d{4}/, (m) => m)).join(", "))))));
+    refOn && h("div", { className: "ana-refs" }, Object.keys(byYear).sort((x, y) => y - x).map((y) => h("div", { key: y, className: "ana-yr" }, h("b", null, y), h("div", { className: "ana-chips" }, byYear[y].map((u, k) => h("span", { key: k, className: "ana-ref" }, h("em", null, (SESS_NAME[u.q.sess] || SESS[u.q.sess] || "").replace(/\s+/g, "")), " ", paperCode(u.q).replace(/^\d{4}\//, "P"), " \u00B7 Q", String(u.q.q || u.q.qn || ""), u.p && u.p.l ? u.p.l : "")))))));
 }
 const anaClean = (s) => String(s || "")
   .replace(/\b(?:DATA SHEET|The Periodic Table of (?:the )?Elements|Permission to reproduce items|Cambridge (?:Assessment )?International Education is part|To avoid the issue of disclosure)[\s\S]*$/i, " ")
@@ -5119,7 +5273,7 @@ function ProfileMenu({ user, role, go, onLogout, dark, setDark }) {
       h("button", { onClick: () => { setOpen(false); window.dispatchEvent(new Event("em-show-intro")); } }, h(BookOpen, { size: 18 }), " How it works"),
       window.emInstall && !window.emIsApp && h("button", { onClick: () => { setOpen(false); window.emInstall(); } }, h(Download, { size: 18 }), " Install the app"),
       setDark && h("button", { className: "pm-theme", onClick: () => { setDark(!dark); } }, h(dark ? Sun : Moon, { size: 18 }), dark ? " Light mode" : " Dark mode"),
-      h("button", { className: "pm-out", onClick: onLogout }, h(ChevL, { size: 18 }), " Log out")));
+      h("button", { className: "pm-out", onClick: async () => { setOpen(false); if (await askConfirm("You will need your email and password to log in again.", { title: "Log out?", yes: "Log out", no: "Stay" })) onLogout(); } }, h(ChevL, { size: 18 }), " Log out")));
 }
 const BOTTOM_NAV = { Student: [["Dashboard", LayoutDashboard], ["My Classes", GraduationCap], ["Study", BookMarked], ["Past Papers", Library]], Teacher: [["Dashboard", LayoutDashboard], ["Classes", GraduationCap], ["Assignments", ClipboardList], ["Past Papers", Library]], Admin: [["Dashboard", LayoutDashboard], ["Users & Schools", Users], ["Payments", Sparkles], ["Settings", Settings]] };
 function BottomNav({ role, page, go, openMenu }) {
@@ -5140,7 +5294,7 @@ function StudentProgress({ results, go }) {
   const A = useQuery((db) => db.collection("assign"), []);
   const aBy = Object.fromEntries(A.docs.map((a) => [a.id, a]));
   const items = [];
-  (results || []).filter((r) => r && r.total > 0).forEach((r) => items.push({ name: "Practice exam", sub: String(r.subject || "Other").split(" ·")[0], pct: Math.round(Number(r.pct) || 0), t: resTime(r), kind: "Practice exam" }));
+  (results || []).filter((r) => r && r.total > 0).forEach((r) => items.push({ name: String(r.subject || "Other").split(" ·")[0] + " practice exam", sub: String(r.subject || "Other").split(" ·")[0], pct: Math.round(Number(r.pct) || 0), t: resTime(r), kind: "Practice exam" }));
   Object.entries(gr.data || {}).forEach(([aid, g]) => { if (g && g.max > 0) { const a = aBy[aid] || {}; items.push({ name: a.title || "Class task", sub: a.sub || "Other", pct: Math.round(g.total / g.max * 100), t: g.at || 0, kind: a.kind === "mock" ? "Class mock exam" : "Class task", marks: `${g.total}/${g.max}` }); } });
   Object.entries(mine.data || {}).forEach(([aid, s]) => { if (s && s.auto && s.auto.max > 0 && !(gr.data && gr.data[aid])) { const a = aBy[aid] || {}; items.push({ name: a.title || "Class task", sub: a.sub || "Other", pct: Math.round(s.auto.total / s.auto.max * 100), t: s.at || 0, kind: "Waiting for teacher", marks: `${s.auto.total}/${s.auto.max}` }); } });
   items.sort((a, b) => b.t - a.t);
@@ -5151,17 +5305,22 @@ function StudentProgress({ results, go }) {
   const bySub = Object.entries(bs).map(([s, L]) => ({ s, avg: av(L), n: L.length })).sort((a, b) => b.avg - a.avg);
   const P = perfStats(results);
   const chart = items.slice(0, 12).reverse().map((i) => ({ d: new Date(i.t || Date.now()).toLocaleDateString("en-GB", { day: "numeric", month: "short" }), score: i.pct }));
-  const head = h(Title, { eyebrow: "MY PROGRESS", title: "My progress", desc: "All your scores from practice exams and class tasks in one place." });
-  if (!items.length) return h(React.Fragment, null, head, h("div", { className: "panel mc-empty" }, h("div", { className: "mc-empty-ic" }, h(ChartNoAxesCombined, { size: 32 })), h("h3", null, "No scores yet"), h("p", null, "Do a practice exam or a class task. Your scores will show here."), h("button", { className: "btn-primary", onClick: () => go("My Classes") }, "Go to My Classes")));
+  const head = h(Title, { eyebrow: "MY PROGRESS", title: "My progress", desc: "Your scores from practice exams and class tasks." });
+  if (!items.length) return h(React.Fragment, null, head, h("div", { className: "panel mc-empty" }, h("div", { className: "mc-empty-ic" }, h(ChartNoAxesCombined, { size: 32 })), h("h3", null, "No scores yet"), h("p", null, "Do a practice exam or a class task. Your scores will show here."), h("button", { className: "btn-primary", onClick: () => go("Study") }, "Start practising")));
   const best = bySub[0], weak = bySub.length > 1 ? bySub[bySub.length - 1] : null;
+  const lvl = (p) => p >= 70 ? ["Strong", "g"] : p >= 50 ? ["Good", "b"] : p >= 35 ? ["Needs practice", "o"] : ["Weak", "r"];
+  const [lv, lc] = lvl(avg);
+  const sent = `Your average is ${avg}% from ${items.length} score${items.length === 1 ? "" : "s"}.` + (trend == null ? "" : trend > 0 ? ` Your last 5 scores are ${trend}% better than before.` : trend < 0 ? ` Your last 5 scores are ${-trend}% lower than before.` : " Your recent scores are steady.");
+  const last = items.slice(0, 8).reverse();
   return h(React.Fragment, null, head,
-    h("div", { className: "pg-top" },
-      h("div", { className: "panel pg-ring" }, h(ScoreRing, { pct: avg }), h("div", null, h("small", { className: "cd-tag" }, "MY AVERAGE SCORE"), h("h3", null, avg >= 70 ? "Great work!" : avg >= 50 ? "Good progress" : "Keep practising"), h("p", null, trend == null ? `From ${items.length} score${items.length === 1 ? "" : "s"}.` : trend >= 0 ? `Up ${trend}% on your last 5 scores.` : `Down ${-trend}% on your last 5 scores.`))),
-      h("div", { className: "pg-tiles" }, [["Scores", items.length, "tests and tasks"], ["Best subject", best ? best.avg + "%" : "–", best ? best.s : ""], ["Needs work", weak ? weak.avg + "%" : "–", weak ? weak.s : "Do more subjects"], ["Study streak", P.streak, P.streak === 1 ? "day" : "days"]].map(([l, v, s]) => h("div", { className: "panel pg-tile", key: l }, h("small", null, l), h("b", null, v), h("span", null, s))))),
-    h("div", { className: "pg-grid" },
-      h("div", { className: "panel" }, h("h3", null, "By subject"), bySub.map((x) => h("div", { className: "pg-sub", key: x.s }, h(SubjectBadge, { sub: x.s, size: 36 }), h("span", { className: "pg-sub-n" }, h("b", null, x.s), h("small", null, `${x.n} score${x.n === 1 ? "" : "s"}`)), h("span", { className: "pg-bar" }, h("i", { style: { width: x.avg + "%", background: x.avg >= 70 ? "#1e9e5a" : x.avg >= 50 ? "#2b86d6" : x.avg >= 35 ? "#e08a1e" : "#d64545" } })), h("b", { className: "pg-pct" }, x.avg + "%")))),
-      chart.length > 1 && h("div", { className: "panel" }, h("h3", null, "Scores over time"), h("div", { style: { height: 220 } }, h(ResponsiveContainer, { width: "100%", height: "100%" }, h(AreaChart, { data: chart }, h(CartesianGrid, { strokeDasharray: "3 5", vertical: false, stroke: "#8899aa33" }), h(XAxis, { dataKey: "d", axisLine: false, tickLine: false, tick: { fontSize: 12, fill: "#6b7c90" } }), h(YAxis, { domain: [0, 100], axisLine: false, tickLine: false, tick: { fontSize: 12, fill: "#6b7c90" }, tickFormatter: (v) => v + "%" }), h(Tooltip, { formatter: (v) => v + "%" }), h(Area, { type: "monotone", dataKey: "score", stroke: "#2b86d6", strokeWidth: 2.5, fill: "#2b86d622" })))))),
-    h("div", { className: "panel" }, h("h3", null, "Recent scores"), items.slice(0, 10).map((i, k) => h("div", { className: "pg-row", key: k }, h(SubjectBadge, { sub: i.sub, size: 36 }), h("span", { className: "pg-sub-n" }, h("b", null, i.name), h("small", null, `${i.kind} \xB7 ${i.sub}${i.t ? " \xB7 " + new Date(i.t).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : ""}`)), h("span", { className: "st-pill " + (i.pct >= 70 ? "st-done" : i.pct >= 50 ? "st-sent" : "st-todo") }, i.marks ? `${i.marks} \xB7 ${i.pct}%` : i.pct + "%")))));
+    h("div", { className: "panel pg2-hero lv-" + lc }, h(ScoreRing, { pct: avg }), h("div", null, h("span", { className: "pg2-lv" }, lv), h("p", null, sent))),
+    h("div", { className: "pg2-tiles" }, [["Tests done", items.length, "practice and class"], ["Study streak", P.streak, P.streak === 1 ? "day" : "days"], ["Best subject", best ? best.avg + "%" : "–", best ? best.s : ""], ["Practise more", weak ? weak.avg + "%" : "–", weak ? weak.s : "Try more subjects"]].map(([l, v, sub2]) => h("div", { className: "panel pg2-tile", key: l }, h("small", null, l), h("b", null, v), h("span", null, sub2)))),
+    h("div", { className: "panel" }, h("h3", { className: "pg2-h" }, "Subjects"), h("p", { className: "pg2-key" }, [["g", "Strong 70%+"], ["b", "Good 50%+"], ["o", "Needs practice"], ["r", "Weak"]].map(([c, t]) => h("span", { key: c }, h("i", { className: "dot-" + c }), t))),
+      bySub.map((x) => { const [t, c] = lvl(x.avg); return h("div", { className: "pg2-sub", key: x.s }, h(SubjectBadge, { sub: x.s, size: 36 }), h("div", { className: "pg2-sub-m" }, h("div", { className: "pg2-sub-t" }, h("b", null, x.s), h("span", { className: "pg2-pc c-" + c }, x.avg + "%")), h("span", { className: "pg2-bar" }, h("i", { className: "bg-" + c, style: { width: Math.max(3, x.avg) + "%" } })), h("small", null, `${t} \xB7 ${x.n} score${x.n === 1 ? "" : "s"}`))); })),
+    last.length > 1 && h("div", { className: "panel" }, h("h3", { className: "pg2-h" }, "Your last scores"), h("p", { className: "muted pg2-note" }, "Oldest on the left, newest on the right."),
+      h("div", { className: "pg2-chart" }, last.map((x, k) => { const [, c] = lvl(x.pct); return h("div", { key: k, className: "pg2-col" }, h("span", { className: "pg2-v" }, x.pct + "%"), h("div", { className: "pg2-cb" }, h("i", { className: "bg-" + c, style: { height: Math.max(4, x.pct) + "%" } })), h("small", null, x.t ? new Date(x.t).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "")); }))),
+    h("div", { className: "panel" }, h("h3", { className: "pg2-h" }, "Recent scores"), items.slice(0, 10).map((x, k) => { const [, c] = lvl(x.pct); return h("div", { className: "pg-row", key: k }, h(SubjectBadge, { sub: x.sub, size: 36 }), h("span", { className: "pg-sub-n" }, h("b", null, x.name), h("small", null, `${x.kind}${x.t ? " \xB7 " + new Date(x.t).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : ""}`)), h("span", { className: "pg2-pill c-" + c }, x.marks ? `${x.marks} \xB7 ${x.pct}%` : x.pct + "%")); })),
+    weak && h("button", { className: "btn-primary pg2-next", onClick: () => go("Study") }, `Practise ${weak.s} next`));
 }
 
 /* ===================== Teacher: question picker & task editor ===================== */
@@ -5343,6 +5502,15 @@ function StudentWork({ a, mine, grade, onBack, toast }) {
   const [view, setView] = useState(null);
   const submitted = mine && mine.status && mine.status !== "draft";
   const locked = submitted || a.closed;
+  const tmins = Number(a.mins) || (a.kind === "mock" ? Number((/Time allowed:\s*(\d+)/.exec(a.instr || "") || [])[1]) || 0 : 0);
+  const [started, setStarted] = useState(mine && mine.started || 0);
+  const [tleft, setTleft] = useState(null);
+  const subRef = React.useRef(null), timeRef = React.useRef(false);
+  useEffect(() => {
+    if (!tmins || !started || locked) return;
+    const tick = () => { const l = Math.max(0, Math.round((started + tmins * 60000 - Date.now()) / 1000)); setTleft(l); if (!l && !timeRef.current) { timeRef.current = true; subRef.current && subRef.current(true); } };
+    tick(); const t = setInterval(tick, 1000); return () => clearInterval(t);
+  }, [tmins, started, locked]);
   const write = async (data) => {
     if (!C.uid) throw new Error("Sign in to save your work.");
     const ref = C.db.doc("subs/" + C.uid), cur = await ref.get();
@@ -5350,14 +5518,14 @@ function StudentWork({ a, mine, grade, onBack, toast }) {
   };
   const draft = async () => { setBusy("save"); try { await write({ answers: ans, files, status: "draft", saved: Date.now() }); toast("Draft saved."); } catch (e) { toast(errText(e)); } setBusy(""); };
   const addFiles = async (e) => { const fs = [...e.target.files || []]; e.target.value = ""; if (!fs.length) return; setBusy("up"); try { const got = await uploadMany(fs); setFiles([...files, ...got]); toast("File added. Remember to submit."); } catch (e2) { toast(e2.message); } setBusy(""); };
-  const submit = async () => {
+  const submit = async (timeUp) => {
     const blank = a.items.filter((it) => !String(ans[it.id] || "").trim()).length;
-    if (blank && !files.length && !(await askConfirm(`${blank} question${blank > 1 ? "s are" : " is"} blank. Submit anyway?`))) return;
+    if (timeUp !== true && blank && !files.length && !(await askConfirm(`${blank} question${blank > 1 ? "s are" : " is"} blank. Submit anyway?`))) return;
     setBusy("submit");
     try {
-      const data = { answers: ans, files, status: "submitted", at: Date.now() };
+      const data = { answers: ans, files, status: "submitted", at: Date.now(), ...(started ? { started } : {}), ...(timeUp === true ? { timeUp: true } : {}) };
       await write(data);
-      toast("Submitted.");
+      if (timeUp === true) tellUser("Your time is over. Your answers have been sent to your teacher.", "Time is up"); else toast("Submitted.");
       if (a.items.length) {
         setBusy("mark");
         const imgs = [];
@@ -5371,12 +5539,23 @@ function StudentWork({ a, mine, grade, onBack, toast }) {
     } catch (e) { toast(errText(e)); }
     setBusy("");
   };
+  subRef.current = submit;
   const res = grade ? grade.items : mine && mine.auto ? mine.auto.items : null;
-  return h("div", { className: "panel" }, h("div", { className: "occ-head" }, h("h3", null, a.title), h("button", { className: "btn-secondary", onClick: onBack }, "Back")), h("p", { className: "muted" }, `${a.sub} \xB7 due ${fmtDue(a.due)} \xB7 ${a.total} marks`, a.closed ? " \xB7 closed" : ""), a.instr && h("p", null, a.instr), h(Attachments, { files: a.files, onView: setView }),
+  const begin = async () => {
+    if (!(await askConfirm(`You have ${tmins} minutes. The timer keeps running if you leave this page. When the time ends, your answers are sent to your teacher automatically.`, { title: "Start the test?", yes: "Start", no: "Not now" }))) return;
+    const t0 = Date.now(); setStarted(t0);
+    try { await write({ answers: ans, files, status: "draft", saved: t0, started: t0 }); } catch (e) { toast(errText(e)); }
+  };
+  if (tmins && !started && !locked) return h("div", { className: "panel tw-start" }, h("div", { className: "occ-head" }, h("h3", null, a.title), h("button", { className: "btn-secondary", onClick: onBack }, "Back")),
+    h("div", { className: "tw-facts" }, [["Time", `${tmins} min`], ["Questions", a.items.length], ["Marks", a.total]].map(([l, v]) => h("div", { key: l }, h("b", null, v), h("small", null, l)))),
+    h("p", { className: "muted" }, "When you start, the timer begins. When the time ends, your answers are sent to your teacher automatically."),
+    h("button", { className: "btn-primary tw-go", onClick: begin }, "Start test"));
+  const mm2 = tleft != null ? String(Math.floor(tleft / 60)).padStart(2, "0") + ":" + String(tleft % 60).padStart(2, "0") : "";
+  return h("div", { className: "panel" }, tmins && started && !locked && tleft != null && h("div", { className: tleft < 120 ? "tw-bar low" : "tw-bar" }, h(Clock3, { size: 16 }), h("span", null, "Time left"), h("b", null, mm2)), h("div", { className: "occ-head" }, h("h3", null, a.title), h("button", { className: "btn-secondary", onClick: onBack }, "Back")), h("p", { className: "muted" }, `${a.sub} \xB7 due ${fmtDue(a.due)} \xB7 ${a.total} marks`, a.closed ? " \xB7 closed" : ""), a.instr && h("p", null, a.instr), h(Attachments, { files: a.files, onView: setView }),
     grade ? h("div", { className: "grade-box" }, h("b", null, `Final mark: ${grade.total} / ${grade.max}`), grade.comment && h("p", null, grade.comment)) : mine && mine.auto ? h("div", { className: "grade-box" }, h(MarkSummary, { s: { total: mine.auto.total, max: mine.auto.max, pct: mine.auto.max ? Math.round(mine.auto.total / mine.auto.max * 100) : 0, grade: gradeFor(mine.auto.max ? Math.round(mine.auto.total / mine.auto.max * 100) : 0), flagged: mine.auto.flagged || 0 }, note: "Provisional mark from the official mark scheme. Your teacher confirms the final mark." })) : submitted ? h("div", { className: "grade-box" }, h("b", null, busy === "mark" ? "Marking…" : "Submitted – waiting for marking")) : null,
     a.items.map((it, i) => h("div", { className: "review-card", key: it.id }, h("b", null, `${i + 1}. `, h("small", { className: "muted" }, it.label, ` \xB7 ${it.marks} mark${it.marks > 1 ? "s" : ""}`)), h(ItemQ, { it }), it.mcq ? h("div", { className: "mcq-row" }, ["A", "B", "C", "D"].map((L) => h("label", { key: L, className: ans[it.id] === L ? "sel" : "" }, h("input", { type: "radio", name: it.id, disabled: locked, checked: ans[it.id] === L, onChange: () => setAns({ ...ans, [it.id]: L }) }), " ", L))) : h("textarea", { rows: 4, disabled: locked, value: ans[it.id] || "", onChange: (e) => setAns({ ...ans, [it.id]: e.target.value }), placeholder: "Your answer and working" }), res && res[it.id] && h(MarkResult, { r: res[it.id] }), grade && res && res[it.id] && res[it.id].comment && h("p", null, h("b", null, "Teacher: "), res[it.id].comment))),
     h("h4", null, "Your files"), h(Attachments, { files, onView: setView }), !locked && h("label", { className: "btn-secondary file-label" }, h(Upload, { size: 14 }), busy === "up" ? " Uploading…" : " Upload photo or PDF of your work", h("input", { type: "file", multiple: true, accept: "image/*,application/pdf", onChange: addFiles, disabled: !!busy || !C.assets })), !C.assets && !locked && h("p", { className: "muted" }, "File upload is not available for your account; type your answers instead."),
-    !locked && h("div", { className: "modal-actions" }, h("button", { className: "btn-secondary", disabled: !!busy, onClick: draft }, "Save draft"), h("button", { className: "btn-primary", disabled: !!busy, onClick: submit }, busy === "submit" ? "Submitting…" : "Submit")), view && h(FileViewer, { f: view, onClose: () => setView(null) }));
+    !locked && h("div", { className: "modal-actions" }, h("button", { className: "btn-secondary", disabled: !!busy, onClick: draft }, "Save draft"), h("button", { className: "btn-primary", disabled: !!busy, onClick: () => submit() }, busy === "submit" ? "Submitting…" : "Submit")), view && h(FileViewer, { f: view, onClose: () => setView(null) }));
 }
 function StudentAssignments({ toast }) {
   const C = useCloud();
@@ -5522,8 +5701,8 @@ function TeacherClasses({ toast }) {
 }
 /* ===================== Subject icons ===================== */
 const SUBJ_PATHS = {
-  English: [["path", {"d": "M8.1 7.81 6.06 13.35H10.15ZM7.25 6.32H8.96L13.2 17.46H11.64L10.62 14.6H5.6L4.59 17.46H3ZM18.26 13.26Q16.6 13.26 15.96 13.64Q15.32 14.02 15.32 14.94Q15.32 15.67 15.8 16.1Q16.28 16.53 17.11 16.53Q18.25 16.53 18.94 15.72Q19.63 14.91 19.63 13.57V13.26ZM21 12.69V17.46H19.63V16.19Q19.16 16.95 18.46 17.31Q17.76 17.68 16.74 17.68Q15.46 17.68 14.7 16.96Q13.94 16.24 13.94 15.03Q13.94 13.62 14.89 12.9Q15.83 12.19 17.7 12.19H19.63V12.05Q19.63 11.1 19 10.59Q18.38 10.07 17.26 10.07Q16.54 10.07 15.86 10.24Q15.18 10.41 14.55 10.75V9.49Q15.31 9.2 16.02 9.05Q16.73 8.9 17.4 8.9Q19.21 8.9 20.1 9.84Q21 10.78 21 12.69Z", "fill": "currentColor", "strokeWidth": 0.55}]],
-  Dhivehi: [["path", {"d": "M16.32 8.39Q16.9 8.39 17.7 8.01Q18.5 7.62 18.5 6.88Q18.5 6.39 18.06 5.97Q17.61 5.56 17.09 5.33Q16.56 5.1 16.11 4.77Q15.67 4.45 15.67 4.08Q15.67 3.62 15.9 3.31Q16.13 3 16.53 3Q17.27 3 17.73 3.28Q17.76 3.28 18.04 3.06Q18.32 2.85 18.43 2.78Q18.53 2.72 18.78 2.58Q19.03 2.45 19.26 2.4Q19.49 2.35 19.74 2.35Q21 2.35 21 3.43Q21 4.23 19.55 4.79Q19.61 4.85 19.81 5.03Q20.01 5.22 20.08 5.3Q20.14 5.37 20.28 5.56Q20.41 5.74 20.48 5.87Q20.54 5.99 20.58 6.19Q20.63 6.39 20.63 6.61Q20.63 8.15 19.54 9.21Q18.44 10.27 16.53 10.27Q14.71 10.27 13.79 9.72Q11.88 11.54 8.7 13.43Q5.53 15.33 4.33 15.33Q3 15.33 3 13.82Q3 13.33 3.29 12.79Q3.59 12.25 4.2 12.25Q4.39 12.25 4.76 12.55Q5.13 12.86 5.28 12.86Q6.36 12.86 8.69 11.32Q11.01 9.78 12.03 8.64Q11.66 8.21 11.66 7.78Q11.66 7.13 12.08 6.78Q12.49 6.42 13.14 6.42Q14.47 6.42 14.59 7.72Q15.48 8.39 16.32 8.39ZM18.04 15.14Q18.47 15.14 18.7 15.45Q18.93 15.76 18.93 16.07Q18.93 16.5 18.78 16.65Q17.49 17.95 14.07 19.8Q10.64 21.65 9.87 21.65Q8.83 21.65 8.83 20.51Q8.83 20.26 9.4 19.98Q9.97 19.71 11.23 19.12Q12.49 18.53 13.6 17.89Q14.9 17.09 15.82 16.44Q16.75 15.79 17.02 15.58Q17.3 15.36 17.52 15.25Q17.73 15.14 18.04 15.14Z", "fill": "currentColor", "strokeWidth": 1}]],
+  English: [["path", {"d": "M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2.5zM4 19.5A2 2 0 0 1 6 18h14"}], ["path", {"d": "M9.5 14l2.5-7 2.5 7M10.4 11.6h3.2"}]],
+  Dhivehi: [["path", {"d": "M20.5 11.5a8.5 8 0 0 1-12.2 7.2L3.5 20.5l1.6-4.3A8.5 8 0 1 1 20.5 11.5z"}], ["path", {"d": "M8.5 9.6c1.8 1.3 4.6 1.3 7-.6M9.5 13.6c1.4.8 3.2.6 4.6-.4"}]],
   Mathematics: [["path", {"d": "M7.5 4.5v6M4.5 7.5h6M13.5 7.5h6M5.2 14.7l4.6 4.6M9.8 14.7l-4.6 4.6M13.5 15.3h6M13.5 18.7h6"}]],
   Physics: [["circle", {"cx": 12, "cy": 12, "r": 1.5, "fill": "currentColor"}], ["ellipse", {"cx": 12, "cy": 12, "rx": 9, "ry": 3.6}], ["ellipse", {"cx": 12, "cy": 12, "rx": 9, "ry": 3.6, "transform": "rotate(60 12 12)"}], ["ellipse", {"cx": 12, "cy": 12, "rx": 9, "ry": 3.6, "transform": "rotate(120 12 12)"}]],
   Chemistry: [["path", {"d": "M14 2.5v5.7a2 2 0 0 0 .25.96l5.4 9.9A2 2 0 0 1 17.9 22H6.1a2 2 0 0 1-1.75-2.94l5.4-9.9A2 2 0 0 0 10 8.2V2.5M6.6 15h10.8M8.5 2.5h7"}]],
@@ -5531,7 +5710,7 @@ const SUBJ_PATHS = {
   "Business Studies": [["rect", {"x": 2.5, "y": 6.5, "width": 19, "height": 14, "rx": 2}], ["path", {"d": "M16 6.5V4.5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M21.5 13a18 18 0 0 1-19 0M12 12h.01"}]],
   Accounting: [["path", {"d": "M4.5 2.5v19l1.9-1 1.9 1 1.9-1 1.8 1 1.9-1 1.9 1 1.9-1 1.8 1v-19l-1.8 1-1.9-1-1.9 1-1.9-1-1.8 1-1.9-1-1.9 1-1.9-1zM15.5 8.2h-5a1.9 1.9 0 0 0 0 3.8h3a1.9 1.9 0 0 1 0 3.8h-5M12 6.5v11"}]],
   Economics: [["path", {"d": "M3.5 3.5v15a2 2 0 0 0 2 2h15M19.5 8l-5 5-4-4-3 3"}], ["path", {"d": "M15.5 8h4v4"}]],
-  Islam: [["path", {"d": "M12.5 3.2a6.5 6.5 0 0 0 8.3 8.3A8.8 8.8 0 1 1 12.5 3.2z"}], ["path", {"d": "m18.6 2.6.62 1.38 1.48.16-1.1 1 .3 1.46-1.3-.75-1.3.75.3-1.46-1.1-1 1.48-.16z", "fill": "currentColor", "strokeWidth": 0.8}]],
+  Islam: [["path", {"d": "M12.5 3.2a6.5 6.5 0 0 0 8.3 8.3A8.8 8.8 0 1 1 12.5 3.2z"}], ["path", {"d": "m18.6 2.6.62 1.38 1.48.16-1.1 1 .3 1.46-1.3-.75-1.3.75.3-1.46-1.1-1 1.48-.16z", "strokeWidth": 1.4}]],
   "Computer Science": [["rect", {"x": 2.5, "y": 4, "width": 19, "height": 13, "rx": 2}], ["path", {"d": "M8 21h8M12 17v4M9.8 8.3 7.5 10.5l2.3 2.2M14.2 8.3l2.3 2.2-2.3 2.2"}]],
   "Travel & Tourism": [["path", {"d": "M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"}]],
   Arabic: [["path", {"d": "M8.32 17.29Q9.68 19.1 13.58 19.1Q15.8 19.1 18.24 17.75V19.86Q16.51 21 13.64 21Q8.8 21 6.89 18.84Q5.76 17.56 5.76 15.25Q5.76 13.22 6.76 12.06Q8.06 10.55 8.95 10.26Q8.36 10.22 7.82 9.87Q6.81 9.23 6.81 7.74Q6.81 5.34 9.16 3.89Q10.58 3 13.48 3V4.94Q11.24 4.94 9.9 5.69Q8.83 6.29 8.83 7.48Q8.83 8.34 9.39 8.63Q9.9 8.91 10.43 8.91Q10.89 8.91 11.36 8.7Q13.18 7.91 16.1 7.57V9.69Q12.96 9.99 10.25 11.7Q7.84 13.21 7.84 15.33Q7.84 16.68 8.32 17.29Z", "fill": "currentColor", "strokeWidth": 0.9}]]
@@ -5539,7 +5718,7 @@ const SUBJ_PATHS = {
 const SUBJ_TONE = { English: "#dc2626", "Business Studies": "#ea580c", Economics: "#ca8a04", Biology: "#65a30d", Islam: "#059669", Chemistry: "#0891b2", Mathematics: "#2563eb", Physics: "#7c3aed", Dhivehi: "#c026d3", "Travel & Tourism": "#db2777", Accounting: "#92400e", "Computer Science": "#475569", Arabic: "#0f766e" };
 function SubjectIcon({ sub, size = 22 }) {
   const parts = SUBJ_PATHS[sub] || [["path", { d: "M5 4h10l4 4v12H5zM15 4v4h4M8 12h8M8 16h6" }]];
-  return h("svg", { className: "si si-" + (SUBJ_CODE[sub] || "x"), width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true }, parts.map(([t, p, kid], i) => h(t, { key: i, ...p }, kid)));
+  return h("svg", { className: "si si-" + (SUBJ_CODE[sub] || "x"), width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true }, parts.map(([t, p, kid], i) => h(t, { key: i, pathLength: 1, ...p }, kid)));
 }
 function SubjectBadge({ sub, size = 44 }) {
   const c = SUBJ_TONE[sub] || "#3f6b9a";
@@ -5830,7 +6009,7 @@ const STUDY_RES = [
 ];
 const LANG_SUBS = ["English", "Dhivehi"];
 const slugT = (t) => String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
-const CONTENT_V = "20261120a";
+const CONTENT_V = "20261120b";
 const tqCache = {}, tqTopicCache = {};
 function useTQ(sub) {
   const code = SUBJ_CODE[sub];
@@ -5888,6 +6067,8 @@ function QBody({ P, q }) {
     ? h("div", { key: i, className: "qfig-row", style: { maxWidth: b[1].reduce((a, x) => a + x[3], 0) + "px" } }, b[1].map((x, k) => h("div", { key: k, style: { flex: `${x[3]} 1 0` } }, fig(x, k))))
     : b[0] === "o"
     ? h("p", { key: i, className: "qopt" }, h("b", null, b[1]), h("span", { dangerouslySetInnerHTML: { __html: b[2] } }))
+    : b[0] === "p" && i > 0 && (B[i - 1][0] === "f" || B[i - 1][0] === "row") && String(b[1]).length <= 40 && FIG_LAB.test(String(b[1]).replace(/<[^>]+>/g, "").trim())
+    ? h("p", { key: i, className: "qfig-cap" }, "Values shown in the diagram: ", String(b[1]).replace(/<[^>]+>/g, "").trim().replace(/\s+(?=[\d.]+\s*[a-zA-Zµ°Ω%/])/g, " · "))
     : b[0] === "p"
     ? h("p", { key: i, className: /^\(\w{1,4}\)/.test(b[1]) ? "qp qpart" : "qp", dangerouslySetInnerHTML: { __html: b[1].replace(/^(\(\w{1,4}\))/, "<b>$1</b>") } })
     : fig(b, i)));
@@ -6310,12 +6491,13 @@ function EnBuilder({ sub, toast }) {
   const [ans, setAns] = useState({});
   const [mk, setMk] = useState({});
   const [done, setDone] = useState(false);
+  const enFinRef = React.useRef(null);
   const [left, setLeft] = useState(0);
   const [results, setResults] = useLocal("em-results", []);
   const [psg, setPsg] = useState({});
   useEffect(() => {
     if (!test || done || !test.mins) return;
-    const t = setInterval(() => { const l = Math.max(0, Math.round((test.end - Date.now()) / 1000)); setLeft(l); if (!l) finish(); }, 1000);
+    const t = setInterval(() => { const l = Math.max(0, Math.round((test.end - Date.now()) / 1000)); setLeft(l); if (!l) { clearInterval(t); enFinRef.current && enFinRef.current(true); } }, 1000);
     return () => clearInterval(t);
   }, [test, done]);
   const score = React.useMemo(() => {
@@ -6347,6 +6529,7 @@ function EnBuilder({ sub, toast }) {
     setTest({ id: Date.now(), items: pick, mins, end: Date.now() + mins * 60000, label }); setAns({}); setMk(init); setDone(false); setLeft(mins * 60); setPsg({});
     window.scrollTo({ top: 0 });
   };
+  enFinRef.current = (tu) => { if (tu === true) tellUser("Your time is over. Your work has been handed in and marked.", "Time is up"); finish(); };
   function finish() {
     setDone(true);
     setMk((m) => {
@@ -6405,7 +6588,7 @@ function BuilderView({ sub, toast, preset, onExit }) {
   const [sel, setSel] = useState([]);
   const [kind, setKind] = useState("mix");
   const [n, setN] = useState(10);
-  const [mins, setMins] = useState(20);
+  const [mins, setMins] = useState("auto");
   const [test, setTest] = useState(null);
   const [ans, setAns] = useState({});
   const [done, setDone] = useState(false);
@@ -6429,13 +6612,15 @@ function BuilderView({ sub, toast, preset, onExit }) {
     const id = test.end - (test.mins || 0) * 60000;
     setResults((r) => [{ id, date: new Date(id).toLocaleDateString("en-GB"), subject: `${sub} \xB7 practice test`, count: test.qs.length, score: live.sc, total: live.tot, pct, grade: gradeFor(pct) }, ...(r || []).filter((x) => x.id !== id)].slice(0, 30));
   }, [live && live.sc, live && live.tot]);
-  useEffect(() => { setSel([]); setTest(null); setN(langB ? 2 : 10); setMins(langB ? 60 : 20); }, [sub]);
+  useEffect(() => { setSel([]); setTest(null); setN(langB ? 2 : 10); setMins("auto"); }, [sub]);
   const startedRef = React.useRef(false);
+  const finRef = React.useRef(null), doneRef = React.useRef(false);
+  useEffect(() => { if (test && !done) doneRef.current = false; }, [test, done]);
   useEffect(() => { if (preset) { setTest({ qs: preset.qs, mins: preset.mins, end: Date.now() + preset.mins * 60000 }); setAns({}); setDone(false); setScore(null); setSm({}); setLeft(preset.mins * 60); window.scrollTo({ top: 0 }); } }, [preset]);
   useEffect(() => { if (test) startedRef.current = true; else if (preset && startedRef.current && onExit) onExit(); }, [test]);
   useEffect(() => {
     if (!test || done || !test.mins) return;
-    const t = setInterval(() => { const l = Math.max(0, Math.round((test.end - Date.now()) / 1000)); setLeft(l); if (!l) finish(); }, 1000);
+    const t = setInterval(() => { const l = Math.max(0, Math.round((test.end - Date.now()) / 1000)); setLeft(l); if (!l) { clearInterval(t); finRef.current && finRef.current(true); } }, 1000);
     return () => clearInterval(t);
   }, [test, done]);
   if (loading) return h("p", { className: "muted" }, "Loading…");
@@ -6453,11 +6638,16 @@ function BuilderView({ sub, toast, preset, onExit }) {
     setBusy(false);
     if (!all.length) { toast("Could not load questions. Check your connection and try again."); return; }
     const qs = [...all].sort(() => Math.random() - 0.5).slice(0, Math.min(n, maxN));
-    setTest({ qs, mins, end: Date.now() + mins * 60000 }); setAns({}); setDone(false); setScore(null); setSm({}); setLeft(mins * 60);
+    const mk = qs.reduce((a, q) => a + (Number(q.m) || 1), 0);
+    const tm = mins === "auto" ? Math.max(5, Math.ceil(mk * (langB ? 1.5 : 1.2) / 5) * 5) : mins;
+    setTest({ qs, mins: tm, end: Date.now() + tm * 60000 }); setAns({}); setDone(false); setScore(null); setSm({}); setLeft(tm * 60);
     window.scrollTo({ top: 0 });
   };
-  async function finish() {
-    if (!test) return;
+  finRef.current = finish;
+  async function finish(timeUp) {
+    if (!test || doneRef.current) return;
+    doneRef.current = true;
+    if (timeUp === true) tellUser(preset ? "Your time is over. Your answers have been handed in and marked." : "Your time is over. Your test has been handed in and marked. Scroll down to see your marks.", "Time is up");
     setDone(true); setBusy(true);
     let mc = 0, tot = 0; const items = [], idx = [], auto = {};
     const canAI = true;
@@ -6490,7 +6680,7 @@ function BuilderView({ sub, toast, preset, onExit }) {
           h("div", { className: "eb-grid" }, topics.map((t) => h("button", { key: t, className: sel.includes(t) ? "eb-t on" : "eb-t", onClick: () => tog(t) }, h("span", { className: "eb-box" }, sel.includes(t) ? h(CheckCircle2, { size: 16 }) : null), h("span", { className: "eb-tn" }, t), h("small", null, count[t])))))),
       data.topics.some((T) => T.m > 0) && h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Question type"), seg(kind, setKind, [["mix", "Mixed"], ["mcq", "MCQ"], ["str", "Written"]])),
       h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Questions"), seg(n, setN, (langB ? [[1, "1"], [2, "2"], [3, "3"], [5, "5"]] : [[5, "5"], [10, "10"], [20, "20"], [30, "30"]]).filter(([k]) => k <= maxN))),
-      h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Time limit"), seg(mins, setMins, langB ? [[0, "Off"], [30, "30 min"], [60, "1 hour"], [90, "1 h 30"], [120, "2 hours"]] : [[0, "Off"], [10, "10 min"], [20, "20 min"], [45, "45 min"]])), langB && h("p", { className: "muted" }, "Questions come from real past papers, with the reading texts included. Compare your answers with the official mark scheme when you finish.")),
+      h("div", { className: "eb-row" }, h("span", { className: "lf-lbl" }, "Time limit"), seg(mins, setMins, [["auto", "Exam time"], [0, "No limit"]]), h("p", { className: "eb-note" }, mins === "auto" ? "Set from the marks, like the real exam (about 1 minute for each mark). The test hands itself in when the time ends." : "No timer. Finish when you are ready.")), langB && h("p", { className: "muted" }, "Questions come from real past papers, with the reading texts included. Compare your answers with the official mark scheme when you finish.")),
     gate.level < 1 && h("p", { className: "tq-free" }, `Free plan: ${gate.left("build")} practice paper left, up to 10 questions.`),
     h("button", { className: "btn-primary eb-start", disabled: !poolN || busy, onClick: start }, busy ? "Loading questions\u2026" : poolN ? `Start test \xB7 ${Math.min(n, maxN, poolN)} questions` : "No questions match"));
 }
@@ -6685,7 +6875,7 @@ function App() {
   const activeNav = navByRole[role] || navByRole.Student || [];
   return /* @__PURE__ */ React.createElement("div", { className: "app-shell" }, h(UpgradeModal, { go: setPage }), h(ConfirmHost), /* @__PURE__ */ React.createElement("aside", { className: `sidebar ${mobileOpen ? "open" : ""}` }, /* @__PURE__ */ React.createElement("div", { className: "brand" }, /* @__PURE__ */ React.createElement("div", { className: "brand-mark" }, /* @__PURE__ */ React.createElement(GraduationCap, { size: 23 })), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("b", null, "Edu", /* @__PURE__ */ React.createElement("span", null, "Maldives")), /* @__PURE__ */ React.createElement("small", null, "SMART LEARNING PORTAL")), /* @__PURE__ */ React.createElement("button", { className: "mobile-close", onClick: () => setMobileOpen(false) }, /* @__PURE__ */ React.createElement(X, null))), h("nav", { className: "side-nav" }, activeNav.map(([label, Icon]) => h("button", { key: label, className: `nav-item ${page === label ? "active" : ""}`, onClick: () => { setPage(label); setMobileOpen(false); setQuery(""); } }, h(Icon, { size: 20 }), h("span", null, pageLabel(label)), LOCKED_PAGES.has(label) && isFreePlan() && h(LockIc)))),
     h("div", { className: "side-acct" }, role !== "Admin" && h("div", { className: "side-acct-row" }, [["Plans", Sparkles], ["Account", Settings]].map(([label, Icon]) => h("button", { key: label, className: `side-tile ${page === label ? "active" : ""}`, onClick: () => { setPage(label); setMobileOpen(false); } }, h(Icon, { size: 19 }), h("span", null, label === "Account" ? "My account" : label), LOCKED_PAGES.has(label) && isFreePlan() && h(LockIc)))),
-      h("div", { className: "side-me" }, h("span", { className: "avatar" }, initials(user.name || role)), h("span", { className: "side-me-n" }, h("b", null, user.name || role + " account"), h("small", null, role)), h("button", { className: "side-out", onClick: () => { setAdminOk(false); setUser(null); } }, "Log out")))), mobileOpen && /* @__PURE__ */ React.createElement("div", { className: "scrim", onClick: () => setMobileOpen(false) }), /* @__PURE__ */ React.createElement("main", { className: "main-area" }, /* @__PURE__ */ React.createElement("header", { className: "topbar" }, page !== "Dashboard" && h("button", { className: "tb-back", onClick: goBack, "aria-label": "Go back" }, h(ChevL, { size: 22 }), h("span", null, "Back")), (() => { const L = role === "Student" && page === "Assignments" ? "Tasks for everyone" : pageLabel(page); const S = SHORT_TITLE[L] || L; return h("div", { className: "tb-title", title: L }, h("span", { className: "tl-long" }, L), h("span", { className: "tl-short" }, S)); })(), h("div", { className: "top-actions" }, h("span", { className: "tb-theme" }, h(ThemeButton, { dark, setDark })), h(NotifBell, { role, go: setPage, toast }), h(ProfileMenu, { user, role, dark, setDark, go: setPage, onLogout: () => { setAdminOk(false); try { window.__SB && window.__SB.auth.signOut().then(() => location.reload()); } catch (e) {} setUser(null); } }))), /* @__PURE__ */ React.createElement("div", { className: "page-content" }, page === "Dashboard" && /* @__PURE__ */ React.createElement(Dashboard, { role, papers, questions, setPage, chartData, toast, results, user }), (page === "Past Papers" || page === "Past Paper Library") && /* @__PURE__ */ React.createElement(LibraryTabs, { questions, role, toast, saveQuestions }), page === "Study" && h(StudyPage, { role, toast, setPage }), page === "Practice Questions" && /* @__PURE__ */ React.createElement(RepeatBank, { role, toast, mode: "practice", key: "practice" }), page === "Repeated Questions" && /* @__PURE__ */ React.createElement(RepeatBank, { role, toast }), (page === "Question Bank" || page === "Question Management") && /* @__PURE__ */ React.createElement(QuestionPage, { questions: filteredQuestions, role, setShowAdd, setSelectedQuestion, subjectFilter, setSubjectFilter, gradeFilter, setGradeFilter, page }), page === "Mock Examinations" && /* @__PURE__ */ React.createElement(MockCentre, { questions, saveQuestions, results, setResults, toast }), page === "My Performance" && role === "Student" ? h(StudentProgress, { results, go: setPage }) : page === "My Performance" || page === "Class Analytics" || page === "Platform Analytics" ? /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(AnalyticsPage, { role, chartData, questions, results }), page === "My Performance" && /* @__PURE__ */ React.createElement(ResultsHistory, { results })) : null, page === "Saved Questions" && /* @__PURE__ */ React.createElement(SavedPage2, { questions, saved, setSaved, setSelectedQuestion }), page === "Study Planner" && /* @__PURE__ */ React.createElement(PlannerPage2, { toast }), page === "Paper Builder" && /* @__PURE__ */ React.createElement(TeacherBuilder, { questions, saveQuestions, toast, setShowAdd }), page === "Assignments" && /* @__PURE__ */ React.createElement(AssignmentsHub, { role, toast }), page === "Classes" && h(TeacherClasses, { toast }), page === "My Classes" && h(StudentClasses, { toast, user, questions, saveQuestions, results, setResults }), page === "Students" || page === "Users & Schools" ? /* @__PURE__ */ React.createElement(AdminUsers, { role, toast }) : null, page === "Curriculum & Subjects" && /* @__PURE__ */ React.createElement(CurriculumPage, null), page === "Content Approval" && /* @__PURE__ */ React.createElement(ApprovalPage, { papers, toast }), page === "Settings" && /* @__PURE__ */ React.createElement(AdminSettings, { toast }), page === "Plans" && /* @__PURE__ */ React.createElement(SubscribePage, { user, subs: subsV, setSubs: setSubsV, pays: paysV, setPays: setPaysV, go: setPage, toast }), page === "Account" && /* @__PURE__ */ React.createElement(AccountPage, { user, setUser, subs: subsV, setSubs: setSubsV, pays: paysV, setPays: setPaysV, go: setPage, toast }), page === "Payments" && /* @__PURE__ */ React.createElement(AdminPayments, { pays, setPays, subMap, setSubMap, toast }))), showAdd && /* @__PURE__ */ React.createElement(Modal, { title: role === "Teacher" ? "Add a question" : page.toLowerCase().includes("paper") ? "Add past paper" : "Add question", onClose: () => setShowAdd(false) }, /* @__PURE__ */ React.createElement("form", { className: "modal-form", onSubmit: page.toLowerCase().includes("paper") ? addPaper : addQuestion }, page.toLowerCase().includes("paper") ? /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Field, { label: "Subject" }, /* @__PURE__ */ React.createElement("select", { name: "subject" }, subjects.map((s) => /* @__PURE__ */ React.createElement("option", null, s)))), /* @__PURE__ */ React.createElement(Field, { label: "Grade" }, /* @__PURE__ */ React.createElement("select", { name: "grade" }, ["Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"].map((s) => /* @__PURE__ */ React.createElement("option", null, s)))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Field, { label: "Year" }, /* @__PURE__ */ React.createElement("input", { name: "year", type: "number", defaultValue: "2025", required: true })), /* @__PURE__ */ React.createElement(Field, { label: "Marks" }, /* @__PURE__ */ React.createElement("input", { name: "marks", type: "number", defaultValue: "80", required: true }))), /* @__PURE__ */ React.createElement(Field, { label: "Examination type" }, /* @__PURE__ */ React.createElement("select", { name: "type" }, /* @__PURE__ */ React.createElement("option", null, "SSC"), /* @__PURE__ */ React.createElement("option", null, "School examination"), /* @__PURE__ */ React.createElement("option", null, "Mock examination"))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Field, { label: "Paper" }, /* @__PURE__ */ React.createElement("input", { name: "paper", defaultValue: "Paper 1" })), /* @__PURE__ */ React.createElement(Field, { label: "Duration" }, /* @__PURE__ */ React.createElement("input", { name: "duration", defaultValue: "2 hours" })))) : /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Field, { label: "Question" }, /* @__PURE__ */ React.createElement("textarea", { name: "question", placeholder: "Enter the question...", required: true })), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Field, { label: "Subject" }, /* @__PURE__ */ React.createElement("select", { name: "subject" }, subjects.map((s) => /* @__PURE__ */ React.createElement("option", null, s)))), /* @__PURE__ */ React.createElement(Field, { label: "Grade" }, /* @__PURE__ */ React.createElement("select", { name: "grade" }, ["Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"].map((s) => /* @__PURE__ */ React.createElement("option", null, s))))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Field, { label: "Topic" }, /* @__PURE__ */ React.createElement("input", { name: "topic", placeholder: "e.g. Algebra", required: true })), /* @__PURE__ */ React.createElement(Field, { label: "Marks" }, /* @__PURE__ */ React.createElement("input", { name: "marks", type: "number", defaultValue: "4" }))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Field, { label: "Question type" }, /* @__PURE__ */ React.createElement("select", { name: "type" }, /* @__PURE__ */ React.createElement("option", null, "Structured"), /* @__PURE__ */ React.createElement("option", null, "MCQ"), /* @__PURE__ */ React.createElement("option", null, "Short answer"), /* @__PURE__ */ React.createElement("option", null, "Essay"), /* @__PURE__ */ React.createElement("option", null, "Calculation"))), /* @__PURE__ */ React.createElement(Field, { label: "Difficulty" }, /* @__PURE__ */ React.createElement("select", { name: "difficulty" }, /* @__PURE__ */ React.createElement("option", null, "Easy"), /* @__PURE__ */ React.createElement("option", null, "Medium"), /* @__PURE__ */ React.createElement("option", null, "Hard")))), /* @__PURE__ */ React.createElement(Field, { label: "Model answer / marking guidance" }, /* @__PURE__ */ React.createElement("textarea", { name: "answer", placeholder: "Enter answer or marking guidance..." }))), /* @__PURE__ */ React.createElement("div", { className: "modal-actions" }, /* @__PURE__ */ React.createElement("button", { type: "button", className: "btn-secondary", onClick: () => setShowAdd(false) }, "Cancel"), /* @__PURE__ */ React.createElement("button", { className: "btn-primary", type: "submit" }, /* @__PURE__ */ React.createElement(Plus, { size: 16 }), " Save")))), selectedQuestion && /* @__PURE__ */ React.createElement(Modal, { title: "Question details", onClose: () => setSelectedQuestion(null) }, /* @__PURE__ */ React.createElement(QuestionDetail2, { q: selectedQuestion, saved, setSaved, role, onDelete: deleteQuestion, toast })), notice && /* @__PURE__ */ React.createElement("div", { className: "toast" }, /* @__PURE__ */ React.createElement(CheckCircle2, { size: 17 }), notice), h(BottomNav, { role, page, go: (p) => { setPage(p); setMobileOpen(false); }, openMenu: () => setMobileOpen(true) }), /* @__PURE__ */ React.createElement("footer", { className: "app-footer" }, /* @__PURE__ */ React.createElement("span", null, "\xA9 2026 EduMaldives"), /* @__PURE__ */ React.createElement("span", null, "Built for learning across the Maldives ", /* @__PURE__ */ React.createElement("span", { className: "heart" }, "\u2665"))));
+      h("div", { className: "side-me" }, h("span", { className: "avatar" }, initials(user.name || role)), h("span", { className: "side-me-n" }, h("b", null, user.name || role + " account"), h("small", null, role)), h("button", { className: "side-out", onClick: async () => { if (await askConfirm("You will need your email and password to log in again.", { title: "Log out?", yes: "Log out", no: "Stay" })) { setAdminOk(false); setUser(null); } } }, "Log out")))), mobileOpen && /* @__PURE__ */ React.createElement("div", { className: "scrim", onClick: () => setMobileOpen(false) }), /* @__PURE__ */ React.createElement("main", { className: "main-area" }, /* @__PURE__ */ React.createElement("header", { className: "topbar" }, page !== "Dashboard" && h("button", { className: "tb-back", onClick: goBack, "aria-label": "Go back" }, h(ChevL, { size: 22 }), h("span", null, "Back")), (() => { const L = role === "Student" && page === "Assignments" ? "Tasks for everyone" : pageLabel(page); const S = SHORT_TITLE[L] || L; return h("div", { className: "tb-title", title: L }, h("span", { className: "tl-long" }, L), h("span", { className: "tl-short" }, S)); })(), h("div", { className: "top-actions" }, h("span", { className: "tb-theme" }, h(ThemeButton, { dark, setDark })), h(NotifBell, { role, go: setPage, toast }), h(ProfileMenu, { user, role, dark, setDark, go: setPage, onLogout: () => { setAdminOk(false); try { window.__SB && window.__SB.auth.signOut().then(() => location.reload()); } catch (e) {} setUser(null); } }))), /* @__PURE__ */ React.createElement("div", { className: "page-content" }, page === "Dashboard" && /* @__PURE__ */ React.createElement(Dashboard, { role, papers, questions, setPage, chartData, toast, results, user }), (page === "Past Papers" || page === "Past Paper Library") && /* @__PURE__ */ React.createElement(LibraryTabs, { questions, role, toast, saveQuestions }), page === "Study" && h(StudyPage, { role, toast, setPage }), page === "Practice Questions" && /* @__PURE__ */ React.createElement(RepeatBank, { role, toast, mode: "practice", key: "practice" }), page === "Repeated Questions" && /* @__PURE__ */ React.createElement(RepeatBank, { role, toast }), (page === "Question Bank" || page === "Question Management") && /* @__PURE__ */ React.createElement(QuestionPage, { questions: filteredQuestions, role, setShowAdd, setSelectedQuestion, subjectFilter, setSubjectFilter, gradeFilter, setGradeFilter, page }), page === "Mock Examinations" && /* @__PURE__ */ React.createElement(MockCentre, { questions, saveQuestions, results, setResults, toast }), page === "My Performance" && role === "Student" ? h(StudentProgress, { results, go: setPage }) : page === "My Performance" || page === "Class Analytics" || page === "Platform Analytics" ? /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(AnalyticsPage, { role, chartData, questions, results }), page === "My Performance" && /* @__PURE__ */ React.createElement(ResultsHistory, { results })) : null, page === "Saved Questions" && /* @__PURE__ */ React.createElement(SavedPage2, { questions, saved, setSaved, setSelectedQuestion }), page === "Study Planner" && /* @__PURE__ */ React.createElement(PlannerPage2, { toast }), page === "Paper Builder" && /* @__PURE__ */ React.createElement(TeacherBuilder, { questions, saveQuestions, toast, setShowAdd }), page === "Assignments" && /* @__PURE__ */ React.createElement(AssignmentsHub, { role, toast }), page === "Classes" && h(TeacherClasses, { toast }), page === "My Classes" && h(StudentClasses, { toast, user, questions, saveQuestions, results, setResults }), page === "Students" || page === "Users & Schools" ? /* @__PURE__ */ React.createElement(AdminUsers, { role, toast }) : null, page === "Curriculum & Subjects" && /* @__PURE__ */ React.createElement(CurriculumPage, null), page === "Content Approval" && /* @__PURE__ */ React.createElement(ApprovalPage, { papers, toast }), page === "Settings" && /* @__PURE__ */ React.createElement(AdminSettings, { toast }), page === "Plans" && /* @__PURE__ */ React.createElement(SubscribePage, { user, subs: subsV, setSubs: setSubsV, pays: paysV, setPays: setPaysV, go: setPage, toast }), page === "Account" && /* @__PURE__ */ React.createElement(AccountPage, { user, setUser, subs: subsV, setSubs: setSubsV, pays: paysV, setPays: setPaysV, go: setPage, toast }), page === "Payments" && /* @__PURE__ */ React.createElement(AdminPayments, { pays, setPays, subMap, setSubMap, toast }))), showAdd && /* @__PURE__ */ React.createElement(Modal, { title: role === "Teacher" ? "Add a question" : page.toLowerCase().includes("paper") ? "Add past paper" : "Add question", onClose: () => setShowAdd(false) }, /* @__PURE__ */ React.createElement("form", { className: "modal-form", onSubmit: page.toLowerCase().includes("paper") ? addPaper : addQuestion }, page.toLowerCase().includes("paper") ? /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Field, { label: "Subject" }, /* @__PURE__ */ React.createElement("select", { name: "subject" }, subjects.map((s) => /* @__PURE__ */ React.createElement("option", null, s)))), /* @__PURE__ */ React.createElement(Field, { label: "Grade" }, /* @__PURE__ */ React.createElement("select", { name: "grade" }, ["Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"].map((s) => /* @__PURE__ */ React.createElement("option", null, s)))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Field, { label: "Year" }, /* @__PURE__ */ React.createElement("input", { name: "year", type: "number", defaultValue: "2025", required: true })), /* @__PURE__ */ React.createElement(Field, { label: "Marks" }, /* @__PURE__ */ React.createElement("input", { name: "marks", type: "number", defaultValue: "80", required: true }))), /* @__PURE__ */ React.createElement(Field, { label: "Examination type" }, /* @__PURE__ */ React.createElement("select", { name: "type" }, /* @__PURE__ */ React.createElement("option", null, "SSC"), /* @__PURE__ */ React.createElement("option", null, "School examination"), /* @__PURE__ */ React.createElement("option", null, "Mock examination"))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Field, { label: "Paper" }, /* @__PURE__ */ React.createElement("input", { name: "paper", defaultValue: "Paper 1" })), /* @__PURE__ */ React.createElement(Field, { label: "Duration" }, /* @__PURE__ */ React.createElement("input", { name: "duration", defaultValue: "2 hours" })))) : /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Field, { label: "Question" }, /* @__PURE__ */ React.createElement("textarea", { name: "question", placeholder: "Enter the question...", required: true })), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Field, { label: "Subject" }, /* @__PURE__ */ React.createElement("select", { name: "subject" }, subjects.map((s) => /* @__PURE__ */ React.createElement("option", null, s)))), /* @__PURE__ */ React.createElement(Field, { label: "Grade" }, /* @__PURE__ */ React.createElement("select", { name: "grade" }, ["Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"].map((s) => /* @__PURE__ */ React.createElement("option", null, s))))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Field, { label: "Topic" }, /* @__PURE__ */ React.createElement("input", { name: "topic", placeholder: "e.g. Algebra", required: true })), /* @__PURE__ */ React.createElement(Field, { label: "Marks" }, /* @__PURE__ */ React.createElement("input", { name: "marks", type: "number", defaultValue: "4" }))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Field, { label: "Question type" }, /* @__PURE__ */ React.createElement("select", { name: "type" }, /* @__PURE__ */ React.createElement("option", null, "Structured"), /* @__PURE__ */ React.createElement("option", null, "MCQ"), /* @__PURE__ */ React.createElement("option", null, "Short answer"), /* @__PURE__ */ React.createElement("option", null, "Essay"), /* @__PURE__ */ React.createElement("option", null, "Calculation"))), /* @__PURE__ */ React.createElement(Field, { label: "Difficulty" }, /* @__PURE__ */ React.createElement("select", { name: "difficulty" }, /* @__PURE__ */ React.createElement("option", null, "Easy"), /* @__PURE__ */ React.createElement("option", null, "Medium"), /* @__PURE__ */ React.createElement("option", null, "Hard")))), /* @__PURE__ */ React.createElement(Field, { label: "Model answer / marking guidance" }, /* @__PURE__ */ React.createElement("textarea", { name: "answer", placeholder: "Enter answer or marking guidance..." }))), /* @__PURE__ */ React.createElement("div", { className: "modal-actions" }, /* @__PURE__ */ React.createElement("button", { type: "button", className: "btn-secondary", onClick: () => setShowAdd(false) }, "Cancel"), /* @__PURE__ */ React.createElement("button", { className: "btn-primary", type: "submit" }, /* @__PURE__ */ React.createElement(Plus, { size: 16 }), " Save")))), selectedQuestion && /* @__PURE__ */ React.createElement(Modal, { title: "Question details", onClose: () => setSelectedQuestion(null) }, /* @__PURE__ */ React.createElement(QuestionDetail2, { q: selectedQuestion, saved, setSaved, role, onDelete: deleteQuestion, toast })), notice && /* @__PURE__ */ React.createElement("div", { className: "toast" }, /* @__PURE__ */ React.createElement(CheckCircle2, { size: 17 }), notice), h(BottomNav, { role, page, go: (p) => { setPage(p); setMobileOpen(false); }, openMenu: () => setMobileOpen(true) }), /* @__PURE__ */ React.createElement("footer", { className: "app-footer" }, /* @__PURE__ */ React.createElement("span", null, "\xA9 2026 EduMaldives"), /* @__PURE__ */ React.createElement("span", null, "Built for learning across the Maldives ", /* @__PURE__ */ React.createElement("span", { className: "heart" }, "\u2665"))));
 }
 /* ===================== Real dashboard data ===================== */
 const TRENDING = [{"sub": "Chemistry", "topic": "Chemical reactions", "n": 36, "t": "Describe how impure water is treated so that it can be used for drinking."}, {"sub": "Chemistry", "topic": "Organic chemistry", "n": 12, "t": "Ethanol is prepared by fermentation; describe how ethanol is separated from the fermentation mixture."}, {"sub": "Mathematics", "topic": "Geometry", "n": 165, "t": "Describe fully the single transformation that maps triangle A onto triangle B."}, {"sub": "Mathematics", "topic": "Algebra", "n": 108, "t": "Make p the subject of the formula. p ="}, {"sub": "Physics", "topic": "Forces", "n": 41, "t": "Determine the gradient G of the graph. Show clearly on the graph how you obtained the necessary information."}, {"sub": "Physics", "topic": "Electricity", "n": 33, "t": "A student suggests that RA, RB and RC should all be equal. State whether your results support this suggestion."}, {"sub": "Business Studies", "topic": "Operations", "n": 7, "t": "What is meant by ‘batch production’?"}, {"sub": "Business Studies", "topic": "Business activity", "n": 7, "t": "What is meant by a ‘private limited company’?"}];
