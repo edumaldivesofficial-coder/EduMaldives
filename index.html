@@ -262,6 +262,23 @@ html[data-theme=dark] .lp-pg{border-color:#2a3d56;background:#fff}
 html[data-theme=dark] .ln-q{border-color:#2f4058}html[data-theme=dark] .ln-instr{color:#c9d6e5}
 /* v98: theme switch always in the top bar */
 .top-actions .tb-theme{display:inline-flex!important}
+.ps{border:1px solid var(--line,#e3e8ef);border-radius:14px;padding:16px;display:grid;gap:14px}.ps-main{display:flex;gap:12px;align-items:flex-start}.ps-main b{font-size:17px;display:block}.ps-main p{margin:4px 0 0;color:#5b6b80;font-size:14px;line-height:1.5}.ps-dot{width:12px;height:12px;border-radius:50%;margin-top:6px;flex:none;background:#94a3b8}.ps-ok .ps-dot{background:#16a34a}.ps-warn .ps-dot{background:#d97706}.ps-bad{border-color:#f5c2c0;background:#fff7f6}.ps-bad .ps-dot{background:#dc2626}.ps-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.ps-facts div{background:#f5f8fb;border-radius:10px;padding:10px 12px}.ps-facts small{display:block;color:#64748b;font-size:12px}.ps-facts b{font-size:14px}.ps-note{margin:0;font-size:13px;color:#92400e;background:#fff7e6;border-radius:10px;padding:8px 12px}.ps-act{display:flex;gap:8px}
+.ph{display:grid;gap:0}.ph-row{display:grid;grid-template-columns:1.6fr 1fr 1fr .8fr 1fr .8fr;gap:12px;align-items:center;padding:12px 4px;border-top:1px solid var(--line,#e9eef4);font-size:14px}.ph-head{border-top:0;font-size:12px;color:#64748b;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding-top:0}.ph-what b{display:block}.ph-what small{color:#64748b;font-size:12px}.ph-st{font-style:normal;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap}.ph-st.ok{background:#e3f6ec;color:#15803d}.ph-st.end{background:#eef2f6;color:#475569}.ph-st.wait{background:#fff4dc;color:#92400e}.ph-st.bad{background:#fde8e6;color:#b42318}.ph-rc a{font-weight:700;color:#1f7fc2;text-decoration:none}
+@media (max-width:760px){.ph-head{display:none}.ph-row{grid-template-columns:1fr 1fr;row-gap:8px;padding:14px 2px}.ph-what{grid-column:1/-1}.ph-row>span[data-l]::before{content:attr(data-l);display:block;font-size:11px;color:#64748b;font-weight:600}.ph-rc{grid-column:1/-1}.ps-facts{grid-template-columns:1fr 1fr 1fr}}
+html[data-theme=dark] .ps{border-color:#26364d}html[data-theme=dark] .ps-facts div{background:#16243a}html[data-theme=dark] .ps-main p{color:#a9b8cc}html[data-theme=dark] .ps-bad{background:#2a1618;border-color:#5b2a2a}html[data-theme=dark] .ph-row{border-color:#26364d}html[data-theme=dark] .ps-note{background:#2d2312;color:#f5c97a}
+.mh{border:1px solid var(--line,#e3e8ef);border-radius:16px;background:#fff;padding:18px 20px;display:grid;gap:14px;margin-bottom:14px}.mh-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid #eef2f6;padding-bottom:12px}.mh-brand{display:flex;align-items:center;gap:10px}.mh-mark{width:36px;height:36px;border-radius:11px}.mh-brand b{font-size:17px;color:#102b4e;display:block;line-height:1.1}.mh-brand b span{color:#278ed0}.mh-brand small{font-size:11px;letter-spacing:.14em;color:#64748b;font-weight:700}.mh-sess{font-size:13px;font-weight:700;color:#1f6fae;background:#e9f5ff;border-radius:999px;padding:5px 12px}.mh-title h2{margin:0;font-size:22px;color:#102b4e}.mh-title p{margin:4px 0 0;color:#5b6b80;font-size:14px}.mh-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.mh-facts div{background:#f5f8fb;border-radius:10px;padding:9px 12px;min-width:0}.mh-facts small{display:block;font-size:11px;color:#64748b;font-weight:600}.mh-facts b{font-size:14px;color:#1b2b40;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}.mh-facts .low b{color:#c2410c}
+.mk{display:grid;gap:12px}.mk-comps{max-width:560px}.mk-info{margin:0;color:#5b6b80;font-size:14px}.mk-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}.mk-row{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line,#e3e8ef);border-radius:12px;padding:12px 14px;background:#fff}.mk-row.done{background:#f7faf8}.mk-t{min-width:0}.mk-t b{display:block;font-size:15px}.mk-t small{color:#64748b;font-size:12px}.mk-badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:#15803d;white-space:nowrap}.mk-go{display:grid;gap:8px}.mk-done{margin:0;font-size:13px;color:#92400e;background:#fff7e6;border-radius:10px;padding:8px 12px}.mk-run{display:grid;gap:0}
+@media (max-width:700px){.mh-facts{grid-template-columns:1fr 1fr}.mh{padding:14px}}
+html[data-theme=dark] .mh,html[data-theme=dark] .mk-row{background:#16243a;border-color:#26364d}html[data-theme=dark] .mh-top{border-color:#26364d}html[data-theme=dark] .mh-brand b,html[data-theme=dark] .mh-title h2{color:#dbe7f6}html[data-theme=dark] .mh-facts div{background:#1d2e47}html[data-theme=dark] .mh-facts b{color:#e6eef8}html[data-theme=dark] .mh-sess{background:#1d3550;color:#9ccff5}html[data-theme=dark] .mk-row.done{background:#17291f}
+.la-note{margin:4px 0 0;font-size:12.5px;color:#64748b;line-height:1.45}.la-ic{width:48px;height:48px;border-radius:50%;flex:none;display:grid;place-items:center;background:#e9f5ff;color:#278ed0}.la-ic.done{background:#e3f6ec;color:#15803d}.la-eq{display:flex;gap:3px;align-items:flex-end;height:18px}.la-eq i{width:4px;background:currentColor;border-radius:2px;animation:laeq 1s ease-in-out infinite}.la-eq i:nth-child(2){animation-delay:.2s}.la-eq i:nth-child(3){animation-delay:.4s}@keyframes laeq{0%,100%{height:5px}50%{height:18px}}.la-prog{height:6px;border-radius:99px;background:#e6edf4;overflow:hidden;margin-top:8px}.la-prog i{display:block;height:100%;background:#278ed0;border-radius:99px;transition:width .5s linear}.la-err{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;font-size:13px;color:#b42318}
+.ln-qs{display:grid;gap:10px}.ln-card{border:1px solid var(--line,#e3e8ef);border-radius:14px;padding:14px 16px;background:#fff;display:grid;gap:10px}.ln-card.ok{border-color:#9bd8b4;background:#f6fcf8}.ln-card.bad{border-color:#f3b8b3;background:#fff8f7}.ln-ctx{margin:0;font-size:13px;color:#5b6b80;font-style:italic}.ln-stem{display:flex;gap:10px;align-items:flex-start}.ln-stem p{margin:0;font-size:15.5px;line-height:1.5;font-weight:600;color:#1b2b40}.ln-num{flex:none;min-width:30px;height:26px;padding:0 7px;border-radius:8px;background:#eef4fa;color:#1f6fae;font-size:12.5px;font-weight:800;display:grid;place-items:center}.ln-pic{width:100%;max-width:620px;height:auto;border-radius:10px;border:1px solid #edf1f5;background:#fff}
+.ln-opts{display:grid;gap:8px}.ln-o{display:flex;gap:12px;align-items:center;text-align:left;width:100%;border:1.5px solid #dfe6ee;background:#fff;border-radius:12px;padding:11px 14px;font:inherit;font-size:15px;color:#1b2b40;cursor:pointer}.ln-o b{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#f1f5f9;font-size:13px}.ln-o.sel{border-color:#278ed0;background:#f0f8ff}.ln-o.sel b{background:#278ed0;color:#fff}.ln-o.ok{border-color:#16a34a;background:#effaf3}.ln-o.ok b{background:#16a34a;color:#fff}.ln-o.bad{border-color:#dc2626;background:#fff5f5}.ln-o.bad b{background:#dc2626;color:#fff}.ln-o:disabled{cursor:default;opacity:1}
+.ln-list{border:1px solid var(--line,#e3e8ef);border-radius:14px;background:#f8fafc;padding:12px 14px;display:grid;gap:8px}.ln-li{display:flex;gap:10px;font-size:14.5px;line-height:1.45}.ln-li b{flex:none;width:24px;height:24px;border-radius:7px;background:#fff;border:1px solid #dfe6ee;display:grid;place-items:center;font-size:12.5px}.ln-spk .ln-let{flex-wrap:nowrap}.ln-let.many .ln-l{flex:1 1 0;min-width:0;max-width:52px}
+.ln-notes{border:1px solid var(--line,#e3e8ef);border-radius:14px;background:#fff;padding:14px 18px;display:grid;gap:6px}.ln-nh{margin:10px 0 2px;font-size:15px;color:#102b4e}.ln-nh:first-child{margin-top:0}.ln-nl p{margin:0;font-size:15px;line-height:2.1}.ln-gap{display:inline-flex;align-items:center;gap:4px;vertical-align:middle}.ln-gap small{font-size:10.5px;font-weight:800;color:#1f6fae;background:#eef4fa;border-radius:6px;padding:1px 5px}.ln-gap .ln-in{width:min(180px,46vw);height:34px;padding:4px 10px}.ln-gap.ok .ln-in{border-color:#16a34a;background:#effaf3}.ln-gap.bad .ln-in{border-color:#dc2626;background:#fff5f5}.ln-nk{padding:8px 12px;grid-template-columns:auto 1fr;align-items:center}
+html[data-theme=dark] .ln-card,html[data-theme=dark] .ln-notes,html[data-theme=dark] .ln-o{background:#16243a;border-color:#2a3b55;color:#e6eef8}html[data-theme=dark] .ln-stem p,html[data-theme=dark] .ln-nh{color:#e6eef8}html[data-theme=dark] .ln-list{background:#1a2a42;border-color:#2a3b55}html[data-theme=dark] .ln-li b,html[data-theme=dark] .ln-o b{background:#22344f;border-color:#2a3b55;color:#dbe7f6}html[data-theme=dark] .ln-o.sel{background:#173452}html[data-theme=dark] .ln-num,html[data-theme=dark] .ln-gap small{background:#1d3550;color:#9ccff5}html[data-theme=dark] .ln-card.ok,html[data-theme=dark] .ln-o.ok{background:#15301f}html[data-theme=dark] .ln-card.bad,html[data-theme=dark] .ln-o.bad{background:#341b1d}html[data-theme=dark] .la-ic{background:#1d3550}html[data-theme=dark] .la-prog{background:#26364d}
+.st-ic{width:46px}.tr-list{display:grid;gap:2px;margin-top:6px}.tr-row{display:flex;align-items:center;gap:14px;width:100%;text-align:left;border:0;background:none;font:inherit;padding:11px 8px;border-radius:12px;cursor:pointer;border-top:1px solid #eef2f6}.tr-row:first-child{border-top:0}.tr-row:hover{background:#f5f9fd}.tr-txt{flex:1;min-width:0}.tr-txt b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;line-height:1.4;color:#1b2b40;font-weight:600}.tr-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:5px}.tr-meta i{font-style:normal;font-size:11.5px;color:#64748b;background:#f1f5f9;border-radius:6px;padding:2px 7px}.tr-meta .tr-sub{color:#1f6fae;background:#e9f5ff;font-weight:600}.tr-n{flex:none;display:grid;justify-items:center;min-width:52px;padding:6px 8px;border-radius:10px;background:#f5f8fb}.tr-n b{font-size:16px;color:#1f6fae;line-height:1}.tr-n small{font-size:10.5px;color:#64748b}
+html[data-theme=dark] .tr-row{border-color:#26364d}html[data-theme=dark] .tr-row:hover{background:#1a2a42}html[data-theme=dark] .tr-txt b{color:#e6eef8}html[data-theme=dark] .tr-meta i,html[data-theme=dark] .tr-n{background:#1d2e47;color:#a9b8cc}html[data-theme=dark] .tr-meta .tr-sub{background:#1d3550;color:#9ccff5}html[data-theme=dark] .tr-n b{color:#9ccff5}
+@media (min-width:1000px){.eb{max-width:980px!important}.eb-card{padding:8px 26px}.ln-exs{display:flex!important;flex-wrap:wrap;gap:8px}.ln-exs .ln-x{flex:1 1 150px}.eb-run{max-width:980px}.st-res{flex-direction:row;align-items:center;min-height:0;padding:18px}.mk-run{max-width:1000px}.ps-panel,.ph-panel{max-width:1100px}}
 </style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="edu-supabase.js"></script>
 <script src="install.js" defer></script><script src="push.js" defer></script>
@@ -1719,11 +1736,11 @@ const PERIODS = [
 ];
 const PLANS = [
   { id: "free", name: "Free", level: 0, for: "Student", tag: "Look around first", price: { month: 0, year: 0 }, features: ["View all past papers", "View all mark schemes"], no: ["Revision notes and flashcards", "Topical and practice questions", "Repeated questions", "Video explanations", "AI marking"] },
-  { id: "student", name: "Student", level: 2, for: "Student", popular: true, tag: "Everything for exam success", price: { month: 249, year: 2090 }, features: ["Unlimited topical questions", "Unlimited practice papers", "Revision notes for every topic", "Flashcards for every topic", "AI marking with feedback", "Repeated questions and predicted papers", "All 12 subjects"] },
+  { id: "student", name: "Student", level: 2, for: "Student", popular: true, tag: "Everything for exam success", price: { month: 199, year: 1791 }, features: ["Unlimited topical questions", "Unlimited practice papers", "Revision notes for every topic", "Flashcards for every topic", "AI marking with feedback", "Repeated questions and predicted papers", "All 12 subjects"] },
   { id: "free_t", name: "Free", level: 0, for: "Teacher", tag: "Try it with your class", price: { month: 0, year: 0 }, features: ["Create classes", "View all past papers and mark schemes"], no: ["Assignments and tasks", "Paper builder and question bank", "AI marking", "Study tools"] },
-  { id: "teacher", name: "Teacher", level: 2, for: "Teacher", popular: true, tag: "Everything for your classes", price: { month: 399, year: 3290 }, features: ["Unlimited classes and students", "Unlimited assignments", "Paper builder and question bank", "AI assignment maker and AI marking", "Class results and analytics", "All 12 subjects"] },
-  { id: "plus", name: "Student Plus", level: 2, for: "Student", hidden: true, price: { month: 249, year: 2090 }, features: [] },
-  { id: "tpro", name: "Teacher Pro", level: 3, for: "Teacher", hidden: true, price: { month: 399, year: 3290 }, features: [] }
+  { id: "teacher", name: "Teacher", level: 2, for: "Teacher", popular: true, tag: "Everything for your classes", price: { month: 299, year: 2691 }, features: ["Unlimited classes and students", "Unlimited assignments", "Paper builder and question bank", "AI assignment maker and AI marking", "Class results and analytics", "All 12 subjects"] },
+  { id: "plus", name: "Student Plus", level: 2, for: "Student", hidden: true, price: { month: 199, year: 1791 }, features: [] },
+  { id: "tpro", name: "Teacher Pro", level: 3, for: "Teacher", hidden: true, price: { month: 299, year: 2691 }, features: [] }
 ];
 const BANK = { bank: "Bank of Maldives (BML)", name: "Your company name", account: "Your account number", note: "Write your email address as the payment reference." };
 const GRADES = ["Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"];
@@ -3287,11 +3304,61 @@ function SubscribePage({ user, subs, setSubs, pays, setPays, go, toast, onboard,
         h("h3", null, p.name), h("p", { className: "pl-tag" }, p.tag),
         h("div", { className: "pl-yr" }, h("div", { className: "pl-price" }, h("b", null, free ? "Free" : `MVR ${period === "year" ? p.price.year : p.price.month}`), !free && h("small", null, period === "year" ? "/ year" : "/ month")),
           h("span", null, free ? "Always free" : period === "year" ? `Only MVR ${per} a month` : "Paid every month"),
-          h("em", { className: free || period !== "year" ? "q" : "" }, free ? "No payment needed" : period === "year" ? `You save MVR ${p.price.month * 12 - p.price.year}` : "No automatic renewal")),
+          h("em", { className: free || period !== "year" ? "q" : "" }, free ? "No payment needed" : period === "year" ? `25% off \xB7 save MVR ${p.price.month * 12 - p.price.year}` : "No automatic renewal")),
         h("ul", null, p.features.map((f) => h("li", { key: f }, h(CheckCircle2, { size: 16 }), f)), (p.no || []).map((f) => h("li", { key: f, className: "no" }, h(X, { size: 16 }), f))),
         onboard && free ? h("button", { className: "btn-secondary pl-btn", onClick: onFree }, "Continue with Free") : isCur ? h("button", { className: "btn-secondary pl-btn", disabled: true }, "Current plan") : free ? h("div", { className: "pl-btn-sp" }) : h("button", { className: (p.popular ? "btn-primary" : "btn-secondary") + " pl-btn", onClick: () => { setPick(p); window.scrollTo({ top: 0 }); } }, `Choose ${p.name}`));
     })),
     h("p", { className: "pl-fine c" }, "Payments are made by bank transfer. All payments are final \u2014 no refunds after subscribing. Questions? Message us from the Help page."));
+}
+const fmtMon = (t) => new Date(t).toLocaleDateString("en-GB", { month: "short", year: "numeric" });
+const payCover = (p) => { const from = p.from || p.decided || p.date; return [from, p.to || from + (DAYS[p.period] || 30) * 864e5]; };
+function PlanStatus({ subs, mine, go }) {
+  const now = Date.now();
+  const plan = subs && PLANS.find((p) => p.id === subs.plan);
+  const live = !!(plan && subs.expires > now);
+  const left = live ? Math.max(0, Math.ceil((subs.expires - now) / 864e5)) : 0;
+  const pending = (mine || []).some((p) => p.status === "pending");
+  const per = subs && (PERIODS.find((x) => x.id === subs.period) || {}).label;
+  const tone = live ? (left <= 5 ? "warn" : "ok") : plan ? "bad" : "free";
+  return h("div", { className: "panel ps-panel" },
+    h("h3", null, "My plan"),
+    h("div", { className: "ps ps-" + tone },
+      h("div", { className: "ps-main" },
+        h("span", { className: "ps-dot" }),
+        h("div", null,
+          h("b", null, live ? `${plan.name} plan${per ? " \xB7 " + per : ""}` : plan ? "Your plan has expired" : "Free plan"),
+          h("p", null, live ? `Active until ${fmtD(subs.expires)} \xB7 ${left} day${left === 1 ? "" : "s"} left` : plan ? `Your ${plan.name} plan ended on ${fmtD(subs.expires)}. Premium features are locked until you renew.` : "Past papers and mark schemes only. Choose a plan to unlock everything."))),
+      live && h("div", { className: "ps-facts" },
+        h("div", null, h("small", null, "Started"), h("b", null, fmtD(subs.started))),
+        h("div", null, h("small", null, "Expires"), h("b", null, fmtD(subs.expires))),
+        h("div", null, h("small", null, "Paid"), h("b", null, subs.amount ? "MVR " + subs.amount : "—"))),
+      pending && h("p", { className: "ps-note" }, "A bank transfer is waiting for approval. Your plan starts when it is approved."),
+      h("div", { className: "ps-act" }, h("button", { className: live ? "btn-secondary" : "btn-primary", onClick: () => go("Plans") }, live ? "Renew early" : plan ? "Renew plan" : "See plans"))));
+}
+function PayHistory({ mine, addSlip, toast }) {
+  const now = Date.now();
+  const rows = [...(mine || [])].sort((a, b) => (b.date || 0) - (a.date || 0));
+  const st = (p) => { if (p.status === "pending") return ["Waiting for approval", "wait"]; if (p.status !== "paid") return ["Rejected", "bad"]; const [, to] = payCover(p); return to > now ? ["Active", "ok"] : ["Ended", "end"]; };
+  return h("div", { className: "panel ph-panel" },
+    h("h3", null, "Payments"),
+    !rows.length ? h("p", { className: "muted" }, "No payments yet.") : h("div", { className: "ph" },
+      h("div", { className: "ph-row ph-head" }, h("span", null, "Plan and period"), h("span", null, "Paid on"), h("span", null, "Expires"), h("span", null, "Amount"), h("span", null, "Status"), h("span", null, "")),
+      rows.map((p) => {
+        const pl = PLANS.find((x) => x.id === p.plan) || { name: p.plan };
+        const per = (PERIODS.find((x) => x.id === p.period) || { label: "" }).label;
+        const [from, to] = payCover(p);
+        const paid = p.status === "paid";
+        const span = p.period === "year" ? `${fmtMon(from)} – ${fmtMon(to - 864e5)}` : fmtMon(from);
+        const [lab, cls] = st(p);
+        const rc = p.receipt ? (p.receipt.id ? "/_blob/" + p.receipt.id : p.receipt.dataUrl) : null;
+        return h("div", { className: "ph-row", key: p.id },
+          h("span", { className: "ph-what" }, h("b", null, paid ? span : per + " plan"), h("small", null, `${pl.name} \xB7 ${per}`)),
+          h("span", { "data-l": "Paid on" }, fmtD(p.date)),
+          h("span", { "data-l": "Expires" }, paid ? fmtD(to) : "—"),
+          h("span", { "data-l": "Amount" }, "MVR " + p.amount),
+          h("span", { "data-l": "Status" }, h("i", { className: "ph-st " + cls }, lab)),
+          h("span", { className: "ph-rc" }, rc ? h("a", { href: rc, target: "_blank", rel: "noopener noreferrer", download: p.receipt.name }, "Receipt") : p.status === "pending" ? h(ReceiptBox, { value: null, onPick: (r) => addSlip(p.id, r), toast }) : null));
+      })));
 }
 function AccountPage({ user, setUser, subs, setSubs, pays, setPays, go, toast }) {
   const [f, setF] = useState({ name: user.name || "", phone: user.phone || "", school: user.school || "", grade: user.grade || "Grade 10" });
@@ -3325,13 +3392,7 @@ function AccountPage({ user, setUser, subs, setSubs, pays, setPays, go, toast })
     setPays(pays.map((p) => p.id === id ? { ...p, receipt: r } : p));
     toast("Receipt uploaded.");
   };
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Title, { eyebrow: "YOUR ACCOUNT", title: "Account details", desc: "Your details, your plan and your payments." }), /* @__PURE__ */ React.createElement("div", { className: "panel" }, /* @__PURE__ */ React.createElement("h3", null, "Profile"), /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap", marginBottom: 12 } }, /* @__PURE__ */ React.createElement("div", { style: { width: 72, height: 72, borderRadius: "50%", background: "#e9f5ff", display: "grid", placeItems: "center", overflow: "hidden", fontWeight: 800, color: "#278ed0", fontSize: 22 } }, user.photo ? /* @__PURE__ */ React.createElement("img", { src: user.photo, alt: "", style: { width: "100%", height: "100%", objectFit: "cover" } }) : (user.name || "?").slice(0, 2).toUpperCase()), /* @__PURE__ */ React.createElement(Fld, { label: "Profile photo" }, h("label", { className: "file-pick" }, h(Upload, { size: 16 }), user.photo ? "Change photo" : "Upload photo", h("input", { type: "file", accept: "image/*", onChange: photo })))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Fld, { label: "Full name" }, /* @__PURE__ */ React.createElement("input", { value: f.name, onChange: (e) => setF({ ...f, name: e.target.value }) })), /* @__PURE__ */ React.createElement(Fld, { label: "Mobile number" }, /* @__PURE__ */ React.createElement("input", { value: f.phone, onChange: (e) => setF({ ...f, phone: e.target.value }) }))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Fld, { label: "Email" }, /* @__PURE__ */ React.createElement("input", { value: user.email || "", disabled: true })), /* @__PURE__ */ React.createElement(Fld, { label: "Role" }, /* @__PURE__ */ React.createElement("input", { value: user.role, disabled: true }))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, user.role === "Student" && /* @__PURE__ */ React.createElement(Fld, { label: "Grade" }, /* @__PURE__ */ React.createElement("select", { value: f.grade, onChange: (e) => setF({ ...f, grade: e.target.value }) }, GRADES.map((g) => /* @__PURE__ */ React.createElement("option", { key: g }, g)))), /* @__PURE__ */ React.createElement(Fld, { label: "School" }, /* @__PURE__ */ React.createElement("input", { value: f.school, onChange: (e) => setF({ ...f, school: e.target.value }) }))), /* @__PURE__ */ React.createElement("button", { className: "btn-primary", onClick: saveProfile }, "Save details")), /* @__PURE__ */ React.createElement("div", { className: "panel" }, /* @__PURE__ */ React.createElement("h3", null, "My plan"), active ? /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("p", { style: { fontSize: 20, fontWeight: 800, margin: "4px 0" } }, active.name, " \xB7 ", (PERIODS.find((x) => x.id === subs.period) || { label: "" }).label), /* @__PURE__ */ React.createElement("p", { className: "muted" }, "Started ", fmtD(subs.started), " \xB7 ends ", fmtD(subs.expires), " \xB7 ", left, " day", left === 1 ? "" : "s", " left", /* @__PURE__ */ React.createElement("br", null), "Paid MVR ", subs.amount, " by ", subs.method), /* @__PURE__ */ React.createElement("ul", { style: { paddingLeft: 18, lineHeight: 1.7 } }, active.features.map((x) => /* @__PURE__ */ React.createElement("li", { key: x }, x))), /* @__PURE__ */ React.createElement("div", { className: "mark-btns" }, /* @__PURE__ */ React.createElement("button", { className: "btn-primary", onClick: () => go("Plans") }, "Renew or change plan"), /* @__PURE__ */ React.createElement("button", { className: "btn-secondary", onClick: () => {
-    setSubs(null);
-    toast("Your plan was cancelled.");
-  } }, "Cancel plan"))) : /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("p", { className: "muted" }, "You are on the free plan.", mine.some((p) => p.status === "pending") ? " A bank transfer is waiting for approval." : ""), /* @__PURE__ */ React.createElement("button", { className: "btn-primary", onClick: () => go("Plans") }, "See plans"))), user.role === "Teacher" && h("div", { className: "panel" }, h("h3", null, "Subjects I teach"), h("p", { className: "muted" }, "Classes and tasks you make use these subjects."), h(TeacherSubjects, { user, setUser: (u) => { persist(u); toast("Subjects saved."); }, inline: true })), /* @__PURE__ */ React.createElement("div", { className: "panel" }, /* @__PURE__ */ React.createElement("h3", null, "Payments"), mine.map((p) => {
-    const pl = PLANS.find((x) => x.id === p.plan) || { name: p.plan };
-    return /* @__PURE__ */ React.createElement("div", { className: "assignment-row", key: p.id, style: { flexWrap: "wrap" } }, /* @__PURE__ */ React.createElement("span", null, /* @__PURE__ */ React.createElement("b", null, pl.name, " \xB7 ", (PERIODS.find((x) => x.id === p.period) || { label: "" }).label), /* @__PURE__ */ React.createElement("small", null, fmtD(p.date), " \xB7 MVR ", p.amount, " \xB7 ", p.method)), /* @__PURE__ */ React.createElement(StatusPill, { s: p.status }), p.receipt && /* @__PURE__ */ React.createElement("a", { className: "btn-secondary", href: p.receipt.dataUrl, target: "_blank", rel: "noopener noreferrer", download: p.receipt.name }, "View receipt"), p.status === "pending" && !p.receipt && /* @__PURE__ */ React.createElement(ReceiptBox, { value: null, onPick: (r) => addSlip(p.id, r), toast }));
-  }), !mine.length && /* @__PURE__ */ React.createElement("p", { className: "muted" }, "No payments yet.")));
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Title, { eyebrow: "YOUR ACCOUNT", title: "Account details", desc: "Your details, your plan and your payments." }), /* @__PURE__ */ React.createElement("div", { className: "panel" }, /* @__PURE__ */ React.createElement("h3", null, "Profile"), /* @__PURE__ */ React.createElement("div", { style: { display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap", marginBottom: 12 } }, /* @__PURE__ */ React.createElement("div", { style: { width: 72, height: 72, borderRadius: "50%", background: "#e9f5ff", display: "grid", placeItems: "center", overflow: "hidden", fontWeight: 800, color: "#278ed0", fontSize: 22 } }, user.photo ? /* @__PURE__ */ React.createElement("img", { src: user.photo, alt: "", style: { width: "100%", height: "100%", objectFit: "cover" } }) : (user.name || "?").slice(0, 2).toUpperCase()), /* @__PURE__ */ React.createElement(Fld, { label: "Profile photo" }, h("label", { className: "file-pick" }, h(Upload, { size: 16 }), user.photo ? "Change photo" : "Upload photo", h("input", { type: "file", accept: "image/*", onChange: photo })))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Fld, { label: "Full name" }, /* @__PURE__ */ React.createElement("input", { value: f.name, onChange: (e) => setF({ ...f, name: e.target.value }) })), /* @__PURE__ */ React.createElement(Fld, { label: "Mobile number" }, /* @__PURE__ */ React.createElement("input", { value: f.phone, onChange: (e) => setF({ ...f, phone: e.target.value }) }))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, /* @__PURE__ */ React.createElement(Fld, { label: "Email" }, /* @__PURE__ */ React.createElement("input", { value: user.email || "", disabled: true })), /* @__PURE__ */ React.createElement(Fld, { label: "Role" }, /* @__PURE__ */ React.createElement("input", { value: user.role, disabled: true }))), /* @__PURE__ */ React.createElement("div", { className: "form-row" }, user.role === "Student" && /* @__PURE__ */ React.createElement(Fld, { label: "Grade" }, /* @__PURE__ */ React.createElement("select", { value: f.grade, onChange: (e) => setF({ ...f, grade: e.target.value }) }, GRADES.map((g) => /* @__PURE__ */ React.createElement("option", { key: g }, g)))), /* @__PURE__ */ React.createElement(Fld, { label: "School" }, /* @__PURE__ */ React.createElement("input", { value: f.school, onChange: (e) => setF({ ...f, school: e.target.value }) }))), /* @__PURE__ */ React.createElement("button", { className: "btn-primary", onClick: saveProfile }, "Save details")), h(PlanStatus, { subs, mine, go }), user.role === "Teacher" && h("div", { className: "panel" }, h("h3", null, "Subjects I teach"), h("p", { className: "muted" }, "Classes and tasks you make use these subjects."), h(TeacherSubjects, { user, setUser: (u) => { persist(u); toast("Subjects saved."); }, inline: true })), h(PayHistory, { mine, addSlip, toast }));
 }
 function PaymentsPage({ pays, setPays, subMap, setSubMap, toast }) {
   const order = [...pays].sort((a, b) => (a.status === "pending" ? 0 : 1) - (b.status === "pending" ? 0 : 1) || b.date - a.date);
@@ -3369,7 +3430,7 @@ const initialQuestions = [
   { id: 4, subject: "English", grade: "Grade 9", topic: "Comprehension", question: "Identify the main idea of a passage and support your answer with two details.", type: "Short answer", marks: 4, years: [2021, 2022, 2023, 2024], frequency: 4, repeat: "Topic", difficulty: "Medium", answer: "Answers should identify the central message and provide two relevant supporting details from the passage." },
   { id: 5, subject: "Physics", grade: "Grade 10", topic: "Forces", question: "Calculate the resultant force when two forces of 12 N and 5 N act in the same direction.", type: "Calculation", marks: 2, years: [2024, 2025], frequency: 2, repeat: "Similar", difficulty: "Easy", answer: "Resultant force = 12 N + 5 N = 17 N." }
 ];
-const navByRole = { Student: [["Dashboard", LayoutDashboard], ["My Classes", GraduationCap], ["Study", BookMarked], ["Past Papers", Library], ["Repeated Questions", Repeat2], ["Practice Questions", BookOpen], ["My Performance", ChartNoAxesCombined], ["Saved Questions", Bookmark], ["Study Planner", CalendarDays]], Teacher: [["Dashboard", LayoutDashboard], ["Classes", GraduationCap], ["Assignments", ClipboardList], ["Paper Builder", FilePlus2], ["Question Bank", BookOpen], ["Past Papers", Library], ["Study", BookMarked], ["Repeated Questions", Repeat2], ["Class Analytics", ChartNoAxesCombined], ["Students", Users]], Admin: [["Dashboard", LayoutDashboard], ["Users & Schools", Users], ["Payments", ShieldCheck], ["Settings", Settings], ["Curriculum & Subjects", GraduationCap], ["Past Paper Library", Library], ["Question Management", BookOpen], ["Repeated Questions", Repeat2], ["Content Approval", ShieldCheck], ["Platform Analytics", ChartNoAxesCombined]] };
+const navByRole = { Student: [["Dashboard", LayoutDashboard], ["My Classes", GraduationCap], ["Study", BookMarked], ["Past Papers", Library], ["Repeated Questions", Repeat2], ["Practice Questions", BookOpen], ["Mock Examinations", ClipboardList], ["My Performance", ChartNoAxesCombined], ["Saved Questions", Bookmark], ["Study Planner", CalendarDays]], Teacher: [["Dashboard", LayoutDashboard], ["Classes", GraduationCap], ["Assignments", ClipboardList], ["Paper Builder", FilePlus2], ["Question Bank", BookOpen], ["Past Papers", Library], ["Study", BookMarked], ["Repeated Questions", Repeat2], ["Class Analytics", ChartNoAxesCombined], ["Students", Users]], Admin: [["Dashboard", LayoutDashboard], ["Users & Schools", Users], ["Payments", ShieldCheck], ["Settings", Settings], ["Curriculum & Subjects", GraduationCap], ["Past Paper Library", Library], ["Question Management", BookOpen], ["Repeated Questions", Repeat2], ["Content Approval", ShieldCheck], ["Platform Analytics", ChartNoAxesCombined]] };
 const chartData = [{ month: "Jan", score: 56 }, { month: "Feb", score: 62 }, { month: "Mar", score: 59 }, { month: "Apr", score: 71 }, { month: "May", score: 68 }, { month: "Jun", score: 82 }];
 const Link2 = ({ size = 14 }) => React.createElement("svg", { width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true }, React.createElement("path", { d: "M9 17H7A5 5 0 0 1 7 7h2" }), React.createElement("path", { d: "M15 7h2a5 5 0 1 1 0 10h-2" }), React.createElement("line", { x1: 8, x2: 16, y1: 12, y2: 12 }));
 /* ===================== EduMaldives cloud layer ===================== */
@@ -4437,7 +4498,7 @@ function cambSwap({ sub, comp, mode, qs, groups, P, idx }) {
   return top.length ? top[Math.floor(Math.random() * top.length)] : null;
 }
 function cambPaperHtml(P, withMs) {
-  const head = `<div class="hd"><div class="b">${P.school ? esc(P.school) + " &middot; " : ""}Cambridge IGCSE&#8482; format &middot; ${esc(P.title || "MOCK PAPER")}</div>${P.cls || P.date ? `<div class="b">${esc(P.cls || "")}${P.cls && P.date ? " &middot; " : ""}${esc(P.date || "")}</div>` : ""}${!withMs && P.school ? '<div class="cn">Candidate name ______________________________ &nbsp; Class ________</div>' : ""}<h1>${esc(P.sub.toUpperCase())} &nbsp;${esc(P.code)}/${esc(P.comp)}</h1><h2>${esc(P.name)}${withMs ? " &mdash; MARK SCHEME" : ""}</h2><div class="r"><span>${withMs ? "Maximum Mark: " + P.total : P.mins + " minutes"}</span><span>${esc(P.label)}</span></div></div>`;
+  const head = `<div class="hd"><div class="b">${P.school ? esc(P.school) + " &middot; " : ""}EduMaldives &middot; ${esc(P.title || "MOCK EXAMINATION")}</div>${P.cls || P.date ? `<div class="b">${esc(P.cls || "")}${P.cls && P.date ? " &middot; " : ""}${esc(P.date || "")}</div>` : ""}${!withMs && P.school ? '<div class="cn">Candidate name ______________________________ &nbsp; Class ________</div>' : ""}<h1>${esc(P.sub.toUpperCase())} &nbsp;${esc(P.code)}/${esc(P.comp)}</h1><h2>${esc(P.name)}${withMs ? " &mdash; MARK SCHEME" : ""}</h2><div class="r"><span>${withMs ? "Maximum Mark: " + P.total : P.mins + " minutes"}</span><span>${esc(P.label)}</span></div></div>`;
   const instr = withMs ? "" : `<div class="ins"><b>INSTRUCTIONS</b><ul>${P.mcq ? "<li>There are " + P.questions.length + " questions on this paper. Answer <b>all</b> questions.</li><li>For each question there are four possible answers <b>A</b>, <b>B</b>, <b>C</b> and <b>D</b>. Choose the <b>one</b> you consider correct.</li>" : "<li>Answer <b>all</b> questions.</li><li>Use a black or dark blue pen. You may use an HB pencil for any diagrams or graphs.</li><li>Write your answer to each question in the space provided.</li><li>Do <b>not</b> use an erasable pen or correction fluid.</li>"}${P.sub === "Mathematics" ? "<li>You should use a calculator where appropriate. You must show all necessary working clearly.</li><li>Give non-exact numerical answers correct to 3 significant figures, or 1 decimal place for angles in degrees, unless the question says otherwise.</li><li>For &pi;, use either your calculator value or 3.142.</li>" : ""}${P.sub === "Physics" && !P.mcq ? "<li>Take the weight of 1.0 kg to be 9.8 N (acceleration of free fall = 9.8 m/s&sup2;).</li>" : ""}</ul><b>INFORMATION</b><ul><li>The total mark for this paper is ${P.total}.</li><li>The number of marks for each question or part question is shown in brackets [ ].</li></ul><p class="nt">This mock paper is built from past Cambridge IGCSE questions${P.school ? " for " + esc(P.school) : " by EduMaldives"}. It is not an official Cambridge paper.</p></div>`;
   const body = P.questions.map((q, n) => {
     const it = qItems(q);
@@ -4474,7 +4535,7 @@ async function cambPdfBlob(P, withMs) {
   const rect = (x, yy, w, hh, lw) => pg().push({ k: "r", x, y: yy, w, h: hh, lw: lw || 1 });
   const dots = (x1, x2, yy) => pg().push({ k: "d", x1, x2, y: yy });
   const lineOp = (x1, y1, x2, y2, lw) => pg().push({ k: "l", x1, y1, x2, y2, lw: lw || 0.8 });
-  const brand = `${P.school ? P.school + " · " : ""}Cambridge IGCSE™ format · ${P.title || "MOCK PAPER"}`;
+  const brand = `${P.school ? P.school + " · " : ""}EduMaldives · ${P.title || "MOCK EXAMINATION"}`;
   // header box
   { const y0 = y; y += 16; text(brand, M + 12, y, 8.5, false, "#333"); if (P.cls || P.date) { y += 12; text([P.cls, P.date].filter(Boolean).join(" · "), M + 12, y, 8.5, false, "#333"); }
     if (!withMs && P.school) { y += 18; text("Candidate name ____________________________________    Class __________", M + 12, y, 9.5); }
@@ -4589,7 +4650,8 @@ async function cambDownloadPdf(P, withMs, toast) {
   const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(a.href), 30000);
 }
-function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
+function CambridgeMock({ results, setResults, toast, teacher, fixedSub, mock }) {
+  const [mDone, setMDone] = useLocal("em-mock-done", {});
   const C = useCloud();
   const [meta, setMeta] = useLocal("em-camb-meta", { title: "", school: "", cls: "Grade 10", date: "", due: "", hideSrc: true });
   const [sending, setSending] = useState(false);
@@ -4629,7 +4691,7 @@ function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
     return () => clearInterval(t);
   }, [phase]);
   useEffect(() => { if (phase === "run" && left <= 0) { tellUser("Your time is over. Your paper has been handed in. Check your answers with the mark scheme below.", "Time is up"); setPhase("review"); } }, [left, phase]);
-  const build = () => {
+  const build = (go) => {
     try {
       const cap = getAccess().level >= 1 ? 0 : 5;
       const r = buildCambPaper({ sub, comp, mode, qs: data.qs, groups, paperId, smallCap: cap });
@@ -4641,7 +4703,8 @@ function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
       const t = r.template;
       const label = mode === "past" ? `${t.year} ${SESS[t.sess] || t.sess} · Paper ${t.cv}` : mode === "rep" ? "Repeated-question mock" : mode === "sim" ? "Similar-question mock" : "Repeated + similar mock";
       setP({ sub, code: CAMB_CODE[sub] || "", comp, name: compName(sub, comp), mins: Number(mins) || 60, total, label, mode, questions: qsel, sources: srcs, mcq: qsel.filter(isMcqQ).length > qsel.length / 2, layout: `${t.year} ${SESS[t.sess] || t.sess} Paper ${t.cv}` });
-      setAns({}); setRes({}); setPhase("paper");
+      setAns({}); setRes({});
+      if (go === true) { setLeft((Number(mins) || 60) * 60); setPhase("run"); window.scrollTo({ top: 0 }); } else setPhase("paper");
     } catch (e) { toast(e.message || "Could not build the paper."); }
   };
   const PP = () => teacher ? { ...P, ...meta } : P;
@@ -4651,6 +4714,7 @@ function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
   const swapQ = (i) => { const n = cambSwap({ sub: P.sub, comp: P.comp, mode: P.mode, qs: data.qs, groups, P, idx: i }); if (!n) { toast("No other question with similar marks was found."); return; } const q = [...P.questions], s = [...P.sources]; q[i] = n; s[i] = { kind: P.mode === "past" ? "swap" : P.mode }; setQs(q, s); };
   const sendAssign = async () => {
     if (!C.db) { toast("Assignments need the online database."); return; }
+    if (!(meta.classes || []).length) { toast("Open Paper details and class, then pick a class."); return; }
     if (P.questions.length > (planLimits().assignQ || Infinity)) { openUpgrade("assignQ"); return; }
     if (!planGateUse("assign")) return;
     setSending(true);
@@ -4694,17 +4758,17 @@ function CambridgeMock({ results, setResults, toast, teacher, fixedSub }) {
   if (phase === "setup") return h(React.Fragment, null,
     h("div", { className: "panel pb-card" },
       !fixedSub && h(Fld, { label: "Subject" }, h("select", { value: sub, onChange: (e) => setSub(e.target.value) }, subs.map((s) => h("option", { key: s }, s)))),
-      h("div", { className: "pb-row" }, h("span", { className: "pb-lbl" }, "Build from"), h(BuildOpts, { mode, setMode, opts: [["past", "Past paper", "A full real paper"], ["rep", "Repeated", "Questions asked again"], ["sim", "Similar", "Asked in a similar way"], ["mix", "Mixed", "Repeated + similar"]] })),
+      !mock && h("div", { className: "pb-row" }, h("span", { className: "pb-lbl" }, "Build from"), h(BuildOpts, { mode, setMode, opts: [["past", "Past paper", "A full real paper"], ["rep", "Repeated", "Questions asked again"], ["sim", "Similar", "Asked in a similar way"], ["mix", "Mixed", "Repeated + similar"]] })),
       h("div", { className: "pb-grid" },
         h(Fld, { label: "Paper" }, h("select", { value: comp, onChange: (e) => setComp(e.target.value) }, comps.map((c) => h("option", { key: c, value: c }, compName(sub, c))))),
         mode === "past" && h(Fld, { label: "Session" }, h("select", { value: paperId, onChange: (e) => setPaperId(e.target.value) }, plist.map((p) => h("option", { key: p.paper, value: p.paper }, paperLabel(p))))),
-        h(Fld, { label: "Time (minutes)" }, h("input", { type: "number", min: 10, max: 240, value: mins, onChange: (e) => setMins(e.target.value) }))),
-      h("p", { className: "muted pb-note" }, mode === "past" ? "The full paper exactly as set, with the official mark scheme." : `Same layout and marks as ${compName(sub, comp)}, filled with ${mode === "rep" ? "repeated" : mode === "sim" ? "similar" : "repeated and similar"} past-paper questions.`),
+        !mock && h(Fld, { label: "Time (minutes)" }, h("input", { type: "number", min: 10, max: 240, value: mins, onChange: (e) => setMins(e.target.value) }))),
+      !mock && h("p", { className: "muted pb-note" }, mode === "past" ? "The full paper exactly as set, with the official mark scheme." : `Same layout and marks as ${compName(sub, comp)}, filled with ${mode === "rep" ? "repeated" : mode === "sim" ? "similar" : "repeated and similar"} past-paper questions.`),
       sub === "Business Studies" && comp === "2" && h("p", { className: "muted" }, "Paper 2 questions refer to that year's case study. Use “View original page” on each question to read it."),
-      data.loading ? h("p", { className: "muted" }, "Loading the question bank…") : data.err ? h("p", { className: "muted" }, data.err) : !comps.length ? h("p", { className: "muted" }, `No analysed ${sub} papers are in the portal yet.`) : h("button", { className: "btn-primary pb-go", disabled: !comp || (mode === "past" && !paperId), onClick: build }, "Build paper")),
+      data.loading ? h("p", { className: "muted" }, "Loading the question bank…") : data.err ? h("p", { className: "muted" }, data.err) : !comps.length ? h("p", { className: "muted" }, `No analysed ${sub} papers are in the portal yet.`) : (mock ? h("div", { className: "mk-go" }, mDone[(CAMB_CODE[sub] || sub) + "|" + paperId] ? h("p", { className: "mk-done" }, `You sat this paper on ${fmtD(mDone[(CAMB_CODE[sub] || sub) + "|" + paperId].t)}. Each paper can be sat once. Pick another session.`) : h("p", { className: "muted pb-note" }, `${mins} minutes · real paper · one attempt`), h("button", { className: "btn-primary pb-go", disabled: !comp || !paperId || !!mDone[(CAMB_CODE[sub] || sub) + "|" + paperId], onClick: async () => { if (await mockStart(mDone, setMDone, (CAMB_CODE[sub] || sub) + "|" + paperId)) build(true); } }, "Start exam")) : h("button", { className: "btn-primary pb-go", disabled: !comp || (mode === "past" && !paperId), onClick: build }, "Build paper"))),
     viewer && h(PdfViewer, { ...viewer, onClose: () => setViewer(null) }));
 
-  const Head = h("div", { className: "cam-head" }, h("div", { className: "cam-brand" }, "Cambridge IGCSE™ format · MOCK PAPER"), h("h2", null, `${P.sub.toUpperCase()}  ${P.code}/${P.comp}`), h("div", null, P.name), h("div", { className: "cam-row" }, h("b", null, phase === "run" ? `Time left ${fmt(left)}` : `${P.mins} minutes`), h("b", null, `Total ${P.total} marks`), h("span", null, P.label)));
+  const Head = h(MockHead, { sub: P.sub, code: P.code, comp: P.comp, name: P.name, label: P.label, mins: P.mins, total: P.total, n: P.questions.length, left: phase === "run" ? left : null });
   const Paper = (withAns) => P.questions.map((q, qi) => h("div", { key: q.id, className: "cam-q" }, h("div", { className: "cam-qn" }, qi + 1), h("div", { className: "cam-qb" },
     q.stem && h("p", { className: "cam-stem" }, camClean(q.stem)),
     qItems(q).map((p) => h("div", { key: p.k, className: "cam-pt" },
@@ -4746,7 +4810,7 @@ function PBTop({ onBack, title, sub, chips }) {
 }
 const tlimOf = (meta, pm) => { const t = meta.tlim; return t === 0 ? 0 : typeof t === "number" && t > 0 ? t : Number(pm) || 0; };
 function PBDetails({ meta, um, sub, note, pmins }) {
-  return h("details", { className: "pb-det" }, h("summary", null, h("span", null, "Paper details and class"), h("small", null, meta.classes && meta.classes.length ? `${meta.classes.length} class${meta.classes.length > 1 ? "es" : ""}` : "All students")),
+  return h("details", { className: "pb-det" }, h("summary", null, h("span", null, "Paper details and class"), h("small", null, meta.classes && meta.classes.length ? `${meta.classes.length} class${meta.classes.length > 1 ? "es" : ""}` : "Pick a class")),
     h("div", { className: "pb-grid" },
       h(Fld, { label: "Paper title" }, h("input", { value: meta.title || "", placeholder: "e.g. Term 2 mock examination", onChange: (e) => um({ title: e.target.value }) })),
       h(Fld, { label: "School" }, h("input", { value: meta.school || "", placeholder: "Shown on the front page", onChange: (e) => um({ school: e.target.value }) })),
@@ -4845,6 +4909,7 @@ function TQPaper({ sub, teacher, toast }) {
   const plain = (q) => (q.b || []).filter((b) => b[0] !== "f").map((b) => b[0] === "o" ? b[1] + " " + String(b[2]).replace(/<[^>]+>/g, "") : String(b[1]).replace(/<[^>]+>/g, "")).join("\n").trim();
   const sendAssign = async () => {
     if (!C.db) { toast("Assignments need the online database."); return; }
+    if (!(meta.classes || []).length) { toast("Open Paper details and class, then pick a class."); return; }
     if (T.questions.length > (planLimits().assignQ || Infinity)) { openUpgrade("assignQ"); return; }
     if (!planGateUse("assign")) return;
     setSending(true);
@@ -4907,12 +4972,98 @@ function TeacherBuilder({ questions, saveQuestions, toast, setShowAdd }) {
     h("div", { className: "eb-seg pb-tabs" }, h("button", { className: tab === "camb" ? "on" : "", onClick: () => setTab("camb") }, "From past papers"), h("button", { className: tab === "custom" ? "on" : "", onClick: () => setTab("custom") }, "From my question bank")),
     tab === "camb" ? h(PaperStudio, { results, setResults, toast, teacher: true }) : h(BuilderPage2, { questions, saveQuestions, toast, setShowAdd }));
 }
-function MockCentre({ questions, saveQuestions, results, setResults, toast }) {
-  const [tab, setTab] = useState("camb");
+function MockHead({ sub, code, comp, name, label, mins, total, n, left }) {
+  let u = {};
+  try { u = JSON.parse(LS.getItem("em-user") || "null") || {}; } catch (e) { }
+  return h("div", { className: "mh" },
+    h("div", { className: "mh-top" },
+      h("div", { className: "mh-brand" }, h("span", { className: "brand-mark mh-mark" }, h(GraduationCap, { size: 20 })), h("div", null, h("b", null, "Edu", h("span", null, "Maldives")), h("small", null, "MOCK EXAMINATION"))),
+      label && h("span", { className: "mh-sess" }, label)),
+    h("div", { className: "mh-title" }, h("h2", null, sub), h("p", null, [code ? code + (comp ? "/" + comp : "") : "", name].filter(Boolean).join(" \xB7 "))),
+    h("div", { className: "mh-facts" },
+      left != null ? h("div", { className: left < 300 ? "low" : "" }, h("small", null, "Time left"), h("b", null, fmt(left))) : h("div", null, h("small", null, "Time"), h("b", null, mins ? mins + " minutes" : "No limit")),
+      total != null && h("div", null, h("small", null, "Total"), h("b", null, total + " marks")),
+      n != null && h("div", null, h("small", null, "Questions"), h("b", null, n)),
+      h("div", null, h("small", null, "Candidate"), h("b", null, u.name || "—"))));
+}
+async function mockStart(done, setDone, key) {
+  if (done && done[key]) { tellUser(`You sat this paper on ${fmtD(done[key].t)}. Each mock paper can be sat only once.`, "Already done"); return false; }
+  if (!(await askConfirm("You can sit each mock paper only once. The timer starts now, and the paper is handed in when the time ends.", { title: "Start this mock exam?", yes: "Start exam", no: "Not now" }))) return false;
+  setDone((d) => ({ ...(d || {}), [key]: { t: Date.now() } }));
+  return true;
+}
+function MockList({ comps, comp, setComp, compLabel, papers, done, onStart, busy, mins }) {
+  return h("div", { className: "panel mk" },
+    comps.length > 1 && h("div", { className: "eb-seg mk-comps" }, comps.map((c) => h("button", { key: c, className: c === comp ? "on" : "", onClick: () => setComp(c) }, compLabel(c)))),
+    h("p", { className: "mk-info" }, `${mins ? mins + " minutes" : ""} \xB7 real past paper \xB7 one attempt per paper`),
+    !papers.length ? h("p", { className: "muted" }, "No papers here yet.") : h("div", { className: "mk-list" }, papers.map((p) => { const d = done[p.key]; return h("div", { key: p.key, className: "mk-row" + (d ? " done" : "") },
+      h("div", { className: "mk-t" }, h("b", null, p.title), h("small", null, p.sub)),
+      d ? h("span", { className: "mk-badge" }, h(CheckCircle2, { size: 15 }), "Done ", fmtD(d.t)) : h("button", { className: "btn-primary sm", disabled: busy, onClick: () => onStart(p) }, busy === p.key ? "Opening…" : "Start")); })));
+}
+const SESS_FULL = { m: "Feb/March", s: "May/June", w: "Oct/Nov" };
+function TQMock({ sub, toast }) {
+  const { loading, data } = useTQ(sub);
+  const code = SUBJ_CODE[sub];
+  const [done, setDone] = useLocal("em-mock-done", {});
+  const [comp, setComp] = useState("");
+  const [run, setRun] = useState(null);
+  const [busy, setBusy] = useState("");
+  const comps = useMemo(() => data ? [...new Set(Object.values(data.papers).map((p) => String(p.c)))].sort() : [], [data]);
+  useEffect(() => { if (comps.length && !comps.includes(comp)) setComp(comps[0]); }, [comps]);
+  if (loading) return h("p", { className: "muted" }, "Loading…");
+  if (!data) return h("div", { className: "ps-empty" }, h(IWand, { size: 22 }), h("p", null, `${sub} mock papers are not available yet.`));
+  const mins = tqCompMins(code, comp);
+  const papers = Object.values(data.papers).filter((p) => String(p.c) === comp).sort((a, b) => b.y - a.y || "wsm".indexOf(a.s) - "wsm".indexOf(b.s) || String(a.v || "").localeCompare(String(b.v || ""))).map((p) => ({ key: code + "|" + p.k, k: p.k, P: p, title: `${SESS_FULL[p.s] || ""} ${p.y}`.trim(), sub: `${tqCode(p)} \xB7 ${tqCompName(code, comp)}` }));
+  const start = async (p) => {
+    if (!(await mockStart(done, setDone, p.key))) return;
+    setBusy(p.key);
+    try {
+      const all = (await Promise.all(data.topics.map((t) => tqLoadTopic(data, t.t)))).flat();
+      const seen = new Set();
+      const qs = all.filter((q) => { const k = q.p + "#" + q.q; if (q.p !== p.k || seen.has(k)) return false; seen.add(k); return true; }).sort((a, b) => tqQNum(a) - tqQNum(b));
+      if (!qs.length) { toast("This paper could not be opened."); setBusy(""); return; }
+      setRun({ p, qs, total: qs.reduce((a, q) => a + (q.m || 1), 0), preset: { qs, mins } });
+      window.scrollTo({ top: 0 });
+    } catch (e) { toast("This paper could not be opened. Check your connection."); }
+    setBusy("");
+  };
+  if (run) return h("div", { className: "mk-run" }, h(MockHead, { sub, code, comp, name: tqCompName(code, comp), label: run.p.title, mins, total: run.total, n: run.qs.length }), h(BuilderView, { sub, toast, preset: run.preset, onExit: () => setRun(null) }));
+  return h(MockList, { comps, comp, setComp, compLabel: (c) => tqCompName(code, c), papers, done, onStart: start, busy, mins });
+}
+function EnMock({ toast }) {
+  const D = useEnPack();
+  const [done, setDone] = useLocal("em-mock-done", {});
+  const [comp, setComp] = useState("");
+  const [run, setRun] = useState(null);
+  if (D === null) return h("p", { className: "muted" }, "Loading…");
+  if (!D) return h("div", { className: "ps-empty" }, h(IWand, { size: 22 }), h("p", null, "English mock papers could not load. Check your connection and try again."));
+  const R = D.reading || [], W = D.writing || [];
+  const full = Object.entries(D.papers || {}).map(([k, p]) => {
+    const items = [...R.filter((x) => x.p === k && x.qs && x.qs.length).sort((a, b) => a.ex - b.ex), ...W.filter((x) => x.p === k).sort((a, b) => a.ex - b.ex).map((x) => ({ ...x, w: true }))];
+    return { k, ...p, items };
+  }).filter((p) => p.items.map((x) => x.ex).join() === "1,2,3,4,5,6");
+  const comps = [...new Set(full.map((p) => String(p.c)))].sort();
+  const most = comps.slice().sort((a, b) => full.filter((p) => String(p.c) === b).length - full.filter((p) => String(p.c) === a).length)[0];
+  const cmp = comp && comps.includes(comp) ? comp : most;
+  const name = (c) => c === "1" ? "Paper 1 \xB7 Reading and Writing (Core)" : "Paper 2 \xB7 Reading and Writing (Extended)";
+  const mins = cmp === "1" ? 90 : 120;
+  const papers = full.filter((p) => String(p.c) === cmp).sort((a, b) => b.y - a.y || "wsm".indexOf(a.s) - "wsm".indexOf(b.s) || String(a.v).localeCompare(String(b.v))).map((p) => ({ key: "0510|" + p.k, p, title: `${SESS_FULL[p.s] || ""} ${p.y}`.trim(), sub: `0510/${p.c}${p.v} \xB7 6 exercises` }));
+  const start = async (x) => {
+    if (!(await mockStart(done, setDone, x.key))) return;
+    setRun({ x, total: x.p.items.reduce((a, it) => a + (Number(it.m) || 0), 0), preset: { items: x.p.items, mins, label: `Mock \xB7 ${x.title} Paper ${x.p.c}${x.p.v}` } });
+    window.scrollTo({ top: 0 });
+  };
+  if (run) return h("div", { className: "mk-run" }, h(MockHead, { sub: "English", code: "0510", comp: cmp, name: name(cmp), label: run.x.title, mins, total: run.total, n: 6 }), h(EnBuilder, { sub: "English", toast, preset: run.preset, onExit: () => setRun(null) }));
+  return h(MockList, { comps, comp: cmp, setComp, compLabel: (c) => c === "1" ? "Paper 1 (Core)" : "Paper 2 (Extended)", papers, done, onStart: start, mins });
+}
+function MockCentre({ results, setResults, toast }) {
+  const all = subjects.filter((x) => SUBJ_CODE[x]);
+  const [sub0, setSub] = useLocal("em-mock-sub", all[0]);
+  const sub = all.includes(sub0) ? sub0 : all[0];
   return h(React.Fragment, null,
-    h(Title, { eyebrow: "EXAM CENTRE", title: "Mock examinations", desc: "Do a full practice exam, just like the real Cambridge exam. Pick a real old paper, or a new paper made from questions that come often." }),
-    h("div", { className: "eb-seg pb-tabs" }, h("button", { className: tab === "camb" ? "on" : "", onClick: () => setTab("camb") }, "Past paper exam"), h("button", { className: tab === "quick" ? "on" : "", onClick: () => setTab("quick") }, "Quick quiz")),
-    tab === "camb" ? h(PaperStudio, { results, setResults, toast }) : h(ExamEngine, { questions, saveQuestions, results, setResults, toast }));
+    h(Title, { eyebrow: "EXAM CENTRE", title: "Mock exams", desc: "Sit a real past paper under exam conditions: one subject, the real time, and one attempt per paper." }),
+    h("div", { className: "pb-subs", role: "tablist", "aria-label": "Subject" }, all.map((x) => h("button", { key: x, role: "tab", "aria-selected": x === sub, className: x === sub ? "pb-sub on" : "pb-sub", onClick: () => setSub(x) }, h(SubjectBadge, { sub: x, size: 30 }), h("span", null, x), h("small", null, SUBJ_CODE[x])))),
+    sub === "English" ? h(EnMock, { key: sub, toast }) : sub === "Chemistry" ? h(CambridgeMock, { key: sub, fixedSub: sub, results, setResults, toast, mock: true }) : h(TQMock, { key: sub, sub, toast }));
 }
 
 /* ===================== National exams (DPE Maldives) ===================== */
@@ -5183,7 +5334,13 @@ function AdminPayments({ pays, setPays, subMap, setSubMap, toast }) {
     setBusy(p.id + status);
     try {
       const ref = Cloud.db.doc("pays/" + p.uid); const s = await ref.get(); const d = s.data() || {};
-      await ref.set({ ...d, items: (d.items || []).map((x) => x.id === p.id ? { ...x, status, decided: Date.now() } : x) });
+      let cover = {};
+      if (status === "paid") {
+        const cur0 = (await Cloud.db.doc("plans/" + p.uid).get()).data();
+        const b0 = cur0 && cur0.expires > Date.now() && cur0.plan === p.plan ? cur0.expires : Date.now();
+        cover = { from: b0, to: b0 + DAYS[p.period] * 864e5 };
+      }
+      await ref.set({ ...d, items: (d.items || []).map((x) => x.id === p.id ? { ...x, status, decided: Date.now(), ...cover } : x) });
       if (status === "paid") {
         const cur = (await Cloud.db.doc("plans/" + p.uid).get()).data();
         const base = cur && cur.expires > Date.now() && cur.plan === p.plan ? cur.expires : Date.now();
@@ -5300,7 +5457,7 @@ async function uploadMany(fileList) {
 /* ===================== Round 3: shared helpers ===================== */
 const ChevL = ({ size = 20 }) => h("svg", { width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2.4, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true }, h("path", { d: "M15 18l-6-6 6-6" }));
 const initials = (n) => String(n || "").trim().split(/\s+/).slice(0, 2).map((w) => w[0] || "").join("").toUpperCase() || "ME";
-const PAGE_LABEL = { "My Performance": "My Progress", "Mock Examinations": "Practice exam" };
+const PAGE_LABEL = { "My Performance": "My Progress", "Mock Examinations": "Mock Exams" };
 const pageLabel = (p) => PAGE_LABEL[p] || p;
 let RQ_FOCUS = null;
 const lsSet = (k, v) => { try { LS.setItem(k, JSON.stringify(v)); } catch (e) { } };
@@ -5453,7 +5610,7 @@ function AssignmentEditor({ initial, onDone, toast }) {
   const step = (n, t) => h("div", { className: "ae-step" }, h("i", null, n), h("b", null, t));
   const [editId, setEditId] = useState(null);
   const [preview, setPreview] = useState(false);
-  const check = () => { if (!a.title.trim()) { toast("Give the task a title."); return false; } if (!a.items.length && !a.files.length) { toast("Add at least one question or a file."); return false; } return true; };
+  const check = () => { if (!a.title.trim()) { toast("Give the task a title."); return false; } if (!(a.classes || []).length) { toast("Pick a class to send this to."); return false; } if (!a.items.length && !a.files.length) { toast("Add at least one question or a file."); return false; } return true; };
   return h("div", { className: "ae" },
     h("div", { className: "ae-head" }, h("h1", null, a.id ? "Edit task" : "New task"), h("button", { className: "btn-secondary", onClick: onDone }, "Cancel")),
     h("section", { className: "panel ae-sec" }, step(1, "Details"),
@@ -5666,9 +5823,9 @@ function ClassPicker({ value, onChange, bare, sub }) {
   const tog = (id) => onChange(v.includes(id) ? v.filter((x) => x !== id) : [...v, id]);
   const wrap = (x) => bare ? x : h(Fld, { label: "Send to" }, x);
   return wrap(h("div", { className: "cls-pick" },
-    h("button", { type: "button", className: v.length ? "cls-chip" : "cls-chip on", onClick: () => onChange([]) }, "All students"),
     T.docs.map((c) => h("button", { type: "button", key: c.id, className: v.includes(c.id) ? "cls-chip on" : "cls-chip", onClick: () => tog(c.id) }, c.name)),
-    !T.loading && !T.docs.length && h("small", { className: "muted" }, sub ? `You have no ${sub} classes yet. Make one in Classes to send work to it.` : "Make a class in Classes to send work to just that class."),
+    !T.loading && !T.docs.length && h("small", { className: "muted" }, sub ? `You have no ${sub} classes yet. Make one in Classes to send work to it.` : "Make a class in Classes first. Work is sent to classes."),
+    !T.loading && T.docs.length > 0 && !v.length && h("small", { className: "muted cls-note" }, "Pick the class or classes to send this to."),
     !T.loading && sub && T0.docs.length > T.docs.length && T.docs.length > 0 && h("small", { className: "muted cls-note" }, `Only your ${sub} classes are shown.`)));
 }
 function ClassMembers({ c, members, toast }) {
@@ -6062,7 +6219,7 @@ const STUDY_RES = [
 ];
 const LANG_SUBS = ["English", "Dhivehi"];
 const slugT = (t) => String(t).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
-const CONTENT_V = "20261120c";
+const CONTENT_V = "20261120d";
 const tqCache = {}, tqTopicCache = {};
 function useTQ(sub) {
   const code = SUBJ_CODE[sub];
@@ -6537,7 +6694,7 @@ function useListenPack() {
   const [d, setD] = useState(null);
   useEffect(() => {
     let live = true;
-    if (!lPackP) lPackP = fetch("tq/0510/L.json" + (typeof CONTENT_V === "string" ? "?v=" + CONTENT_V : ""), { cache: "no-cache" }).then((r) => r.ok ? r.json() : null).catch(() => { lPackP = null; return null; });
+    if (!lPackP) lPackP = window.__LPACK ? Promise.resolve(window.__LPACK) : fetch("tq/0510/L.json" + (typeof CONTENT_V === "string" ? "?v=" + CONTENT_V : ""), { cache: "no-cache" }).then((r) => r.ok ? r.json() : null).catch(() => { lPackP = null; return null; });
     lPackP.then((x) => { if (live) setD(x || false); });
     return () => { live = false; };
   }, []);
@@ -6598,48 +6755,57 @@ function lMark(it, ans) {
 }
 function LAudio({ id, segs, labels, onDone }) {
   const ref = React.useRef(null);
+  const kRef = React.useRef(0);
+  const want = React.useRef(segs[0][0]);
+  const going = React.useRef(false);
   const [k, setK] = useState(0);
   const [cur, setCur] = useState(segs[0][0]);
-  const [playing, setPlaying] = useState(false);
-  const [ready, setReady] = useState(false);
+  const [started, setStarted] = useState(false);
   const [ended, setEnded] = useState(false);
   const [bad, setBad] = useState(false);
-  const want = React.useRef(segs[0][0]);
+  const [wait, setWait] = useState(false);
   const seg = segs[k] || segs[0];
   useEffect(() => {
     const a = ref.current; if (!a) return;
-    const meta = () => { setReady(true); try { a.currentTime = want.current; } catch (e) { } };
+    const meta = () => { try { a.currentTime = want.current; } catch (e) { } };
     const tick = () => {
-      const t = a.currentTime; setCur(t);
+      const t = a.currentTime;
       const s = segs[kRef.current];
+      if (going.current && t < s[0] - 1) { try { a.currentTime = s[0]; } catch (e) { } return; }
+      setCur(t);
       if (t >= s[1]) {
-        if (kRef.current + 1 < segs.length) { kRef.current += 1; setK(kRef.current); a.currentTime = segs[kRef.current][0]; }
-        else { a.pause(); setEnded(true); onDone && onDone(); }
+        if (kRef.current + 1 < segs.length) { kRef.current += 1; setK(kRef.current); want.current = segs[kRef.current][0]; a.currentTime = segs[kRef.current][0]; }
+        else { going.current = false; a.pause(); setEnded(true); onDone && onDone(); }
       }
     };
-    const pl = () => setPlaying(true), pa = () => setPlaying(false);
-    a.addEventListener("loadedmetadata", meta); a.addEventListener("timeupdate", tick); a.addEventListener("play", pl); a.addEventListener("pause", pa);
-    return () => { a.removeEventListener("loadedmetadata", meta); a.removeEventListener("timeupdate", tick); a.removeEventListener("play", pl); a.removeEventListener("pause", pa); a.pause(); };
+    /* the recording cannot be paused: if the browser or a headset pauses it, it carries on */
+    const pa = () => { if (going.current && !a.ended) setTimeout(() => { if (going.current && a.paused) a.play().catch(() => setWait(true)); }, 300); };
+    const pl = () => setWait(false);
+    const wt = () => setWait(true), cp = () => setWait(false);
+    a.addEventListener("loadedmetadata", meta); a.addEventListener("timeupdate", tick); a.addEventListener("pause", pa); a.addEventListener("play", pl); a.addEventListener("waiting", wt); a.addEventListener("playing", cp);
+    return () => { going.current = false; a.removeEventListener("loadedmetadata", meta); a.removeEventListener("timeupdate", tick); a.removeEventListener("pause", pa); a.removeEventListener("play", pl); a.removeEventListener("waiting", wt); a.removeEventListener("playing", cp); a.pause(); };
   }, []);
-  const kRef = React.useRef(0);
-  const go = (t) => { const a = ref.current; want.current = t; if (a && a.readyState >= 1) a.currentTime = t; setCur(t); };
-  const toggle = () => { const a = ref.current; if (!a) return; if (a.paused) { if (ended) { kRef.current = 0; setK(0); setEnded(false); go(segs[0][0]); } else if (a.readyState >= 1 && (a.currentTime < seg[0] - 1 || a.currentTime > seg[1])) go(seg[0]); a.play().catch(() => { }); } else a.pause(); };
-  const back = () => go(Math.max(seg[0], cur - 10));
-  const fwd = () => go(Math.min(seg[1] - 0.5, cur + 10));
-  const restart = () => go(seg[0]);
+  const start = () => {
+    const a = ref.current; if (!a || ended) return;
+    going.current = true; setStarted(true); setBad(false);
+    if (a.readyState >= 1 && Math.abs(a.currentTime - want.current) > 1 && !started) a.currentTime = want.current;
+    a.play().catch(() => setWait(true));
+  };
+  const resume = () => { const a = ref.current; if (a) { setBad(false); a.play().catch(() => setWait(true)); } };
   const len = seg[1] - seg[0], pos = Math.min(len, Math.max(0, cur - seg[0]));
-  return h("div", { className: "la" },
-    h("audio", { ref, src: LMEDIA + "audio/" + id + ".mp3", preload: "metadata", playsInline: true, onError: () => setBad(true), onCanPlay: () => setBad(false) }),
-    h("div", { className: "la-row" },
-      h("button", { type: "button", className: "la-play", onClick: toggle, "aria-label": playing ? "Pause" : "Play" }, playing ? h("svg", { viewBox: "0 0 24 24", width: 24, height: 24, fill: "currentColor" }, h("rect", { x: 6, y: 5, width: 4, height: 14, rx: 1 }), h("rect", { x: 14, y: 5, width: 4, height: 14, rx: 1 })) : h("svg", { viewBox: "0 0 24 24", width: 24, height: 24, fill: "currentColor" }, h("path", { d: "M8 5.5v13l11-6.5z" }))),
-      h("div", { className: "la-mid" },
-        h("div", { className: "la-t" }, h("b", null, labels ? labels[k] + (segs.length > 1 ? ` \xB7 ${k + 1} of ${segs.length}` : "") : "Full paper"), h("span", null, ended ? "Finished" : !ready && !playing ? "Tap play to start" : `${lFmt(pos)} / ${lFmt(len)}`)),
-        h("input", { type: "range", className: "la-bar", min: 0, max: Math.round(len), step: 1, value: Math.round(pos), "aria-label": "Position in the recording", onChange: (e) => go(seg[0] + Number(e.target.value)) }))),
-    h("div", { className: "la-btns" },
-      h("button", { type: "button", onClick: back }, "↺ 10 s"),
-      h("button", { type: "button", onClick: restart }, "Start of this part"),
-      h("button", { type: "button", onClick: fwd }, "10 s ↻")),
-    bad && h("p", { className: "la-err" }, "The recording could not load. Check your connection, or open edumaldives.vercel.app to listen."));
+  const pct = len ? Math.round(pos / len * 100) : 0;
+  return h("div", { className: "la" + (started && !ended ? " on" : "") },
+    h("audio", { ref, src: LMEDIA + "audio/" + id + ".mp3", preload: "metadata", playsInline: true, controlsList: "nodownload noplaybackrate", onError: () => setBad(true), onCanPlay: () => setBad(false) }),
+    !started ? h("div", { className: "la-row" },
+      h("button", { type: "button", className: "la-play", onClick: start, "aria-label": "Start the recording" }, h("svg", { viewBox: "0 0 24 24", width: 24, height: 24, fill: "currentColor" }, h("path", { d: "M8 5.5v13l11-6.5z" }))),
+      h("div", { className: "la-mid" }, h("div", { className: "la-t" }, h("b", null, labels ? labels[0] : "Full paper"), h("span", null, "Ready")), h("p", { className: "la-note" }, "Once it starts, the recording plays to the end. You cannot pause, go back or skip, just like the real exam.")))
+      : h("div", { className: "la-row" },
+        h("span", { className: "la-ic" + (ended ? " done" : "") }, ended ? h("svg", { viewBox: "0 0 24 24", width: 22, height: 22, fill: "none", stroke: "currentColor", strokeWidth: 2.4, strokeLinecap: "round", strokeLinejoin: "round" }, h("path", { d: "M5 12.5l4.5 4.5L19 7.5" })) : h("span", { className: "la-eq" }, h("i"), h("i"), h("i"))),
+        h("div", { className: "la-mid" },
+          h("div", { className: "la-t" }, h("b", null, labels ? labels[k] + (segs.length > 1 ? ` \xB7 ${k + 1} of ${segs.length}` : "") : "Full paper"), h("span", null, ended ? "Finished" : wait ? "Loading…" : `${lFmt(pos)} / ${lFmt(len)}`)),
+          h("div", { className: "la-prog", role: "progressbar", "aria-valuenow": pct, "aria-valuemin": 0, "aria-valuemax": 100 }, h("i", { style: { width: (ended ? 100 : pct) + "%" } })))),
+    bad && h("div", { className: "la-err" }, h("span", null, "The recording stopped loading. Check your connection."), started && !ended && h("button", { type: "button", className: "btn-secondary sm", onClick: resume }, "Try again")),
+    wait && !bad && started && !ended && ref.current && ref.current.paused && h("div", { className: "la-err" }, h("span", null, "Tap to carry on listening."), h("button", { type: "button", className: "btn-secondary sm", onClick: resume }, "Carry on")));
 }
 function LPages({ P, ex }) {
   return h("div", { className: "lp" }, ex.pages.map((p, i) => {
@@ -6647,6 +6813,70 @@ function LPages({ P, ex }) {
     const src = LMEDIA + "img/" + P.id + "/p" + p + ".webp";
     return h("a", { key: p, className: "lp-pg", href: src, target: "_blank", rel: "noopener" }, h("img", { src, loading: "lazy", alt: `Question paper page ${p}`, width: sz[0], height: sz[1], style: { aspectRatio: `${sz[0]} / ${sz[1]}` } }));
   }));
+}
+function LKey({ it, done, mk, setMk }) {
+  if (!done) return null;
+  const L1 = lLetterAns(it.a);
+  const m = mk[it.id];
+  return h("div", { className: "ln-key" }, h("small", null, "Answer"), h("span", null, L1 || it.a), !L1 && h("div", { className: "ln-self" }, [[it.m || 1, "Right"], [0, "Wrong"]].map(([val, lab]) => h("button", { key: lab, type: "button", className: m === val ? "chip on" : "chip", onClick: () => setMk((o) => ({ ...o, [it.id]: val })) }, lab))));
+}
+const lRes = (done, mk, id) => done ? (mk[id] == null ? "" : mk[id] > 0 ? " ok" : " bad") : "";
+function LLetters({ it, letters, v, done, setAns }) {
+  const L1 = lLetterAns(it.a);
+  return h("div", { className: "ln-let" + (letters.length > 4 ? " many" : "") }, letters.map((x) => { let c = "ln-l"; if (v === x) c += " sel"; if (done && x === L1) c += " ok"; else if (done && v === x) c += " bad"; return h("button", { key: x, type: "button", className: c, disabled: done, "aria-pressed": v === x, onClick: () => setAns((a) => ({ ...a, [it.id]: x })) }, x); }));
+}
+function LOpts({ it, opts, v, done, setAns }) {
+  const L1 = lLetterAns(it.a);
+  return h("div", { className: "ln-opts", role: "radiogroup" }, opts.map(([x, t]) => { let c = "ln-o"; if (v === x) c += " sel"; if (done && x === L1) c += " ok"; else if (done && v === x) c += " bad"; return h("button", { key: x, type: "button", role: "radio", "aria-checked": v === x, className: c, disabled: done, onClick: () => setAns((a) => ({ ...a, [it.id]: x })) }, h("b", null, x), h("span", null, t)); }));
+}
+/* join PDF line breaks so each note reads as one sentence */
+function lJoin(lines) {
+  const out = [];
+  lines.forEach((l) => {
+    const prev = out[out.length - 1];
+    const first = l.s[0];
+    const lastP = prev && prev.s[prev.s.length - 1];
+    const cont = prev && !prev.h && !l.h && (typeof first !== "string" || /^[a-z(‘'"$£0-9,.)]/.test(first)) && !(typeof lastP === "string" && /[.?!:]$/.test(lastP));
+    if (cont) prev.s = prev.s.concat(l.s); else out.push({ ...l, s: [...l.s] });
+  });
+  return out;
+}
+function LExercise({ P, e, ans, setAns, mk, setMk, done }) {
+  const X = e.x;
+  const byId = {}; e.items.forEach((it) => byId[it.id] = it);
+  const letters = lLetters(e);
+  const inp = (it) => h("input", { className: "ln-in", value: ans[it.id] || "", disabled: done, placeholder: "Your answer", autoCapitalize: "off", autoComplete: "off", spellCheck: false, onChange: (ev) => setAns((a) => ({ ...a, [it.id]: ev.target.value })) });
+  if (X && X.k === "mcq") return h("div", { className: "ln-qs" }, e.items.map((it) => {
+    const q = X.q[it.id] || {};
+    return h("div", { key: it.id, className: "ln-card" + lRes(done, mk, it.id) },
+      q.c && h("p", { className: "ln-ctx" }, q.c),
+      h("div", { className: "ln-stem" }, h("span", { className: "ln-num" }, it.id), q.q ? h("p", null, q.q) : null),
+      q.img && h("img", { className: "ln-pic", src: LMEDIA + q.img, alt: "Question " + it.id, loading: "lazy", width: q.sz && q.sz[0], height: q.sz && q.sz[1], style: q.sz ? { aspectRatio: `${q.sz[0]} / ${q.sz[1]}` } : undefined }),
+      q.o ? h(LOpts, { it, opts: q.o, v: ans[it.id], done, setAns }) : h(LLetters, { it, letters, v: ans[it.id], done, setAns }),
+      h(LKey, { it, done, mk, setMk }));
+  }));
+  if (X && X.k === "match") return h("div", { className: "ln-qs" },
+    h("div", { className: "ln-list" }, X.list.map(([L, t]) => h("div", { key: L, className: "ln-li" }, h("b", null, L), h("span", null, t)))),
+    e.items.map((it) => h("div", { key: it.id, className: "ln-card ln-spk" + lRes(done, mk, it.id) },
+      h("div", { className: "ln-stem" }, h("span", { className: "ln-num" }, it.id), h("p", null, (X.q[it.id] || {}).q || it.lab || "")),
+      h(LLetters, { it, letters: X.list.map((x) => x[0]), v: ans[it.id], done, setAns }),
+      h(LKey, { it, done, mk, setMk }))));
+  if (X && X.k === "short") return h("div", { className: "ln-qs" }, e.items.map((it) => h("div", { key: it.id, className: "ln-card" + lRes(done, mk, it.id) },
+    h("div", { className: "ln-stem" }, h("span", { className: "ln-num" }, it.id), h("p", null, (X.q[it.id] || {}).q)),
+    inp(it), h(LKey, { it, done, mk, setMk }))));
+  if (X && X.k === "notes") return h("div", { className: "ln-notes" }, lJoin(X.lines).map((l, i) => l.h ? h("h4", { key: i, className: "ln-nh" }, l.s.join(" ")) : h("div", { key: i, className: "ln-nl" },
+    h("p", null, l.s.map((x, j) => typeof x === "string" ? h("span", { key: j }, x + " ") : byId[x.g] ? h("span", { key: j, className: "ln-gap" + lRes(done, mk, x.g) }, h("small", null, x.g), h("input", { className: "ln-in", value: ans[x.g] || "", disabled: done, "aria-label": "Answer " + x.g, autoCapitalize: "off", autoComplete: "off", spellCheck: false, onChange: (ev) => setAns((a) => ({ ...a, [x.g]: ev.target.value })) }), " ") : null)),
+    done && l.s.filter((x) => typeof x !== "string" && byId[x.g]).map((x) => h("div", { key: x.g, className: "ln-card ln-nk" + lRes(done, mk, x.g) }, h("span", { className: "ln-num" }, x.g), h(LKey, { it: byId[x.g], done, mk, setMk }))))));
+  /* no text version: show the printed pages and answer below */
+  return h(React.Fragment, null, h(LPages, { P, ex: e }),
+    h("div", { className: "ln-ans" }, h("p", { className: "ln-ans-h" }, done ? "Your answers" : "Your answers — answer here as you listen"),
+      e.items.map((it) => {
+        const L1 = lLetterAns(it.a);
+        return h("div", { key: it.id, className: "ln-q" + (L1 && letters.length > 4 ? " wide" : "") + lRes(done, mk, it.id) },
+          h("span", { className: "ln-qn" }, it.lab || it.id),
+          L1 ? h(LLetters, { it, letters, v: ans[it.id], done, setAns }) : inp(it),
+          h(LKey, { it, done, mk, setMk }));
+      })));
 }
 function ListenBuilder({ toast, top }) {
   const L = useListenPack();
@@ -6703,20 +6933,10 @@ function ListenBuilder({ toast, top }) {
       h("div", { className: "ln-head" }, h("b", null, lName(P)), h("span", null, test.full ? "Full listening paper" : sel.length > 1 ? `Exercises ${sel.join(", ")}` : `Exercise ${sel[0]}`)),
       done && h("div", { className: "eb-score" }, h("b", null, `${sc} / ${tot}`), h("span", null, todo ? `${todo} answer${todo > 1 ? "s" : ""} to check. Compare with the answer and tap Right or Wrong.` : `${tot ? Math.round(sc / tot * 100) : 0}% \xB7 saved to My Progress`)),
       h("div", { className: "ln-sticky" }, h(LAudio, { key: test.id, id: P.id, segs, labels: test.full ? null : sel.map((n) => `Exercise ${n}`) })),
-      !done && h("p", { className: "ln-tip" }, "Press play. The recording starts at the beginning of ", test.full ? "the paper" : sel.length > 1 ? "each exercise you chose" : `Exercise ${sel[0]}`, ". You hear each part twice, just like the exam."),
+      !done && h("p", { className: "ln-tip" }, "Read the questions first, then press play. The recording starts at the beginning of ", test.full ? "the paper" : sel.length > 1 ? "each exercise you chose" : `Exercise ${sel[0]}`, " and you hear each part twice, like the exam."),
       E.map((e) => h("section", { key: e.n, className: "ln-ex" },
         h("h3", null, `Exercise ${e.n}`), e.instr && h("p", { className: "ln-instr" }, e.instr),
-        h(LPages, { P, ex: e }),
-        h("div", { className: "ln-ans" }, h("p", { className: "ln-ans-h" }, done ? "Your answers" : "Your answers — answer here as you listen"),
-          e.items.map((it) => {
-            const L1 = lLetterAns(it.a), v = ans[it.id] || "", m = mk[it.id];
-            const res = done ? (m == null ? "" : m > 0 ? " ok" : " bad") : "";
-            return h("div", { key: it.id, className: "ln-q" + (L1 && lLetters(e).length > 4 ? " wide" : "") + res },
-              h("span", { className: "ln-qn" }, it.lab || it.id),
-              L1 ? h("div", { className: "ln-let" }, lLetters(e).map((x) => { let c = "ln-l"; if (v === x) c += " sel"; if (done && x === L1) c += " ok"; else if (done && v === x) c += " bad"; return h("button", { key: x, type: "button", className: c, disabled: done, "aria-pressed": v === x, onClick: () => setAns((a) => ({ ...a, [it.id]: x })) }, x); }))
-                : h("input", { className: "ln-in", value: v, disabled: done, placeholder: "Your answer", autoCapitalize: "off", autoComplete: "off", spellCheck: false, onChange: (ev) => setAns((a) => ({ ...a, [it.id]: ev.target.value })) }),
-              done && h("div", { className: "ln-key" }, h("small", null, "Answer"), h("span", null, L1 || it.a), !L1 && h("div", { className: "ln-self" }, [[it.m || 1, "Right"], [0, "Wrong"]].map(([val, lab]) => h("button", { key: lab, type: "button", className: m === val ? "chip on" : "chip", onClick: () => setMk((o) => ({ ...o, [it.id]: val })) }, lab)))));
-          })))),
+        h(LExercise, { P, e, ans, setAns, mk, setMk, done }))),
       !done && h("button", { className: "btn-primary eb-start", onClick: async () => { if (nAns >= items.length || (await askConfirm("Some answers are empty. Finish anyway?", { yes: "Finish", no: "Keep going" }))) finish(); } }, "Finish and mark"));
   }
   const T = L_TYPES.find((x) => x[0] === ty);
@@ -6744,7 +6964,7 @@ function TimePick({ val, set, auto = true, note }) {
     md === "pick" && h("div", { className: "tp-quick" }, [10, 20, 30, 45, 60, 90, 120].map((v) => h("button", { key: v, type: "button", className: n === v ? "chip on" : "chip", onClick: () => set(v) }, v < 60 ? v + " min" : v === 60 ? "1 hour" : v % 60 ? `${Math.floor(v / 60)} h ${v % 60}` : `${v / 60} hours`))),
     h("p", { className: "eb-note" }, note || (md === "auto" ? "Set from the marks at real exam pace. The test hands itself in when the time ends." : md === "pick" ? `You have ${n} minutes. The test hands itself in when the time ends.` : "No timer. Finish when you are ready.")));
 }
-function EnBuilder({ sub, toast }) {
+function EnBuilder({ sub, toast, preset, onExit }) {
   const D = useEnPack();
   const gate = usePlanGate();
   const [sec, setSec] = useState("writing");
@@ -6762,6 +6982,7 @@ function EnBuilder({ sub, toast }) {
   const [left, setLeft] = useState(0);
   const [results, setResults] = useLocal("em-results", []);
   const [psg, setPsg] = useState({});
+  useEffect(() => { if (!preset) return; const tm = preset.mins; setTest({ id: Date.now(), items: preset.items, mins: tm, end: Date.now() + tm * 60000, label: preset.label }); setAns({}); setMk({}); setDone(false); setLeft(tm * 60); setPsg({}); window.scrollTo({ top: 0 }); }, [preset]);
   useEffect(() => {
     if (!test || done || !test.mins) return;
     const t = setInterval(() => { const l = Math.max(0, Math.round((test.end - Date.now()) / 1000)); setLeft(l); if (!l) { clearInterval(t); enFinRef.current && enFinRef.current(true); } }, 1000);
@@ -6809,12 +7030,13 @@ function EnBuilder({ sub, toast }) {
   }
   const setA = (k, v) => setAns((a) => ({ ...a, [k]: v }));
   const setM = (k, v) => setMk((a) => ({ ...a, [k]: v }));
+  if (preset && !test) return h("p", { className: "muted" }, "Loading…");
   if (test) {
     const mm = String(Math.floor(left / 60)).padStart(2, "0"), ss = String(left % 60).padStart(2, "0");
     const nAns = test.items.reduce((a, it, i) => a + (it.w ? (String(ans[i] || "").trim() ? 1 : 0) : it.qs.filter((q, j) => String(ans[i + ":" + j] || "").trim()).length), 0);
     const nAll = test.items.reduce((a, it) => a + (it.w ? 1 : it.qs.length), 0);
     return h("div", { className: "eb-run en-run" },
-      h("div", { className: "eb-bar" }, h("button", { className: "st-back", onClick: async () => { if (done || (await askConfirm("Leave this test? Your answers will be lost.", { yes: "Leave", no: "Stay" }))) setTest(null); } }, h(IBack, { size: 18 }), done ? " New test" : " Leave"), h("span", null, `${nAns}/${nAll} answered`), test.mins && !done ? h("b", { className: left < 60 ? "eb-time low" : "eb-time" }, `${mm}:${ss}`) : null, !done && h("button", { className: "btn-primary sm", onClick: async () => { if (nAns >= nAll || (await askConfirm("Some answers are empty. Finish anyway?", { yes: "Finish", no: "Keep going" }))) finish(); } }, "Finish")),
+      h("div", { className: "eb-bar" }, h("button", { className: "st-back", onClick: async () => { if (done || (await askConfirm(preset ? "Leave this exam? It still counts as your one attempt." : "Leave this test? Your answers will be lost.", { yes: "Leave", no: "Stay" }))) { if (preset && onExit) onExit(); else setTest(null); } } }, h(IBack, { size: 18 }), done ? (preset ? " Back" : " New test") : " Leave"), h("span", null, `${nAns}/${nAll} answered`), test.mins && !done ? h("b", { className: left < 60 ? "eb-time low" : "eb-time" }, `${mm}:${ss}`) : null, !done && h("button", { className: "btn-primary sm", onClick: async () => { if (nAns >= nAll || (await askConfirm("Some answers are empty. Finish anyway?", { yes: "Finish", no: "Keep going" }))) finish(); } }, "Finish")),
       done && h("div", { className: "eb-score" }, h("b", null, `${score.sc} / ${score.tot}`), h("span", null, score.todo ? `${score.todo} answer${score.todo > 1 ? "s" : ""} still to mark. Use the mark scheme below and tap your marks.` : `${score.tot ? Math.round(score.sc / score.tot * 100) : 0}% \xB7 marked automatically \xB7 saved to My Progress`)),
       test.items.map((it, i) => h("article", { key: it.id, className: "tq-card en-card" },
         h("div", { className: "tq-head" }, h("span", { className: "tq-n" }, i + 1), h("div", { className: "tq-src" }, h("b", null, enSrc(D, it)), h("small", null, it.w ? `${(EN_WT.find((x) => x[0] === it.type) || [, "Writing"])[1]}${it.sub ? " \xB7 " + it.sub : ""} \xB7 ${it.m} marks${it.words ? " \xB7 " + it.words + " words" : ""}` : `${(EN_RK.find((x) => x[0] === it.kind) || [, ""])[1]} \xB7 ${it.m} marks`))),
@@ -7207,7 +7429,7 @@ function Dashboard({ role, papers, questions, setPage, chartData: chartData2, to
   const D = dashData(role, results, user, T, AS);
   const student = role === "Student";
   const teacher = role === "Teacher";
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, h(NoticeBar), /* @__PURE__ */ React.createElement("div", { className: "welcome-row" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "eyebrow" }, /* @__PURE__ */ React.createElement("span", { className: "eyebrow-dot" }), student ? "YOUR LEARNING SPACE" : teacher ? "TEACHING WORKSPACE" : "PLATFORM OVERVIEW"), /* @__PURE__ */ (() => { const w = String(D.greet).split(" "); const last = w.pop(); return h("h1", null, w.join(" "), " ", h("span", { style: { whiteSpace: "nowrap" } }, last, " ", h("span", { className: "wave" }, "\u2726"))); })(), /* @__PURE__ */ React.createElement("p", null, student ? "Let\u2019s study a little today. One question at a time." : teacher ? "Here is what is happening across your classes and learning resources." : "Here is the latest overview of your EduMaldives platform.")), /* @__PURE__ */ React.createElement("div", { className: "date-pill" }, /* @__PURE__ */ React.createElement(CalendarDays, { size: 16 }), " ", D.date)), h(Countdown), !student && h(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { className: "section-heading" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h2", null, student ? "Your progress" : teacher ? "Your teaching at a glance" : "Platform at a glance"), /* @__PURE__ */ React.createElement("p", null, student ? "How you are doing so far." : teacher ? "A snapshot of your teaching resources." : "A snapshot of platform activity.")), /* @__PURE__ */ React.createElement("button", { className: "text-link", onClick: () => setPage(student ? "My Performance" : teacher ? "Class Analytics" : "Platform Analytics") }, "View analytics ", /* @__PURE__ */ React.createElement(ArrowUpRight, { size: 15 }))), /* @__PURE__ */ React.createElement("div", { className: "stats-grid" }, (D.stats).map(([label, value, sub, Icon, color]) => /* @__PURE__ */ React.createElement("div", { className: "stat-card", key: label }, /* @__PURE__ */ React.createElement("div", { className: `stat-icon ${color}` }, /* @__PURE__ */ React.createElement(Icon, { size: 19 })), /* @__PURE__ */ React.createElement("div", { className: "stat-label" }, label), /* @__PURE__ */ React.createElement("div", { className: "stat-value" }, value), /* @__PURE__ */ React.createElement("div", { className: "stat-sub" }, /* @__PURE__ */ React.createElement("span", { className: "trend-dot" }), sub))))), /* @__PURE__ */ React.createElement("div", { className: "dashboard-grid one" }, /* @__PURE__ */ React.createElement("div", { className: "panel quick-panel" }, /* @__PURE__ */ React.createElement("div", { className: "panel-head" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", null, "Quick access")), /* @__PURE__ */ React.createElement(MoreHorizontal, { size: 18, color: "#98a5b6" })), h("div", { className: "qa-grid" }, (student ? [["Practice exam", "Timed test, marked for you", ClipboardList, "#2b86d6", "Mock Examinations"], ["Tasks for everyone", "Work for all students", FilePlus2, "#7c5cd6", "Assignments"], ["Repeated questions", "Asked again and again", Repeat2, "#0f9b8e", "Repeated Questions"], ["Past papers", "Old exam papers", Library, "#e0832a", "Past Papers"]] : teacher ? [["Classes", "Your classes and codes", GraduationCap, "#2b86d6", "Classes"], ["New task", "Send work to a class", ClipboardList, "#7c5cd6", "Assignments"], ["Paper builder", "Make a full exam paper", FilePlus2, "#0f9b8e", "Paper Builder"], ["Class analytics", "See class results", ChartNoAxesCombined, "#e0832a", "Class Analytics"]] : [["Users", "People and roles", Users, "#2b86d6", "Users & Schools"], ["Payments", "Approve plans", ShieldCheck, "#7c5cd6", "Payments"], ["Settings", "Bank, notice, countdown", Settings, "#0f9b8e", "Settings"], ["Past papers", "Paper library", Library, "#e0832a", "Past Paper Library"]]).map(([title, desc, Icon, col, dest]) => h("button", { className: "qa-tile", key: title, style: { "--c": col }, onClick: () => setPage(dest) }, h("span", { className: "qa-ic" }, h(Icon, { size: 24 })), h("b", null, title), h("small", null, desc)))))), /* @__PURE__ */ React.createElement("div", { className: "bottom-grid" }, /* @__PURE__ */ React.createElement("div", { className: "panel subject-panel" }, /* @__PURE__ */ React.createElement("div", { className: "panel-head" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", null, student ? "Your subjects" : "Subject overview"), /* @__PURE__ */ React.createElement("p", null, "Notes, questions and past papers for each subject.")), /* @__PURE__ */ React.createElement("button", { className: "text-link", onClick: () => setPage("Study") }, "Study ", /* @__PURE__ */ React.createElement(ArrowUpRight, { size: 14 }))), /* @__PURE__ */ React.createElement("div", { className: "subject-grid" }, SUBJ_STATS.map(([s, ab, info], i) => h("button", { className: "subject-tile", key: s, onClick: () => openSubject(s, setPage) }, h(SubjectBadge, { sub: s, size: 42 }), h("b", null, s), h("small", null, info))))), /* @__PURE__ */ React.createElement("div", { className: "panel repeated-panel" }, /* @__PURE__ */ React.createElement("div", { className: "panel-head" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", null, "Trending questions"), /* @__PURE__ */ React.createElement("p", null, "Questions that come often in exams.")), /* @__PURE__ */ React.createElement("button", { className: "text-link", onClick: () => setPage("Repeated Questions") }, "Explore ", /* @__PURE__ */ React.createElement(ArrowUpRight, { size: 14 }))), TRENDING.map((q, k) => h("button", { className: "trending-row", key: k, onClick: () => openTrending(q, setPage) }, h("span", { className: "trending-rank" }, String(q.n).padStart(2, "0"), "×"), h("span", null, h("b", null, q.t), h("small", null, q.sub, " · ", q.topic, " · asked in ", q.n, " papers")), h(ChevronRight, { size: 15 }))))));
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, h(NoticeBar), /* @__PURE__ */ React.createElement("div", { className: "welcome-row" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "eyebrow" }, /* @__PURE__ */ React.createElement("span", { className: "eyebrow-dot" }), student ? "YOUR LEARNING SPACE" : teacher ? "TEACHING WORKSPACE" : "PLATFORM OVERVIEW"), /* @__PURE__ */ (() => { const w = String(D.greet).split(" "); const last = w.pop(); return h("h1", null, w.join(" "), " ", h("span", { style: { whiteSpace: "nowrap" } }, last, " ", h("span", { className: "wave" }, "\u2726"))); })(), /* @__PURE__ */ React.createElement("p", null, student ? "Let\u2019s study a little today. One question at a time." : teacher ? "Here is what is happening across your classes and learning resources." : "Here is the latest overview of your EduMaldives platform.")), /* @__PURE__ */ React.createElement("div", { className: "date-pill" }, /* @__PURE__ */ React.createElement(CalendarDays, { size: 16 }), " ", D.date)), h(Countdown), !student && h(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { className: "section-heading" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h2", null, student ? "Your progress" : teacher ? "Your teaching at a glance" : "Platform at a glance"), /* @__PURE__ */ React.createElement("p", null, student ? "How you are doing so far." : teacher ? "A snapshot of your teaching resources." : "A snapshot of platform activity.")), /* @__PURE__ */ React.createElement("button", { className: "text-link", onClick: () => setPage(student ? "My Performance" : teacher ? "Class Analytics" : "Platform Analytics") }, "View analytics ", /* @__PURE__ */ React.createElement(ArrowUpRight, { size: 15 }))), /* @__PURE__ */ React.createElement("div", { className: "stats-grid" }, (D.stats).map(([label, value, sub, Icon, color]) => /* @__PURE__ */ React.createElement("div", { className: "stat-card", key: label }, /* @__PURE__ */ React.createElement("div", { className: `stat-icon ${color}` }, /* @__PURE__ */ React.createElement(Icon, { size: 19 })), /* @__PURE__ */ React.createElement("div", { className: "stat-label" }, label), /* @__PURE__ */ React.createElement("div", { className: "stat-value" }, value), /* @__PURE__ */ React.createElement("div", { className: "stat-sub" }, /* @__PURE__ */ React.createElement("span", { className: "trend-dot" }), sub))))), /* @__PURE__ */ React.createElement("div", { className: "dashboard-grid one" }, /* @__PURE__ */ React.createElement("div", { className: "panel quick-panel" }, /* @__PURE__ */ React.createElement("div", { className: "panel-head" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", null, "Quick access")), /* @__PURE__ */ React.createElement(MoreHorizontal, { size: 18, color: "#98a5b6" })), h("div", { className: "qa-grid" }, (student ? [["Mock exams", "Real papers, timed", ClipboardList, "#2b86d6", "Mock Examinations"], ["Study planner", "Plan today’s study", CalendarDays, "#7c5cd6", "Study Planner"], ["Repeated questions", "Asked again and again", Repeat2, "#0f9b8e", "Repeated Questions"], ["Past papers", "Old exam papers", Library, "#e0832a", "Past Papers"]] : teacher ? [["Classes", "Your classes and codes", GraduationCap, "#2b86d6", "Classes"], ["New task", "Send work to a class", ClipboardList, "#7c5cd6", "Assignments"], ["Paper builder", "Make a full exam paper", FilePlus2, "#0f9b8e", "Paper Builder"], ["Class analytics", "See class results", ChartNoAxesCombined, "#e0832a", "Class Analytics"]] : [["Users", "People and roles", Users, "#2b86d6", "Users & Schools"], ["Payments", "Approve plans", ShieldCheck, "#7c5cd6", "Payments"], ["Settings", "Bank, notice, countdown", Settings, "#0f9b8e", "Settings"], ["Past papers", "Paper library", Library, "#e0832a", "Past Paper Library"]]).map(([title, desc, Icon, col, dest]) => h("button", { className: "qa-tile", key: title, style: { "--c": col }, onClick: () => setPage(dest) }, h("span", { className: "qa-ic" }, h(Icon, { size: 24 })), h("b", null, title), h("small", null, desc)))))), /* @__PURE__ */ React.createElement("div", { className: "bottom-grid" }, /* @__PURE__ */ React.createElement("div", { className: "panel subject-panel" }, /* @__PURE__ */ React.createElement("div", { className: "panel-head" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", null, student ? "Your subjects" : "Subject overview"), /* @__PURE__ */ React.createElement("p", null, "Notes, questions and past papers for each subject.")), /* @__PURE__ */ React.createElement("button", { className: "text-link", onClick: () => setPage("Study") }, "Study ", /* @__PURE__ */ React.createElement(ArrowUpRight, { size: 14 }))), /* @__PURE__ */ React.createElement("div", { className: "subject-grid" }, SUBJ_STATS.map(([s, ab, info], i) => h("button", { className: "subject-tile", key: s, onClick: () => openSubject(s, setPage) }, h(SubjectBadge, { sub: s, size: 42 }), h("b", null, s), h("small", null, info))))), /* @__PURE__ */ React.createElement("div", { className: "panel repeated-panel" }, /* @__PURE__ */ React.createElement("div", { className: "panel-head" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", null, "Trending questions"), /* @__PURE__ */ React.createElement("p", null, "Asked again and again in real papers.")), /* @__PURE__ */ React.createElement("button", { className: "text-link", onClick: () => setPage("Repeated Questions") }, "Explore ", /* @__PURE__ */ React.createElement(ArrowUpRight, { size: 14 }))), h("div", { className: "tr-list" }, TRENDING.slice(0, 6).map((q, k) => h("button", { className: "tr-row", key: k, onClick: () => openTrending(q, setPage) }, h("span", { className: "tr-txt" }, h("b", null, q.t), h("span", { className: "tr-meta" }, h("i", { className: "tr-sub" }, q.sub), h("i", null, q.topic))), h("span", { className: "tr-n" }, h("b", null, q.n), h("small", null, "papers"))))))));
 }
 function PageTitle({ eyebrow, title, desc, action, children }) {
   return /* @__PURE__ */ React.createElement("div", { className: "page-title-row" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "eyebrow" }, eyebrow), /* @__PURE__ */ React.createElement("h1", null, title), /* @__PURE__ */ React.createElement("p", null, desc)), action, children);
