@@ -3254,7 +3254,8 @@ function AuthPage({ supabase: supabase2, setUser }) {
         const { data: isAd } = await supabase2.rpc("is_admin");
         if (mode === "admin" && !isAd) { await supabase2.auth.signOut(); throw new Error("This account is not an admin account."); }
         if (isAd && (mode === "admin" || m.role === "Admin")) { setAdminOk(true); fin({ id: data.user.id, email, name: m.name || "Admin", role: "Admin", admin: true }); return; }
-        fin({ id: data.user.id, email, name: m.name || email, phone: m.phone || "", role: m.role || "Student", grade: m.grade || "", school: m.school || "" });
+        const prof = await loadMyProfile(supabase2, data.user.id);
+        fin({ id: data.user.id, email, name: prof.name || m.name || email, phone: prof.phone || m.phone || "", role: m.role || "Student", grade: prof.grade || m.grade || "", school: prof.school || m.school || "", ...(subsFrom(prof.tsubs, m.subjects) ? { subjects: subsFrom(prof.tsubs, m.subjects) } : {}) });
       } else {
         const h = await sha(email + ":" + f.password);
         const u = readUsers().find((x) => x.email === email && x.hash === h);
@@ -5495,7 +5496,8 @@ function useMemberSync(user) {
     const ref = C.db.doc("members/" + C.uid);
     ref.get().then((s) => {
       const old = s.exists ? s.data() : {};
-      const prof = { name: user.name || "", email: user.email || "", phone: user.phone || "", role: user.role || "Student", grade: user.grade || "", tsubs: (user.subjects || []).join(", "), school: (user.school || "").trim() };
+      const prof0 = { name: user.name || "", email: user.email || "", phone: user.phone || "", role: user.role || "Student", grade: user.grade || "", tsubs: (user.subjects || []).join(", "), school: (user.school || "").trim() };
+      const prof = {}; Object.keys(prof0).forEach((k) => { prof[k] = prof0[k] === "" && old[k] ? old[k] : prof0[k]; });
       const changed = Object.keys(prof).some((k) => old[k] !== prof[k]);
       if (!s.exists || changed || !old.last || Date.now() - old.last > 30 * 6e4) ref.set({ ...old, ...prof, joined: old.joined || Date.now(), last: Date.now() }).catch(() => {});
     }).catch(() => {});
@@ -6081,16 +6083,42 @@ function ClassMembers({ c, members, toast }) {
   return h("div", { className: "cls-members" }, list.length === 0 ? h("p", { className: "muted" }, "No students yet. Share the code so they can join.") : list.map((m) => h("div", { className: "assignment-row", key: m.id }, h("span", null, h("b", null, names[m.id] && names[m.id] !== "Student" ? names[m.id] : m.name || "Student"), h("small", { className: "muted", style: { display: "block" } }, m.email || "", m.joined && m.joined[c.id] ? ` \xB7 joined ${new Date(m.joined[c.id]).toLocaleDateString("en-GB")}` : "")), h("button", { className: "btn-secondary", onClick: () => setChatWith(m) }, "Message"), h("button", { className: "btn-secondary", onClick: () => remove(m) }, "Remove"))), chatWith && h(ChatBox, { ownerUid: chatWith.id, cls: c.id, teacherSide: true, title: names[chatWith.id] && names[chatWith.id] !== "Student" ? names[chatWith.id] : chatWith.name || "Student", onClose: () => setChatWith(null), toast }));
 }
 const teachSubs = () => { const t = getAccess().tsubs; return t && t.length ? subjects.filter((x) => t.includes(x)) : subjects; };
+async function loadMyProfile(sb, uid) {
+  try { const r = await sb.from("docs").select("data").eq("path", "members/" + uid).maybeSingle(); return (r && r.data && r.data.data) || {}; } catch (e) { return {}; }
+}
+function subsFrom(tsubs, metaSubs) {
+  const a = Array.isArray(metaSubs) && metaSubs.length ? metaSubs : String(tsubs || "").split(",").map((x) => x.trim()).filter(Boolean);
+  const ok = subjects.filter((x) => a.includes(x));
+  return ok.length ? ok : null;
+}
 function TeacherSubjects({ user, setUser, onDone, inline }) {
   const [sel, setSel] = useState(user.subjects || []);
+  const [checking, setChecking] = useState(!inline && !!window.__SB);
+  useEffect(() => {
+    if (inline || !window.__SB) return;
+    let on = true;
+    (async () => {
+      try {
+        const { data: s } = await window.__SB.auth.getSession(); const uid = s && s.session && s.session.user && s.session.user.id;
+        const md = s && s.session && s.session.user && s.session.user.user_metadata || {};
+        const prof = uid ? await loadMyProfile(window.__SB, uid) : {};
+        const got = subsFrom(prof.tsubs, md.subjects);
+        if (on && got) { setUser({ ...user, subjects: got }); return; }
+      } catch (e) { }
+      if (on) setChecking(false);
+    })();
+    return () => { on = false; };
+  }, []);
   const tog = (x) => setSel(sel.includes(x) ? sel.filter((y) => y !== x) : [...sel, x]);
   const save = () => {
     if (!sel.length) return;
     const u = { ...user, subjects: subjects.filter((x) => sel.includes(x)) };
     setUser(u);
+    try { window.__SB && window.__SB.auth.updateUser({ data: { subjects: u.subjects } }).catch(() => { }); } catch (e) { }
     try { const us = JSON.parse(LS.getItem("em-users") || "[]").map((x) => x.email && x.email === u.email ? { ...x, subjects: u.subjects } : x); LS.setItem("em-users", JSON.stringify(us)); } catch (e) { }
     onDone && onDone();
   };
+  if (checking) return h("div", { className: "pin-wrap" }, h("div", { className: "nd-skel", style: { width: "min(360px, 90vw)" } }, h("i"), h("i"), h("i")));
   const body = h(React.Fragment, null,
     !inline && h("span", { className: "up-ic" }, h(BookOpen, { size: 22 })),
     !inline && h("h2", null, "Which subjects do you teach?"),
