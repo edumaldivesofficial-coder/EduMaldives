@@ -7697,7 +7697,7 @@ function App() {
   };
   useAccountRole(user, setRole);
   const cloud = useCloud();
-  const lockedStudent = cloud.ready && cloud.shared && !cloud.canEdit;
+  const lockedStudent = cloud.ready && cloud.shared && !cloud.canEdit && !(user && user.role === "Teacher");
   useSiteConfig();
   useMemberSync(user);
   const CON = cloud.ready && cloud.shared && !!cloud.uid && !!user && user.role !== "Demo";
