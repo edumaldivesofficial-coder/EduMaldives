@@ -1398,112 +1398,131 @@ html[data-theme=dark] .ln-ctx{background:#16263b;color:#bcd7f0!important}
 .eb-seg{grid-auto-flow:row!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,128px),1fr));grid-auto-columns:auto}
 .eb-seg button{white-space:normal!important;height:auto!important;min-height:38px;padding:6px 8px!important;line-height:1.25}
 .mk-comps{max-width:none!important}
-</style><style id="rn102">.rn{display:flex;flex-direction:column;gap:14px;max-width:760px;margin:0 auto;width:100%}
-.rn-subj{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e6ecf3;border-radius:20px;padding:14px 16px;box-shadow:0 6px 20px rgba(20,48,77,.05)}
-.rn-sic{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;flex:none;background:color-mix(in srgb,var(--t,#2f7fd1) 13%,#fff);color:var(--t,#2f7fd1)}
-.rn-sn{display:flex;flex-direction:column;min-width:0;flex:1}
-.rn-sn small{font:800 11px "DM Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#8492a5}
-.rn-sn b{font:800 18px "DM Sans",sans-serif;color:#14304d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.rn-sn em{font:600 12px "DM Sans",sans-serif;font-style:normal;color:#8492a5}
-.rn-chg{position:relative;display:flex;align-items:center;gap:6px;border:1px solid #dfe6ef;border-radius:14px;padding:9px 14px;color:#4b5fd6;font:700 15px "DM Sans",sans-serif;flex:none;cursor:pointer}
-.rn-chg select{position:absolute;inset:0;opacity:0;cursor:pointer;font-size:16px}
-.rn-seg{display:inline-flex;align-self:flex-start;background:#fff;border:1px solid #e6ecf3;border-radius:16px;padding:4px;gap:4px}
-.rn-seg button{border:0;background:transparent;border-radius:12px;padding:10px 20px;font:800 15px "DM Sans",sans-serif;color:#8492a5;cursor:pointer}
-.rn-seg button.on{background:#0e1b3d;color:#fff}
-.rn-full{display:flex;align-items:center;gap:14px;width:100%;text-align:left;border:0;border-radius:22px;padding:18px;background:#0e1b3d;color:#fff;cursor:pointer;box-shadow:0 10px 26px rgba(14,27,61,.22);font-family:inherit}
-.rn-fic{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:#173a4f;color:#7ee0cf;flex:none}
-.rn-ft{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
-.rn-ft b{font:800 18px "DM Sans",sans-serif}
-.rn-ft small{font:500 14px "DM Sans",sans-serif;color:#b7c3dc}
-.rn-full .rn-chev{color:#7ee0cf}
-.rn-search input{width:100%;box-sizing:border-box;border:1px solid #e1e8f0;border-radius:14px;padding:12px 14px;font:500 15px "DM Sans",sans-serif;background:#fff;color:#14304d}
-.rn.dv .rn-search input{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;font-size:16px}
-.rn-h{margin:6px 2px 0;font:800 18px "DM Sans",sans-serif;color:#14304d}
-.rn-uc{background:#fff;border:1px solid #e6ecf3;border-radius:20px;overflow:hidden;box-shadow:0 4px 16px rgba(20,48,77,.04)}
-.rn-ucb{display:flex;align-items:center;gap:14px;width:100%;padding:16px;border:0;background:transparent;cursor:pointer;text-align:start;font-family:inherit}
-.rn-ub{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;flex:none;background:#eef0ff;color:#5560d8;font:800 16px "DM Sans",sans-serif;direction:ltr}
-.rn-ut{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
-.rn-ut b{font:800 16.5px "DM Sans",sans-serif;color:#14304d;line-height:1.35}
-.rn-ut small{font:600 13px "DM Sans",sans-serif;color:#8492a5}
-.rn-cd{color:#8492a5;transition:transform .2s;flex:none}
-.rn-uc.on .rn-cd{transform:rotate(180deg)}
-.rn-ub2{border-top:1px solid #eef2f6;padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px}
-.rn-whole{display:flex;align-items:center;gap:10px;width:100%;border:0;border-radius:16px;padding:14px 16px;background:#e5f7f2;color:#24946f;font:800 15.5px "DM Sans",sans-serif;cursor:pointer;text-align:start}
-.rn-whole span{flex:1}
-.rn-or{font:800 12px "DM Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8492a5;margin:12px 4px 4px}
-.rn-li{display:flex;align-items:center;gap:12px;width:100%;border:0;background:transparent;padding:10px 4px;border-radius:14px;cursor:pointer;text-align:start;font-family:inherit}
-.rn-li:hover{background:#f5f8fc}
-.rn-n{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none;background:#eef0ff;color:#5560d8;font:800 14px "DM Sans",sans-serif}
-.rn-lt{flex:1;min-width:0;font:600 15.5px "DM Sans",sans-serif;color:#1f344b;line-height:1.4;display:flex;flex-direction:column}
-.rn-lt small{font:500 12.5px "DM Sans",sans-serif;color:#8492a5}
-.rn-chev{color:#9aa8b8;flex:none}
-.rn.dv .rn-chev{transform:scaleX(-1)}
-.rn-list{display:flex;flex-direction:column;background:#fff;border:1px solid #e6ecf3;border-radius:20px;padding:8px}
-.rn.dv .rn-ut b,.rn.dv .rn-lt,.rn.dv .rn-h,.rn.dv .rn-whole,.rn.dv .rn-or,.rn.dv .rn-ft,.rn.dv .rn-sn small,.rn.dv .rn-seg button,.rn.dv .rn-chg span,.rn.dv .rn-ut small{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;letter-spacing:0}
-.rn.dv .rn-ut b{font-size:19px;font-weight:400;line-height:1.8}
-.rn.dv .rn-lt{font-size:18px;line-height:1.8}
-.rn.dv .rn-whole,.rn.dv .rn-ft b{font-size:17px;font-weight:400}
-.rn.dv .rn-h{font-size:20px;font-weight:400}
-.rn-back{align-self:flex-start}
-.rn-crumb{background:#fff;border:1px solid #e6ecf3;border-radius:20px;padding:18px;text-align:center;display:flex;flex-direction:column;gap:4px}
-.rn-crumb small{font:700 13px "DM Sans",sans-serif;color:#8492a5}
-.rn-crumb b{font:800 22px "DM Sans",sans-serif;color:#14304d;line-height:1.4}
-.rn.dv .rn-crumb b,.rn.dv .rn-crumb small{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;font-weight:400}
-.rn.dv .rn-crumb b{font-size:24px}
-.rn-toc{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:8px}
-.rn-toc a{display:inline-flex;gap:6px;align-items:center;border:1px solid #e1e8f0;border-radius:999px;padding:6px 12px;font:600 13px "DM Sans",sans-serif;color:#1f344b;text-decoration:none;background:#f8fafc}
-.rn-toc a span{color:#5560d8;font-weight:800}
-.rn.dv .rn-toc a{font:15px "Faruma","MV Faruma","Noto Sans Thaana",sans-serif}
-.rn-unit{display:flex;flex-direction:column;gap:14px;scroll-margin-top:80px}
-.rn-uh{display:flex;align-items:center;gap:14px;padding:6px 2px 0}
-.rn-uh small{font:700 13px "DM Sans",sans-serif;color:#8492a5}
-.rn-uh h2{margin:2px 0 0;font:800 22px "DM Sans",sans-serif;color:#14304d}
-.rn.dv .rn-uh h2,.rn.dv .rn-uh small{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;font-weight:400}
-.rn-les{display:flex;flex-direction:column;gap:12px;background:#fff;border:1px solid #e6ecf3;border-radius:22px;padding:18px;scroll-margin-top:80px}
-.rn-les .nd-card{border-radius:16px;box-shadow:none}
-.rn-lh{display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1px solid #eef2f6}
-.rn-ln{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex:none;background:#0e1b3d;color:#fff;font:800 15px "DM Sans",sans-serif}
-.rn-lh small{font:700 12px "DM Sans",sans-serif;color:#8492a5;letter-spacing:.06em;text-transform:uppercase}
-.rn-lh h3{margin:2px 0 0;font:800 19px "DM Sans",sans-serif;color:#14304d;line-height:1.35}
-.rn.dv .rn-lh h3,.rn.dv .rn-lh small{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;font-weight:400;letter-spacing:0}
-.rn.dv .rn-lh h3{font-size:22px;line-height:1.8}
-.rn-words{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
-.rn-word{background:#f7f9fc;border:1px solid #e6ecf3;border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:3px}
-.rn-word b{font:800 15px "DM Sans",sans-serif;color:#14304d}
-.rn-word span{font:500 14.5px/1.5 "DM Sans",sans-serif;color:#33495f}
-.rn.dv .rn-word b,.rn.dv .rn-word span{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;font-weight:400}
-.rn.dv .rn-word b{font-size:18px}
-.rn.dv .rn-word span{font-size:17px;line-height:1.9}
-.nd-words{background:#fbfcfe}
-.nd-ex{background:#f6f8ff;border-color:#e2e6fb}
-.nd-ex h4{color:#4b55c8}
-.nd-qs h4{color:#13497a}
-.rn-nav{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.rn-pn{display:flex;flex-direction:column;gap:3px;border:1px solid #e1e8f0;background:#fff;border-radius:16px;padding:12px 14px;text-align:start;cursor:pointer;font-family:inherit;min-width:0}
-.rn-pn.nx{text-align:end;background:#0e1b3d;border-color:#0e1b3d}
-.rn-pn small{font:700 12px "DM Sans",sans-serif;color:#8492a5}
-.rn-pn b{font:700 14.5px "DM Sans",sans-serif;color:#14304d;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.rn-pn.nx small{color:#9fb0d4}
-.rn-pn.nx b{color:#fff}
-.rn.dv .rn-pn b,.rn.dv .rn-pn small{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;font-weight:400}
-.rn.dv .rn-pn b{font-size:17px;line-height:1.7}
-.rn-end{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px;background:#fff;border:1px solid #e6ecf3;border-radius:20px;text-align:center}
-.rn-end b{font:800 17px "DM Sans",sans-serif;color:#24946f}
-.rn.dv .rn-end b,.rn.dv .rn-end button{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;font-weight:400}
-.rn-top{align-self:center;border:1px solid #e1e8f0;background:#fff;border-radius:999px;padding:8px 18px;font:700 14px "DM Sans",sans-serif;color:#4f6276;cursor:pointer}
-.rn.dv .rn-top{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;font-weight:400;font-size:16px}
-@media (max-width:520px){.rn-subj{padding:12px}.rn-sic,.rn-ub{width:44px;height:44px}.rn-full{padding:16px}.rn-les{padding:14px;border-radius:18px}.rn-les .nd-card{padding:13px}.rn-chg{padding:8px 11px;font-size:14px}.rn-seg button{padding:9px 16px}}
-html[data-theme=dark] .rn-subj,html[data-theme=dark] .rn-uc,html[data-theme=dark] .rn-crumb,html[data-theme=dark] .rn-les,html[data-theme=dark] .rn-list,html[data-theme=dark] .rn-end,html[data-theme=dark] .rn-seg,html[data-theme=dark] .rn-pn,html[data-theme=dark] .rn-top,html[data-theme=dark] .rn-search input{background:#152238;border-color:#24364f;color:#e6edf5}
-html[data-theme=dark] .rn-sn b,html[data-theme=dark] .rn-ut b,html[data-theme=dark] .rn-h,html[data-theme=dark] .rn-crumb b,html[data-theme=dark] .rn-uh h2,html[data-theme=dark] .rn-lh h3,html[data-theme=dark] .rn-pn b,html[data-theme=dark] .rn-word b{color:#e6edf5}
-html[data-theme=dark] .rn-lt,html[data-theme=dark] .rn-word span{color:#c5d3e3}
-html[data-theme=dark] .rn-ub,html[data-theme=dark] .rn-n{background:#252c5a;color:#aab3ff}
-html[data-theme=dark] .rn-whole{background:#123b34;color:#7ee0bf}
-html[data-theme=dark] .rn-seg button.on,html[data-theme=dark] .rn-full,html[data-theme=dark] .rn-ln,html[data-theme=dark] .rn-pn.nx{background:#2a5bd7;border-color:#2a5bd7}
-html[data-theme=dark] .rn-ub2,html[data-theme=dark] .rn-lh{border-color:#24364f}
-html[data-theme=dark] .rn-li:hover{background:#1b2a40}
-html[data-theme=dark] .rn-word,html[data-theme=dark] .nd-words,html[data-theme=dark] .rn-toc a{background:#1b2a40;border-color:#2a3d56;color:#e6edf5}
-html[data-theme=dark] .nd-ex{background:#1a2347;border-color:#2c3768}
-html[data-theme=dark] .rn-chg{border-color:#2a3d56;color:#aab3ff}
+</style><style id="rn102">.rn2{display:flex;flex-direction:column;gap:12px;max-width:760px;margin:0 auto;width:100%;--ac:var(--t,#278ed0)}
+.r2-top1{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:space-between}
+.r2-subj{position:relative;display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #e3eaf2;border-radius:999px;padding:6px 14px 6px 6px;cursor:pointer;color:#102b4e;min-width:0}
+.rn2.dv .r2-subj{padding:6px 6px 6px 14px}
+.r2-subj b{font:800 15px "DM Sans",sans-serif;white-space:nowrap}
+.r2-subj select{position:absolute;inset:0;opacity:0;cursor:pointer;font-size:16px}
+.r2-sic{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--ac) 14%,#fff);color:var(--ac)}
+.r2-grades{display:inline-flex;gap:6px}
+.r2-grades button{border:1px solid #e3eaf2;background:#fff;border-radius:999px;padding:8px 16px;font:700 14px "DM Sans",sans-serif;color:#4f6276;cursor:pointer}
+.r2-grades button.on{background:#278ed0;border-color:#278ed0;color:#fff}
+.r2-hero{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:linear-gradient(135deg,#185081,#2688c9);color:#fff}
+.r2-hs{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.r2-hs b{font:700 14.5px "DM Sans",sans-serif;opacity:.95}
+.r2-hero .r2-bar{background:rgba(255,255,255,.25)}
+.r2-hero .r2-bar i{background:#a9d6f5}
+.r2-allb{display:inline-flex;align-items:center;gap:6px;border:0;background:#fff;color:#185081;border-radius:999px;padding:9px 14px;font:800 14px "DM Sans",sans-serif;cursor:pointer;flex:none}
+.r2-bar{display:block;height:6px;border-radius:6px;background:#edf2f7;overflow:hidden}
+.r2-bar i{display:block;height:100%;border-radius:6px;background:var(--ac);transition:width .3s}
+.r2-search{width:100%;box-sizing:border-box;border:1px solid #e3eaf2;border-radius:12px;padding:11px 14px;font:500 15px "DM Sans",sans-serif;background:#fff;color:#102b4e}
+.r2-unit{background:#fff;border:1px solid #e3eaf2;border-radius:16px;overflow:hidden}
+.r2-unit.on{border-color:color-mix(in srgb,var(--ac) 40%,#e3eaf2)}
+.r2-uh{display:flex;align-items:center;gap:12px;width:100%;padding:14px;border:0;background:transparent;cursor:pointer;text-align:start;font-family:inherit}
+.r2-num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;flex:none;border:2px solid var(--ac);color:var(--ac);font:800 15px "DM Sans",sans-serif;background:#fff}
+.r2-num.full{background:var(--ac);color:#fff}
+.r2-ut{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0}
+.r2-ut b{font:800 16px "DM Sans",sans-serif;color:#102b4e;line-height:1.35}
+.r2-ut small{font:600 12.5px "DM Sans",sans-serif;color:#8492a5}
+.r2-ut .r2-bar{height:4px;max-width:220px}
+.r2-cd{color:#8492a5;flex:none;transition:transform .2s}
+.r2-unit.on .r2-cd{transform:rotate(180deg)}
+.r2-path{padding:2px 14px 14px 14px;display:flex;flex-direction:column;position:relative}
+.r2-step{position:relative;display:flex;align-items:center;gap:12px;width:100%;border:0;background:transparent;padding:9px 6px;border-radius:12px;cursor:pointer;text-align:start;font-family:inherit}
+.r2-path .r2-step:not(:last-of-type)::after{content:"";position:absolute;inset-inline-start:22px;top:38px;bottom:-8px;width:2px;background:#e3eaf2}
+.r2-step:hover{background:#f4f8fc}
+.r2-dot{position:relative;z-index:1;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;flex:none;background:#f0f4f9;color:#4f6276;font:800 13px "DM Sans",sans-serif;direction:ltr}
+.r2-step.ok .r2-dot{background:#2bb673;color:#fff}
+.r2-st{flex:1;min-width:0;font:600 15px "DM Sans",sans-serif;color:#1f344b;line-height:1.45;display:flex;flex-direction:column}
+.r2-st small{font:500 12px "DM Sans",sans-serif;color:#8492a5}
+.r2-whole{margin-top:6px;align-self:flex-start;border:1px dashed color-mix(in srgb,var(--ac) 50%,#fff);background:color-mix(in srgb,var(--ac) 6%,#fff);color:var(--ac);border-radius:10px;padding:9px 14px;font:700 14px "DM Sans",sans-serif;cursor:pointer}
+.r2-hits{display:flex;flex-direction:column;background:#fff;border:1px solid #e3eaf2;border-radius:16px;padding:6px}
+.r2-back{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;color:#278ed0;font:700 15px "DM Sans",sans-serif;cursor:pointer;padding:4px 0}
+.rn2.dv .r2-back svg{transform:scaleX(-1)}
+.r2-lh{display:flex;flex-direction:column;gap:6px;padding:4px 2px 6px;border-bottom:1px solid #e3eaf2}
+.r2-lh small{font:700 12.5px "DM Sans",sans-serif;color:var(--ac);letter-spacing:.02em}
+.r2-lh h2{margin:0;font:800 24px/1.3 "DM Sans",sans-serif;color:#102b4e}
+.r2-lh em{font:600 12px "DM Sans",sans-serif;font-style:normal;color:#8492a5}
+.r2-dots{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.r2-dots button{width:22px;height:6px;border-radius:4px;border:0;background:#e3eaf2;cursor:pointer;padding:0}
+.r2-dots button.ok{background:#9fdcbc}
+.r2-dots button.on{background:var(--ac);width:34px}
+.r2-toc{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.r2-toc a{display:inline-flex;gap:6px;align-items:center;border:1px solid #e3eaf2;border-radius:999px;padding:5px 12px;font:600 13px "DM Sans",sans-serif;color:#1f344b;text-decoration:none;background:#fff}
+.r2-toc a b{color:var(--ac)}
+.r2-les{display:flex;flex-direction:column;gap:14px}
+.r2-sec h4{margin:0 0 6px;font:800 13px "DM Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8492a5}
+.r2-sec .nd-md{font-size:15.5px;line-height:1.7;color:#1f344b}
+.r2-sec .nd-md h5{color:#102b4e;font-size:16px;margin:14px 0 4px}
+.r2-sec .nd-md li::marker{color:var(--ac)}
+.r2-sum{border-inline-start:4px solid var(--ac);background:color-mix(in srgb,var(--ac) 7%,#fff);border-radius:4px 14px 14px 4px;padding:12px 14px}
+.rn2.dv .r2-sum{border-radius:14px 4px 4px 14px}
+.r2-sum .nd-md{font-size:16.5px;font-weight:500;color:#102b4e}
+.r2-main,.r2-steps,.r2-dalil{padding:0 2px}
+.r2-words dl{margin:0;display:grid;grid-template-columns:minmax(90px,max-content) 1fr;border:1px solid #e3eaf2;border-radius:12px;overflow:hidden;background:#fff}
+.r2-words dt,.r2-words dd{margin:0;padding:9px 12px;border-top:1px solid #eef2f6;font:15px/1.5 "DM Sans",sans-serif}
+.r2-words dt:first-of-type,.r2-words dt:first-of-type+dd{border-top:0}
+.r2-words dt{font-weight:800;color:#102b4e;background:#f7fafd}
+.r2-words dd{color:#33495f}
+.r2-ex{border:1px dashed #c9d6e4;border-radius:14px;padding:12px 14px;background:#fbfdff}
+.r2-qa{border:1px solid #e3eaf2;border-radius:12px;margin-top:8px;background:#fff;overflow:hidden}
+.r2-qq{display:flex;align-items:flex-start;gap:10px;width:100%;border:0;background:transparent;padding:11px 12px;text-align:start;cursor:pointer;font:700 15px/1.5 "DM Sans",sans-serif;color:#102b4e}
+.r2-qq span{flex:1}
+.r2-qq em{font:700 12px "DM Sans",sans-serif;font-style:normal;color:#278ed0;white-space:nowrap;padding-top:3px}
+.r2-qans{padding:0 12px 12px;border-top:1px dashed #e3eaf2}
+.r2-qans p{margin:8px 0 0;font:15px/1.6 "DM Sans",sans-serif;color:#1d7444}
+.r2-tip,.r2-warn{border-radius:14px;padding:12px 14px;background:#fff8e6;border:1px solid #f6e2b0}
+.r2-tip h4{color:#a26a00}
+.r2-warn{background:#fff3f1;border-color:#f6d0c9}
+.r2-warn h4{color:#b4453a}
+.r2-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:10px;border-top:1px solid #e3eaf2}
+.r2-done{border:1px solid #cfe9db;background:#fff;color:#1d7444;border-radius:999px;padding:10px 16px;font:700 14px "DM Sans",sans-serif;cursor:pointer}
+.r2-done.on{background:#2bb673;border-color:#2bb673;color:#fff}
+.r2-pn{display:flex;gap:8px}
+.r2-prev,.r2-next{border-radius:999px;padding:10px 18px;font:800 14px "DM Sans",sans-serif;cursor:pointer;border:1px solid #e3eaf2;background:#fff;color:#4f6276}
+.r2-next{background:#278ed0;border-color:#278ed0;color:#fff}
+.r2-uw{display:flex;flex-direction:column;gap:12px;scroll-margin-top:80px;padding-top:6px}
+.r2-uwh{display:flex;align-items:center;gap:12px}
+.r2-uwh small{font:700 12.5px "DM Sans",sans-serif;color:#8492a5}
+.r2-uwh h2{margin:2px 0 0;font:800 21px "DM Sans",sans-serif;color:#102b4e}
+.r2-lw{background:#fff;border:1px solid #e3eaf2;border-radius:16px;padding:16px}
+.r2-lw h3{display:flex;align-items:center;gap:10px;margin:0 0 12px;font:800 17px/1.4 "DM Sans",sans-serif;color:#102b4e}
+.r2-lw h3 span{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--ac);color:#fff;font-size:13px;flex:none}
+.r2-end{display:flex;flex-direction:column;align-items:center;gap:10px;padding:16px;border-radius:16px;background:#ecf8f1}
+.r2-end b{font:800 16px "DM Sans",sans-serif;color:#1d7444}
+.r2-totop{align-self:center;border:1px solid #e3eaf2;background:#fff;border-radius:999px;padding:8px 18px;font:700 13px "DM Sans",sans-serif;color:#4f6276;cursor:pointer}
+.rn2.dv,.rn2.dv button,.rn2.dv input,.rn2.dv .r2-sec .nd-md,.rn2.dv dt,.rn2.dv dd,.rn2.dv h2,.rn2.dv h3,.rn2.dv h4,.rn2.dv small,.rn2.dv b,.rn2.dv em,.rn2.dv a{font-family:"Faruma","MV Faruma","Noto Sans Thaana",sans-serif;letter-spacing:0;text-transform:none}
+.rn2.dv .r2-sec .nd-md{font-size:19px;line-height:2.05}
+.rn2.dv .r2-sum .nd-md{font-size:20px}
+.rn2.dv .r2-lh h2{font-size:27px;font-weight:400;line-height:1.7}
+.rn2.dv .r2-ut b,.rn2.dv .r2-st{font-size:19px;font-weight:400;line-height:1.8}
+.rn2.dv .r2-sec h4{font-size:17px;font-weight:400}
+.rn2.dv .r2-qq{font-size:18px;font-weight:400;line-height:1.9}
+.rn2.dv .r2-qans p,.rn2.dv dt,.rn2.dv dd{font-size:18px;line-height:1.9}
+.rn2.dv dt{font-weight:400}
+.rn2.dv .r2-uwh h2,.rn2.dv .r2-lw h3{font-weight:400;font-size:23px}
+.rn2.dv .r2-hs b,.rn2.dv .r2-grades button,.rn2.dv .r2-allb,.rn2.dv .r2-whole,.rn2.dv .r2-done,.rn2.dv .r2-prev,.rn2.dv .r2-next,.rn2.dv .r2-qq em{font-weight:400;font-size:16px}
+.rn2.dv .nd-md ul,.rn2.dv .nd-md ol{padding-left:0;padding-right:22px}
+.rn2.dv .nd-tw th,.rn2.dv .nd-tw td{text-align:right}
+.rn2.dv .r2-subj b{font-family:"DM Sans",sans-serif}
+@media (max-width:520px){.r2-hero{flex-direction:column;align-items:stretch}.r2-allb{justify-content:center}.r2-lh h2{font-size:21px}.r2-lw{padding:13px}}
+html[data-theme=dark] .r2-subj,html[data-theme=dark] .r2-grades button:not(.on),html[data-theme=dark] .r2-search,html[data-theme=dark] .r2-unit,html[data-theme=dark] .r2-hits,html[data-theme=dark] .r2-lw,html[data-theme=dark] .r2-qa,html[data-theme=dark] .r2-words dl,html[data-theme=dark] .r2-toc a,html[data-theme=dark] .r2-prev,html[data-theme=dark] .r2-done:not(.on),html[data-theme=dark] .r2-totop,html[data-theme=dark] .r2-num:not(.full){background:#152238;border-color:#24364f;color:#e6edf5}
+html[data-theme=dark] .r2-ut b,html[data-theme=dark] .r2-lh h2,html[data-theme=dark] .r2-uwh h2,html[data-theme=dark] .r2-lw h3,html[data-theme=dark] .r2-qq,html[data-theme=dark] .r2-words dt,html[data-theme=dark] .r2-sum .nd-md,html[data-theme=dark] .r2-sec .nd-md h5{color:#e6edf5}
+html[data-theme=dark] .r2-st,html[data-theme=dark] .r2-sec .nd-md,html[data-theme=dark] .r2-words dd{color:#c5d3e3}
+html[data-theme=dark] .r2-words dt{background:#1b2a40}
+html[data-theme=dark] .r2-words dt,html[data-theme=dark] .r2-words dd{border-color:#24364f}
+html[data-theme=dark] .r2-dot{background:#1e3048;color:#c5d3e3}
+html[data-theme=dark] .r2-path .r2-step:not(:last-of-type)::after,html[data-theme=dark] .r2-bar,html[data-theme=dark] .r2-dots button{background:#24364f}
+html[data-theme=dark] .r2-step:hover{background:#1b2a40}
+html[data-theme=dark] .r2-sum{background:color-mix(in srgb,var(--ac) 14%,#152238)}
+html[data-theme=dark] .r2-ex{background:#152238;border-color:#2f4560}
+html[data-theme=dark] .r2-tip{background:#2b2513;border-color:#4a3d16}
+html[data-theme=dark] .r2-warn{background:#2d1a19;border-color:#4d2825}
+html[data-theme=dark] .r2-qans p{color:#7fd6a5}
+html[data-theme=dark] .r2-lh,html[data-theme=dark] .r2-foot{border-color:#24364f}
+html[data-theme=dark] .r2-whole{background:#152238}
+html[data-theme=dark] .r2-end{background:#123b2a}
 .side-runs{margin:10px 4px 0;padding:12px 8px 4px;border-top:1px solid #e9eef4;display:flex;flex-direction:column;gap:4px}
 .sr-h{display:flex;align-items:center;justify-content:space-between;padding:2px 6px 4px}
 .sr-h b{font:800 12px "DM Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#8492a5}
@@ -6716,99 +6735,109 @@ function NoteDoc({ sub, topic, role, toast }) {
       staff && h("button", { className: "text-link", onClick: () => setEdit(md) }, " Edit")));
 }
 /* ===================== Revision notes: units and lessons ===================== */
-const RN_T = (dv) => dv ? { sub: "މާއްދާ", change: "ބަދަލުކުރޭ", full: "ފުރިހަމަ ނޯޓު ކިޔާ", fullS: (u, l) => `${u} ޔުނިޓް · ${l} ފިލާވަޅު، އެއް ޞަފްޙާއެއްގައި`, byUnit: "ޔުނިޓުން ކިޔާ", whole: "މުޅި ޔުނިޓް ކިޔާ", single: "ނުވަތަ އެއް ފިލާވަޅު", lessons: (n) => `${n} ފިލާވަޅު`, grade: (g) => `ގްރޭޑް ${g}`, unit: (n) => `ޔުނިޓް ${n}`, lesson: (n) => `ފިލާވަޅު ${n}`, next: "ދެން އޮތް ފިލާވަޅު", prev: "ކުރީގެ ފިލާވަޅު", back: "ޔުނިޓުތަކަށް", done: "މި ޔުނިޓް ނިމުނީ", nextU: "ދެން އޮތް ޔުނިޓް", top: "މަތިއަށް", search: "ފިލާވަޅެއް ހޯދާ", none: "ނުފެނުނު" } : { sub: "Subject", change: "Change", full: "Read the full notes", fullS: (u, l) => `${u} units · ${l} lessons, all on one page`, byUnit: "Read by unit", whole: "Read the whole unit", single: "Or a single lesson", lessons: (n) => `${n} lesson${n === 1 ? "" : "s"}`, grade: (g) => `Grade ${g}`, unit: (n) => `Unit ${n}`, lesson: (n) => `Lesson ${n}`, next: "Next lesson", prev: "Previous lesson", back: "All units", done: "You finished this unit", nextU: "Next unit", top: "Back to top", search: "Find a lesson", none: "No lessons found" };
-const rnSecCls = (hd) => /mistake|ގޯސް|careful/i.test(hd) ? "nd-card nd-warn" : /remember|tip|ހަނދާން/i.test(hd) ? "nd-card nd-tip" : /in short|overview|ޚުލާޞާ|ކުރުކޮށް/i.test(hd) ? "nd-card nd-sum" : /step|method|ކުރާނެ ގޮތް/i.test(hd) ? "nd-card nd-steps" : /key words|key terms|ބަސްތައް|ބަހުގެ މާނަ/i.test(hd) ? "nd-card nd-words" : /example|މިސާލު/i.test(hd) ? "nd-card nd-ex" : /question|ސުވާލ/i.test(hd) ? "nd-card nd-qs" : "nd-card";
-function rnWords(md) {
-  const rows = String(md || "").split("\n").map((l) => l.trim()).filter((l) => /^\|/.test(l) && !/^\|[\s:|-]+\|?$/.test(l)).map((r) => r.replace(/^\||\|$/g, "").split("|").map((c) => c.trim()));
-  if (rows.length < 2 || rows[0].length < 2) return null;
-  return rows.slice(1);
+const RN_T = (dv) => dv ? { change: "މާއްދާ ބަދަލުކުރޭ", all: "ހުރިހާ ނޯޓެއް", allL: "ހުރިހާ ނޯޓެއް އެއް ޞަފްޙާއެއްގައި", stats: (u, l, d) => `${u} ޔުނިޓް · ${l} ފިލާވަޅު · ${d} ނިމިފައި`, lessons: (n, d) => `${n} ފިލާވަޅު${d ? ` · ${d} ނިމިފައި` : ""}`, grade: (g) => `ގްރޭޑް ${g}`, unit: (n) => `ޔުނިޓް ${n}`, of: (a, b) => `ފިލާވަޅު ${a} / ${b}`, next: "ދެން", prev: "ކުރިން", back: "ޔުނިޓުތައް", wholeU: "މުޅި ޔުނިޓް އެއްފަހަރާ ކިޔާ", done: "ނިމުނީ", markDone: "ކިޔާ ނިމުނީ", nextU: "ދެން އޮތް ޔުނިޓް", top: "މަތިއަށް", search: "ފިލާވަޅެއް ހޯދާ", none: "ނުފެނުނު", show: "ޖަވާބު ބަލާ", hide: "ފޮރުވާ", finished: "މި ޔުނިޓް ނިމުނީ!" } : { change: "Change subject", all: "All notes", allL: "All notes on one page", stats: (u, l, d) => `${u} units · ${l} lessons · ${d} done`, lessons: (n, d) => `${n} lesson${n === 1 ? "" : "s"}${d ? ` · ${d} done` : ""}`, grade: (g) => `Grade ${g}`, unit: (n) => `Unit ${n}`, of: (a, b) => `Lesson ${a} of ${b}`, next: "Next", prev: "Back", back: "Units", wholeU: "Read the whole unit on one page", done: "Done", markDone: "Mark as done", nextU: "Next unit", top: "Back to top", search: "Find a lesson or a word", none: "No lessons found", show: "Show answer", hide: "Hide", finished: "Unit finished!" };
+const rnKind = (hd) => /mistake|ގޯސް|careful/i.test(hd) ? "warn" : /remember|tip|ހަނދާން/i.test(hd) ? "tip" : /in short|overview|ޚުލާޞާ/i.test(hd) ? "sum" : /step|method|ކުރާނެ ގޮތް/i.test(hd) ? "steps" : /key words|key terms|ބަސްތައް/i.test(hd) ? "words" : /example|މިސާލު/i.test(hd) ? "ex" : /question|check yourself|ސުވާލ|ބަލާ/i.test(hd) ? "qs" : /ދަލީލު/i.test(hd) ? "dalil" : "main";
+function rnRaw(md) { const o = []; let cur = null; String(md || "").split("\n").forEach((l) => { const m = l.match(/^##\s+(.*)/); if (m) { cur = { h: m[1].trim(), b: [] }; o.push(cur); } else if (cur) cur.b.push(l); }); return o; }
+function RnQA({ q, a, T }) {
+  const [open, setOpen] = useState(false);
+  return h("div", { className: open ? "r2-qa on" : "r2-qa" },
+    h("button", { className: "r2-qq", onClick: () => setOpen(!open), "aria-expanded": open }, h("span", { dangerouslySetInnerHTML: { __html: mdInline(q) } }), h("em", null, open ? T.hide : T.show)),
+    open && h("div", { className: "r2-qans" }, a.split(/\s+(?=\d+[.)]\s)/).map((x, i) => h("p", { key: i, dangerouslySetInnerHTML: { __html: mdInline(x) } }))));
 }
-function RnLesson({ L, n, un, dv, id }) {
-  const secs = mdSections(L.md);
-  return h("article", { className: "rn-les", id },
-    h("header", { className: "rn-lh" }, h("span", { className: "rn-ln" }, n), h("div", null, h("small", null, un), h("h3", null, L.t))),
+function RnLesson({ L, T, id }) {
+  const secs = rnRaw(L.md);
+  return h("article", { className: "r2-les", id },
     secs.map((s, i) => {
-      const cls = rnSecCls(s.h);
-      if (cls === "nd-card nd-words") {
-        const raw = String(L.md).split(/\n(?=##\s)/).find((b) => b.replace(/^##\s+/, "").trim().startsWith(s.h)) || "";
-        const W = rnWords(raw);
-        if (W) return h("section", { className: cls, key: i }, h("h4", null, s.h), h("div", { className: "rn-words" }, W.map((w, k) => h("div", { key: k, className: "rn-word" }, h("b", { dangerouslySetInnerHTML: { __html: mdInline(w[0]) } }), h("span", { dangerouslySetInnerHTML: { __html: mdInline(w.slice(1).join(" — ")) } })))));
+      const k = rnKind(s.h), body = s.b.join("\n");
+      if (k === "words") {
+        const rows = s.b.map((l) => l.trim()).filter((l) => /^\|/.test(l) && !/^\|[\s:|-]+\|?$/.test(l)).map((r) => r.replace(/^\||\|$/g, "").split("|").map((c) => c.trim())).slice(1);
+        if (rows.length) return h("section", { key: i, className: "r2-sec r2-words" }, h("h4", null, s.h), h("dl", null, rows.map((w, j) => h(React.Fragment, { key: j }, h("dt", { dangerouslySetInnerHTML: { __html: mdInline(w[0]) } }), h("dd", { dangerouslySetInnerHTML: { __html: mdInline(w.slice(1).join(" — ")) } })))));
       }
-      return h("section", { className: cls, key: i }, s.h && h("h4", null, s.h), h("div", { className: "nd-md", dangerouslySetInnerHTML: { __html: s.html } }));
+      if (k === "qs") {
+        const qs = s.b.map((l) => l.trim().match(/^[-*•]\s+\*\*(.+?[?؟!])\*\*\s*(.+)$/)).filter(Boolean);
+        if (qs.length) return h("section", { key: i, className: "r2-sec r2-qs" }, h("h4", null, s.h), qs.map((m, j) => h(RnQA, { key: j, q: m[1], a: m[2], T })));
+      }
+      return h("section", { key: i, className: "r2-sec r2-" + k }, h("h4", null, s.h), h("div", { className: "nd-md", dangerouslySetInnerHTML: { __html: mdHtml(body) } }));
     }));
 }
 function RevNotes({ sub, units, setSub, role }) {
   const dv = isDv(sub);
   const T = RN_T(dv);
+  const code = SUBJ_CODE[sub];
   const grades = [...new Set(units.map((u) => u.g).filter(Boolean))].sort((a, b) => a - b);
-  const [grade, setGrade] = useLocal(`em-rn-g-${SUBJ_CODE[sub]}`, grades[0] || 0);
+  const [grade, setGrade] = useLocal(`em-rn-g-${code}`, grades[0] || 0);
   const g = grades.length ? (grades.includes(grade) ? grade : grades[0]) : 0;
   const list = units.map((u, i) => ({ ...u, i })).filter((u) => !g || u.g === g);
+  const [doneMap, setDoneMap] = useLocal(`em-rn-done-${code}`, {});
+  const isDone = (ui, li) => !!(doneMap || {})[ui + "-" + li];
+  const setDone = (ui, li, v) => setDoneMap((m) => { const n = { ...(m || {}) }; const k = ui + "-" + li; if (v) n[k] = 1; else delete n[k]; return n; });
   const [open, setOpen] = useState(() => list.length ? list[0].i : -1);
-  const [view, setView] = useState(null); // {k:'all'|'unit'|'les', u, l}
+  const [view, setView] = useState(null);
   const [q, setQ] = useState("");
   const gate = usePlanGate();
   useEffect(() => { setView(null); setQ(""); setOpen(list.length ? list[0].i : -1); }, [sub, g]);
   useEffect(() => { window.scrollTo({ top: 0 }); }, [view && view.k, view && view.u, view && view.l]);
   const nL = list.reduce((a, u) => a + u.l.length, 0);
+  const nD = list.reduce((a, u) => a + u.l.filter((_, j) => isDone(u.i, j)).length, 0);
   const go = (v) => { if (!gate.use("notes", sub + "|" + (v.u !== undefined ? units[v.u].t : "all"))) return; setView(v); };
-  const unitName = (u, k) => `${T.unit(k + 1)}${u.g ? " · " + T.grade(u.g) : ""}`;
   const pos = (ui) => list.findIndex((u) => u.i === ui);
-  const subCard = h("div", { className: "rn-subj" },
-    h("span", { className: "rn-sic" }, h(SubjectIcon, { sub, size: 24 })),
-    h("div", { className: "rn-sn" }, h("small", null, T.sub), h("b", null, sub), h("em", null, SUBJ_CODE[sub])),
-    setSub && h("label", { className: "rn-chg" }, h("span", null, T.change), h(ChevronDown, { size: 15 }),
-      h("select", { value: sub, "aria-label": T.change, onChange: (e) => setSub(e.target.value) }, subjects.map((s) => h("option", { key: s, value: s }, s)))));
-  const gradeTabs = grades.length > 1 && h("div", { className: "rn-seg", role: "tablist" }, grades.map((x) => h("button", { key: x, role: "tab", "aria-selected": x === g, className: x === g ? "on" : "", onClick: () => setGrade(x) }, T.grade(x))));
+  const cls = dv ? "rn2 dv" : "rn2", dir = dv ? "rtl" : undefined;
+  const bar = (a, b) => h("span", { className: "r2-bar" }, h("i", { style: { width: `${b ? Math.round(a / b * 100) : 0}%` } }));
   if (view) {
-    const back = h("button", { className: "st-back rn-back", onClick: () => setView(null) }, h(IBack, { size: 18 }), " ", T.back);
+    const back = h("button", { className: "r2-back", onClick: () => setView(null) }, h(IBack, { size: 17 }), T.back);
     if (view.k === "les") {
-      const u = units[view.u]; const k = pos(view.u); const L = u.l[view.l];
-      const prevL = view.l > 0 ? { u: view.u, l: view.l - 1, t: u.l[view.l - 1].t } : null;
+      const u = units[view.u]; const k = pos(view.u); const L = u.l[view.l]; const dn = isDone(view.u, view.l);
       const nu = list[k + 1];
-      const nextL = view.l < u.l.length - 1 ? { u: view.u, l: view.l + 1, t: u.l[view.l + 1].t } : nu ? { u: nu.i, l: 0, t: nu.l[0].t } : null;
-      return h("div", { className: dv ? "nd dv rn" : "nd rn", dir: dv ? "rtl" : undefined },
+      const nextL = view.l < u.l.length - 1 ? { u: view.u, l: view.l + 1 } : nu ? { u: nu.i, l: 0 } : null;
+      const prevL = view.l > 0 ? { u: view.u, l: view.l - 1 } : null;
+      return h("div", { className: cls, dir },
         back,
-        h("div", { className: "rn-crumb" }, h("small", null, unitName(u, k)), h("b", null, u.t)),
-        h(RnLesson, { L, n: view.l + 1, un: T.lesson(view.l + 1), dv }),
-        h("div", { className: "rn-nav" },
-          prevL ? h("button", { className: "rn-pn", onClick: () => setView({ k: "les", u: prevL.u, l: prevL.l }) }, h("small", null, T.prev), h("b", null, prevL.t)) : h("span"),
-          nextL ? h("button", { className: "rn-pn nx", onClick: () => setView({ k: "les", u: nextL.u, l: nextL.l }) }, h("small", null, nextL.u !== view.u ? T.nextU : T.next), h("b", null, nextL.t)) : h("span")),
-        h("button", { className: "rn-whole", onClick: () => setView({ k: "unit", u: view.u }) }, h(BookOpen, { size: 18 }), h("span", null, T.whole), h(ChevronRight, { size: 18, className: "rn-chev" })));
+        h("header", { className: "r2-lh" },
+          h("small", null, T.unit(k + 1) + " · " + u.t),
+          h("h2", null, L.t),
+          h("div", { className: "r2-dots" }, u.l.map((_, j) => h("button", { key: j, className: (j === view.l ? "on " : "") + (isDone(view.u, j) ? "ok" : ""), "aria-label": T.of(j + 1, u.l.length), onClick: () => setView({ k: "les", u: view.u, l: j }) }))),
+          h("em", null, T.of(view.l + 1, u.l.length))),
+        h(RnLesson, { L, T }),
+        h("div", { className: "r2-foot" },
+          h("button", { className: dn ? "r2-done on" : "r2-done", onClick: () => setDone(view.u, view.l, !dn) }, dn ? "✓ " + T.done : T.markDone),
+          h("div", { className: "r2-pn" },
+            prevL && h("button", { className: "r2-prev", onClick: () => setView({ k: "les", ...prevL }) }, T.prev),
+            nextL && h("button", { className: "r2-next", onClick: () => { setDone(view.u, view.l, true); setView({ k: "les", ...nextL }); } }, nextL.u !== view.u ? T.nextU : T.next))));
     }
     const show = view.k === "unit" ? list.filter((u) => u.i === view.u) : list;
-    const k0 = view.k === "unit" ? pos(view.u) : 0;
-    const nu = view.k === "unit" ? list[k0 + 1] : null;
-    return h("div", { className: dv ? "nd dv rn" : "nd rn", dir: dv ? "rtl" : undefined },
+    const nu = view.k === "unit" ? list[pos(view.u) + 1] : null;
+    return h("div", { className: cls, dir },
       back,
-      view.k === "all" && h("div", { className: "rn-crumb" }, h("small", null, g ? T.grade(g) : sub), h("b", null, T.full), h("div", { className: "rn-toc" }, show.map((u, k) => h("a", { key: u.i, href: `#rnu-${u.i}`, onClick: (e) => { e.preventDefault(); const el = document.getElementById(`rnu-${u.i}`); if (el) el.scrollIntoView({ behavior: "smooth" }); } }, h("span", null, "U" + (k + 1)), u.t)))),
-      show.map((u, k) => h("section", { key: u.i, className: "rn-unit", id: `rnu-${u.i}` },
-        h("div", { className: "rn-uh" }, h("span", { className: "rn-ub" }, "U" + (view.k === "unit" ? k0 + 1 : k + 1)), h("div", null, h("small", null, unitName(u, view.k === "unit" ? k0 : k) + " · " + T.lessons(u.l.length)), h("h2", null, u.t))),
-        u.l.map((L, j) => h(RnLesson, { key: j, L, n: j + 1, un: T.lesson(j + 1), dv, id: `rnl-${u.i}-${j}` })))),
-      view.k === "unit" && h("div", { className: "rn-end" }, h("b", null, T.done), nu ? h("button", { className: "btn-primary", onClick: () => setView({ k: "unit", u: nu.i }) }, T.nextU, ": ", nu.t) : h("button", { className: "btn-secondary", onClick: () => setView(null) }, T.back)),
-      h("button", { className: "rn-top", onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }) }, T.top));
+      view.k === "all" && h("header", { className: "r2-lh" }, h("small", null, (g ? T.grade(g) + " · " : "") + sub), h("h2", null, T.allL), h("div", { className: "r2-toc" }, show.map((u, k) => h("a", { key: u.i, href: `#rnu-${u.i}`, onClick: (e) => { e.preventDefault(); const el = document.getElementById(`rnu-${u.i}`); if (el) el.scrollIntoView({ behavior: "smooth" }); } }, h("b", null, k + 1), u.t)))),
+      show.map((u) => { const k = pos(u.i); return h("section", { key: u.i, className: "r2-uw", id: `rnu-${u.i}` },
+        h("div", { className: "r2-uwh" }, h("span", { className: "r2-num" }, k + 1), h("div", null, h("small", null, T.unit(k + 1) + " · " + T.lessons(u.l.length)), h("h2", null, u.t))),
+        u.l.map((L, j) => h("div", { key: j, className: "r2-lw" }, h("h3", null, h("span", null, j + 1), L.t), h(RnLesson, { L, T, id: `rnl-${u.i}-${j}` })))); }),
+      view.k === "unit" && h("div", { className: "r2-end" }, h("b", null, T.finished), nu ? h("button", { className: "r2-next", onClick: () => setView({ k: "unit", u: nu.i }) }, T.nextU + ": " + nu.t) : h("button", { className: "r2-prev", onClick: () => setView(null) }, T.back)),
+      h("button", { className: "r2-totop", onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }) }, T.top));
   }
   const ql = q.trim().toLowerCase();
-  const hits = ql ? list.flatMap((u, k) => u.l.map((L, j) => ({ u, k, L, j })).filter((x) => (x.L.t + " " + x.u.t).toLowerCase().includes(ql) || String(x.L.md).toLowerCase().includes(ql))) : null;
-  return h("div", { className: dv ? "rn dv" : "rn", dir: dv ? "rtl" : undefined },
-    subCard, gradeTabs,
-    h("button", { className: "rn-full", onClick: () => go({ k: "all" }) }, h("span", { className: "rn-fic" }, h(BookOpen, { size: 24 })), h("span", { className: "rn-ft" }, h("b", null, T.full), h("small", null, T.fullS(list.length, nL))), h(ChevronRight, { size: 22, className: "rn-chev" })),
-    h("div", { className: "rn-search" }, h("input", { type: "search", value: q, placeholder: T.search, onChange: (e) => setQ(e.target.value), dir: "auto" })),
-    hits ? h("div", { className: "rn-list" }, hits.length ? hits.slice(0, 40).map((x) => h("button", { key: x.u.i + "-" + x.j, className: "rn-li", onClick: () => go({ k: "les", u: x.u.i, l: x.j }) }, h("span", { className: "rn-n" }, x.j + 1), h("span", { className: "rn-lt" }, x.L.t, h("small", null, "U" + (x.k + 1) + " · " + x.u.t)), h(ChevronRight, { size: 18, className: "rn-chev" }))) : h("p", { className: "muted" }, T.none)) :
-    h(React.Fragment, null,
-      h("h3", { className: "rn-h" }, T.byUnit),
-      list.map((u, k) => {
-        const on = open === u.i;
-        return h("div", { key: u.i, className: on ? "rn-uc on" : "rn-uc" },
-          h("button", { className: "rn-ucb", "aria-expanded": on, onClick: () => setOpen(on ? -1 : u.i) },
-            h("span", { className: "rn-ub" }, "U" + (k + 1)),
-            h("span", { className: "rn-ut" }, h("b", null, u.t), h("small", null, (u.g ? T.grade(u.g) + " · " : "") + T.lessons(u.l.length))),
-            h(ChevronDown, { size: 20, className: "rn-cd" })),
-          on && h("div", { className: "rn-ub2" },
-            h("button", { className: "rn-whole", onClick: () => go({ k: "unit", u: u.i }) }, h(BookOpen, { size: 18 }), h("span", null, T.whole), h(ChevronRight, { size: 18, className: "rn-chev" })),
-            h("small", { className: "rn-or" }, T.single),
-            u.l.map((L, j) => h("button", { key: j, className: "rn-li", onClick: () => go({ k: "les", u: u.i, l: j }) }, h("span", { className: "rn-n" }, j + 1), h("span", { className: "rn-lt" }, L.t), h(ChevronRight, { size: 18, className: "rn-chev" })))));
-      })));
+  const hits = ql ? list.flatMap((u) => u.l.map((L, j) => ({ u, L, j })).filter((x) => (x.L.t + " " + x.u.t).toLowerCase().includes(ql) || String(x.L.md).toLowerCase().includes(ql))) : null;
+  return h("div", { className: cls, dir },
+    h("div", { className: "r2-top1" },
+      h("label", { className: "r2-subj", title: T.change }, h("span", { className: "r2-sic" }, h(SubjectIcon, { sub, size: 20 })), h("b", null, sub), setSub && h(ChevronDown, { size: 16 }),
+        setSub && h("select", { value: sub, "aria-label": T.change, onChange: (e) => setSub(e.target.value) }, subjects.map((s) => h("option", { key: s, value: s }, s)))),
+      grades.length > 1 && h("div", { className: "r2-grades", role: "tablist" }, grades.map((x) => h("button", { key: x, role: "tab", "aria-selected": x === g, className: x === g ? "on" : "", onClick: () => setGrade(x) }, T.grade(x))))),
+    h("div", { className: "r2-hero" },
+      h("div", { className: "r2-hs" }, h("b", null, T.stats(list.length, nL, nD)), bar(nD, nL)),
+      h("button", { className: "r2-allb", onClick: () => go({ k: "all" }) }, h(BookOpen, { size: 17 }), T.all)),
+    h("input", { className: "r2-search", type: "search", value: q, placeholder: T.search, onChange: (e) => setQ(e.target.value), dir: "auto" }),
+    hits ? h("div", { className: "r2-hits" }, hits.length ? hits.slice(0, 40).map((x) => h("button", { key: x.u.i + "-" + x.j, className: "r2-step", onClick: () => go({ k: "les", u: x.u.i, l: x.j }) }, h("span", { className: "r2-dot" }, x.j + 1), h("span", { className: "r2-st" }, x.L.t, h("small", null, x.u.t)))) : h("p", { className: "muted" }, T.none)) :
+    list.map((u, k) => {
+      const on = open === u.i; const d = u.l.filter((_, j) => isDone(u.i, j)).length;
+      return h("section", { key: u.i, className: on ? "r2-unit on" : "r2-unit" },
+        h("button", { className: "r2-uh", "aria-expanded": on, onClick: () => setOpen(on ? -1 : u.i) },
+          h("span", { className: d === u.l.length ? "r2-num full" : "r2-num" }, d === u.l.length ? "✓" : k + 1),
+          h("span", { className: "r2-ut" }, h("b", null, u.t), h("small", null, T.lessons(u.l.length, d)), bar(d, u.l.length)),
+          h(ChevronDown, { size: 19, className: "r2-cd" })),
+        on && h("div", { className: "r2-path" },
+          u.l.map((L, j) => h("button", { key: j, className: isDone(u.i, j) ? "r2-step ok" : "r2-step", onClick: () => go({ k: "les", u: u.i, l: j }) }, h("span", { className: "r2-dot" }, isDone(u.i, j) ? "✓" : j + 1), h("span", { className: "r2-st" }, L.t))),
+          h("button", { className: "r2-whole", onClick: () => go({ k: "unit", u: u.i }) }, T.wholeU)));
+    }));
 }
 function NotesView({ sub, role, toast, setSub }) {
   const rnPack = useStudyPack(SUBJ_CODE[sub]);
